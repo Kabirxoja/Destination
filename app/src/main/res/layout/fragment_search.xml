@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.search.SearchFragment"
+    android:background="@color/light_gray"
+
+    >
+
+    <TextView
+        android:id="@+id/text_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        android:text="Vocabulary"
+        android:textColor="@color/gray"
+        android:textStyle="bold"
+
+
+        />
+
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search..."
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:drawablePadding="8dp"
+        android:layout_below="@+id/text_banner"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/bac_curve"
+        android:backgroundTint="@color/white"
+        android:padding="12dp"
+        android:textCursorDrawable="@drawable/text_cursor_drawable"
+        android:textSelectHandleLeft="@drawable/text_select_handle_drawable_left"
+        android:textSelectHandleRight="@drawable/text_select_handle_drawable_right"
+        android:textSelectHandle="@drawable/text_select_handle_drawable"
+
+        />
+</RelativeLayout>

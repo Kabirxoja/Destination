@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_test"
+        android:name="com.example.destination.ui.test.TestFragment"
+        android:label="@string/nav_name_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.destination.ui.search.SearchFragment"
+        android:label="@string/nav_name_search"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.destination.ui.home.HomeFragment"
+        android:label="@string/nav_name_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_vocabularyFragment"
+            app:destination="@id/vocabularyFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notes"
+        android:name="com.example.destination.ui.notes.NotesFragment"
+        android:label="@string/nav_name_notes"
+        tools:layout="@layout/fragment_notes" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.destination.ui.settings.SettingsFragment"
+        android:label="@string/nav_name_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/navigation_main"
+        android:name="com.example.destination.MainFragment"
+        android:label="main"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/vocabularyFragment"
+        android:name="com.example.destination.ui.home.vocabulary.VocabularyFragment"
+        android:label="fragment_vocabulary"
+        tools:layout="@layout/fragment_vocabulary" />
+</navigation>

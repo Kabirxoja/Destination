@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bac_curve"
+    android:backgroundTint="@color/green"
+
+    >
+
+    <TextView
+        android:id="@+id/en_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:text=""
+        android:textColor="@color/white"
+        android:layout_marginStart="12dp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/expandable_button_child"
+        android:layout_alignParentStart="true"
+
+
+        />
+
+    <TextView
+        android:id="@+id/uz_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:text=""
+        android:textColor="@color/white"
+        android:layout_marginStart="12dp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/expandable_button_child"
+        android:layout_alignParentStart="true"
+
+        />
+
+    <ImageView
+        android:id="@+id/expandable_button_child"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_reverse_back"
+        android:layout_alignParentEnd="true"
+        android:padding="6dp"
+        android:layout_marginEnd="12dp"
+
+
+        />
+
+</RelativeLayout>

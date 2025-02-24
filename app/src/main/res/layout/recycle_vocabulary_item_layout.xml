@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:background="@drawable/bac_curve"
+    android:backgroundTint="@color/green"
+    android:padding="12dp"
+    android:layout_marginBottom="12dp"
+
+
+    >
+
+    <TextView
+        android:id="@+id/immutable_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unit №"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+
+        />
+
+    <TextView
+        android:id="@+id/unitNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/immutable_txt"
+        android:text="3"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+
+        />
+
+
+    <TextView
+        android:id="@+id/unitName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@id/unitNumber"
+        android:text="Fun and Game topic"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+
+        />
+
+
+</RelativeLayout>

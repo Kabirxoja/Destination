@@ -1,0 +1,90 @@
+package com.example.destination.ui.notes
+
+import android.animation.AnimatorInflater
+import android.animation.AnimatorSet
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ImageButton
+import android.widget.TextView
+import androidx.cardview.widget.CardView
+import androidx.viewpager.widget.PagerAdapter
+import com.example.destination.R
+
+class WordPagerAdapter(private val words: List<Word>) : PagerAdapter() {
+
+    override fun instantiateItem(container: ViewGroup, position: Int): Any {
+        val view = LayoutInflater.from(container.context).inflate(R.layout.card_item, container, false)
+        val frontText: TextView = view.findViewById(R.id.your_front_view_id)
+        val backText: TextView = view.findViewById(R.id.your_back_view_id)
+        val addToNotes: ImageButton = view.findViewById(R.id.add_to_notes)
+        val flipCardView: ImageButton = view.findViewById(R.id.flip_cardview)
+        val cardView: CardView = view.findViewById(R.id.your_card_view_id)
+
+        var isFront = true
+
+        // Bind data to views
+        frontText.text = words[position].english
+        backText.text = words[position].uzbek
+
+        // Set up flip animation
+        flipCardView.setOnClickListener {
+            isFront = flipCard(cardView, isFront)
+        }
+
+        container.addView(view)
+        return view
+    }
+
+    override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
+        container.removeView(`object` as View)
+    }
+
+    override fun getCount(): Int {
+        return words.size
+    }
+
+    override fun isViewFromObject(view: View, `object`: Any): Boolean {
+        return view == `object`
+    }
+
+    private fun flipCard(cardView: CardView, isFront: Boolean): Boolean {
+        val scale = cardView.context.resources.displayMetrics.density
+        cardView.cameraDistance = 12000 * scale  // Depth effect
+
+        val flipOut = AnimatorInflater.loadAnimator(cardView.context, R.animator.flip_out) as AnimatorSet
+        val flipIn = AnimatorInflater.loadAnimator(cardView.context, R.animator.flip_in) as AnimatorSet
+
+        flipOut.setTarget(cardView)
+        flipIn.setTarget(cardView)
+
+        val frontText: TextView = cardView.findViewById(R.id.your_front_view_id)
+        val backText: TextView = cardView.findViewById(R.id.your_back_view_id)
+        val addToNotes: ImageButton = cardView.findViewById(R.id.add_to_notes)
+        val flipCardView: ImageButton = cardView.findViewById(R.id.flip_cardview)
+
+        frontText.visibility = View.GONE
+        addToNotes.visibility = View.GONE
+        backText.visibility = View.GONE
+        flipCardView.visibility = View.GONE
+
+        frontText.animate().alpha(if (isFront) 0f else 1f).setDuration(600).start()
+        backText.animate().alpha(if (isFront) 1f else 0f).setDuration(600).start()
+
+        cardView.postDelayed({
+            addToNotes.visibility = View.VISIBLE
+            flipCardView.visibility = View.VISIBLE
+
+            if (isFront) {
+                backText.visibility = View.VISIBLE
+            } else {
+                frontText.visibility = View.VISIBLE
+            }
+        }, 300)
+
+        flipOut.start()
+        flipIn.start()
+
+        return !isFront
+    }
+}
