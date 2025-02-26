@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="130dp"
         android:clipChildren="false"
         android:clipToPadding="false"
-        android:padding="16dp"
-        >
+        android:padding="14dp"
+        tools:ignore="UselessParent">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/your_card_view_id"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        app:cardBackgroundColor="@color/green"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/blue"
         app:cardCornerRadius="8dp"
         app:cardElevation="0dp"
 
@@ -24,13 +25,12 @@
 
         <ImageButton
             android:id="@+id/add_to_notes"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_gravity="end"
-            android:layout_margin="12dp"
-            android:padding="4dp"
-            android:src="@drawable/notes_inactive"
-            android:background="@android:color/transparent"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="start"
+            android:layout_margin="6dp"
+            android:background="@drawable/notes_inactive"
+
 
             />
 
@@ -41,8 +41,9 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="Back Content"
-            android:textSize="28sp"
+            android:textSize="24sp"
             android:visibility="gone"
+            android:textColor="@color/white"
 
             />
 
@@ -54,6 +55,7 @@
             android:gravity="center"
             android:text="Front Content"
             android:textSize="28sp"
+            android:textColor="@color/white"
 
             />
 

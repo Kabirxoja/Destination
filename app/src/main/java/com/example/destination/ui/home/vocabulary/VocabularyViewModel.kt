@@ -47,3 +47,5 @@ class VocabularyViewModel : ViewModel() {
         _parentItems.value = sampleData
     }
 }
+
+

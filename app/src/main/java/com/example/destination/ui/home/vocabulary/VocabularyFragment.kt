@@ -9,28 +9,23 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.destination.R
-import com.example.destination.databinding.FragmentHomeBinding
+import com.example.destination.databinding.FragmentVocabularyBinding
+import com.example.destination.ui.notes.Word
+import kotlin.math.abs
 
 class VocabularyFragment : Fragment() {
-
-    private var _binding: FragmentHomeBinding? = null
-
+    private var _binding: FragmentVocabularyBinding? = null
     private val binding get() = _binding!!
 
-
-    private lateinit var recyclerView: RecyclerView
     private lateinit var parentAdapter: ParentAdapter
     private lateinit var viewModel: VocabularyViewModel
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentVocabularyBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         viewModel = ViewModelProvider(this)[VocabularyViewModel::class.java]
@@ -39,18 +34,27 @@ class VocabularyFragment : Fragment() {
         val args = arguments // arguments is a nullable Bundle
         val topicUnit = args?.getString("topicUnit")
         val topicNumber = args?.getInt("topicNumber")
-        Toast.makeText(binding.root.context, "$topicUnit   - $topicNumber", Toast.LENGTH_SHORT).show()
+        Toast.makeText(binding.root.context, "$topicUnit   - $topicNumber", Toast.LENGTH_SHORT)
+            .show()
 
 
-        recyclerView = root.findViewById(R.id.parent_recyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(root.context)
+        binding.parentRecyclerView.layoutManager = LinearLayoutManager(root.context)
 
         parentAdapter = ParentAdapter()
-        recyclerView.adapter = parentAdapter
+        binding.parentRecyclerView.adapter = parentAdapter
 
         viewModel.parentItems.observe(viewLifecycleOwner) { parentItems ->
             parentAdapter.submitList(parentItems)
+            binding.viewPager.adapter = WordPagerAdapter(parentItems)
         }
+
+        binding.viewPager.setPageTransformer(false) { page, position ->
+            val scale = if (position < -1 || position > 1) 0.75f else 1 - abs(position) * 0.25f
+            page.scaleX = scale
+            page.scaleY = scale
+        }
+
+
         return root
     }
 

@@ -10,10 +10,8 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.viewpager.widget.PagerAdapter
 import com.example.destination.databinding.FragmentNotesBinding
 import java.util.Locale
-import kotlin.math.abs
 
 class NotesFragment : Fragment(), TextToSpeech.OnInitListener {
 
@@ -45,21 +43,6 @@ class NotesFragment : Fragment(), TextToSpeech.OnInitListener {
         btnSpeakMale.setOnClickListener { speakWord("male") }
         btnSpeakFemale.setOnClickListener { speakWord("female") }
 
-
-        val words = listOf(
-            Word("Hello", "Salom"),
-            Word("Apple", "Olma"),
-            Word("Book", "Kitob"),
-            Word("School", "Maktab"),
-        )
-
-        binding.viewPager.adapter = WordPagerAdapter(words)
-
-        binding.viewPager.setPageTransformer(false) { page, position ->
-            val scale = if (position < -1 || position > 1) 0.75f else 1 - abs(position) * 0.25f
-            page.scaleX = scale
-            page.scaleY = scale
-        }
 
         return root
     }

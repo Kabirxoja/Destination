@@ -41,7 +41,8 @@ class ChildAdapter : ListAdapter<ChildItem, ChildAdapter.ChildViewHolder>(DiffCa
 
         private val uzTextView: TextView = itemView.findViewById(R.id.uz_text_view)
         private val enTextView: TextView = itemView.findViewById(R.id.en_text_view)
-        private val expandableButton: ImageView = itemView.findViewById(R.id.expandable_button_child)
+        private val expandableButton: ImageView =
+            itemView.findViewById(R.id.expandable_button_child)
 
         fun bind(childItem: ChildItem) {
             uzTextView.text = childItem.uzExample

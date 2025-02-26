@@ -2,12 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="46dp"
     android:layout_marginHorizontal="12dp"
     android:background="@drawable/bac_curve"
     android:backgroundTint="@color/green"
-    android:padding="12dp"
     android:layout_marginBottom="12dp"
+    android:gravity="center_vertical"
+    android:paddingStart="12dp"
 
 
     >

@@ -1,4 +1,4 @@
-package com.example.destination.ui.notes
+package com.example.destination.ui.home.vocabulary
 
 import android.animation.AnimatorInflater
 import android.animation.AnimatorSet
@@ -10,8 +10,9 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.viewpager.widget.PagerAdapter
 import com.example.destination.R
+import com.example.destination.ui.notes.Word
 
-class WordPagerAdapter(private val words: List<Word>) : PagerAdapter() {
+class WordPagerAdapter(private val words: List<ParentItem>) : PagerAdapter() {
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val view = LayoutInflater.from(container.context).inflate(R.layout.card_item, container, false)
@@ -24,8 +25,8 @@ class WordPagerAdapter(private val words: List<Word>) : PagerAdapter() {
         var isFront = true
 
         // Bind data to views
-        frontText.text = words[position].english
-        backText.text = words[position].uzbek
+        frontText.text = words[position].enWord
+        backText.text = words[position].uzWord
 
         // Set up flip animation
         flipCardView.setOnClickListener {
@@ -52,8 +53,10 @@ class WordPagerAdapter(private val words: List<Word>) : PagerAdapter() {
         val scale = cardView.context.resources.displayMetrics.density
         cardView.cameraDistance = 12000 * scale  // Depth effect
 
-        val flipOut = AnimatorInflater.loadAnimator(cardView.context, R.animator.flip_out) as AnimatorSet
-        val flipIn = AnimatorInflater.loadAnimator(cardView.context, R.animator.flip_in) as AnimatorSet
+        val flipOut =
+            AnimatorInflater.loadAnimator(cardView.context, R.animator.flip_out) as AnimatorSet
+        val flipIn =
+            AnimatorInflater.loadAnimator(cardView.context, R.animator.flip_in) as AnimatorSet
 
         flipOut.setTarget(cardView)
         flipIn.setTarget(cardView)

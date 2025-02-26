@@ -40,8 +40,10 @@ class ParentAdapter : ListAdapter<ParentItem, ParentAdapter.ParentViewHolder>(Di
         private val enTextView: TextView = itemView.findViewById(R.id.en_text_view)
         private val uzTextView: TextView = itemView.findViewById(R.id.uz_text_view)
         private val definitionTextView: TextView = itemView.findViewById(R.id.definition_text_view)
-        private val expandableButton: ImageView = itemView.findViewById(R.id.expandable_button_parent)
-        private val childRecyclerView: RecyclerView = itemView.findViewById(R.id.child_recycler_view)
+        private val expandableButton: ImageView =
+            itemView.findViewById(R.id.expandable_button_parent)
+        private val childRecyclerView: RecyclerView =
+            itemView.findViewById(R.id.child_recycler_view)
 
         fun bind(parentItem: ParentItem) {
             uzTextView.text = parentItem.uzWord

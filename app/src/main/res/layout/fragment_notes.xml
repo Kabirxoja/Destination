@@ -12,6 +12,7 @@
         android:id="@+id/editTextWord"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:hint="Enter a word"
         android:textSize="18sp" />
 
@@ -30,14 +31,6 @@
         android:text="Speak (Female Voice)" />
 
 
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clipToPadding="false"
-
-        />
 
 
 

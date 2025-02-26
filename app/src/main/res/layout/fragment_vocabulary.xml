@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.home.vocabulary.VocabularyFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:clipToPadding="false"
+        android:layout_marginTop="16dp"
+
+
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/parent_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        tools:listitem="@layout/recycle_parent_item_layout"
+        android:layout_marginTop="16dp"
 
-</FrameLayout>
+
+        />
+
+</LinearLayout>
