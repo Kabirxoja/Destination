@@ -5,11 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.destination.databinding.RecycleIndicatorItemBinding
 
-
 class IndicatorAdapter : RecyclerView.Adapter<IndicatorAdapter.MyViewHolder>() {
+
     private var list: MutableList<Int> = ArrayList()
     private var listener: OnClickItemListener?= null
-
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -41,18 +40,18 @@ class IndicatorAdapter : RecyclerView.Adapter<IndicatorAdapter.MyViewHolder>() {
         }
     }
 
-    fun updateList(newList: List<Int>) {
-        list.clear()
-        list.addAll(newList)
-        notifyDataSetChanged()
-    }
-
-    fun setOnClickListener(onClickListener: OnClickItemListener){
-        listener = onClickListener
+    fun setOnClickListener(onClickItemListener: OnClickItemListener){
+        listener = onClickItemListener
     }
 
     interface OnClickItemListener {
         fun onClickItem(item: Int)
+    }
+
+    fun updateList(newList: List<Int>) {
+        list.clear()
+        list.addAll(newList)
+        notifyDataSetChanged()
     }
 
 

@@ -41,6 +41,13 @@ class TestFragment : Fragment(){
                 Toast.makeText(binding.root.context, "$item", Toast.LENGTH_SHORT).show()
             }
         })
+
+
+        binding.startButton.setOnClickListener {
+            val bottomSheetDialog = BottomSheetDialog()
+            bottomSheetDialog.show(childFragmentManager, "BottomSheet") //or childFragmentManager if in a fragment.
+        }
+
         return root
     }
 

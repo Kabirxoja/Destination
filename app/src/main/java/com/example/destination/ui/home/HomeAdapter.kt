@@ -7,8 +7,8 @@ import com.example.destination.databinding.RecycleVocabularyItemLayoutBinding
 
 class HomeAdapter : RecyclerView.Adapter<HomeAdapter.MyViewHolder>() {
 
-    private var listener: OnClickItemListener? = null
     private var list: MutableList<HomeItem> = ArrayList()
+    private var listener: OnClickItemListener? = null
 
     inner class MyViewHolder(private val binding: RecycleVocabularyItemLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
