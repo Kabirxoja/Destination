@@ -1,14 +1,20 @@
 package com.example.destination.ui.test
 
+import android.content.res.ColorStateList
+import android.graphics.Color
+import android.provider.CalendarContract.Colors
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.destination.R
 import com.example.destination.databinding.RecycleIndicatorItemBinding
 
 class IndicatorAdapter : RecyclerView.Adapter<IndicatorAdapter.MyViewHolder>() {
 
-    private var list: MutableList<Int> = ArrayList()
-    private var listener: OnClickItemListener?= null
+    private var list: MutableList<TestItem> = ArrayList()
+    private var listener: OnClickItemListener? = null
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -30,25 +36,62 @@ class IndicatorAdapter : RecyclerView.Adapter<IndicatorAdapter.MyViewHolder>() {
     inner class MyViewHolder(private val binding: RecycleIndicatorItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun onBind(item: Int) {
+        fun onBind(item: TestItem) {
             binding.unitText.text = "Unit"
-            binding.numberText.text = item.toString()
+            binding.numberText.text = item.unitNumber.toString()
+
+
+            if (adapterPosition != RecyclerView.NO_POSITION && adapterPosition < list.size) {
+                val isChecked = list[adapterPosition].checked
+
+                val backgroundColor = if (isChecked) R.color.green else R.color.white
+                val textColor = if (isChecked) R.color.white else R.color.black
+
+                val color = ContextCompat.getColor(binding.root.context, backgroundColor)
+                val colorStateList = ColorStateList.valueOf(color)
+                ViewCompat.setBackgroundTintList(
+                    binding.indicatorRecyclerView,
+                    colorStateList
+                )
+                binding.unitText.setTextColor(
+                    ContextCompat.getColor(
+                        binding.root.context,
+                        textColor
+                    )
+                )
+                binding.numberText.setTextColor(
+                    ContextCompat.getColor(
+                        binding.root.context,
+                        textColor
+                    )
+                )
+            }
+
 
             binding.root.setOnClickListener {
+                val selectedPosition = adapterPosition
+                if (selectedPosition != RecyclerView.NO_POSITION) {
+                    list[selectedPosition].checked = !item.checked
+                    notifyItemChanged(selectedPosition)
+                }
+
                 listener?.onClickItem(item)
             }
+
         }
+
+
     }
 
-    fun setOnClickListener(onClickItemListener: OnClickItemListener){
+    fun setOnClickListener(onClickItemListener: OnClickItemListener) {
         listener = onClickItemListener
     }
 
     interface OnClickItemListener {
-        fun onClickItem(item: Int)
+        fun onClickItem(item: TestItem)
     }
 
-    fun updateList(newList: List<Int>) {
+    fun updateList(newList: List<TestItem>) {
         list.clear()
         list.addAll(newList)
         notifyDataSetChanged()

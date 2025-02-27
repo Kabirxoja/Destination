@@ -1,3 +1,3 @@
 package com.example.destination.ui.test
 
-class TestItem(unitNumber:Int)
+data class TestItem(val unitNumber: Int, var checked: Boolean)

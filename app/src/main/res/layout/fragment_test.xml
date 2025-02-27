@@ -28,12 +28,12 @@
         android:layout_width="46dp"
         android:layout_height="46dp"
         android:layout_below="@id/text_banner"
+        android:layout_alignBottom="@id/start_button"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="20dp"
         android:background="@drawable/bac_curve"
         android:backgroundTint="@color/white"
         android:src="@drawable/settings_inactive"
-        android:layout_alignBottom="@id/start_button"
 
 
         />
@@ -49,9 +49,9 @@
         android:background="@drawable/bac_curve"
         android:backgroundTint="@color/blue"
         android:text="Start"
-        android:textSize="18sp"
-        android:textColor="@color/white"
         android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
 
 
         />

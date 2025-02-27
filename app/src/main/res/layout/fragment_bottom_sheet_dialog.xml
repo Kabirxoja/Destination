@@ -3,23 +3,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bottom_sheet_background"
+    android:backgroundTint="@color/white"
     android:padding="16dp"
-    tools:context=".ui.test.BottomSheetDialog">
+    tools:context=".ui.test.BottomSheetDialog"
+
 
     >
+
+    <ImageView
+        android:id="@+id/line_of_top"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_bottom_sheet_line"
+        android:layout_centerHorizontal="true"
+
+        />
 
     <LinearLayout
         android:id="@+id/row1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_below="@id/line_of_top"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        >
 
         <ImageView
             android:id="@+id/icon1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:contentDescription="Menu Icon"
-            android:src="@drawable/test_inactive" />
+            android:src="@drawable/ic_checkbox_true" />
 
         <TextView
             android:id="@+id/text1"
@@ -27,8 +43,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="Row 1 Text"
+            android:textColor="@color/black"
             android:textSize="16sp"
-            android:textColor="@color/black" />
+
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -37,15 +55,18 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/row1"
         android:layout_marginTop="16dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+
+        >
 
         <ImageView
             android:id="@+id/icon2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="Menu Icon"
-            android:src="@drawable/test_inactive"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="center_vertical"
+            android:contentDescription="Menu Icon"
+            android:src="@drawable/ic_checkbox_true"
 
             />
 
@@ -55,9 +76,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="Row 2 Text"
-            android:textSize="16sp"
-
             android:textColor="@color/black"
+
+            android:textSize="16sp"
 
             />
     </LinearLayout>
@@ -68,15 +89,18 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/row2"
         android:layout_marginTop="16dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+
+        >
 
         <ImageView
             android:id="@+id/icon3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="Menu Icon"
-            android:src="@drawable/test_inactive"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="center_vertical"
+            android:contentDescription="Menu Icon"
+            android:src="@drawable/ic_checkbox_false"
 
             />
 
@@ -98,15 +122,18 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/row3"
         android:layout_marginTop="16dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+
+        >
 
         <ImageView
             android:id="@+id/icon4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="Menu Icon"
-            android:src="@drawable/test_inactive"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="center_vertical"
+            android:contentDescription="Menu Icon"
+            android:src="@drawable/ic_checkbox_true"
 
             />
 
@@ -128,16 +155,18 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/row4"
         android:layout_marginTop="16dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+
+        >
 
         <ImageView
             android:id="@+id/icon5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="Menu Icon"
-            android:src="@drawable/test_inactive"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="center_vertical"
-            />
+            android:contentDescription="Menu Icon"
+            android:src="@drawable/ic_checkbox_true" />
 
         <TextView
             android:id="@+id/text5"

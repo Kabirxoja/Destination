@@ -1,27 +1,33 @@
 package com.example.destination.ui.test
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.destination.databinding.FragmentTestBinding
 
-class TestFragment : Fragment(){
+class TestFragment : Fragment(), BottomSheetDialog.BottomSheetListener{
 
     private var _binding: FragmentTestBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var bottomSheetDialog: BottomSheetDialog
+
+    private lateinit var testViewModel: TestViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val testViewModel = ViewModelProvider(this)[TestViewModel::class.java]
+        testViewModel = ViewModelProvider(this)[TestViewModel::class.java]
 
         _binding = FragmentTestBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -37,15 +43,16 @@ class TestFragment : Fragment(){
         }
 
         indicatorAdapter.setOnClickListener(object : IndicatorAdapter.OnClickItemListener {
-            override fun onClickItem(item: Int) {
+            override fun onClickItem(item: TestItem) {
                 Toast.makeText(binding.root.context, "$item", Toast.LENGTH_SHORT).show()
             }
         })
 
 
-        binding.startButton.setOnClickListener {
-            val bottomSheetDialog = BottomSheetDialog()
-            bottomSheetDialog.show(childFragmentManager, "BottomSheet") //or childFragmentManager if in a fragment.
+        binding.adjustmentButton.setOnClickListener {
+            bottomSheetDialog = BottomSheetDialog()
+            bottomSheetDialog.setListener(this) // Set the listener
+            bottomSheetDialog.show(childFragmentManager, "BottomSheet")
         }
 
         return root
@@ -54,6 +61,19 @@ class TestFragment : Fragment(){
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onOkButtonClicked(
+        rowSelections: Map<Int, Boolean>,
+        buttonSelections: Map<Int, Boolean>
+    ) {
+        // Handle data from OKEY button click
+        Log.d("tertete", "Row selections: $rowSelections")
+        Log.d("tertete", "Button selections: $buttonSelections")
+        // Transfer data to other fragments or ViewModel
+
+        testViewModel.setBottomSheetData(rowSelections, buttonSelections)
+
     }
 
 }
