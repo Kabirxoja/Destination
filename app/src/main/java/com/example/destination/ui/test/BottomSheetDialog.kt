@@ -10,6 +10,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
@@ -55,29 +56,32 @@ open class BottomSheetDialog : BottomSheetDialogFragment() {
             rowSelections[3] = isSelected
             updateRowImage(3, isSelected)
         }
-        binding.row3.setOnClickListener {
+        binding.row4.setOnClickListener {
             val isSelected = !rowSelections.getOrDefault(4, false)
             rowSelections[4] = isSelected
-        }
-        binding.row4.setOnClickListener {
-            val isSelected = !rowSelections.getOrDefault(5, false)
-            rowSelections[5] = isSelected
+            updateRowImage(4, isSelected)
+
         }
         binding.row5.setOnClickListener {
-            val isSelected = !rowSelections.getOrDefault(6, false)
-            rowSelections[6] = isSelected
+            val isSelected = !rowSelections.getOrDefault(5, false)
+            rowSelections[5] = isSelected
+            updateRowImage(5, isSelected)
+
         }
 
 
         binding.button1.setOnClickListener {
             val isClicked = !buttonSelections.getOrDefault(1, false)
             buttonSelections[1] = isClicked
-            selectedButton = 1
+            changeButtonTintColor(binding.button1, R.color.holo_green_dark)
+            changeButtonTintColor(binding.button2, R.color.darker_gray)
+
         }
         binding.button2.setOnClickListener {
             val isClicked = !buttonSelections.getOrDefault(2, false)
             buttonSelections[2] = isClicked
-            selectedButton = 2
+            changeButtonTintColor(binding.button1, R.color.darker_gray)
+            changeButtonTintColor(binding.button2, R.color.holo_green_dark)
         }
 
 
@@ -99,15 +103,35 @@ open class BottomSheetDialog : BottomSheetDialogFragment() {
 
     }
 
+    private fun changeButtonTintColor(button: Button, colorRes: Int) {
+        val color = ContextCompat.getColor(button.context, colorRes)
+        val colorStateList = ColorStateList.valueOf(color)
+        ViewCompat.setBackgroundTintList(button, colorStateList)
+        //Or, if you don't need backwards compatibility:
+        //button.backgroundTintList = colorStateList
+    }
+
     private fun updateRowImage(rowNumber: Int, isSelected: Boolean) {
         val imageView: ImageView? = when (rowNumber) {
             1 -> binding.icon1
             2 -> binding.icon2
             3 -> binding.icon3
+            4 -> binding.icon4
+            5 -> binding.icon5
+
             else -> null
         }
 
-        imageView?.setImageResource(if (isSelected) R.drawable.checkbox_on_background else R.drawable.checkbox_off_background)
+        binding.icon1.setImageResource(R.drawable.ic_dialog_alert)
+
+        imageView?.setImageDrawable(
+            if (isSelected)
+                ContextCompat.getDrawable(requireContext(), R.drawable.checkbox_on_background)
+            else
+                ContextCompat.getDrawable(requireContext(), R.drawable.checkbox_off_background)
+        )
+
+
     }
 
 
