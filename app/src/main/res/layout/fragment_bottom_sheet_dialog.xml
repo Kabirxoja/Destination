@@ -6,7 +6,7 @@
     android:background="@drawable/bottom_sheet_background"
     android:backgroundTint="@color/white"
     android:padding="16dp"
-    tools:context=".ui.test.BottomSheetDialog"
+    tools:context=".ui.selection.choice.BottomSheetDialog"
 
 
     >
@@ -100,7 +100,7 @@
             android:layout_height="20dp"
             android:layout_gravity="center_vertical"
             android:contentDescription="Menu Icon"
-            android:src="@drawable/ic_checkbox_false"
+            android:src="@drawable/ic_checkbox_true"
 
             />
 
@@ -202,8 +202,9 @@
             android:background="@drawable/bac_curve"
             android:backgroundTint="@color/gray"
             android:text="Button 1"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="18sp"
+
 
             />
 
@@ -214,7 +215,7 @@
             android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:background="@drawable/bac_curve"
-            android:backgroundTint="@color/green"
+            android:backgroundTint="@color/gray"
             android:text="Button 2"
             android:textColor="@color/white"
             android:textSize="18sp"

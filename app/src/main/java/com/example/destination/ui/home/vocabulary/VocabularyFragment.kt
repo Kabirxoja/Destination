@@ -34,8 +34,7 @@ class VocabularyFragment : Fragment() {
         val args = arguments // arguments is a nullable Bundle
         val topicUnit = args?.getString("topicUnit")
         val topicNumber = args?.getInt("topicNumber")
-        Toast.makeText(binding.root.context, "$topicUnit   - $topicNumber", Toast.LENGTH_SHORT)
-            .show()
+        Toast.makeText(binding.root.context, "$topicUnit   - $topicNumber", Toast.LENGTH_SHORT).show()
 
 
         binding.parentRecyclerView.layoutManager = LinearLayoutManager(root.context)

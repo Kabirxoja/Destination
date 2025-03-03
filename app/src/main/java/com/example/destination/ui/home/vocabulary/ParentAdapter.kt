@@ -1,10 +1,12 @@
 package com.example.destination.ui.home.vocabulary
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -40,16 +42,17 @@ class ParentAdapter : ListAdapter<ParentItem, ParentAdapter.ParentViewHolder>(Di
         private val enTextView: TextView = itemView.findViewById(R.id.en_text_view)
         private val uzTextView: TextView = itemView.findViewById(R.id.uz_text_view)
         private val definitionTextView: TextView = itemView.findViewById(R.id.definition_text_view)
-        private val expandableButton: ImageView =
-            itemView.findViewById(R.id.expandable_button_parent)
-        private val childRecyclerView: RecyclerView =
-            itemView.findViewById(R.id.child_recycler_view)
+        private val audioSpeaker: ImageView = itemView.findViewById(R.id.audio_speaker)
+
+//        private val expandableButton: ImageView = itemView.findViewById(R.id.expandable_button_parent)
+
+        private val childRecyclerView: RecyclerView = itemView.findViewById(R.id.child_recycler_view)
 
         fun bind(parentItem: ParentItem) {
             uzTextView.text = parentItem.uzWord
             enTextView.text = parentItem.enWord
             definitionTextView.text = parentItem.definition
-            expandableButton.setImageResource(if (parentItem.isExpanded) R.drawable.ic_cursor_up else R.drawable.ic_cursor_down) // Replace with your icons
+//            expandableButton.setImageResource(if (parentItem.isExpanded) R.drawable.ic_cursor_up else R.drawable.ic_cursor_down) // Replace with your icons
             childRecyclerView.visibility = if (parentItem.isExpanded) View.VISIBLE else View.GONE
 
             if (parentItem.isExpanded) {
@@ -62,7 +65,7 @@ class ParentAdapter : ListAdapter<ParentItem, ParentAdapter.ParentViewHolder>(Di
         }
 
         init {
-            expandableButton.setOnClickListener {
+            itemView.rootView.setOnClickListener {
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
                     (itemView.context as? AppCompatActivity)?.let { activity ->
@@ -73,6 +76,10 @@ class ParentAdapter : ListAdapter<ParentItem, ParentAdapter.ParentViewHolder>(Di
                         adapter.notifyItemChanged(position)
                     }
                 }
+            }
+
+            audioSpeaker.setOnClickListener{
+                Log.d("sadsad","audioSpeaker")
             }
         }
     }

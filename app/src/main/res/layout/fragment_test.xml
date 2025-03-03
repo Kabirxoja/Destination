@@ -1,73 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_gray"
-    tools:context=".ui.test.TestFragment"
+    tools:context=".ui.selection.test.TestFragment">
 
-    >
-
-    <TextView
-        android:id="@+id/text_banner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Vocabulary"
-        android:textAlignment="center"
-        android:textColor="@color/gray"
-        android:textSize="32sp"
-        android:textStyle="bold"
-
-
-        />
-
-    <ImageButton
-        android:id="@+id/adjustment_button"
-        android:layout_width="46dp"
-        android:layout_height="46dp"
-        android:layout_below="@id/text_banner"
-        android:layout_alignBottom="@id/start_button"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
+    <LinearLayout
+        android:id="@+id/btn_back"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_margin="16dp"
         android:background="@drawable/bac_curve"
         android:backgroundTint="@color/white"
-        android:src="@drawable/settings_inactive"
+        android:paddingVertical="8dp"
+        android:paddingStart="6dp"
+        android:paddingEnd="8dp"
+
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_back" />
+
+
+    </LinearLayout>
+
+
+    <!-- Horizontal Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_below="@id/btn_back"
+        android:layout_marginHorizontal="16dp"
+        android:max="100"
+        android:progress="30"
+        android:progressDrawable="@drawable/progress_bar_style"
 
 
         />
 
-    <Button
-        android:id="@+id/start_button"
+    <TextView
+        android:id="@+id/txt_text_1"
         android:layout_width="match_parent"
-        android:layout_height="46dp"
-        android:layout_below="@id/text_banner"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_toStartOf="@id/adjustment_button"
-        android:background="@drawable/bac_curve"
-        android:backgroundTint="@color/blue"
-        android:text="Start"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-
-
-        />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/indicator_rv"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/adjustment_button"
-        android:layout_centerHorizontal="true"
+        android:layout_height="72dp"
+        android:layout_below="@id/progressBar"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="16dp"
-        tools:listitem="@layout/recycle_indicator_item"
+        android:background="@drawable/bac_curve"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:text="Blow up"
+        android:textColor="@color/black"
+        android:textSize="28sp"
 
 
         />
+
+    <TextView
+        android:id="@+id/txt_text_2"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_below="@id/txt_text_1"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bac_curve"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:text="portlatish"
+        android:textColor="@color/green"
+        android:textSize="28sp"
+
+
+
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="12dp"
+
+
+        >
+
+        <EditText
+            android:id="@+id/put_into"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:hint="enter the words..."
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:drawablePadding="8dp"
+            android:background="@drawable/bac_curve"
+            android:backgroundTint="@color/white"
+            android:textCursorDrawable="@drawable/text_cursor_drawable"
+            android:textSelectHandleLeft="@drawable/text_select_handle_drawable_left"
+            android:textSelectHandleRight="@drawable/text_select_handle_drawable_right"
+            android:textSelectHandle="@drawable/text_select_handle_drawable"
+            android:paddingHorizontal="12dp"
+            android:inputType="text"
+            android:imeOptions="actionDone"
+            />
+
+
+        <TextView
+            android:id="@+id/doNotKnowTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Do not know"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:visibility="visible"
+            android:layout_alignEnd="@id/put_into"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="6dp"
+            android:padding="6dp"
+
+            />
+
+
+    </RelativeLayout>
 
 
 </RelativeLayout>

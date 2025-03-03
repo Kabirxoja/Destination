@@ -3,7 +3,7 @@
 
 
     <item
-        android:id="@+id/navigation_test"
+        android:id="@+id/navigation_test_choice"
         android:icon="@drawable/ic_changing_test"
         android:title="" />
 

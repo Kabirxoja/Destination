@@ -1,8 +1,6 @@
-package com.example.destination.ui.test
+package com.example.destination.ui.selection.choice
 
 import android.content.res.ColorStateList
-import android.graphics.Color
-import android.provider.CalendarContract.Colors
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
@@ -13,19 +11,19 @@ import com.example.destination.databinding.RecycleIndicatorItemBinding
 
 class IndicatorAdapter : RecyclerView.Adapter<IndicatorAdapter.MyViewHolder>() {
 
-    private var list: MutableList<TestItem> = ArrayList()
+    private var list: MutableList<TestChoiceItem> = ArrayList()
     private var listener: OnClickItemListener? = null
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): IndicatorAdapter.MyViewHolder {
+    ): MyViewHolder {
         val binding =
             RecycleIndicatorItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MyViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: IndicatorAdapter.MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.onBind(list[position])
     }
 
@@ -36,7 +34,7 @@ class IndicatorAdapter : RecyclerView.Adapter<IndicatorAdapter.MyViewHolder>() {
     inner class MyViewHolder(private val binding: RecycleIndicatorItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun onBind(item: TestItem) {
+        fun onBind(item: TestChoiceItem) {
             binding.unitText.text = "Unit"
             binding.numberText.text = item.unitNumber.toString()
 
@@ -88,10 +86,10 @@ class IndicatorAdapter : RecyclerView.Adapter<IndicatorAdapter.MyViewHolder>() {
     }
 
     interface OnClickItemListener {
-        fun onClickItem(item: TestItem)
+        fun onClickItem(item: TestChoiceItem)
     }
 
-    fun updateList(newList: List<TestItem>) {
+    fun updateList(newList: List<TestChoiceItem>) {
         list.clear()
         list.addAll(newList)
         notifyDataSetChanged()

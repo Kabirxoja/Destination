@@ -29,7 +29,7 @@ class NotesFragment : Fragment(), TextToSpeech.OnInitListener {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notificationsViewModel = ViewModelProvider(this).get(NotesViewModel::class.java)
+        val notificationsViewModel = ViewModelProvider(this)[NotesViewModel::class.java]
 
         _binding = FragmentNotesBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -43,17 +43,11 @@ class NotesFragment : Fragment(), TextToSpeech.OnInitListener {
         btnSpeakMale.setOnClickListener { speakWord("male") }
         btnSpeakFemale.setOnClickListener { speakWord("female") }
 
-
         return root
     }
 
-    override fun onInit(status: Int) {
-        if (status == TextToSpeech.SUCCESS) {
-            tts.language = Locale.US  // Set language (adjust as needed)
-        } else {
-            Log.e("TTS", "Initialization failed")
-        }
-    }
+
+
 
     private fun speakWord(gender: String) {
         val word = editText.text.toString().trim()
@@ -97,6 +91,14 @@ class NotesFragment : Fragment(), TextToSpeech.OnInitListener {
         super.onDestroy()
         tts.stop()
         tts.shutdown()
+    }
+
+    override fun onInit(status: Int) {
+        if (status == TextToSpeech.SUCCESS) {
+            tts.language = Locale.US  // Set language (adjust as needed)
+        } else {
+            Log.e("TTS", "Initialization failed")
+        }
     }
 
 

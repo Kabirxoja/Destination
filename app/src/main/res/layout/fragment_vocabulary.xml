@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/recycle_parent_item_layout"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
 
 
         />

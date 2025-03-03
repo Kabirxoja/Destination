@@ -60,17 +60,7 @@
             />
 
 
-        <ImageButton
-            android:id="@+id/flip_cardview"
-            android:layout_width="32dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right|bottom"
-            android:layout_margin="12dp"
-            android:background="@android:color/transparent"
-            android:padding="6dp"
-            android:src="@drawable/ic_flip"
 
-            />
 
 
     </androidx.cardview.widget.CardView>

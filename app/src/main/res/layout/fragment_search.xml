@@ -16,7 +16,7 @@
         android:layout_marginTop="12dp"
         android:textAlignment="center"
         android:textSize="32sp"
-        android:text="Vocabulary"
+        android:text="Search"
         android:textColor="@color/gray"
         android:textStyle="bold"
 

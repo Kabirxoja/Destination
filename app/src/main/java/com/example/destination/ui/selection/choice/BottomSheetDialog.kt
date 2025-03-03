@@ -1,7 +1,5 @@
-package com.example.destination.ui.test
+package com.example.destination.ui.selection.choice
 
-import android.R
-import android.annotation.SuppressLint
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -14,9 +12,9 @@ import android.widget.Button
 import android.widget.ImageView
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
+import com.example.destination.R
 import com.example.destination.databinding.FragmentBottomSheetDialogBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-
 
 open class BottomSheetDialog : BottomSheetDialogFragment() {
 
@@ -27,13 +25,11 @@ open class BottomSheetDialog : BottomSheetDialogFragment() {
 
     private val rowSelections = mutableMapOf<Int, Boolean>() // Store row selections
     private val buttonSelections = mutableMapOf<Int, Boolean>() // Store button selections
-    private var selectedButton: Int? = null // Track selected button
-
+    private var selectedButton: Int = 0 // Track selected button
 
     fun setListener(listener: BottomSheetListener) {
         this.listener = listener
     }
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,74 +37,75 @@ open class BottomSheetDialog : BottomSheetDialogFragment() {
     ): View? {
         _binding = FragmentBottomSheetDialogBinding.inflate(layoutInflater, container, false)
 
+        // Initialize rowSelections with default values for all rows
+        for (rowNumber in 1..5) {
+            rowSelections[rowNumber] = true // Default value is false
+        }
+
+        // Set up row click listeners
         binding.row1.setOnClickListener {
-            val isSelected = !rowSelections.getOrDefault(1, false)
-            rowSelections[1] = isSelected
-            updateRowImage(1, isSelected)
+            toggleRowSelection(1)
         }
         binding.row2.setOnClickListener {
-            val isSelected = !rowSelections.getOrDefault(2, false)
-            rowSelections[2] = isSelected
-            updateRowImage(2, isSelected)
+            toggleRowSelection(2)
         }
         binding.row3.setOnClickListener {
-            val isSelected = !rowSelections.getOrDefault(3, false)
-            rowSelections[3] = isSelected
-            updateRowImage(3, isSelected)
+            toggleRowSelection(3)
         }
         binding.row4.setOnClickListener {
-            val isSelected = !rowSelections.getOrDefault(4, false)
-            rowSelections[4] = isSelected
-            updateRowImage(4, isSelected)
-
+            toggleRowSelection(4)
         }
         binding.row5.setOnClickListener {
-            val isSelected = !rowSelections.getOrDefault(5, false)
-            rowSelections[5] = isSelected
-            updateRowImage(5, isSelected)
-
+            toggleRowSelection(5)
         }
-
 
         binding.button1.setOnClickListener {
-            val isClicked = !buttonSelections.getOrDefault(1, false)
-            buttonSelections[1] = isClicked
-            changeButtonTintColor(binding.button1, R.color.holo_green_dark)
-            changeButtonTintColor(binding.button2, R.color.darker_gray)
-
+            selectedButton = 1
+            toggleButtonSelection(selectedButton, binding.button1, binding.button2)
         }
         binding.button2.setOnClickListener {
-            val isClicked = !buttonSelections.getOrDefault(2, false)
-            buttonSelections[2] = isClicked
-            changeButtonTintColor(binding.button1, R.color.darker_gray)
-            changeButtonTintColor(binding.button2, R.color.holo_green_dark)
+            selectedButton = 2
+            toggleButtonSelection(selectedButton, binding.button2, binding.button1)
         }
 
-
+        // Set up bottom button click listener
         binding.bottomSingleButton.setOnClickListener {
-            listener?.onOkButtonClicked(rowSelections, buttonSelections)
-            Log.d("sdfsf", rowSelections.toString())
-            dismiss()
+            if (selectedButton!=0){
+                listener?.onOkButtonClicked(rowSelections, buttonSelections)
+                Log.d("RowSelections", rowSelections.toString())
+                dismiss()
+            }
         }
-
 
         // Initialize images based on initial selections
         rowSelections.forEach { (rowNumber, isSelected) ->
             updateRowImage(rowNumber, isSelected)
         }
 
-
-
         return binding.root
+    }
 
+    private fun toggleRowSelection(rowNumber: Int) {
+        val isSelected = !rowSelections.getOrDefault(rowNumber, true)
+        rowSelections[rowNumber] = isSelected
+        updateRowImage(rowNumber, isSelected)
+    }
+
+    private fun toggleButtonSelection(
+        buttonNumber: Int,
+        selectedButton: Button,
+        otherButton: Button
+    ) {
+        val isClicked = !buttonSelections.getOrDefault(buttonNumber, true)
+        buttonSelections[buttonNumber] = isClicked
+        changeButtonTintColor(selectedButton, R.color.green)
+        changeButtonTintColor(otherButton, R.color.gray)
     }
 
     private fun changeButtonTintColor(button: Button, colorRes: Int) {
         val color = ContextCompat.getColor(button.context, colorRes)
         val colorStateList = ColorStateList.valueOf(color)
         ViewCompat.setBackgroundTintList(button, colorStateList)
-        //Or, if you don't need backwards compatibility:
-        //button.backgroundTintList = colorStateList
     }
 
     private fun updateRowImage(rowNumber: Int, isSelected: Boolean) {
@@ -118,30 +115,20 @@ open class BottomSheetDialog : BottomSheetDialogFragment() {
             3 -> binding.icon3
             4 -> binding.icon4
             5 -> binding.icon5
-
             else -> null
         }
 
-        binding.icon1.setImageResource(R.drawable.ic_dialog_alert)
-
         imageView?.setImageDrawable(
             if (isSelected)
-                ContextCompat.getDrawable(requireContext(), R.drawable.checkbox_on_background)
+                ContextCompat.getDrawable(requireContext(), R.drawable.ic_checkbox_true)
             else
-                ContextCompat.getDrawable(requireContext(), R.drawable.checkbox_off_background)
+                ContextCompat.getDrawable(requireContext(), R.drawable.ic_checkbox_false)
         )
-
-
     }
-
 
     interface BottomSheetListener {
-        fun onOkButtonClicked(
-            rowSelections: Map<Int, Boolean>,
-            buttonSelections: Map<Int, Boolean>
-        )
+        fun onOkButtonClicked(rowSelections: Map<Int, Boolean>, buttonSelections: Map<Int, Boolean>)
     }
-
 
     override fun onStart() {
         super.onStart()

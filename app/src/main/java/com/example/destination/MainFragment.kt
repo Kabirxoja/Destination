@@ -1,6 +1,8 @@
 package com.example.destination
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +12,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.destination.databinding.FragmentMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 
 
 class MainFragment : Fragment() {
@@ -41,7 +45,7 @@ class MainFragment : Fragment() {
                 R.id.navigation_settings,
                 R.id.navigation_notes,
                 R.id.navigation_search,
-                R.id.navigation_test -> navView.visibility = View.VISIBLE
+                R.id.navigation_test_choice -> navView.visibility = View.VISIBLE
                 else -> {
                     navView.visibility = View.GONE
                 }
@@ -49,7 +53,36 @@ class MainFragment : Fragment() {
         }
 
 
+
+
+        val vocabularyList = parseJson(mainFragmentBinding.root.context)
+        vocabularyList?.forEach {
+            Log.d("Vocabulary", "theme: ${it.theme} - unit: ${it.unit}  = ${it.english_word}")
+        }
+
+
         return mainFragmentBinding.root
+    }
+
+    private fun getJsonDataFromAssets(context: Context, fileName: String): String? {
+        return try {
+            val inputStream = context.assets.open(fileName)
+            val size = inputStream.available()
+            val buffer = ByteArray(size)
+            inputStream.read(buffer)
+            inputStream.close()
+            String(buffer, Charsets.UTF_8)
+        } catch (ex: Exception) {
+            ex.printStackTrace()
+            null
+        }
+    }
+
+    private fun parseJson(context: Context): List<Vocabulary>? {
+        val jsonString = getJsonDataFromAssets(context, "converted.json")
+        val gson = Gson()
+        val listType = object : TypeToken<List<Vocabulary>>() {}.type
+        return gson.fromJson(jsonString, listType)
     }
 
 

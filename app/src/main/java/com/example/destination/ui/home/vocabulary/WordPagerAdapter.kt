@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.viewpager.widget.PagerAdapter
 import com.example.destination.R
@@ -19,7 +20,6 @@ class WordPagerAdapter(private val words: List<ParentItem>) : PagerAdapter() {
         val frontText: TextView = view.findViewById(R.id.your_front_view_id)
         val backText: TextView = view.findViewById(R.id.your_back_view_id)
         val addToNotes: ImageButton = view.findViewById(R.id.add_to_notes)
-        val flipCardView: ImageButton = view.findViewById(R.id.flip_cardview)
         val cardView: CardView = view.findViewById(R.id.your_card_view_id)
 
         var isFront = true
@@ -29,9 +29,14 @@ class WordPagerAdapter(private val words: List<ParentItem>) : PagerAdapter() {
         backText.text = words[position].uzWord
 
         // Set up flip animation
-        flipCardView.setOnClickListener {
+        cardView.setOnClickListener {
             isFront = flipCard(cardView, isFront)
         }
+
+        addToNotes.setOnClickListener{
+            Toast.makeText(view.context, "note is added", Toast.LENGTH_SHORT).show()
+        }
+
 
         container.addView(view)
         return view
@@ -64,19 +69,16 @@ class WordPagerAdapter(private val words: List<ParentItem>) : PagerAdapter() {
         val frontText: TextView = cardView.findViewById(R.id.your_front_view_id)
         val backText: TextView = cardView.findViewById(R.id.your_back_view_id)
         val addToNotes: ImageButton = cardView.findViewById(R.id.add_to_notes)
-        val flipCardView: ImageButton = cardView.findViewById(R.id.flip_cardview)
 
         frontText.visibility = View.GONE
         addToNotes.visibility = View.GONE
         backText.visibility = View.GONE
-        flipCardView.visibility = View.GONE
 
         frontText.animate().alpha(if (isFront) 0f else 1f).setDuration(600).start()
         backText.animate().alpha(if (isFront) 1f else 0f).setDuration(600).start()
 
         cardView.postDelayed({
             addToNotes.visibility = View.VISIBLE
-            flipCardView.visibility = View.VISIBLE
 
             if (isFront) {
                 backText.visibility = View.VISIBLE

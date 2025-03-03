@@ -1,19 +1,18 @@
-package com.example.destination.ui.test
+package com.example.destination.ui.selection.choice
 
-import android.graphics.pdf.models.ListItem
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.destination.ui.home.vocabulary.ChildItem
-import com.example.destination.ui.home.vocabulary.ParentItem
 
-class TestViewModel : ViewModel() {
+class TestChoiceViewModel : ViewModel() {
 
-    private val _numberList = MutableLiveData<List<TestItem>>()
-    val numberList: LiveData<List<TestItem>> = _numberList
+    private val _numberList = MutableLiveData<List<TestChoiceItem>>()
+    val numberList: LiveData<List<TestChoiceItem>> = _numberList
 
     private val _bottomSheetData = MutableLiveData<Pair<Map<Int, Boolean>, Map<Int, Boolean>>>()
     val bottomSheetData: LiveData<Pair<Map<Int, Boolean>, Map<Int, Boolean>>> = _bottomSheetData
+
+
 
     fun setBottomSheetData(
         rowSelections: Map<Int, Boolean>,
@@ -24,13 +23,14 @@ class TestViewModel : ViewModel() {
 
     init {
         val list = listOf(
-            TestItem(7, false),
-            TestItem(12, false),
-            TestItem(45, false),
-            TestItem(67, false),
-            TestItem(78, false)
+            TestChoiceItem(7, false),
+            TestChoiceItem(12, false),
+            TestChoiceItem(45, false),
+            TestChoiceItem(67, false),
+            TestChoiceItem(78, false)
         )
         _numberList.value = list
+
     }
 
 

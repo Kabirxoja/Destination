@@ -22,7 +22,6 @@
             android:layout_marginTop="6dp"
             android:layout_marginBottom="6dp"
             android:layout_marginStart="12dp"
-            android:layout_toStartOf="@+id/expandable_button_parent"
             android:layout_alignParentStart="true"
 
             >
@@ -93,17 +92,6 @@
 
     </RelativeLayout>
 
-        <ImageView
-            android:id="@+id/expandable_button_parent"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_alignParentEnd="true"
-            android:padding="6dp"
-            android:src="@drawable/ic_cursor_down"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="12dp"
-
-            />
 
     </RelativeLayout>
 
