@@ -8,4 +8,7 @@
     <string name="nav_name_home">HOME</string>
     <string name="nav_name_notes">NOTES</string>
     <string name="nav_name_settings">SETTINGS</string>
+
+    <string name="tab">\u0009\u0009\u0009\u0009</string>
+
 </resources>

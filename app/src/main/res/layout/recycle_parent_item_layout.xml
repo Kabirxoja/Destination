@@ -1,106 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginBottom="12dp"
     android:background="@drawable/bac_curve"
     android:backgroundTint="@color/white"
-    android:layout_marginHorizontal="12dp"
-    android:layout_marginBottom="12dp"
+    android:padding="12dp"
 
     >
 
-    <RelativeLayout
-        android:id="@+id/parent_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/en_icon"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_alignTop="@id/en_text_view"
+        android:layout_alignBottom="@id/en_text_view"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_uk" />
 
-        <RelativeLayout
-            android:id="@+id/parent_view2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="6dp"
-            android:layout_marginStart="12dp"
-            android:layout_alignParentStart="true"
-
-            >
-
-            <ImageView
-                android:id="@+id/audio_speaker"
-                android:layout_width="22dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_audio_speaker"
-                android:layout_alignTop="@+id/en_text_view"
-                android:layout_alignBottom="@+id/en_text_view"
-                />
-
-        <TextView
-            android:id="@+id/en_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="abroad"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:layout_marginStart="2dp"
-            android:textStyle="bold"
-            android:layout_toEndOf="@+id/audio_speaker"
-            />
-
-        <TextView
-            android:id="@+id/line"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/en_text_view"
-            android:text="-"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/uz_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/line"
-            android:text="xorij"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/definition"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/en_text_view"
-            android:text="definition: "
-            android:textColor="@color/black"
-            android:textSize="12dp"
-            android:textStyle="bold"
-            />
-
-        <TextView
-            android:id="@+id/definition_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/en_text_view"
-            android:layout_toEndOf="@id/definition"
-            android:text="A place for someone to  in"
-            android:textColor="@color/black"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-
-
-    </RelativeLayout>
-
-
-    </RelativeLayout>
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/child_recycler_view"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/en_text_view"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/parent_view"
-        tools:listitem="@layout/recycle_child_item_layout" />
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/en_icon"
+        android:text="abroad (noun)"
+        android:textColor="#222222"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/audio_speaker"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:padding="4dp"
+        android:src="@drawable/ic_audio_speaker"
+
+        />
+
+    <ImageView
+        android:id="@+id/uz_icon"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_below="@id/en_icon"
+        android:layout_alignTop="@id/uz_text_view"
+        android:layout_alignBottom="@id/uz_text_view"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ic_uz" />
+
+    <TextView
+        android:id="@+id/uz_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/en_text_view"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/uz_icon"
+        android:text="xorij"
+        android:textColor="#222222"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/add_note"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_centerVertical="true"
+        android:layout_marginHorizontal="18dp"
+        android:layout_toStartOf="@+id/audio_speaker"
+        android:padding="4dp"
+        android:src="@drawable/ic_changing_notes"
+
+
+        />
 
 </RelativeLayout>

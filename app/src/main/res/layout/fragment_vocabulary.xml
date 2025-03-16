@@ -1,20 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".ui.home.vocabulary.VocabularyFragment">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp">
+
+        <RelativeLayout
+            android:id="@+id/btn_back"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/bac_curve"
+            android:backgroundTint="@color/white"
+            android:paddingVertical="8dp"
+            android:paddingStart="6dp"
+            android:paddingEnd="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_back" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_change"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bac_curve"
+            android:backgroundTint="@color/white"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/btn_change_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_card_rectangle" />
+        </RelativeLayout>
+    </RelativeLayout>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="362dp"
+        android:layout_centerVertical="true"
+        android:clipToPadding="false"
         android:paddingLeft="@dimen/card_padding"
         android:paddingRight="@dimen/card_padding"
-        android:clipToPadding="false"
-
+        android:visibility="gone"
 
         />
 
@@ -22,10 +62,8 @@
         android:id="@+id/parent_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/recycle_parent_item_layout"
+        android:layout_below="@id/top_layout"
         android:layout_marginTop="12dp"
+        tools:listitem="@layout/recycle_parent_item_layout" />
 
-
-        />
-
-</LinearLayout>
+</RelativeLayout>

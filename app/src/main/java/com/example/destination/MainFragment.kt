@@ -11,6 +11,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.destination.databinding.FragmentMainBinding
+import com.example.destination.ui.home.Vocabulary
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -55,9 +56,10 @@ class MainFragment : Fragment() {
 
 
 
+        //Read Json file
         val vocabularyList = parseJson(mainFragmentBinding.root.context)
         vocabularyList?.forEach {
-            Log.d("Vocabulary", "theme: ${it.theme} - unit: ${it.unit}  = ${it.english_word}")
+            Log.d("Vocabulary", "theme: ${it.type} - unit: ${it.unit}  = ${it.english_word}")
         }
 
 

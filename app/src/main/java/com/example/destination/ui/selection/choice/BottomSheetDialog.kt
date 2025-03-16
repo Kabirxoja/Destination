@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import com.example.destination.R
@@ -93,16 +94,16 @@ open class BottomSheetDialog : BottomSheetDialogFragment() {
 
     private fun toggleButtonSelection(
         buttonNumber: Int,
-        selectedButton: Button,
-        otherButton: Button
+        selectedButton: LinearLayout,
+        otherButton: LinearLayout
     ) {
         val isClicked = !buttonSelections.getOrDefault(buttonNumber, true)
         buttonSelections[buttonNumber] = isClicked
         changeButtonTintColor(selectedButton, R.color.green)
-        changeButtonTintColor(otherButton, R.color.gray)
+        changeButtonTintColor(otherButton, R.color.light_gray)
     }
 
-    private fun changeButtonTintColor(button: Button, colorRes: Int) {
+    private fun changeButtonTintColor(button: LinearLayout, colorRes: Int) {
         val color = ContextCompat.getColor(button.context, colorRes)
         val colorStateList = ColorStateList.valueOf(color)
         ViewCompat.setBackgroundTintList(button, colorStateList)

@@ -17,6 +17,8 @@ gsonVersion = "2.8.8"
 toolsCore = "1.0.0-alpha12"
 playServicesBasement = "18.5.0"
 
+roomVersion = "2.6.1" # Use the latest stable version
+ksp = "1.9.0-1.0.13" # Use the latest KSP version
 
 [libraries]
 
@@ -37,11 +39,16 @@ androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation
 androidx-tools-core = { group = "androidx.privacysandbox.tools", name = "tools-core", version.ref = "toolsCore" }
 play-services-basement = { group = "com.google.android.gms", name = "play-services-basement", version.ref = "playServicesBasement" }
 
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomVersion" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "roomVersion" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomVersion" }
 
+ksp-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "ksp" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 safeargs-navigation = { id = "androidx.navigation.safeargs", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 

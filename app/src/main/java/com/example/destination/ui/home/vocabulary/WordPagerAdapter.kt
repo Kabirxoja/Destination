@@ -2,10 +2,12 @@ package com.example.destination.ui.home.vocabulary
 
 import android.animation.AnimatorInflater
 import android.animation.AnimatorSet
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
@@ -15,18 +17,30 @@ import com.example.destination.ui.notes.Word
 
 class WordPagerAdapter(private val words: List<ParentItem>) : PagerAdapter() {
 
+    @SuppressLint("MissingInflatedId")
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val view = LayoutInflater.from(container.context).inflate(R.layout.card_item, container, false)
-        val frontText: TextView = view.findViewById(R.id.your_front_view_id)
-        val backText: TextView = view.findViewById(R.id.your_back_view_id)
-        val addToNotes: ImageButton = view.findViewById(R.id.add_to_notes)
-        val cardView: CardView = view.findViewById(R.id.your_card_view_id)
+
+        val frontText: TextView = view.findViewById(R.id.text_front_title)
+        val frontText2: TextView = view.findViewById(R.id.text_front_subtext)
+        val backLayout: LinearLayout = view.findViewById(R.id.layout_back_content)
+        val addToNotes: ImageButton = view.findViewById(R.id.btn_add_to_notes)
+        val audioIcon: ImageButton = view.findViewById(R.id.btn_audio)
+        val cardView: CardView = view.findViewById(R.id.card_container)
+
+
+        val textUzWord: TextView = view.findViewById(R.id.text_uz_word)
+        val textEnWord: TextView = view.findViewById(R.id.text_en_word)
+        val textDefinition: TextView = view.findViewById(R.id.text_definition)
 
         var isFront = true
 
         // Bind data to views
         frontText.text = words[position].enWord
-        backText.text = words[position].uzWord
+        frontText2.text = words[position].uzWord
+        textUzWord.text = words[position].uzExample
+        textEnWord.text = words[position].enExample
+        textDefinition.text = words[position].definition
 
         // Set up flip animation
         cardView.setOnClickListener {
@@ -58,32 +72,41 @@ class WordPagerAdapter(private val words: List<ParentItem>) : PagerAdapter() {
         val scale = cardView.context.resources.displayMetrics.density
         cardView.cameraDistance = 12000 * scale  // Depth effect
 
-        val flipOut =
-            AnimatorInflater.loadAnimator(cardView.context, R.animator.flip_out) as AnimatorSet
-        val flipIn =
-            AnimatorInflater.loadAnimator(cardView.context, R.animator.flip_in) as AnimatorSet
+        val flipOut = AnimatorInflater.loadAnimator(cardView.context, R.animator.flip_out) as AnimatorSet
+        val flipIn = AnimatorInflater.loadAnimator(cardView.context, R.animator.flip_in) as AnimatorSet
 
         flipOut.setTarget(cardView)
         flipIn.setTarget(cardView)
 
-        val frontText: TextView = cardView.findViewById(R.id.your_front_view_id)
-        val backText: TextView = cardView.findViewById(R.id.your_back_view_id)
-        val addToNotes: ImageButton = cardView.findViewById(R.id.add_to_notes)
+        val frontText: TextView = cardView.findViewById(R.id.text_front_title)
+        val frontText2: TextView = cardView.findViewById(R.id.text_front_subtext)
+        val backLayout: LinearLayout = cardView.findViewById(R.id.layout_back_content)
+        val addToNotes: ImageButton = cardView.findViewById(R.id.btn_add_to_notes)
+        val audioIcon: ImageButton = cardView.findViewById(R.id.btn_audio)
+
 
         frontText.visibility = View.GONE
+        frontText2.visibility = View.GONE
         addToNotes.visibility = View.GONE
-        backText.visibility = View.GONE
+        audioIcon.visibility = View.GONE
+        backLayout.visibility = View.GONE
 
         frontText.animate().alpha(if (isFront) 0f else 1f).setDuration(600).start()
-        backText.animate().alpha(if (isFront) 1f else 0f).setDuration(600).start()
+        frontText2.animate().alpha(if (isFront) 0f else 1f).setDuration(600).start()
+        audioIcon.animate().alpha(if (isFront) 0f else 1f).setDuration(400).start()
+        addToNotes.animate().alpha(if (isFront) 0f else 1f).setDuration(400).start()
+
+        backLayout.animate().alpha(if (isFront) 1f else 0f).setDuration(600).start()
 
         cardView.postDelayed({
             addToNotes.visibility = View.VISIBLE
+            audioIcon.visibility = View.VISIBLE
 
             if (isFront) {
-                backText.visibility = View.VISIBLE
+                backLayout.visibility = View.VISIBLE
             } else {
                 frontText.visibility = View.VISIBLE
+                frontText2.visibility = View.VISIBLE
             }
         }, 300)
 

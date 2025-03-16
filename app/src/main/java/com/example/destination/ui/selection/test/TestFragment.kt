@@ -8,6 +8,7 @@ import android.text.TextWatcher
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
@@ -38,12 +39,27 @@ class TestFragment : Fragment() {
         Log.d("ooooo",rowSelections.toString()+""+buttonSelections.toString())
 
         setupCancelIconAndDoNotKnowText()
-
+        setupCancelClickListener()
 
         binding.btnBack.setOnClickListener {
             findNavController().popBackStack()
         }
 
+
+
+        binding.putInto.setOnEditorActionListener { v, actionId, event ->
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                val word = binding.putInto.text.toString().trim()
+
+                if (word.isNotEmpty()) {
+                    processWord(word)  // Process the word
+                    binding.putInto.setText("")  // Clear the EditText for new input
+                }
+                true
+            } else {
+                false
+            }
+        }
         return binding.root
     }
 
@@ -80,20 +96,25 @@ class TestFragment : Fragment() {
             override fun afterTextChanged(s: Editable?) {}
         })
 
-        binding.putInto.setOnEditorActionListener { v, actionId, event ->
-            if (actionId == EditorInfo.IME_ACTION_DONE) {
-                val word = binding.putInto.text.toString().trim()
 
-                if (word.isNotEmpty()) {
-                    processWord(word)  // Process the word
-                    binding.putInto.setText("")  // Clear the EditText for new input
+    }
+
+
+    @SuppressLint("ClickableViewAccessibility")
+    private fun setupCancelClickListener() {
+        binding.putInto.setOnTouchListener { view, event ->
+            if (event.action == MotionEvent.ACTION_UP) {
+                val drawables =  binding.putInto.compoundDrawablesRelative // Get the drawables
+
+                if (drawables[2] != null) { // Check if the end drawable (cancel icon) is not null
+                    if (event.rawX >=  binding.putInto.right - drawables[2].bounds.width()) {
+                        binding.putInto.text.clear()
+                        return@setOnTouchListener true
+                    }
                 }
-                true
-            } else {
-                false
             }
+            return@setOnTouchListener false
         }
-
     }
 
     private fun processWord(word: String) {

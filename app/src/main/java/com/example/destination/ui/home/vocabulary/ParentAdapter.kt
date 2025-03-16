@@ -6,13 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.destination.R
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class ParentAdapter : ListAdapter<ParentItem, ParentAdapter.ParentViewHolder>(DiffCallback()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ParentViewHolder {
@@ -41,28 +40,25 @@ class ParentAdapter : ListAdapter<ParentItem, ParentAdapter.ParentViewHolder>(Di
 
         private val enTextView: TextView = itemView.findViewById(R.id.en_text_view)
         private val uzTextView: TextView = itemView.findViewById(R.id.uz_text_view)
-        private val definitionTextView: TextView = itemView.findViewById(R.id.definition_text_view)
         private val audioSpeaker: ImageView = itemView.findViewById(R.id.audio_speaker)
-
-//        private val expandableButton: ImageView = itemView.findViewById(R.id.expandable_button_parent)
-
-        private val childRecyclerView: RecyclerView = itemView.findViewById(R.id.child_recycler_view)
 
         fun bind(parentItem: ParentItem) {
             uzTextView.text = parentItem.uzWord
             enTextView.text = parentItem.enWord
-            definitionTextView.text = parentItem.definition
-//            expandableButton.setImageResource(if (parentItem.isExpanded) R.drawable.ic_cursor_up else R.drawable.ic_cursor_down) // Replace with your icons
-            childRecyclerView.visibility = if (parentItem.isExpanded) View.VISIBLE else View.GONE
-
-            if (parentItem.isExpanded) {
-                val childAdapter = ChildAdapter()
-                childRecyclerView.adapter = childAdapter
-                childAdapter.submitList(parentItem.children) // Or use a separate list if needed.
-                childRecyclerView.layoutManager =
-                    LinearLayoutManager(childRecyclerView.context) // Set a LayoutManager
-            }
         }
+
+        private fun showBottomSheet(parentItem: ParentItem, itemView: View) {
+            val bottomSheetDialog = BottomSheetDialog(itemView.context)
+            val bottomSheetView = LayoutInflater.from(itemView.context).inflate(R.layout.bottom_sheet_vocab, null)
+
+            bottomSheetView.findViewById<TextView>(R.id.en_word_bottom_sheet).text = parentItem.enExample
+            bottomSheetView.findViewById<TextView>(R.id.uz_word_bottom_sheet).text = parentItem.uzExample
+            bottomSheetView.findViewById<TextView>(R.id.defination_bottom_sheet).text =parentItem.definition
+
+            bottomSheetDialog.setContentView(bottomSheetView)
+            bottomSheetDialog.show()
+        }
+
 
         init {
             itemView.rootView.setOnClickListener {
@@ -72,9 +68,10 @@ class ParentAdapter : ListAdapter<ParentItem, ParentAdapter.ParentViewHolder>(Di
                         val adapter = (recyclerView.adapter as? ParentAdapter)
                             ?: return@setOnClickListener  // Now recyclerView is available!
                         val parentItem = adapter.getItem(position)
-                        parentItem.isExpanded = !parentItem.isExpanded
+                        showBottomSheet(parentItem, itemView)
                         adapter.notifyItemChanged(position)
                     }
+
                 }
             }
 
