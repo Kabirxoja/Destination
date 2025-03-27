@@ -92,195 +92,6 @@
     {
         "type": "topic_vocabulary",
         "unit": "3",
-        "english_word": "competition (n)",
-        "uzbek_word": "musobaqa",
-        "definition": "An organised event in which people try to win prizes by being better than other people",
-        "example_in_english": "He'd entered a competition in the local newspaper.",
-        "example_in_uzbek": "U mahalliy nashriyotdagi musobaqaga qo'shildi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "3",
-        "english_word": "concert (n)",
-        "uzbek_word": "konsert",
-        "definition": "An event at which an orchestra, band, or musician plays or sings in front of an audience",
-        "example_in_english": "Did you hear that the Rolling Stones did a concert in China?",
-        "example_in_uzbek": "Rolling Stones guruhi Xitoyda konsert berganini eshitdingizmi?"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "3",
-        "english_word": "defeat (v)",
-        "uzbek_word": "g’alaba (qozonmoq)",
-        "definition": "To win against someone",
-        "example_in_english": "France defeated Italy 3-1.",
-        "example_in_uzbek": "Fransiya Italiyani 3-1 hisobda mag'lubiyatga uchratdi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "3",
-        "english_word": "defeat (n)",
-        "uzbek_word": "mag'lubiyat",
-        "definition": "Failure to win a competition or to succeed in doing something",
-        "example_in_english": "England suffered a 2-0 defeat.",
-        "example_in_uzbek": "Angliya 2-0 hisobida mag'lub bo'ldi"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "3",
-        "english_word": "entertaining (adj)",
-        "uzbek_word": "ko’ngilochar",
-        "definition": "Enjoyable or interesting",
-        "example_in_english": "I saw a really entertaining programme on TV last night.",
-        "example_in_uzbek": "Men kecha tunda televizorda juda qiziqarli bir dastur ko'rdim."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "3",
-        "english_word": "folk music (n)",
-        "uzbek_word": "folklor musiqa",
-        "definition": "Traditional music from a particular country or region, or music played in a traditional style",
-        "example_in_english": "What I like about folk music is the sound of the guitar.",
-        "example_in_uzbek": "Milliy musiqaning menga yoqadigan jihati bu gitara sadosi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "3",
-        "english_word": "group (n)",
-        "uzbek_word": "guruh",
-        "definition": "A room or club with equipment for doing physical exercises",
-        "example_in_english": "My brother has got his own group and they play in our local area.",
-        "example_in_uzbek": "Akam o'z guruhiga ega va ular bizning mahalliy hududda ijro etishadi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "3",
-        "english_word": "gym (n)",
-        "uzbek_word": "zal (gimnaziya zali)",
-        "definition": "A room or club with equipment for doing physical exercises",
-        "example_in_english": "I'm thinking of joining a gym.",
-        "example_in_uzbek": "Men sport zaliga qo'shilish haqida o'ylayapman."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "3",
-        "english_word": "have fun (v)",
-        "uzbek_word": "xursandchilik qilmoq",
-        "definition": "Get enjoyment from an activity that is not important or serious",
-        "example_in_english": "We haven't had such fun for years.",
-        "example_in_uzbek": "Ancha yildan beri, bunchalik xursandchilik qilmagandik."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "3",
-        "english_word": "interest (v)",
-        "uzbek_word": "qiziqtirmoq",
-        "definition": "To make someone want to know about or take part in something",
-        "example_in_english": "Photography has always interested me.",
-        "example_in_uzbek": "Fotograflik meni doim qiziqtirib kelgan."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "3",
-        "english_word": "interest (n)",
-        "uzbek_word": "",
-        "definition": "An activity that you enjoy doing when you are not working",
-        "example_in_english": "Tell us about your interests and hobbies.",
-        "example_in_uzbek": "Qiziqishlaringiz va sevimli mashg'ulotlaringiz haqida bizga aytib bering."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "3",
-        "english_word": "member (n)",
-        "uzbek_word": "a’zo",
-        "definition": "Someone who belongs to a group or an organisation",
-        "example_in_english": "Are you a member of the golf club?",
-        "example_in_uzbek": "Siz golf klubi a'zosimisiz?"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "3",
-        "english_word": "opponent (n)",
-        "uzbek_word": "raqib",
-        "definition": "Someone who is competing against you",
-        "example_in_english": "His opponent received only 36 percent of the vote.",
-        "example_in_uzbek": "Uning raqibi ovozlarning bor yo'g'i 36 foizini oldi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "3",
-        "english_word": "organise (v)",
-        "uzbek_word": "tashkillashtirmoq",
-        "definition": "To prepare or arrange an activity or event",
-        "example_in_english": "Who's organising the conference?",
-        "example_in_uzbek": "Konferensiyani kim tashkillashtiryapti?"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "3",
-        "english_word": "pleasure (n)",
-        "uzbek_word": "rohat",
-        "definition": "A feeling of happiness, enjoyment, or satisfaction",
-        "example_in_english": "Rick smiled with pleasure when Michonne walked in.",
-        "example_in_uzbek": "Mishon kirib kelganida, Rik mamnuniyat bilan jilmaydi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "3",
-        "english_word": "referee (n)",
-        "uzbek_word": "hakam",
-        "definition": "Someone whose job is to make sure that players in a game obey the rules",
-        "example_in_english": "The referee blew his whistle and the game began.",
-        "example_in_uzbek": "Hakam hushtagini chaldi va o'yin boshlandi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "3",
-        "english_word": "rhythm (n)",
-        "uzbek_word": "maqom; marom",
-        "definition": "A regular pattern of sounds in music",
-        "example_in_english": "This song has got a really great rhythm.",
-        "example_in_uzbek": "Bu qo'shiq judayam ajoyib ritmga ega."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "3",
-        "english_word": "risk (v)",
-        "uzbek_word": "tavakkal (qilmoq)",
-        "definition": "To do something although you know that something bad could happen as a result",
-        "example_in_english": "He risked a lot of money on the company.",
-        "example_in_uzbek": "U kompaniya uchun katta pul tikdi"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "3",
-        "english_word": "risk (n)",
-        "uzbek_word": "tavakkal, xavf",
-        "definition": "The possibility that something unpleasant or dangerous might happen",
-        "example_in_english": "There's a serious risk of an accident on the road.",
-        "example_in_uzbek": "Ushbu mashina yo'lida jiddiy avariya bo'lish xavfi mavjud."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "3",
-        "english_word": "score (v)",
-        "uzbek_word": "ochko (ishlamoq) (gol kiritmoq)",
-        "definition": "To get a point in a game or sport",
-        "example_in_english": "No one scored in the first half.",
-        "example_in_uzbek": "O'yinning birinchi yarmida hech kim go'l urmadi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "3",
-        "english_word": "score (n)",
-        "uzbek_word": "ball, natija, hisob",
-        "definition": "The number of points that someone gains in a game or test",
-        "example_in_english": "The final score was 4-3 to United.",
-        "example_in_uzbek": "Yakuniy hisob Yunayted foydasiga 4-3 bo'ldi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "3",
         "english_word": "support (v)",
         "uzbek_word": "qo’llab quvatlamoq",
         "definition": "To like a particular sports team and always want them to win",
@@ -667,492 +478,6 @@
     },
     {
         "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "break (n)",
-        "uzbek_word": "tanaffus",
-        "definition": "A period of time when you are not working and can rest or enjoy yourself",
-        "example_in_english": "OK, let's take a fifteen-minute break.",
-        "example_in_uzbek": "Okey, keling 15 daqiqalik tanaffus qilamiz."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "cancel (v)",
-        "uzbek_word": "bekor qilmoq",
-        "definition": "To say that something that has been arranged will not now happen",
-        "example_in_english": "The 4.05 train has been cancelled.",
-        "example_in_uzbek": "4.05 dagi poyezd bekor qilindi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "catch (v)",
-        "uzbek_word": "tutmoq",
-        "definition": "To get on a train, bus, plane, or boat that is travelling somewhere",
-        "example_in_english": "I caught the next train to London.",
-        "example_in_uzbek": "Men Londonga ketayotgan keyingi poyezdga chiqdim."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "coach (n)",
-        "uzbek_word": "avtobus",
-        "definition": "A comfortable bus for long journeys",
-        "example_in_english": "Let's take the coach to Brighton this weekend.",
-        "example_in_uzbek": "Keling bu dam olish kunida Braytnga turistik avtobusda sayohat qilamiz."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "convenient (adj)",
-        "uzbek_word": "qulay",
-        "definition": "Easy for you to do, or suitable for your needs",
-        "example_in_english": "Travelling underground is fast and convenient.",
-        "example_in_uzbek": "Metro orqali borish tez va qulay."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "crash (v)",
-        "uzbek_word": "avariya (bo’lmoq)",
-        "definition": "If a vehicle crashes, or if someone crashes it, it hits something",
-        "example_in_english": "Three people were killed when their car crashed into a tree.",
-        "example_in_uzbek": "Mashinalari daraxtga urilgan paytda, 3 kishi o'ldi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "crash (n)",
-        "uzbek_word": "avariya ",
-        "definition": "An accident that happens when a vehicle hits something",
-        "example_in_english": "He was seriously injured in a car crash.",
-        "example_in_uzbek": "U avtohalokatda jiddiy jarohat oldi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "crowded (adj)",
-        "uzbek_word": "tiqilinch, gavjum",
-        "definition": "Containing a lot of people or things",
-        "example_in_english": "Was the pool crowded?",
-        "example_in_uzbek": "Basseyn tiqilinchmidi? (=Basseynda odam ko'pmidi?)"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "cruise (n)",
-        "uzbek_word": "dengiz sayohati",
-        "definition": "A journey on a ship for pleasure, often visiting a series of places",
-        "example_in_english": "I would love to go on a cruise round the Mediterranean.",
-        "example_in_uzbek": "Men O'rta Yer dengizi bo'ylab dengiz sayohatiga chiqishni istardim."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "delay (v)",
-        "uzbek_word": "kechiktirmoq",
-        "definition": "To do something later than is planned or expected",
-        "example_in_english": "They delayed the decision for as long as possible.",
-        "example_in_uzbek": "Ular qarorni iloji boricha uzoqroq vaqtga kechiktirishdi (=Bir qaror qabul qilishmadi)."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "delay (n)",
-        "uzbek_word": "kechikish",
-        "definition": "A situation in which something happens later or more slowly than you expected",
-        "example_in_english": "After a long delay, the plane finally took off.",
-        "example_in_uzbek": "Uzoq kechikishdan so'ng, samalyot nihoyat havoga ko'tarildi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "destination (n)",
-        "uzbek_word": "manzil",
-        "definition": "The place where someone or something is going",
-        "example_in_english": "After eight hours on the road, we finally reached our destination.",
-        "example_in_uzbek": "8 soat yo'lda yurgandan so'ng, biz nihoyat manzilimizga yetib bordik."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "ferry (n)",
-        "uzbek_word": "yassi kema(yuk kemasi)",
-        "definition": "A boat that makes short regular journeys between two or more places",
-        "example_in_english": "They took the ferry to Dover.",
-        "example_in_uzbek": "Ular Doverga ketadigan qayiqqa chiqishdi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "flight (n)",
-        "uzbek_word": "parvoz",
-        "definition": "A journey in a plane",
-        "example_in_english": "The flight from New York to Heathrow took about five hours.",
-        "example_in_uzbek": "Nyu Yorkdan Hizrovga bo'lgan parvoz 5 soat oldi (5 soat davom etdi)."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "foreign (adj)",
-        "uzbek_word": "xorijiy",
-        "definition": "From another country, or in another country",
-        "example_in_english": "Do you speak any foreign languages?",
-        "example_in_uzbek": "Qandaydir chet tilida gaplasha olasizmi?"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "harbor (n)",
-        "uzbek_word": "port, bandargoh",
-        "definition": "An area of water next to the land where boats can stop",
-        "example_in_english": "There were about twenty boats in the harbour.",
-        "example_in_uzbek": "Bandargohda taxminan 20 ta qayiq bor edi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "journey (n)",
-        "uzbek_word": "sayohat*",
-        "definition": "An occasion when you travel from one place to another, especially over a long distance",
-        "example_in_english": "We had a long journey ahead of us.",
-        "example_in_uzbek": "Oldinda bizni uzoq sayohat kutib turardi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "luggage (n)",
-        "uzbek_word": "yuk",
-        "definition": "Bags and suitcases that you take on a journey",
-        "example_in_english": "We have to get our luggage when we get off the plane.",
-        "example_in_uzbek": "Samalyotdan tushganimizda yuklarimizni olishimiz kerak."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "nearby (adj)",
-        "uzbek_word": "yaqinida",
-        "definition": "A nearby place is not far away",
-        "example_in_english": "Let's go to a nearby restaurant, shall we?",
-        "example_in_uzbek": "Yaqin atrofdagi restoranga boramizmi?"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "nearby (adj)",
-        "uzbek_word": "yaqin",
-        "definition": "Not far from where you are",
-        "example_in_english": "My cousin lives nearby.",
-        "example_in_uzbek": "Mening qarindoshim shu yaqin atrofda yashaydi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "pack (v)",
-        "uzbek_word": "narsalarni joylamoq",
-        "definition": "To put your things into a bag, case, or box so that you can take or send them somewhere",
-        "example_in_english": "He was still packing his suitcase when the taxi came.",
-        "example_in_uzbek": "Taksi kelganda, u hamon chamadonini yig‘ishtirib o‘tirgan edi (chamadoniga kiyimlarini joylab)."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "passport (n)",
-        "uzbek_word": "passport",
-        "definition": "An official document that contains your photograph and shows which country you are a citizen of",
-        "example_in_english": "Bill has a Canadian passport.",
-        "example_in_uzbek": "Bilda Kanada pasporti bor."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "platform (n)",
-        "uzbek_word": "platforma, bo’linma",
-        "definition": "An area next to a railway track where passengers get onto and off trains",
-        "example_in_english": "The train to Brussels will depart from platform 3.",
-        "example_in_uzbek": "Braselsga ketayotgan poyezd 3-platformadan jo'naydi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "public transport (n)",
-        "uzbek_word": "jamoat transporti",
-        "definition": "The system that is used for travelling or for moving goods from one place to another",
-        "example_in_english": "Auckland's public transport system is excellent.",
-        "example_in_uzbek": "Oklend shahrining jamoat transport tizimi a'lo darajada."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "reach (v)",
-        "uzbek_word": "ga yetib kelmoq",
-        "definition": "To arrive somewhere",
-        "example_in_english": "We hoped to reach the camp before dark.",
-        "example_in_uzbek": "Lagerga qorong'u tushishdan avval yetib borishga umid qilgandik."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "resort (n)",
-        "uzbek_word": "kurort, dam olish joyi",
-        "definition": "A place where people go for a holiday",
-        "example_in_english": "We stayed in a lovely ski resort.",
-        "example_in_uzbek": "Biz ajoyib chang'i kurortida tunadik."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "souvenir (n)",
-        "uzbek_word": "suvenir, esdalik sovg’a",
-        "definition": "Something that you buy to remind you of a place that you visited on holiday or of a special event",
-        "example_in_english": "This T-shirt with Big Ben on it will make a great souvenir.",
-        "example_in_uzbek": "Big Ben tasvirlangan bu futbolka ajoyib suviner bo'ladi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "traffic (n)",
-        "uzbek_word": "qatnov",
-        "definition": "The vehicles that are travelling in an area at a particular time",
-        "example_in_english": "At that time of night, there was no traffic on the roads.",
-        "example_in_uzbek": "Tunning o‘sha paytida, yo‘llarda hech qanday transport qatnovi yo‘q edi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "trip (n)",
-        "uzbek_word": "sayohat*(ish yuzasidan)",
-        "definition": "An occasion when you go somewhere and come back again",
-        "example_in_english": "The whole family went on a trip to Florida.",
-        "example_in_uzbek": "Butun oila Floridaga sayohatga ketishdi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "9",
-        "english_word": "vehicle (n)",
-        "uzbek_word": "transport",
-        "definition": "A machine that you travel in or on, especially one with an engine that travels on roads, for example a car, bus, etc",
-        "example_in_english": "Four vehicles were involved in the accident.",
-        "example_in_uzbek": "Avariyada 4 ta transport vositasi qatnashgan."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "apologise (v)",
-        "uzbek_word": "kechir so’ramoq",
-        "definition": "To tell someone that you are sorry for doing something wrong",
-        "example_in_english": "You should apologise to your brother.",
-        "example_in_uzbek": "Akangizdan kechirim so'rashingiz kerak."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "boyfriend (n)",
-        "uzbek_word": "o’g’il do’st, yigiti",
-        "definition": "A man or boy that you are having a romantic relationship with",
-        "example_in_english": "She's got a new boyfriend.",
-        "example_in_uzbek": "Uning yangi yigiti bor."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "close (adj)",
-        "uzbek_word": "yaqin",
-        "definition": "Connected by shared feelings such as love and respect",
-        "example_in_english": "My brother and I are very close.",
-        "example_in_uzbek": "Akam bilan men juda yaqinmiz."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "confident (adj)",
-        "uzbek_word": "o’ziga ishongan",
-        "definition": "Certain about your abilities and not nervous or frightened",
-        "example_in_english": "I was starting to feel more confident about the exam.",
-        "example_in_uzbek": "Imtihonga nisbatan o‘zimni yanada dadil his qila boshladim."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "cool (adj)",
-        "uzbek_word": "sovuqqon",
-        "definition": "A cool person is one that you like or admire, or is very fashionable",
-        "example_in_english": "Jake is really cool.",
-        "example_in_uzbek": "Jake juda ham ajoyib!"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "couple (n)",
-        "uzbek_word": "juftlik",
-        "definition": "Two people who are married to each other, or who have a romantic relationship with each other",
-        "example_in_english": "Bill and Melissa make a great couple.",
-        "example_in_uzbek": "Bil va Melisa juda zo'r juftlik bo'lishadi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "decorate (V)",
-        "uzbek_word": "bezamoq",
-        "definition": "To put new paint or paper on the walls of a room",
-        "example_in_english": "We decorated the kitchen last weekend.",
-        "example_in_uzbek": "O'tgan hafta biz oshxonani bezatdik."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "defend (V)",
-        "uzbek_word": "himoya qilmoq",
-        "definition": "To say things to support someone or something",
-        "example_in_english": "We will defend their right to free speech.",
-        "example_in_uzbek": "Biz ularning so'z erkinligi huquqini himoya qilamiz."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "divorced (adj)",
-        "uzbek_word": "ajrashgan",
-        "definition": "No longer married because your marriage has been legally ended",
-        "example_in_english": "After they got divorced, she never remarried.",
-        "example_in_uzbek": "Ular ajrashishgandan so'ng, u hech qachon qayta turmush qurmadi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "flat (n)",
-        "uzbek_word": "kvartira",
-        "definition": "A set of rooms for living in, usually on one floor of a large building",
-        "example_in_english": "The family live in a fourth-floor flat.",
-        "example_in_uzbek": "Oila to'rtinchi qavatdagi kvartirada yashaydi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "generous (adj)",
-        "uzbek_word": "sahiy",
-        "definition": "Giving people more of your time or money than is usual or expected",
-        "example_in_english": "She is a warm and generous human being.",
-        "example_in_uzbek": "U samimiy va sahiy inson."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "girlfriend (n)",
-        "uzbek_word": "qiz do’st",
-        "definition": "A girl or woman that you are having a romantic relationship with",
-        "example_in_english": "Have you got a girlfriend?",
-        "example_in_uzbek": "Uchrashib yuradigan yoqtirgan qizingiz bormi?"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "grateful (adj)",
-        "uzbek_word": "minnatdor, mamnun",
-        "definition": "The feeling that you want to thank someone because they have given you something or done something for you",
-        "example_in_english": "Thanks for coming with me. I'm really grateful.",
-        "example_in_uzbek": "Men bilan birga kelganingiz uchun rahmat. Juda ham minnatdorman."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "guest (n)",
-        "uzbek_word": "mehmon",
-        "definition": "Someone that you have invited to your home or your party",
-        "example_in_english": "He was a guest at our wedding.",
-        "example_in_uzbek": "U to'yimizda mehmon bo'ldi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "independent (adj)",
-        "uzbek_word": "mustaqil",
-        "definition": "Not depending on other people",
-        "example_in_english": "Michelle is young, independent and confident.",
-        "example_in_uzbek": "Mishel yosh, mustaqil va dadil."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "introduce (v)",
-        "uzbek_word": "tanishtirmoq",
-        "definition": "To tell someone another person's name when they meet for the first time",
-        "example_in_english": "I'd like to introduce you to my friend Martin.",
-        "example_in_uzbek": "Sizni do'stim Martinga tanishtirmoqchiman."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "loving (adj)",
-        "uzbek_word": "sevimli",
-        "definition": "Feeling or showing love",
-        "example_in_english": "Cats are really loving animals.",
-        "example_in_uzbek": "Mushuklar juda mehribon hayvonlardir."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "loyal (adj)",
-        "uzbek_word": "sadoqatli",
-        "definition": "Someone who is loyal continues to support a person or organization, or idea in difficult times",
-        "example_in_english": "These are people who have remained loyal to the company for years.",
-        "example_in_uzbek": "Bular kompaniyaga uzoq yillardan beri sodiq qolib kelayotgan odamlar."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "mood (n)",
-        "uzbek_word": "kayfiyat",
-        "definition": "The way that someone is feeling, or the way that a group of people is feeling at a particular time",
-        "example_in_english": "I had never seen Ann in such a good mood before.",
-        "example_in_uzbek": "Men Anni avval hech qachon bunchalar yaxshi kayfiyatda ko'rmagandim."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "neighbourhood (n)",
-        "uzbek_word": "mahalla",
-        "definition": "A particular area of a town",
-        "example_in_english": "We live in a quiet neighbourhood.",
-        "example_in_uzbek": "Biz tinch mahallada yashaymiz."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "ordinary (adj)",
-        "uzbek_word": "oddiy",
-        "definition": "Normal or average, and not unusual or special",
-        "example_in_english": "It was just an ordinary Saturday morning.",
-        "example_in_uzbek": "U shunchaki odatiy bir shanba tongi edi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "patient (adj)",
-        "uzbek_word": "sabrli",
-        "definition": "Someone who is patient is able to wait for a long time or deal with a difficult situation without becoming angry or upset",
-        "example_in_english": "Susan is very patient with the children.",
-        "example_in_uzbek": "Syusen bu bolalar bilan juda sabrli."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "private (adj)",
-        "uzbek_word": "shaxsiy, xususiy",
-        "definition": "A private person does not talk to other people about their personal life or feelings",
-        "example_in_english": "Damian is a very private person.",
-        "example_in_uzbek": "Demiyen shaxsiy hayoti yoki tuyg'ulari to'g'risida gapirmaydigan inson."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "recognise (v)",
-        "uzbek_word": "tanimoq",
-        "definition": "To know someone or something because you have seen, heard, or met them before",
-        "example_in_english": "I thought I recognised your voice!",
-        "example_in_uzbek": "Ovozingizni tanidim deb o'ylagandim!"
-    },
-    {
-        "type": "topic_vocabulary",
         "unit": "12",
         "english_word": "relation (n)",
         "uzbek_word": "qarindosh",
@@ -1216,96 +541,6 @@
     },
     {
         "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "trust (v)",
-        "uzbek_word": "ishonmoq",
-        "definition": "To believe that someone or something is good, honest, or reliable",
-        "example_in_english": "You can trust Dana.",
-        "example_in_uzbek": "Danaga ishonsangiz bo'ladi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "12",
-        "english_word": "trust (n)",
-        "uzbek_word": "ishonch",
-        "definition": "A feeling that you trust someone or something",
-        "example_in_english": "The doctor-patient relationship has to be based on trust.",
-        "example_in_uzbek": "Shifokor va bemor o'rtasidagi aloqa ishonchga asoslangan bo'lishi kerak."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "advertisement (n)",
-        "uzbek_word": "reklama",
-        "definition": "An announcement in a newspaper, on television, on the internet, etc that is designed to persuade people to buy a product or service, go to an event, or apply for a job",
-        "example_in_english": "I saw an advertisement for a new kind of camera.",
-        "example_in_uzbek": "Men yangi turdagi kameraning reklamasini ko'rdim."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "afford (v)",
-        "uzbek_word": "qurbi yetmoq",
-        "definition": "To have enough money to pay for something",
-        "example_in_english": "I'm not sure how they're able to afford such expensive holidays.",
-        "example_in_uzbek": "Bunaqangi qimmat dam olishlarga qanday qilib pullari yetishini bilmayman."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "bargain (n)",
-        "uzbek_word": "savdo bitimi",
-        "definition": "Something you buy that costs much less than normal",
-        "example_in_english": "Her dress was a real bargain.",
-        "example_in_uzbek": "Uning ko'ylagi haqiqiy chegirmadagi mahsulot edi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "brand (n)",
-        "uzbek_word": "savdo belgisi(brendi)",
-        "definition": "A product or group of products that has its own name and is made by one particular company",
-        "example_in_english": "I tried using a new brand of soap.",
-        "example_in_uzbek": "Yangi brenddagi sovunni ishlatib ko'rdim."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "catalogue (n)",
-        "uzbek_word": "katalog",
-        "definition": "A book that contains pictures of things that you can buy",
-        "example_in_english": "Do you have a catalogue with all your products in it?",
-        "example_in_uzbek": "Hamma mahsulotingizni o'z ichiga jamlagan katalogingiz bormi?"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "change (n)",
-        "uzbek_word": "chaqa, mayda pul",
-        "definition": "Coins rather than notes",
-        "example_in_english": "I'm sorry, I haven't got any change.",
-        "example_in_uzbek": "Uzr, lekin tangam yo'q edi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "coin (n)",
-        "uzbek_word": "tanga",
-        "definition": "A flat round piece of metal used as money",
-        "example_in_english": "Put a coin into the slot.",
-        "example_in_uzbek": "Tirqishga tanga soling."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "cost (v)",
-        "uzbek_word": "narx(lamoq)",
-        "definition": "If something costs an amount of money, you need that amount to pay for it or to do it",
-        "example_in_english": "A new computer costs around €1,000.",
-        "example_in_uzbek": "Yangi kompyuter taxminan 1,000 yevro turadi."
-    },
-    {
-        "type": "topic_vocabulary",
         "unit": "15",
         "english_word": "cost (n)",
         "uzbek_word": "narx",
@@ -1321,141 +556,6 @@
         "definition": "A person or company that buys goods or services",
         "example_in_english": "Supermarkets use a variety of ways to attract customers.",
         "example_in_uzbek": "Xaridorlarni jalb qilish uchun supermarketlar turli-tuman yo'llardan foydalanishadi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "debt (n)",
-        "uzbek_word": "qarz",
-        "definition": "An amount of money that you owe",
-        "example_in_english": "By this time we had debts of over €15,000.",
-        "example_in_uzbek": "Bu paytgacha, 15,000 yevrodan ziyod qarzimiz bor edi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "demand (v)",
-        "uzbek_word": "talab",
-        "definition": "To say strongly that you want something",
-        "example_in_english": "The teacher demanded an explanation for all the water on the floor.",
-        "example_in_uzbek": "O'qituvchi poldagi suv uchun izoh talab qildi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "export (v)",
-        "uzbek_word": "chetga chiqarish(eksport)",
-        "definition": "To send a product to another country so that it can be sold there",
-        "example_in_english": "Their flowers are exported around the world.",
-        "example_in_uzbek": "Ularning gullari dunyo bo'ylab eksport qilinadi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "fee (n)",
-        "uzbek_word": "haq, maosh",
-        "definition": "Money that you pay to a professional person or institution for their work",
-        "example_in_english": "He will have to pay school fees of €2,000.",
-        "example_in_uzbek": "U 2,000 yevro maktab haqini to'lashiga to'g'ri keladi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "fortune (n)",
-        "uzbek_word": "boylik",
-        "definition": "A large amount of money",
-        "example_in_english": "They must have spent a fortune on flowers.",
-        "example_in_uzbek": "Gullar uchun ancha ko'p pul sarflashgan bo'lishsa kerak."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "import (v)",
-        "uzbek_word": "o’ziga kiritish (import)",
-        "definition": "To buy a product from another country and bring it to your country",
-        "example_in_english": "We import most of our coal from other countries.",
-        "example_in_uzbek": "Ko'mirning katta qismini boshqa davlatlardan import qilamiz."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "invest (v)",
-        "uzbek_word": "sarmoya kiritmoq",
-        "definition": "To use your money with the aim of making a profit from it",
-        "example_in_english": "Banks invested €20 million in the scheme.",
-        "example_in_uzbek": "Banklar ushbu loyihaga 20 million yevro sarmoya kiritishgan."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "obtain (v)",
-        "uzbek_word": "erishmoq",
-        "definition": "To get something that you want or need",
-        "example_in_english": "She has to obtain her father's permission before she does anything.",
-        "example_in_uzbek": "Qandaydir ish qilishdan avval, u otasining ijozatini olishiga to'g'ri keladi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "owe (v)",
-        "uzbek_word": "qarz bo’lmoq",
-        "definition": "To have to give someone a particular amount of money because you have bought something or have borrowed money from them",
-        "example_in_english": "Pam still owes me €5.",
-        "example_in_uzbek": "Pam haliyam mendan 5 yevro qarz."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "own (v)",
-        "uzbek_word": "egalik qilmoq",
-        "definition": "To legally have something, especially because you have bought it",
-        "example_in_english": "Who owns that house by the lake?",
-        "example_in_uzbek": "Ko'l bo'yidagi uyga kim egalik qiladi?"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "profit (n)",
-        "uzbek_word": "foyda; daromad",
-        "definition": "Money that you get when you sell something for a price that is higher than the cost of making it or buying it",
-        "example_in_english": "Investors have made a 14 percent profit in just three months.",
-        "example_in_uzbek": "Sarmoyachilar bor yo'g'i 3 oyda 14% foyda ko'rdilar."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "property (n)",
-        "uzbek_word": "mol-mulk",
-        "definition": "The things that you own",
-        "example_in_english": "The books are my personal property.",
-        "example_in_uzbek": "Kitoblar mening shaxsiy mulkim."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "purchase (v)",
-        "uzbek_word": "xarid qilmoq",
-        "definition": "To buy something",
-        "example_in_english": "She purchased a new lamp for her bedroom.",
-        "example_in_uzbek": "U yotoqxonasi uchun yangi lampa sotib oldi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "purchase (n)",
-        "uzbek_word": "xarid",
-        "definition": "Something that you buy",
-        "example_in_english": "Her latest purchase was a long black coat.",
-        "example_in_uzbek": "Uning oxirgi xaridi uzun qora palto edi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "15",
-        "english_word": "receipt (n)",
-        "uzbek_word": "xarid qilganlik cheki",
-        "definition": "A document that you get from someone showing that you have given them money or goods",
-        "example_in_english": "Make sure you get a receipt for the taxi.",
-        "example_in_uzbek": "Taksi uchun chekni olishni unutmang."
     },
     {
         "type": "topic_vocabulary",
@@ -1555,123 +655,6 @@
         "definition": "An automatic machine can work by itself without being operated by people",
         "example_in_english": "It's an automatic door.",
         "example_in_uzbek": "Bu avtomatik eshik."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "18",
-        "english_word": "complicated (adj)",
-        "uzbek_word": "murakkab",
-        "definition": "Difficult to do, deal with, or understand",
-        "example_in_english": "This is a complicated problem.",
-        "example_in_uzbek": "Bu murakkab muammo."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "18",
-        "english_word": "decrease (v)",
-        "uzbek_word": "kamay(tir)moq",
-        "definition": "To become less",
-        "example_in_english": "The number of visitors has decreased significantly.",
-        "example_in_uzbek": "Mehmonlar soni sezilarli darajada kamaydi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "18",
-        "english_word": "decrease (n)",
-        "uzbek_word": "pasayish",
-        "definition": "The amount by which something is less",
-        "example_in_english": "There's been a decrease in the number of visitors.",
-        "example_in_uzbek": "Mehmonlar sonida kamayish bo'ldi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "18",
-        "english_word": "digital (adj)",
-        "uzbek_word": "raqamli (sifrli)",
-        "definition": "Storing information such as sound or pictures as numbers or electronic signals",
-        "example_in_english": "It's a digital recording.",
-        "example_in_uzbek": "Bu raqamli yozuv."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "18",
-        "english_word": "discover (v)",
-        "uzbek_word": "kashf qilmoq",
-        "definition": "To find something that was hidden or that no one knew about before",
-        "example_in_english": "William Herschel discovered Uranus in 1781.",
-        "example_in_uzbek": "Uilyam Herschel Uranusni 1781 yilda kashf etdi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "18",
-        "english_word": "effect (n)",
-        "uzbek_word": "ta’sir",
-        "definition": "A change that is produced in one person or thing by another",
-        "example_in_english": "Scientists are studying the chemical's effect on the environment.",
-        "example_in_uzbek": "Olimlar kimyoviy moddalar ta'sirini atrof-muhitda o'rganmoqda."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "18",
-        "english_word": "equipment (n)",
-        "uzbek_word": "jihoz",
-        "definition": "The tools, machines, or other things that you need for a particular job or activity",
-        "example_in_english": "A computer is the most important piece of equipment you will buy.",
-        "example_in_uzbek": "Kompyuter siz sotib oladigan eng muhim uskunadir."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "18",
-        "english_word": "estimate (v)",
-        "uzbek_word": "baholab bermoq; fikr yuritmoq",
-        "definition": "To guess or calculate an amount or value by using available information",
-        "example_in_english": "It is impossible to estimate how many of the residents were affected.",
-        "example_in_uzbek": "Qanchalik ko'p aholi ta'sirlanganligini baholash imkonsiz."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "18",
-        "english_word": "exact (adj)",
-        "uzbek_word": "aniq",
-        "definition": "Done, made, or described with all the details correct",
-        "example_in_english": "The exact number of people there was unknown.",
-        "example_in_uzbek": "U yerda aniq odam soni ma'lum emas edi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "18",
-        "english_word": "experiment (v)",
-        "uzbek_word": "tajriba qilmoq",
-        "definition": "To perform scientific tests in order to find out what happens to someone or something in particular conditions",
-        "example_in_english": "This lab does not experiment on animals.",
-        "example_in_uzbek": "Ushbu laboratoriya hayvonlar ustida tajriba o'tkazmaydi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "18",
-        "english_word": "experiment (n)",
-        "uzbek_word": "tajriba",
-        "definition": "A scientific test to find out what happens to someone or something in particular conditions",
-        "example_in_english": "Researchers now need to do more experiments.",
-        "example_in_uzbek": "Tadqiqotchilar endi ko'proq tajribalar o'tkazishlari kerak."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "18",
-        "english_word": "gadget (n)",
-        "uzbek_word": "uskuna,moslama (gadjet)",
-        "definition": "A small tool or piece of equipment that does something that is useful or impressive",
-        "example_in_english": "That's a very useful gadget!",
-        "example_in_uzbek": "Bu juda foydali qurilma!"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "18",
-        "english_word": "hardware (n)",
-        "uzbek_word": "ehtiyot qism",
-        "definition": "Computer equipment",
-        "example_in_english": "Printers and modems are examples of hardware.",
-        "example_in_uzbek": "Printerning va modemlar apparat qismlariga misol bo'ladi."
     },
     {
         "type": "topic_vocabulary",
@@ -1888,96 +871,6 @@
         "definition": "A program that is broadcast.",
         "example_in_english": "They mentioned the problem on Channel 5's main news broadcast.",
         "example_in_uzbek": "Muammo 5-kanalning asosiy yangiliklar ko‘rsatuvida aytib o'tildi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "21",
-        "english_word": "channel (n)",
-        "uzbek_word": "kanal",
-        "definition": "A television station and the programs that it broadcasts.",
-        "example_in_english": "What's on the other channel?",
-        "example_in_uzbek": "Boshqa kanalda nima beryapti?"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "21",
-        "english_word": "clear (adj)",
-        "uzbek_word": "aniq; toza",
-        "definition": "Easy to understand.",
-        "example_in_english": "Clear instructions are provided.",
-        "example_in_uzbek": "Tushunishga oson ko'rsatmalar ta'minlanadi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "21",
-        "english_word": "click (v)",
-        "uzbek_word": "kattalashtirmoq, oydinlashtirmoq",
-        "definition": "To make a computer do something by pressing a button on the mouse.",
-        "example_in_english": "To send the message, click on the 'send' button.",
-        "example_in_uzbek": "Xabarni yuborish uchun, 'jo'natish' tugmasini bosing."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "21",
-        "english_word": "contact (v)",
-        "uzbek_word": "aloqa (qilmoq)",
-        "definition": "To communicate with someone by phone, e-mail, letter, etc.",
-        "example_in_english": "Please contact us if you have any information.",
-        "example_in_uzbek": "Agar qandaydir ma'lumot bo'lsa, iltimos biz bilan bog'laning."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "21",
-        "english_word": "contact (n)",
-        "uzbek_word": "aloqa",
-        "definition": "Communication between people, countries, or organizations.",
-        "example_in_english": "Do you and Jo still keep in contact?",
-        "example_in_uzbek": "Siz hozir ham Jo bilan aloqani saqlab qolganmisiz?"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "21",
-        "english_word": "file (n)",
-        "uzbek_word": "fayl",
-        "definition": "A set of information that is stored on a computer and that is given a particular name.",
-        "example_in_english": "I can't find the file on my computer.",
-        "example_in_uzbek": "Faylni kompyuterimdan topolmayapman."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "21",
-        "english_word": "formal (adj)",
-        "uzbek_word": "rasmiy",
-        "definition": "Suitable for serious situations or occasions.",
-        "example_in_english": "Ameliorate' is a more formal way of saying 'improve'.",
-        "example_in_uzbek": "Ijobiy tarafga o'zgartirmoq' - bu 'yaxshilamoq' so'zini aytishning yanayam rasmiyroq usuli."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "21",
-        "english_word": "image (n)",
-        "uzbek_word": "surat, tasvir",
-        "definition": "A picture, especially one in a mirror or on a computer, television, or cinema screen.",
-        "example_in_english": "Images of Germany appeared on the screen.",
-        "example_in_uzbek": "Ekranda Germaniya tasvirlari paydo bo'ldi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "21",
-        "english_word": "informal (adj)",
-        "uzbek_word": "norasmiy",
-        "definition": "Suitable for relaxed friendly situations.",
-        "example_in_english": "You should wear informal clothes to the party tomorrow.",
-        "example_in_uzbek": "Ertangi bazmga norasmiy kiyinishingiz kerak."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "21",
-        "english_word": "Internet (n)",
-        "uzbek_word": "internet",
-        "definition": "A computer system that allows people in different parts of the world to exchange information.",
-        "example_in_english": "Do you have access to the Internet?",
-        "example_in_uzbek": "Internetga kirish imkoniyatiga egamisiz?"
     },
     {
         "type": "topic_vocabulary",
@@ -2315,87 +1208,6 @@
     {
         "type": "topic_vocabulary",
         "unit": "24",
-        "english_word": "Illegal (adj)",
-        "uzbek_word": "noqonuniy",
-        "definition": "Not allowed by the law.",
-        "example_in_english": "Robbing banks is illegal.",
-        "example_in_uzbek": "Banklarni o'g'irlash noqonuniy hisoblanadi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "24",
-        "english_word": "Politics (n)",
-        "uzbek_word": "siyosat",
-        "definition": "The ideas and activities involved in getting power in an area or governing it.",
-        "example_in_english": "She's heavily involved in local politics.",
-        "example_in_uzbek": "U mahalliy siyosatda faol ishtirok etmoqda."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "24",
-        "english_word": "Population (n)",
-        "uzbek_word": "aholi",
-        "definition": "The number of people who live in a particular area.",
-        "example_in_english": "Los Angeles has a population of over 3 million.",
-        "example_in_uzbek": "Los-Anjelesning aholisi 3 milliondan ortiq."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "24",
-        "english_word": "Prison (n)",
-        "uzbek_word": "qamoq",
-        "definition": "An institution where people are kept as a punishment for committing a crime.",
-        "example_in_english": "He's currently in prison.",
-        "example_in_uzbek": "U hozirda qamoqdamiz."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "24",
-        "english_word": "Protest (v)",
-        "uzbek_word": "e’tiroz bildirmoq",
-        "definition": "To show publicly that you oppose something.",
-        "example_in_english": "Workers are protesting against high unemployment.",
-        "example_in_uzbek": "Ishchilar yuqori ishsizlikka qarshi norozilik bildirmoqda."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "24",
-        "english_word": "Protest (n)",
-        "uzbek_word": "",
-        "definition": "An occasion when people show strong public opposition to something.",
-        "example_in_english": "Students will hold a protest this weekend outside Parliament.",
-        "example_in_uzbek": "Talabalar bu hafta oxirida Parlament oldida norozilik namoyishi o'tkazadilar."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "24",
-        "english_word": "Resident (n)",
-        "uzbek_word": "yashovchi",
-        "definition": "Someone who lives in a particular place.",
-        "example_in_english": "Many local residents have objected to the new road.",
-        "example_in_uzbek": "Ko'plab mahalliy aholi yangi yo'lga qarshi chiqdi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "24",
-        "english_word": "Responsible (adj)",
-        "uzbek_word": "javobgar",
-        "definition": "If you are responsible for something that has happened, you caused it, or you deserve to be blamed for it; in charge of someone or something.",
-        "example_in_english": "He was responsible for the accident.",
-        "example_in_uzbek": "U avariya uchun javobgar edi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "24",
-        "english_word": "Rob (v)",
-        "uzbek_word": "o’marmoq",
-        "definition": "To take money or property from someone illegally.",
-        "example_in_english": "They were planning to rob the museum.",
-        "example_in_uzbek": "Ular muzeyni o'g'irlashni rejalashtirishgan."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "24",
         "english_word": "Routine (n)",
         "uzbek_word": "kun tartibi",
         "definition": "Your usual way of doing things.",
@@ -2491,114 +1303,6 @@
         "definition": "An official choice you make between two or more issues, people, etc., for example in an election.",
         "example_in_english": "My vote will go to the candidate who promises lower taxes.",
         "example_in_uzbek": "Mening ovozim soliqni kamaytirishni va'da qilgan nomzodga boradi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "24",
-        "english_word": "Youth club (n phr)",
-        "uzbek_word": "yoshlar klubi",
-        "definition": "A place where young people can go to meet and take part in activities.",
-        "example_in_english": "Let's go to the youth club after school.",
-        "example_in_uzbek": "Maktabdan so'ng yoshlar klubiga boramiz"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "27",
-        "english_word": "Ambition (n)",
-        "uzbek_word": "orzu, istak",
-        "definition": "Something that you very much want to achieve.",
-        "example_in_english": "His ambition was to become a successful writer.",
-        "example_in_uzbek": "Uning maqsadi muvaffaqiyatli yozuvchi bo'lish edi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "27",
-        "english_word": "Application (n)",
-        "uzbek_word": "ariza",
-        "definition": "A formal request to do something or have something, for example, a job.",
-        "example_in_english": "His application for membership was rejected.",
-        "example_in_uzbek": "Uning a'zolik uchun arizasi rad etildi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "27",
-        "english_word": "Bank account (n phr)",
-        "uzbek_word": "bank hisobi",
-        "definition": "An arrangement with a bank that allows you to keep your money there.",
-        "example_in_english": "We'll pay the money into your bank account.",
-        "example_in_uzbek": "Pulni sizning bank hisobingizga o'tkazamiz."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "27",
-        "english_word": "Boss (n)",
-        "uzbek_word": "boshliq",
-        "definition": "The person who is in charge of you at work.",
-        "example_in_english": "I asked my boss for a day off next week.",
-        "example_in_uzbek": "Men o'z boshimdan keyingi hafta bir kun ta'til so'radim."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "27",
-        "english_word": "Career (n)",
-        "uzbek_word": "mavqei, karera",
-        "definition": "A job or profession that you work at for some time.",
-        "example_in_english": "Rosen had decided on an academic career.",
-        "example_in_uzbek": "Rosen akademik karera tanlagan edi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "27",
-        "english_word": "Colleague (n)",
-        "uzbek_word": "hamkasb",
-        "definition": "Someone who works in the same organization or department as you.",
-        "example_in_english": "Friends and colleagues will remember him as a kind man.",
-        "example_in_uzbek": "Do'stlar va hamkasblar uni mehribon inson sifatida eslaydi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "27",
-        "english_word": "Company (n)",
-        "uzbek_word": "kompaniya",
-        "definition": "An organization that sells services or goods.",
-        "example_in_english": "Max works for a large oil company.",
-        "example_in_uzbek": "Max katta neft kompaniyasida ishlaydi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "27",
-        "english_word": "Contract (n)",
-        "uzbek_word": "shartnoma",
-        "definition": "A written legal agreement between two people or organizations.",
-        "example_in_english": "After six months, she was offered a contract of employment.",
-        "example_in_uzbek": "Olti oydan so'ng, unga ish shartnomasi taklif qilindi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "27",
-        "english_word": "Department (n)",
-        "uzbek_word": "bo’lim",
-        "definition": "A section in a government, organization, or business that deals with a particular type of work.",
-        "example_in_english": "You need to speak to our sales department.",
-        "example_in_uzbek": "Siz bizning savdo bo'limimiz bilan gaplashishingiz kerak."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "27",
-        "english_word": "Deserve (v)",
-        "uzbek_word": "sazovor bo’lmoq",
-        "definition": "If you deserve something, it is right that you get it because of the way that you are or the way that you have behaved.",
-        "example_in_english": "After five hours on your feet, you deserve a break.",
-        "example_in_uzbek": "Besh soat oyoq ustida turganingizdan so'ng, dam olishga haqliysiz."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "27",
-        "english_word": "Earn (v)",
-        "uzbek_word": "ishlab topmoq",
-        "definition": "To receive money for work that you do.",
-        "example_in_english": "Most people here earn about €30,000 a year.",
-        "example_in_uzbek": "Bu yerda ko'pchilik odamlar yilda taxminan €30,000 ishlaydi."
     },
     {
         "type": "topic_vocabulary",
@@ -2737,60 +1441,6 @@
     },
     {
         "type": "topic_vocabulary",
-        "unit": "27",
-        "english_word": "Salary (n)",
-        "uzbek_word": "maosh",
-        "definition": "A fixed amount of money that you earn each month or year from your job.",
-        "example_in_english": "Lisa gets an annual salary of €30,000.",
-        "example_in_uzbek": "Liza yillik €30,000 maosh oladi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "27",
-        "english_word": "Staff (n)",
-        "uzbek_word": "xodimlar",
-        "definition": "The people who work for a particular company, organization, or institution.",
-        "example_in_english": "She joined the staff in 1996.",
-        "example_in_uzbek": "U 1996-yilda xodimlar safiga qo'shildi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "27",
-        "english_word": "Strike (n)",
-        "uzbek_word": "ish tashlash, namoyish",
-        "definition": "A period of time during which people refuse to work, as a protest.",
-        "example_in_english": "There's a tram strike in the city.",
-        "example_in_uzbek": "Shaharda tramvay ish tashladi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "27",
-        "english_word": "Tax (v)",
-        "uzbek_word": "soliq (solmoq)",
-        "definition": "To make someone pay money to the government.",
-        "example_in_english": "Everyone in my country pays 20 per cent tax on any money they earn.",
-        "example_in_uzbek": "Mening mamlakatimda har kim o'z daromadidan 20 foiz soliq to'laydi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "27",
-        "english_word": "Tax (n)",
-        "uzbek_word": "soliq",
-        "definition": "An amount of money that you have to pay to the government.",
-        "example_in_english": "The government has promised to lower taxes after the election.",
-        "example_in_uzbek": "Hukumat saylovlardan keyin soliqni kamaytirishni va'da qildi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "27",
-        "english_word": "Wealthy (adj)",
-        "uzbek_word": "boy",
-        "definition": "Rich.",
-        "example_in_english": "Ian became a very wealthy businessman.",
-        "example_in_uzbek": "Ian juda boy ishbilarmon bo'ldi."
-    },
-    {
-        "type": "topic_vocabulary",
         "unit": "30",
         "english_word": "Affect (v)",
         "uzbek_word": "ta’sir qilmoq",
@@ -2851,141 +1501,6 @@
         "definition": "To use your teeth to bite food in your mouth into small pieces.",
         "example_in_english": "She chewed her food slowly.",
         "example_in_uzbek": "U ovqatini sekin-sekin chaynadi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "30",
-        "english_word": "Chop (v)",
-        "uzbek_word": "chopmoq, maydalamoq",
-        "definition": "To cut something such as food or wood into pieces.",
-        "example_in_english": "Chop the meat into small pieces.",
-        "example_in_uzbek": "Go'shtni kichik bo'laklarga kesing."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "30",
-        "english_word": "Contain (v)",
-        "uzbek_word": "o’z ichiga olmoq",
-        "definition": "To have something inside.",
-        "example_in_english": "The envelope contained a few old photographs.",
-        "example_in_uzbek": "Konvertda bir necha eski fotosuratlar bor edi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "30",
-        "english_word": "Cough (v)",
-        "uzbek_word": "yo’talmoq",
-        "definition": "To force air up through your throat with a sudden noise, especially when you have a cold or when you want to get someone's attention.",
-        "example_in_english": "My chest felt painful, and I was coughing uncontrollably.",
-        "example_in_uzbek": "Ko'kragim og'rirdi va men nazorat qilinmaydigan yo'talib turardim."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "30",
-        "english_word": "Cough (n)",
-        "uzbek_word": "yo’tal",
-        "definition": "The action of coughing, or the sound that you make when you cough.",
-        "example_in_english": "I've got a bad cough.",
-        "example_in_uzbek": "Men yomon yo'taldim."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "30",
-        "english_word": "Cure (v)",
-        "uzbek_word": "davolamoq",
-        "definition": "To stop someone from being affected by an illness.",
-        "example_in_english": "Only an operation will cure her.",
-        "example_in_uzbek": "Faqat operatsiya uni davolaydi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "30",
-        "english_word": "Cure (n)",
-        "uzbek_word": "davo",
-        "definition": "A medicine or treatment that makes someone who is ill become healthy.",
-        "example_in_english": "Doctors say there are several possible cures.",
-        "example_in_uzbek": "Doktorlar bir necha mumkin bo'lgan davolar borligini aytishadi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "30",
-        "english_word": "Exercise (v)",
-        "uzbek_word": "mashq (qilmoq)",
-        "definition": "To do a physical activity in order to stay healthy and to make your body stronger.",
-        "example_in_english": "Do you eat properly and exercise regularly?",
-        "example_in_uzbek": "Siz to'g'ri ovqatlanasizmi va muntazam jismoniy mashqlar qilasizmi?"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "30",
-        "english_word": "Exercise (n)",
-        "uzbek_word": "mashq",
-        "definition": "Physical activity that you do in order to stay healthy and make your body stronger.",
-        "example_in_english": "I get plenty of exercise being an aerobics instructor.",
-        "example_in_uzbek": "Aerobika instruktor sifatida ko'p jismoniy mashqlar qilaman."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "30",
-        "english_word": "Flu (n)",
-        "uzbek_word": "gripp",
-        "definition": "A very common infectious disease that lasts for a short time and makes you feel weak and tired.",
-        "example_in_english": "My dad has got flu.",
-        "example_in_uzbek": "Mening dadam grippdan aziyat chekmoqda."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "30",
-        "english_word": "Have an operation (v phr)",
-        "uzbek_word": "operatsiya bo’lmoq",
-        "definition": "The process of cutting into someone's body for medical reasons.",
-        "example_in_english": "The baby had to have an operation.",
-        "example_in_uzbek": "Bolaga operatsiya qilish kerak edi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "30",
-        "english_word": "Healthy (adj)",
-        "uzbek_word": "sog’lom",
-        "definition": "Physically strong and not ill.",
-        "example_in_english": "I feel very healthy at the moment.",
-        "example_in_uzbek": "Hozirda juda sog'lom his qilaman."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "30",
-        "english_word": "Ignore (v)",
-        "uzbek_word": "e’tiborsiz bo’lmoq",
-        "definition": "To not consider something, or to not let it influence you.",
-        "example_in_english": "We had ignored the fact that it was getting darker.",
-        "example_in_uzbek": "Biz qorayib borayotgan faktni e'tiborsiz qoldirdik."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "30",
-        "english_word": "Infection (n)",
-        "uzbek_word": "infeksiya",
-        "definition": "A disease that is caused by bacteria or by a virus.",
-        "example_in_english": "I've got a throat infection.",
-        "example_in_uzbek": "Men tomoq infektsiyasidan aziyat chekmoqdaman."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "30",
-        "english_word": "Ingredient (n)",
-        "uzbek_word": "tarkibiy qism/masalliq",
-        "definition": "One of the foods or liquids that you use in making a particular meal.",
-        "example_in_english": "Mix all the ingredients together carefully.",
-        "example_in_uzbek": "Barcha ingredientlarni ehtiyotkorlik bilan aralashtiring."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "30",
-        "english_word": "Injury (n)",
-        "uzbek_word": "yara, jarohat",
-        "definition": "Physical harm.",
-        "example_in_english": "All the passengers in the vehicle escaped injury.",
-        "example_in_uzbek": "Transportdagi barcha yo'lovchilar jarohatlanmasdan qutuldilar."
     },
     {
         "type": "topic_vocabulary",
@@ -3242,123 +1757,6 @@
     {
         "type": "topic_vocabulary",
         "unit": "33",
-        "english_word": "Match (v)",
-        "uzbek_word": "moslashtirmoq",
-        "definition": "If one thing matches another, or they match, they form an attractive combination.",
-        "example_in_english": "She wore a green dress and a hat to match.",
-        "example_in_uzbek": "U yashil libos va mos keladigan shapka kiygan edi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "33",
-        "english_word": "Material (n)",
-        "uzbek_word": "material, mato",
-        "definition": "Cloth or substance used to make things.",
-        "example_in_english": "What sort of material is your desk made from?",
-        "example_in_uzbek": "Sizning stolingiz qaysi materialdan tayyorlangan?"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "33",
-        "english_word": "Notice (v)",
-        "uzbek_word": "payqamoq, sezmoq",
-        "definition": "To become conscious of someone or something by seeing, hearing, or feeling them.",
-        "example_in_english": "After a few days here, you hardly notice the noise.",
-        "example_in_uzbek": "Bu yerda bir necha kundan so'ng, siz shovqinni deyarli sezmasligingiz mumkin."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "33",
-        "english_word": "Notice (n)",
-        "uzbek_word": "e'lon, ishora, payqash",
-        "definition": "A written sign or announcement that gives information or warns people about something.",
-        "example_in_english": "They put up a notice on the door saying they'd gone out of business.",
-        "example_in_uzbek": "Ular eshikda biznesni yopishganini bildiruvchi e'lonni osib qo'yishdi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "33",
-        "english_word": "Pattern (n)",
-        "uzbek_word": "andaza, naqsh, bezak",
-        "definition": "A set of lines, shapes, or colors that are repeated regularly.",
-        "example_in_english": "I like the pattern on your carpet.",
-        "example_in_uzbek": "Men sizning gilamingizdagi naqshni yoqtiraman."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "33",
-        "english_word": "Pile (n)",
-        "uzbek_word": "to’da",
-        "definition": "A number of things that are put on top of each other in an untidy way.",
-        "example_in_english": "Rubbish lay in piles in the street.",
-        "example_in_uzbek": "Ko'chada axlat to'plangan edi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "33",
-        "english_word": "Practical (adj)",
-        "uzbek_word": "amaliy",
-        "definition": "Involving, or relating to, real situations rather than theories or ideas alone.",
-        "example_in_english": "Practical experience can be as valuable as academic qualifications.",
-        "example_in_uzbek": "Amaliy tajriba akademik malakalarga teng qadrga ega bo'lishi mumkin."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "33",
-        "english_word": "Rough (adj)",
-        "uzbek_word": "notekis, tinchni qochiradigan",
-        "definition": "With a surface that is not smooth.",
-        "example_in_english": "The walls were built of dark, rough stone.",
-        "example_in_uzbek": "Devorlar qorong'i, qattiq toshdan qurilgan."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "33",
-        "english_word": "Shape (n)",
-        "uzbek_word": "shakl",
-        "definition": "The form of something.",
-        "example_in_english": "Trace the shape onto the card and cut it out.",
-        "example_in_uzbek": "Shaklni kartonga izlang va kesib oling."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "33",
-        "english_word": "Silk (n)",
-        "uzbek_word": "ipak",
-        "definition": "A thin, smooth cloth made from the fibers produced by insects called silkworms.",
-        "example_in_english": "I love your new silk shirt.",
-        "example_in_uzbek": "Men sizning yangi ipak ko'ylagingizni yaxshi ko'raman."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "33",
-        "english_word": "Sleeve (n)",
-        "uzbek_word": "yeng",
-        "definition": "The part of a piece of clothing that covers your arm.",
-        "example_in_english": "Oh no! I've got a little tear in one of my sleeves.",
-        "example_in_uzbek": "Oh yo'q! Menimcha bir yelkamda kichik yoriq bor."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "33",
-        "english_word": "Smooth (adj)",
-        "uzbek_word": "silliq, tekis",
-        "definition": "Completely even with no rough areas.",
-        "example_in_english": "How do you keep your skin so smooth?",
-        "example_in_uzbek": "Sizning teringizni qanday qilib silliq saqlaysiz?"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "33",
-        "english_word": "Stretch (v)",
-        "uzbek_word": "cho’zmoq, tortmoq",
-        "definition": "To pull something to make it longer or wider, or to become longer or wider.",
-        "example_in_english": "Can you stretch the material a little?",
-        "example_in_uzbek": "Materialni biroz cho'zib bera olasizmi?"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "33",
         "english_word": "Striped (adj)",
         "uzbek_word": "yo’l-qo’l",
         "definition": "With a pattern of colored lines.",
@@ -3373,60 +1771,6 @@
         "definition": "The way that something is made or done, typical of a particular group, time, or place.",
         "example_in_english": "I don't like the style of dresses that are out now.",
         "example_in_uzbek": "Hozirgi liboslarning uslubini yoqtirmayman."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "33",
-        "english_word": "Suit (v)",
-        "uzbek_word": "mos kelmoq",
-        "definition": "If a style or something you wear suits you, it makes you look good.",
-        "example_in_english": "The new hairstyle really suits her.",
-        "example_in_uzbek": "Yangi soch turmagi unga juda mos keladi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "33",
-        "english_word": "Suit (n)",
-        "uzbek_word": "kostyum-shim",
-        "definition": "A set of clothes made from the same cloth, usually a jacket with trousers or a skirt.",
-        "example_in_english": "He was wearing a dark suit and a tie.",
-        "example_in_uzbek": "U qorong'i kostyum va galstuk kiygan edi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "33",
-        "english_word": "Suitable (adj)",
-        "uzbek_word": "mos",
-        "definition": "Right for a particular purpose, person, or situation.",
-        "example_in_english": "This film is not suitable for young children.",
-        "example_in_uzbek": "Bu film yosh bolalar uchun mos emas."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "33",
-        "english_word": "Tear (v)",
-        "uzbek_word": "yirtmoq",
-        "definition": "To pull something so that it separates into pieces or gets a hole, or to become damaged in this way.",
-        "example_in_english": "He'd torn his raincoat.",
-        "example_in_uzbek": "U o'z yomg'ir kurtkasini yirtib yuborgan edi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "33",
-        "english_word": "Tear (n)",
-        "uzbek_word": "yirtiq",
-        "definition": "A hole in something where it has been torn.",
-        "example_in_english": "There was a tear in her coat.",
-        "example_in_uzbek": "Uning paltoida yoriq bor edi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "33",
-        "english_word": "Tight (adj)",
-        "uzbek_word": "tor",
-        "definition": "Fitting closely around your body or part of your body.",
-        "example_in_english": "These shoes are too tight.",
-        "example_in_uzbek": "Bu poyabzallar juda tor."
     },
     {
         "type": "topic_vocabulary",
@@ -3683,60 +2027,6 @@
     {
         "type": "topic_vocabulary",
         "unit": "36",
-        "english_word": "Satellite (n)",
-        "uzbek_word": "sun’iy yo’ldosh",
-        "definition": "An object that is sent into space to travel around the Earth to receive and send information; or a natural object like a moon that moves around a planet.",
-        "example_in_english": "There are lots of satellites above the Earth.",
-        "example_in_uzbek": "Yer ustida ko'plab sun'iy yo'ldoshlar mavjud."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "36",
-        "english_word": "Shower (n)",
-        "uzbek_word": "jala/qattiq yomg’ir",
-        "definition": "A short period when it rains.",
-        "example_in_english": "Tonight there's a 50 percent chance of showers.",
-        "example_in_uzbek": "Bu kecha yomg'ir yog'ishi ehtimoli 50 foiz."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "36",
-        "english_word": "Solar System (n phr)",
-        "uzbek_word": "quyosh tizimi",
-        "definition": "The Sun and the group of planets that move around it.",
-        "example_in_english": "How many planets are there in our solar system?",
-        "example_in_uzbek": "Bizning quyosh sistemamizda nechta sayyora bor?"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "36",
-        "english_word": "Species (n)",
-        "uzbek_word": "tur",
-        "definition": "A plant or animal group whose members all have similar general features and are able to produce young plants or animals together.",
-        "example_in_english": "Over 120 species of birds have been recorded in this national park.",
-        "example_in_uzbek": "Ushbu milliy parkda 120 dan ortiq qush turi qayd etilgan."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "36",
-        "english_word": "Thunder (n)",
-        "uzbek_word": "momaqaldiroq",
-        "definition": "The loud noise that you sometimes hear in the sky during a storm.",
-        "example_in_english": "Listen to that thunder!",
-        "example_in_uzbek": "O'sha chaqmoqni eshiting!"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "36",
-        "english_word": "Wild (adj)",
-        "uzbek_word": "yovvoyi",
-        "definition": "A wild animal or plant lives or grows on its own in natural conditions and is not raised by humans.",
-        "example_in_english": "This behavior is common in both domestic and wild dogs.",
-        "example_in_uzbek": "Bu xulq ham uy hayvonlari, ham yovvoyi itlarda keng tarqalgan."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "36",
         "english_word": "Wildlife (n)",
         "uzbek_word": "yovvoyi tabiat",
         "definition": "Animals, birds, and plants that live in natural conditions.",
@@ -3935,42 +2225,6 @@
     {
         "type": "topic_vocabulary",
         "unit": "39",
-        "english_word": "Polite (adj)",
-        "uzbek_word": "xushmuomala",
-        "definition": "Behaving toward other people in a pleasant way that follows all the usual rules of society.",
-        "example_in_english": "It's not polite to talk with your mouth full of food.",
-        "example_in_uzbek": "O'zingizning og'zingiz to'la ovqat bilan gaplashish odobsizdir."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "39",
-        "english_word": "React (v)",
-        "uzbek_word": "ta’sirlanmoq",
-        "definition": "To behave in a particular way because of things that are happening around you or things that other people are doing to you.",
-        "example_in_english": "I wasn't sure how you would react.",
-        "example_in_uzbek": "Sizning qanday reaktsiya berishingizni aniq bilmasdim."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "39",
-        "english_word": "Regret (v)",
-        "uzbek_word": "afsuslanmoq",
-        "definition": "To feel sorry or sad about something that has happened, or about something that you have done.",
-        "example_in_english": "We regret any problems caused by the delay.",
-        "example_in_uzbek": "Kechikish tufayli yuzaga kelgan muammolar uchun afsusdamiz."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "39",
-        "english_word": "Regret (n)",
-        "uzbek_word": "afsus-nadomat, pushaymonlik",
-        "definition": "A feeling of sadness about something that has happened or something that you have done.",
-        "example_in_english": "Do you have any regrets about what you did?",
-        "example_in_uzbek": "Qilgan ishingiz uchun qandaydir afsuslaringiz bormikin?"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "39",
         "english_word": "Ridiculous (adj)",
         "uzbek_word": "bachkana",
         "definition": "Silly or unreasonable and deserving to be laughed at.",
@@ -4115,141 +2369,6 @@
     {
         "type": "topic_vocabulary",
         "unit": "42",
-        "english_word": "Criticise (v)",
-        "uzbek_word": "tanqid qilmoq",
-        "definition": "To say what you think is wrong or bad about something or someone.",
-        "example_in_english": "Why are you always criticising me?",
-        "example_in_uzbek": "Nega doimo meni tanqid qilayapsiz?"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "42",
-        "english_word": "Deny (v)",
-        "uzbek_word": "tan olmaslik",
-        "definition": "To say that something is not true.",
-        "example_in_english": "He still denies stealing the money.",
-        "example_in_uzbek": "U hali ham pullarni o'g'irlashni rad etmoqda."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "42",
-        "english_word": "Discussion (n)",
-        "uzbek_word": "muhokama",
-        "definition": "A conversation about something important.",
-        "example_in_english": "We need to have a discussion about your schoolwork.",
-        "example_in_uzbek": "Biz sizning maktab ishingiz haqida suhbatlashishimiz kerak."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "42",
-        "english_word": "Doubt (v)",
-        "uzbek_word": "shubhalanmoq",
-        "definition": "To think that something is probably not true, probably does not exist, or probably will not happen.",
-        "example_in_english": "Do you think they'll win? I doubt it.",
-        "example_in_uzbek": "Sizningcha ular yutadi? Men shubhalanaman."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "42",
-        "english_word": "Doubt (n)",
-        "uzbek_word": "shubha",
-        "definition": "A feeling of not being certain about something.",
-        "example_in_english": "There's no doubt about it—we're in trouble.",
-        "example_in_uzbek": "Bunda shubha yo'q—biz muammodamiz."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "42",
-        "english_word": "Encourage (v)",
-        "uzbek_word": "undamoq/ruhlantirmoq",
-        "definition": "To give someone confidence or hope.",
-        "example_in_english": "Mum always encouraged us when we took part in competitions.",
-        "example_in_uzbek": "Ona har doim musobaqalarda qatnashganimizda bizni rag'batlantirardi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "42",
-        "english_word": "Get rid of (v phr)",
-        "uzbek_word": "...dan qutilmoq",
-        "definition": "To throw away, give away, or sell something that you no longer want or need.",
-        "example_in_english": "We're moving, so we have to get rid of a lot of our furniture.",
-        "example_in_uzbek": "Biz ko'chmoqdamiz, shuning uchun ko'p mebellardan voz kechishimiz kerak."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "42",
-        "english_word": "Gossip (v)",
-        "uzbek_word": "g’iybat qilmoq",
-        "definition": "To talk about other people or about things that are not important.",
-        "example_in_english": "You shouldn't gossip about people.",
-        "example_in_uzbek": "Siz boshqalar haqida mish-mish qilmang."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "42",
-        "english_word": "Gossip (n)",
-        "uzbek_word": "g’iybat",
-        "definition": "Talk or a conversation about things that are not important or about people's private lives.",
-        "example_in_english": "Here's an interesting piece of gossip for you.",
-        "example_in_uzbek": "Siz uchun qiziqarli mish-mish shu yerda."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "42",
-        "english_word": "Ideal (adj)",
-        "uzbek_word": "qulay/bekami-ko’st",
-        "definition": "Perfect.",
-        "example_in_english": "Upgrading your computer seems the ideal solution.",
-        "example_in_uzbek": "Kompyuteringizni yangilash ideal yechim kabi ko'rinadi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "42",
-        "english_word": "Insult (v)",
-        "uzbek_word": "haqoratlamoq",
-        "definition": "To say or do something that is offensive.",
-        "example_in_english": "You'll insult the cook if you don't at least taste the meal.",
-        "example_in_uzbek": "Agar siz taomni tatmasangiz, oshpazni haqorat qilasiz."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "42",
-        "english_word": "Insult (n)",
-        "uzbek_word": "haqorat",
-        "definition": "An offensive remark.",
-        "example_in_english": "I've never heard such a dreadful insult.",
-        "example_in_uzbek": "Men hech qachon bunday dahshatli haqoratni eshitmaganman."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "42",
-        "english_word": "Investigate (v)",
-        "uzbek_word": "tadqiq qilmoq/aniqlashtirmoq",
-        "definition": "To try to find out all the facts about something in order to learn the truth about it.",
-        "example_in_english": "We sent a reporter to investigate the rumour.",
-        "example_in_uzbek": "Biz mish-mishni tergash uchun reporterni yubordik."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "42",
-        "english_word": "Negative (adj)",
-        "uzbek_word": "salbiy",
-        "definition": "Harmful or bad.",
-        "example_in_english": "Does TV have a negative effect on children?",
-        "example_in_uzbek": "Televizion bolalarga salbiy ta'sir ko'rsatadimi?"
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "42",
-        "english_word": "Positive (adj)",
-        "uzbek_word": "ijobiy",
-        "definition": "A positive experience, situation, result, etc., is a good one.",
-        "example_in_english": "School was a totally positive experience for me.",
-        "example_in_uzbek": "Maktab men uchun butunlay ijobiy tajriba bo'ldi."
-    },
-    {
-        "type": "topic_vocabulary",
-        "unit": "42",
         "english_word": "Praise (v)",
         "uzbek_word": "maqtamoq",
         "definition": "To express strong approval or admiration for someone or something.",
@@ -4374,42 +2493,6 @@
         "example_in_uzbek": "Politsiya hududdagi har bir kishiga yolg'iz chiqishda ehtiyot bo'lishni ogohlantirmoqda."
     },
     {
-        "type": "",
-        "unit": "",
-        "english_word": "",
-        "uzbek_word": "",
-        "definition": "",
-        "example_in_english": "",
-        "example_in_uzbek": ""
-    },
-    {
-        "type": "",
-        "unit": "",
-        "english_word": "",
-        "uzbek_word": "",
-        "definition": "",
-        "example_in_english": "",
-        "example_in_uzbek": ""
-    },
-    {
-        "type": "",
-        "unit": "",
-        "english_word": "",
-        "uzbek_word": "",
-        "definition": "",
-        "example_in_english": "",
-        "example_in_uzbek": ""
-    },
-    {
-        "type": "",
-        "unit": "",
-        "english_word": "",
-        "uzbek_word": "",
-        "definition": "",
-        "example_in_english": "",
-        "example_in_uzbek": ""
-    },
-    {
         "type": "phrasal_verbs",
         "unit": "15",
         "english_word": "Add up",
@@ -4453,69 +2536,6 @@
         "definition": "to take care of a child until adulthood",
         "example_in_english": "She brought up three sons on her own.",
         "example_in_uzbek": "U uchta o'g'ilni o'zi yetishtirdi."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "36",
-        "english_word": "Build up",
-        "uzbek_word": "Not given",
-        "definition": "to increase",
-        "example_in_english": "These exercises are good for building up leg strength.",
-        "example_in_uzbek": "Bu mashqlar oyoq kuchini oshirish uchun yaxshi."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "21",
-        "english_word": "Call back",
-        "uzbek_word": "qayta tel qilmoq",
-        "definition": "to ring again on the phone",
-        "example_in_english": "I'll call you back later when you're not so busy.",
-        "example_in_uzbek": "Men sizni keyinroq qaytib chaqiraman, siz band bo'lmaganingizda."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "27",
-        "english_word": "Call off",
-        "uzbek_word": "bekor qilmoq",
-        "definition": "to cancel",
-        "example_in_english": "The concert has been called off because of the weather.",
-        "example_in_uzbek": "Konsert ob-havo tufayli bekor qilindi."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "39",
-        "english_word": "Calm down",
-        "uzbek_word": "Not given",
-        "definition": "to become/make calmer",
-        "example_in_english": "The woman finally calmed down and explained what had happened.",
-        "example_in_uzbek": "Ayol nihoyat tinchlandi va nima bo'lganini tushuntirdi."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "3",
-        "english_word": "Carry on",
-        "uzbek_word": "davom etmoq",
-        "definition": "to continue",
-        "example_in_english": "The phone rang, but Mark just carried on watching TV.",
-        "example_in_uzbek": "Telefon chalingan edi, lekin Mark TV tomosha qilishni davom ettirdi."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "24",
-        "english_word": "Catch up (with)",
-        "uzbek_word": "yetib olmoq",
-        "definition": "to reach the same point/level as",
-        "example_in_english": "He's missed so much school that he's going to find it hard to catch up.",
-        "example_in_uzbek": "U juda ko'p maktabni qoldirib qo'ydi, shuning uchun orqada qolishni qiyinlashtiradi."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "39",
-        "english_word": "Cheer up",
-        "uzbek_word": "xursand qilmoq",
-        "definition": "to become/make happier",
-        "example_in_english": "I started to cheer up when the sun came out.",
-        "example_in_uzbek": "Quyosh chiqqanda men kayfiyatimni ko'tarishni boshladim."
     },
     {
         "type": "phrasal_verbs",
@@ -4618,96 +2638,6 @@
     },
     {
         "type": "phrasal_verbs",
-        "unit": "30",
-        "english_word": "Fall down",
-        "uzbek_word": "yiqilmoq",
-        "definition": "to trip and fall",
-        "example_in_english": "I fell down and hurt my knee.",
-        "example_in_uzbek": "Men yiqildim va tizzamni jarohatladim."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "12",
-        "english_word": "Fall out (with)",
-        "uzbek_word": "Not given",
-        "definition": "to have an argument and stop being friends",
-        "example_in_english": "Have you two fallen out?",
-        "example_in_uzbek": "Siz ikkovingiz o'zaro janjallashdingizmi?"
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "21",
-        "english_word": "Fill in",
-        "uzbek_word": "to’ldirmoq",
-        "definition": "to add information in a form",
-        "example_in_english": "Just fill in this application form, please.",
-        "example_in_uzbek": "Iltimos, ushbu ariza formasini to'ldiring."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "33",
-        "english_word": "Fill up",
-        "uzbek_word": "Not given",
-        "definition": "to make something completely full",
-        "example_in_english": "Just fill this bowl up with sugar and put it on the table.",
-        "example_in_uzbek": "Bu idishni shakar bilan to'ldirib, stolga qo'ying."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "18",
-        "english_word": "Find out",
-        "uzbek_word": "bilmoq",
-        "definition": "to discover information, etc.",
-        "example_in_english": "I don't want Jerry to find out about this.",
-        "example_in_uzbek": "Men Jerryning buni bilishini xohlamayman."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "24",
-        "english_word": "Get away with",
-        "uzbek_word": "jazodan qutilib qolmoq (suvdan quriq chiqmoq)",
-        "definition": "to escape punishment for",
-        "example_in_english": "They have repeatedly broken the law and got away with it.",
-        "example_in_uzbek": "Ular qonunni qayta-qayta buzib, jazolanishdan qochib ketishdi."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "9",
-        "english_word": "Get in(to)",
-        "uzbek_word": "mashinaga minmoq",
-        "definition": "to enter a car",
-        "example_in_english": "I hurt my head as I was getting into the car.",
-        "example_in_uzbek": "Mashinaga kirayotganimda boshimni jarohatladim."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "9",
-        "english_word": "Get off",
-        "uzbek_word": "jamoat transportidan tushmoq (bus, train)",
-        "definition": "to leave a bus/train/etc",
-        "example_in_english": "You need to get off the bus opposite the supermarket.",
-        "example_in_uzbek": "Siz supermarket qarshisidagi avtobusda tushishingiz kerak."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "12",
-        "english_word": "Get on (with)",
-        "uzbek_word": "Not given",
-        "definition": "to have a good relationship (with)",
-        "example_in_english": "She seems to get on with everybody.",
-        "example_in_uzbek": "U hammaga yaxshi muomala qiladi."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "9",
-        "english_word": "Get on(to)",
-        "uzbek_word": "jamoat transportiga chiqmoq (bus, train)",
-        "definition": "to enter a bus/train/etc",
-        "example_in_english": "You can buy a ticket when you get on the bus.",
-        "example_in_uzbek": "Siz avtobusga chiqish vaqtida chipta sotib olishingiz mumkin."
-    },
-    {
-        "type": "phrasal_verbs",
         "unit": "9",
         "english_word": "Get out (of)",
         "uzbek_word": "mashinadan tushmoq",
@@ -4786,231 +2716,6 @@
         "definition": "to no longer be fresh",
         "example_in_english": "Has this milk gone off?",
         "example_in_uzbek": "Bu sut eskirib ketdimi?"
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "27",
-        "english_word": "Go on",
-        "uzbek_word": "davom etmoq",
-        "definition": "to continue happening or doing something",
-        "example_in_english": "Please go on with your work while I speak to the head teacher.",
-        "example_in_uzbek": "Men maktab direktori bilan gaplashayotganimda, siz ishni davom ettiring, iltimos."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "27",
-        "english_word": "Go on",
-        "uzbek_word": "sodir bo'lmoq",
-        "definition": "to happen",
-        "example_in_english": "There isn't much going on in this town in the evening.",
-        "example_in_uzbek": "Kechqurun bu shaharda ko'p narsalar bo'lmaydi."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "36",
-        "english_word": "Go out",
-        "uzbek_word": "o’chmoq (yonishdan to’xtash)",
-        "definition": "to stop burning",
-        "example_in_english": "The fire must have gone out during the night.",
-        "example_in_uzbek": "O'g'ri tun davomida o'chishi kerak."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "12",
-        "english_word": "Go out with",
-        "uzbek_word": "bilan uchrashib yurmoq",
-        "definition": "to be the boyfriend/girlfriend of",
-        "example_in_english": "Greg used to go out with Katy.",
-        "example_in_uzbek": "Greg Katy bilan uchrashardi."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "12",
-        "english_word": "Grow up",
-        "uzbek_word": "ulg’aymoq",
-        "definition": "to become older (for children)",
-        "example_in_english": "He rarely saw his father while he was growing up.",
-        "example_in_uzbek": "U ulg'ayganida kamdan-kam otasini ko'rardi."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "39",
-        "english_word": "Hang on",
-        "uzbek_word": "kutib turmoq",
-        "definition": "to wait",
-        "example_in_english": "Just hang on - I'll be ready in a minute.",
-        "example_in_uzbek": "Kuting - men bir daqiqada tayyor bo'laman."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "21",
-        "english_word": "Hang up",
-        "uzbek_word": "ilib qo’ymoq",
-        "definition": "to put clothes in a wardrobe, etc",
-        "example_in_english": "The women hung up their coats and sat down.",
-        "example_in_uzbek": "Ayollar o'z palto'larini osib, o'tirdilar."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "21",
-        "english_word": "Hang up",
-        "uzbek_word": "go'shakni qo'ymoq",
-        "definition": "to put the receiver down to end a phone call",
-        "example_in_english": "I can't believe that Jessica hung up without saying goodbye!",
-        "example_in_uzbek": "Jessica xayrlashmasdan telefonni yopganini ishonmayapman!"
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "33",
-        "english_word": "Have on",
-        "uzbek_word": "kiyib yurmoq",
-        "definition": "to wear (a piece of clothing)",
-        "example_in_english": "The man had a strange hat on.",
-        "example_in_uzbek": "Erkakda g'alati shapka bor edi."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "15",
-        "english_word": "Hurry up",
-        "uzbek_word": "shoshilmoq",
-        "definition": "to do something more quickly",
-        "example_in_english": "We haven't got much time, so hurry up!",
-        "example_in_uzbek": "Bizda ko'p vaqt qolmagan, shuning uchun tezroq qiling!"
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "3",
-        "english_word": "Join in",
-        "uzbek_word": "qo’shilmoq, qatnashmoq",
-        "definition": "to participate, take part",
-        "example_in_english": "Ask them if you can play - I'm sure they'll let you join in.",
-        "example_in_uzbek": "Ulardan o'ynashim mumkinligini so'rang - men ishonamanki, ular sizni qo'shishadi."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "36",
-        "english_word": "Keep out",
-        "uzbek_word": "“kirilmasin” [kirishdan saqlash]",
-        "definition": "to prevent from entering",
-        "example_in_english": "Cars should be kept out of the city centre.",
-        "example_in_uzbek": "Avtomobillar shahar markazidan chiqarilishi kerak."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "33",
-        "english_word": "Leave out",
-        "uzbek_word": "qoldirib ketmoq",
-        "definition": "to not include",
-        "example_in_english": "Don't leave your brother out - let him play with you and your friends.",
-        "example_in_uzbek": "Akangni chetda qoldirmang - uni siz bilan o'ynashga ruxsat bering."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "12",
-        "english_word": "Let down",
-        "uzbek_word": "hafa qilmoq",
-        "definition": "to disappoint",
-        "example_in_english": "You've really let me down.",
-        "example_in_uzbek": "Siz meni juda xafa qildingiz."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "30",
-        "english_word": "Lie down",
-        "uzbek_word": "yotmoq",
-        "definition": "to start lying (on a bed, etc)",
-        "example_in_english": "I'm going to go and lie down for a while.",
-        "example_in_uzbek": "Men bir oz vaqt yotishga boraman."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "21",
-        "english_word": "Log off",
-        "uzbek_word": "netdan chiqmoq",
-        "definition": "to disconnect from the Internet/a website",
-        "example_in_english": "Don't forget to log off when you've finished checking your e-mail.",
-        "example_in_uzbek": "E-pochta tekshirilgandan so'ng, tizimdan chiqishni unutmang."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "21",
-        "english_word": "Log on(to)",
-        "uzbek_word": "netga kirmoq",
-        "definition": "to connect to the Internet/a website",
-        "example_in_english": "You need your password to log on.",
-        "example_in_uzbek": "Tizimga kirish uchun parolingiz kerak."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "12",
-        "english_word": "Look after",
-        "uzbek_word": "g’amxo’rlik qilmoq",
-        "definition": "to take care of",
-        "example_in_english": "It's hard work looking after three children all day.",
-        "example_in_uzbek": "Butun kun uchta bolani qarash juda qiyin."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "6",
-        "english_word": "Look up",
-        "uzbek_word": "so’z qidirmoq",
-        "definition": "to try to find information in a book, etc",
-        "example_in_english": "I had to look the word up in a dictionary.",
-        "example_in_uzbek": "Men so'zni lug'atdan qidirishga to'g'ri keldi."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "18",
-        "english_word": "Make up",
-        "uzbek_word": "o’ylab topmoq",
-        "definition": "to invent an explanation, excuse, etc",
-        "example_in_english": "He made up some excuse about the dog eating his homework.",
-        "example_in_uzbek": "U itning uy vazifasini yeyayotgani haqida bahona uydirdi."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "24",
-        "english_word": "Move in",
-        "uzbek_word": "ko’chib kirmoq",
-        "definition": "to start living in a new house, etc",
-        "example_in_english": "We're moving in next week.",
-        "example_in_uzbek": "Biz kelasi hafta ko'chib o'tamiz."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "15",
-        "english_word": "Pay back",
-        "uzbek_word": "pulni qaytarmoq, qarzni to’lamoq",
-        "definition": "to return money (to someone)",
-        "example_in_english": "Did you pay Denise back?",
-        "example_in_uzbek": "Siz Denise'ni to'ladingizmi?"
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "41",
-        "english_word": "Pick up",
-        "uzbek_word": "terib olmoq",
-        "definition": "to lift something from the floor, a table, etc",
-        "example_in_english": "Please pick those toys up and put them away.",
-        "example_in_uzbek": "Iltimos, o'sha o'yinchoqlarni yig'ing va ularni joyiga qo'ying."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "6",
-        "english_word": "Point out",
-        "uzbek_word": "eslatib o’tmoq",
-        "definition": "to tell someone important information",
-        "example_in_english": "He pointed out that we had two hours of free time before dinner.",
-        "example_in_uzbek": "U kechki ovqatgacha ikkita soat bo'sh vaqtimiz borligini ko'rsatdi."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "21",
-        "english_word": "Print out",
-        "uzbek_word": "nashrdan chiqarmoq",
-        "definition": "to make a paper copy of something on a computer",
-        "example_in_english": "Let me print those photographs out for you.",
-        "example_in_uzbek": "Men siz uchun o'sha rasmlarni chop etishga ruxsat bering."
     },
     {
         "type": "phrasal_verbs",
@@ -5128,87 +2833,6 @@
         "definition": "to escape by running",
         "example_in_english": "The thief ran away from the police officers.",
         "example_in_uzbek": "O'g'rining politsiyachilardan qochib ketdi."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "41",
-        "english_word": "Run out (of)",
-        "uzbek_word": "tugab qolmoq",
-        "definition": "to not have any left",
-        "example_in_english": "Many hospitals are running out of money.",
-        "example_in_uzbek": "Ko'plab kasalxonalar puldan qutulmoqda."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "15",
-        "english_word": "Save up (for)",
-        "uzbek_word": "pul yig’moq",
-        "definition": "to save money (for a specific purpose)",
-        "example_in_english": "I'm saving up for a new electric guitar.",
-        "example_in_uzbek": "Men yangi elektr gitara uchun pul to'playapman."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "3",
-        "english_word": "Send off",
-        "uzbek_word": "o’yindan chetlashtirmoq",
-        "definition": "to make a player leave a game (e.g. football)",
-        "example_in_english": "It was a very bad foul and the referee sent the player off.",
-        "example_in_uzbek": "Bu juda yomon xato edi va hakam o'yinchini maydondan chiqarib yubordi."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "9",
-        "english_word": "Set off",
-        "uzbek_word": "sayohatni boshlamoq",
-        "definition": "to start a journey",
-        "example_in_english": "Go to sleep because we're setting off early in the morning.",
-        "example_in_uzbek": "Uxlashing kerak, chunki ertalab biz erta ketamiz."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "27",
-        "english_word": "Set up",
-        "uzbek_word": "biznes boshlash",
-        "definition": "to start (a business, organization, etc)",
-        "example_in_english": "My dad is going to set up a taxi company.",
-        "example_in_uzbek": "Dadam taksi kompaniyasini tashkil etmoqchi."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "41",
-        "english_word": "Share out",
-        "uzbek_word": "baham ko’rmoq",
-        "definition": "to give a part of something to a group of people",
-        "example_in_english": "The money will be shared out between 30 different environmental organizations.",
-        "example_in_uzbek": "Pul 30 xil ekologik tashkilot o'rtasida taqsimlanadi."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "39",
-        "english_word": "Shut up",
-        "uzbek_word": "bas qilmoq/og’zini yopmoq",
-        "definition": "to stop talking, stop making a noise",
-        "example_in_english": "Just shut up a minute and let me tell you what happened!",
-        "example_in_uzbek": "Bir daqiqa jim bo'ling va nima bo'lganini aytishga ruxsat bering!"
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "30",
-        "english_word": "Sit down",
-        "uzbek_word": "o’tirmoq",
-        "definition": "to (start to) sit",
-        "example_in_english": "Please, sit down and make yourselves comfortable.",
-        "example_in_uzbek": "Iltimos, o'tiring va o'zingizni qulay tuting."
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "41",
-        "english_word": "Sort out",
-        "uzbek_word": "hal qilmoq",
-        "definition": "to solve a problem",
-        "example_in_english": "Investigators are still trying to sort out why the accident happened.",
-        "example_in_uzbek": "Tekshiruvchilar haligacha baxtsiz hodisaning sabablarini aniqlashga harakat qilishmoqda."
     },
     {
         "type": "phrasal_verbs",
@@ -5338,33 +2962,6 @@
     },
     {
         "type": "phrasal_verbs",
-        "unit": "18",
-        "english_word": "Turn off",
-        "uzbek_word": "o’chirmoq",
-        "definition": "to stop a machine working",
-        "example_in_english": "Will you turn the television off, please?",
-        "example_in_uzbek": "Iltimos, televizorni o'chirsangiz bo'ladimi?"
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "18",
-        "english_word": "Turn on",
-        "uzbek_word": "yoqmoq",
-        "definition": "to start a machine working",
-        "example_in_english": "Will you turn the television on, please?",
-        "example_in_uzbek": "Iltimos, televizorni yoqsangiz bo'ladimi?"
-    },
-    {
-        "type": "phrasal_verbs",
-        "unit": "6",
-        "english_word": "Turn over",
-        "uzbek_word": "keyingi sahifaga o’tmoq",
-        "definition": "to turn something so the other side is towards you",
-        "example_in_english": "You may turn over your exam papers now.",
-        "example_in_uzbek": "Endi imtihon qog'ozlaringizni aylantirishingiz mumkin."
-    },
-    {
-        "type": "phrasal_verbs",
         "unit": "3",
         "english_word": "Turn up",
         "uzbek_word": "ovozni ko’tarmoq",
@@ -5409,106 +3006,7 @@
         "example_in_uzbek": "Internet aloqasini qanday ishga tushirishni bilmayapmiz."
     },
     {
-        "type": "phrasal_verbs",
-        "unit": "6",
-        "english_word": "Write down",
-        "uzbek_word": "yozib qo'ymoq",
-        "definition": "to write information on a piece of paper",
-        "example_in_english": "Do you want to write down my phone number?",
-        "example_in_uzbek": "Telefon raqamimni yozmoqchimisiz?"
-    },
-    {
-        "type": "",
-        "unit": "",
-        "english_word": "",
-        "uzbek_word": "",
-        "definition": "",
-        "example_in_english": "",
-        "example_in_uzbek": ""
-    },
-    {
-        "type": "",
-        "unit": "",
-        "english_word": "",
-        "uzbek_word": "",
-        "definition": "",
-        "example_in_english": "",
-        "example_in_uzbek": ""
-    },
-    {
-        "type": "",
-        "unit": "",
-        "english_word": "",
-        "uzbek_word": "",
-        "definition": "",
-        "example_in_english": "",
-        "example_in_uzbek": ""
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "42",
-        "english_word": "accident",
-        "uzbek_word": "by accident",
-        "definition": "",
-        "example_in_english": "I meant to call Helen, but I called Roger by accident.",
-        "example_in_uzbek": "Men Helenni chaqirmoqchi edim, lekin tasodifan Rogerni chaqirdim."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "30",
-        "english_word": "addition",
-        "uzbek_word": "in addition (to)",
-        "definition": "",
-        "example_in_english": "In addition to all the food, we took some games to play.",
-        "example_in_uzbek": "Barcha ovqatlardan tashqari, biz o'ynash uchun ba'zi o'yinlarni olib keldik."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "24",
-        "english_word": "age",
-        "uzbek_word": "at the age of",
-        "definition": "",
-        "example_in_english": "I left home at the age of eighteen.",
-        "example_in_uzbek": "Men sakkiz yoshimda uyimdan ketdim."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "9",
-        "english_word": "air/etc",
-        "uzbek_word": "by air/sea/bus/car/etc",
-        "definition": "",
-        "example_in_english": "The best way to get there is by bus.",
-        "example_in_uzbek": "U yerga borishning eng yaxshi yo'li avtobus bilan."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "33",
-        "english_word": "back",
-        "uzbek_word": "at the back (of)",
-        "definition": "",
-        "example_in_english": "Let’s go and sit at the back.",
-        "example_in_uzbek": "Keling, orqa tomonda o'tiraylik."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "36",
-        "english_word": "beginning",
-        "uzbek_word": "in the beginning",
-        "definition": "",
-        "example_in_english": "I found Chinese hard to learn in the beginning, but it’s easier now.",
-        "example_in_uzbek": "Dastlab, Xitoy tilini o'rganish qiyin edi, lekin hozir osonroq."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "9",
-        "english_word": "board",
-        "uzbek_word": "on board",
-        "definition": "",
-        "example_in_english": "The ship left as soon as all the passengers were on board.",
-        "example_in_uzbek": "Barcha yo'lovchilar kemaga chiqishi bilan, kema jo'nab ketdi."
-    },
-    {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "36",
         "english_word": "bottom",
         "uzbek_word": "at the bottom (of)",
@@ -5517,7 +3015,7 @@
         "example_in_uzbek": "Dengizning tubida qanday?"
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "27",
         "english_word": "business",
         "uzbek_word": "on business",
@@ -5526,7 +3024,7 @@
         "example_in_uzbek": "Men biznes uchun ko'p sayohat qilaman."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "15",
         "english_word": "cash",
         "uzbek_word": "in cash",
@@ -5535,7 +3033,7 @@
         "example_in_uzbek": "Ayol mashina uchun naqd pul to'lagan, bu odatiy hol emasdi."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "3",
         "english_word": "CD/DVD/video",
         "uzbek_word": "on CD/DVD/video",
@@ -5544,7 +3042,7 @@
         "example_in_uzbek": "Men kinoni kinoteatrlarda ko'rmadim, shuning uchun bugun DVDda tomosha qilaman."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "18",
         "english_word": "chance",
         "uzbek_word": "by chance",
@@ -5553,7 +3051,7 @@
         "example_in_uzbek": "Men tasodifan Veniyani shahar markazida uchratdim."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "27",
         "english_word": "charge",
         "uzbek_word": "in charge (of)",
@@ -5562,7 +3060,7 @@
         "example_in_uzbek": "Men mas'ul shaxs bilan gaplashmoqchiman."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "9",
         "english_word": "coast",
         "uzbek_word": "on the coast",
@@ -5571,7 +3069,7 @@
         "example_in_uzbek": "Biz avval sohilda yashardik."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "12",
         "english_word": "common",
         "uzbek_word": "in common (with)",
@@ -5580,7 +3078,7 @@
         "example_in_uzbek": "Men siz bilan hech qanday umumiy tomonim yo'q!"
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "30",
         "english_word": "comparison",
         "uzbek_word": "in comparison to/with",
@@ -5589,7 +3087,7 @@
         "example_in_uzbek": "Germaniya Rossiyaga nisbatan juda kichik."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "6",
         "english_word": "conclusion",
         "uzbek_word": "in conclusion",
@@ -5598,7 +3096,7 @@
         "example_in_uzbek": "Xulosa qilib aytganda, men televizorni ijobiy ixtiro deb hisoblayman."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "15",
         "english_word": "condition",
         "uzbek_word": "in good/bad condition",
@@ -5607,79 +3105,7 @@
         "example_in_uzbek": "Sotiladi: kemper uskunalari, yaxshi holatda."
     },
     {
-        "type": "prepositional _phrases",
-        "unit": "12",
-        "english_word": "contact",
-        "uzbek_word": "in contact (with)",
-        "definition": "",
-        "example_in_english": "I’m still in contact with several friends from school.",
-        "example_in_uzbek": "Men hali ham maktabdagi bir nechta do'stlarim bilan aloqadaman."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "33",
-        "english_word": "corner",
-        "uzbek_word": "in the corner (of)",
-        "definition": "",
-        "example_in_english": "In the corner of the room there was a guitar.",
-        "example_in_uzbek": "Xonaning burchagida gitara bor edi."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "15",
-        "english_word": "credit card/cheque",
-        "uzbek_word": "by credit card/cheque",
-        "definition": "",
-        "example_in_english": "Can I pay by cheque?",
-        "example_in_uzbek": "Men chek bilan to'laysizmi?"
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "42",
-        "english_word": "danger",
-        "uzbek_word": "in danger (of)",
-        "definition": "",
-        "example_in_english": "That house is in danger of falling down.",
-        "example_in_uzbek": "O'sha uy qulashi xavfi ostida."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "15",
-        "english_word": "debt",
-        "uzbek_word": "in debt",
-        "definition": "",
-        "example_in_english": "It can be very worrying to be in debt.",
-        "example_in_uzbek": "Qarzdor bo'lish juda xavotirli bo'lishi mumkin."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "30",
-        "english_word": "diet",
-        "uzbek_word": "on a diet",
-        "definition": "",
-        "example_in_english": "I’m on a diet at the moment so I’m not eating any fatty food.",
-        "example_in_uzbek": "Men hozirda dieta qilaman, shuning uchun yog'li ovqatlar yemayapman."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "36",
-        "english_word": "distance",
-        "uzbek_word": "in the distance",
-        "definition": "",
-        "example_in_english": "Is that a car I can see in the distance?",
-        "example_in_uzbek": "Masofada ko'rayotganim avtomobildanmi?"
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "27",
-        "english_word": "duty",
-        "uzbek_word": "on/off duty",
-        "definition": "",
-        "example_in_english": "My dad's a policeman and he’s often on duty at night.",
-        "example_in_uzbek": "Otam politsiyachi va u tez-tez kechasi xizmatda bo'ladi."
-    },
-    {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "21",
         "english_word": "e-mail/etc",
         "uzbek_word": "by e-mail/phone/letter",
@@ -5688,7 +3114,7 @@
         "example_in_uzbek": "E-mail orqali aloqaga chiqing va men sizga rasmlarimni yuboraman."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "18",
         "english_word": "end",
         "uzbek_word": "in the end",
@@ -5697,7 +3123,7 @@
         "example_in_uzbek": "Biz uchda yetamiz deb o'yladim, lekin oxir-oqibat beshta yetib keldik."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "33",
         "english_word": "end",
         "uzbek_word": "at the end (of)",
@@ -5706,7 +3132,7 @@
         "example_in_uzbek": "Film oxirida hamma turmush qurgan."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "6",
         "english_word": "fact",
         "uzbek_word": "in fact",
@@ -5715,7 +3141,7 @@
         "example_in_uzbek": "Ko'p odamlar Gretsiya qishda issiq deb o'ylashadi, lekin aslida ba'zan qor yog'adi."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "33",
         "english_word": "fashion/style",
         "uzbek_word": "in fashion/style",
@@ -5724,7 +3150,7 @@
         "example_in_uzbek": "O'sha tuflilar hozirda juda modda."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "33",
         "english_word": "fashion/style",
         "uzbek_word": "out of fashion/style",
@@ -5733,7 +3159,7 @@
         "example_in_uzbek": "Hozirgi kunda narsalar juda tez moda bo'lishdan chiqib ketmoqda."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "6",
         "english_word": "favour",
         "uzbek_word": "in favour (of)",
@@ -5742,7 +3168,7 @@
         "example_in_uzbek": "Siz maktab formalariga qanchalik qo'llab-quvvatlaysiz?"
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "39",
         "english_word": "first",
         "uzbek_word": "at first",
@@ -5751,7 +3177,7 @@
         "example_in_uzbek": "Dastlab, Maryamni yoqtirmadim, lekin keyin biz do'st bo'ldik."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "9",
         "english_word": "foot",
         "uzbek_word": "on foot",
@@ -5760,7 +3186,7 @@
         "example_in_uzbek": "Mehmonxonadan plyajga piyoda borishimiz mumkinmi yoki avtobusga o'tish yaxshiroqmi?"
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "33",
         "english_word": "front",
         "uzbek_word": "in front (of)",
@@ -5769,7 +3195,7 @@
         "example_in_uzbek": "Xavotir olmang - siz uyimiz oldida mashinangizni to'xtatishingiz mumkin."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "3",
         "english_word": "fun",
         "uzbek_word": "for fun",
@@ -5778,7 +3204,7 @@
         "example_in_uzbek": "Men rohat uchun bir guruhda qo'shiq aytaman."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "18",
         "english_word": "future",
         "uzbek_word": "in the future",
@@ -5787,214 +3213,7 @@
         "example_in_uzbek": "Kelajakda odamlar boshqa sayyoralarda yashaydilarmi?"
     },
     {
-        "type": "prepositional _phrases",
-        "unit": "6",
-        "english_word": "general",
-        "uzbek_word": "in general",
-        "definition": "",
-        "example_in_english": "In general, TV programs are not educational.",
-        "example_in_uzbek": "Umuman olganda, televizion dasturlar ta'limiy emas."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "6",
-        "english_word": "heart",
-        "uzbek_word": "by heart",
-        "definition": "",
-        "example_in_english": "I’ve learnt the song by heart.",
-        "example_in_uzbek": "Men qo'shiqni yodlab oldim."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "9",
-        "english_word": "holiday",
-        "uzbek_word": "on holiday",
-        "definition": "",
-        "example_in_english": "Isn’t it great to finally be on holiday?",
-        "example_in_uzbek": "Nihoyat ta'tilda bo'lish juda yaxshi emasmi?"
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "6",
-        "english_word": "instance",
-        "uzbek_word": "for instance",
-        "definition": "",
-        "example_in_english": "Many countries, for instance the UK, don’t have identity cards.",
-        "example_in_uzbek": "Ko'pgina mamlakatlarda, masalan, Buyuk Britaniya, shaxsiy guvohnomalar yo'q."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "21",
-        "english_word": "Internet",
-        "uzbek_word": "on the Internet",
-        "definition": "",
-        "example_in_english": "You can find a lot of information on the Internet.",
-        "example_in_uzbek": "Siz Internetda ko'p ma'lumot topishingiz mumkin."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "18",
-        "english_word": "last",
-        "uzbek_word": "at last",
-        "definition": "",
-        "example_in_english": "At last, we’ve arrived!",
-        "example_in_uzbek": "Nihoyat, biz yetib keldik!"
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "24",
-        "english_word": "law",
-        "uzbek_word": "against the law",
-        "definition": "",
-        "example_in_english": "Stealing is against the law.",
-        "example_in_uzbek": "O'g'irlik qonunga qarshi."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "39",
-        "english_word": "least",
-        "uzbek_word": "at least",
-        "definition": "",
-        "example_in_english": "It's cold, but at least it's not raining.",
-        "example_in_uzbek": "Havo sovuq, lekin kamida yomg'ir yo'q."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "12",
-        "english_word": "love",
-        "uzbek_word": "in love (with)",
-        "definition": "",
-        "example_in_english": "I'm in love with Chris.",
-        "example_in_uzbek": "Men Krisga oshiqman."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "42",
-        "english_word": "mess",
-        "uzbek_word": "in a mess",
-        "definition": "",
-        "example_in_english": "Your room is in a mess. Go and tidy it!",
-        "example_in_uzbek": "Sizning xonangiz tartibsiz. Bordiyu, uni tartibga keltiring!"
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "3",
-        "english_word": "middle",
-        "uzbek_word": "in the middle (of)",
-        "definition": "",
-        "example_in_english": "In the middle of the stage, there was an elephant.",
-        "example_in_uzbek": "Scenarning o'rtasida fil bor edi."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "42",
-        "english_word": "mistake",
-        "uzbek_word": "by mistake",
-        "definition": "",
-        "example_in_english": "I meant to call Helen, but I called Roger by mistake.",
-        "example_in_uzbek": "Men Helenni chaqirmoqchi edim, lekin xato bilan Rogerni chaqirdim."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "27",
-        "english_word": "moment",
-        "uzbek_word": "at the moment",
-        "definition": "",
-        "example_in_english": "I'm busy at the moment.",
-        "example_in_uzbek": "Men hozir bandman."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "36",
-        "english_word": "most",
-        "uzbek_word": "at most",
-        "definition": "",
-        "example_in_english": "The tickets should cost about €20 at most.",
-        "example_in_uzbek": "Chiptalar taxminan 20 evro atrofida bo'lishi kerak."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "21",
-        "english_word": "news",
-        "uzbek_word": "on the news",
-        "definition": "",
-        "example_in_english": "They mentioned the accident on the news.",
-        "example_in_uzbek": "Ular hodisani yangiliklarda tilga oldilar."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "30",
-        "english_word": "night",
-        "uzbek_word": "at night",
-        "definition": "",
-        "example_in_english": "It usually gets dark at night.",
-        "example_in_uzbek": "Odatda kechasi qorong'i bo'ladi."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "18",
-        "english_word": "opinion",
-        "uzbek_word": "in my opinion",
-        "definition": "",
-        "example_in_english": "In my opinion, we shouldn’t go to school on Saturdays.",
-        "example_in_uzbek": "Menimcha, shanba kunlari maktabga borishimiz shart emas."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "18",
-        "english_word": "order",
-        "uzbek_word": "out of order",
-        "definition": "",
-        "example_in_english": "This phone is out of order. We'll have to find another one.",
-        "example_in_uzbek": "Ushbu telefon ishlamayapti. Biz boshqa telefon topishimiz kerak."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "12",
-        "english_word": "own",
-        "uzbek_word": "on your own",
-        "definition": "",
-        "example_in_english": "Did you go to the cinema on your own?",
-        "example_in_uzbek": "Siz kinoteatrga yolg'iz bordingizmi?"
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "21",
-        "english_word": "phone",
-        "uzbek_word": "on the phone",
-        "definition": "",
-        "example_in_english": "Come in and wait a second - I'm just on the phone.",
-        "example_in_uzbek": "Kiring va bir oz kuting - men hozir telefon qilmoqdaman."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "42",
-        "english_word": "pressure",
-        "uzbek_word": "under pressure",
-        "definition": "",
-        "example_in_english": "My dad is under a lot of pressure at work at the moment.",
-        "example_in_uzbek": "Otam hozirda ishda katta bosim ostida."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "24",
-        "english_word": "public",
-        "uzbek_word": "in public",
-        "definition": "",
-        "example_in_english": "Politicians can say things in private that they can’t say in public.",
-        "example_in_uzbek": "Siyosatchilar xususiy ravishda aytadigan gaplarini jamoatchilik oldida aytishlari mumkin emas."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "12",
-        "english_word": "purpose",
-        "uzbek_word": "on purpose",
-        "definition": "",
-        "example_in_english": "I didn’t do it on purpose.",
-        "example_in_uzbek": "Men uni qasddan qilmadim."
-    },
-    {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "21",
         "english_word": "radio",
         "uzbek_word": "on the radio",
@@ -6003,7 +3222,7 @@
         "example_in_uzbek": "Men ushbu qo'shiqni birinchi marta radioda eshitdim."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "15",
         "english_word": "rent",
         "uzbek_word": "for rent",
@@ -6012,7 +3231,7 @@
         "example_in_uzbek": "Sizda ijaraga beriladigan xonalar bormi?"
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "24",
         "english_word": "response",
         "uzbek_word": "in response to",
@@ -6021,7 +3240,7 @@
         "example_in_uzbek": "Men 13-iyuldagi xatingizga javoban yozmoqdaman."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "30",
         "english_word": "risk",
         "uzbek_word": "at risk",
@@ -6030,7 +3249,7 @@
         "example_in_uzbek": "Agar ko'proq ishlamasangiz, imtihonlarda muvaffaqiyatsizlikka uchrash xavfi bor."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "15",
         "english_word": "sale",
         "uzbek_word": "for sale",
@@ -6039,7 +3258,7 @@
         "example_in_uzbek": "Men qo'rqaman, devordagi rasmlar sotilmaydi."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "9",
         "english_word": "schedule",
         "uzbek_word": "on schedule",
@@ -6048,7 +3267,7 @@
         "example_in_uzbek": "Bizning poyezd reja bo'yicha yetib keldi."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "39",
         "english_word": "secret",
         "uzbek_word": "in secret",
@@ -6057,70 +3276,7 @@
         "example_in_uzbek": "Biz Julie uchun tug'ilgan kun partiyasini yashirincha rejalashtirdik."
     },
     {
-        "type": "prepositional _phrases",
-        "unit": "30",
-        "english_word": "shape",
-        "uzbek_word": "in shape",
-        "definition": "",
-        "example_in_english": "It's important to me to stay in shape, so I go to the gym whenever I can.",
-        "example_in_uzbek": "Mening uchun forma saqlash muhim, shuning uchun imkon qadar sport zaliga boraman."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "39",
-        "english_word": "spite",
-        "uzbek_word": "in spite of",
-        "definition": "",
-        "example_in_english": "Tina seems to be happy, in spite of her recent problems.",
-        "example_in_uzbek": "Tina yaqinda yuzaga kelgan muammolariga qaramay, baxtli ko'rinadi."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "3",
-        "english_word": "stage",
-        "uzbek_word": "on stage",
-        "definition": "",
-        "example_in_english": "There were three actors on stage.",
-        "example_in_uzbek": "Scenada uchta aktyor bor edi."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "27",
-        "english_word": "strike",
-        "uzbek_word": "on strike",
-        "definition": "",
-        "example_in_english": "We got a day off school because our teachers were on strike.",
-        "example_in_uzbek": "Biz maktabdan bir kun ta'til oldik, chunki o'qituvchilar grevda edilar."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "39",
-        "english_word": "tears",
-        "uzbek_word": "in tears",
-        "definition": "",
-        "example_in_english": "When I found Fiona, she was in tears.",
-        "example_in_uzbek": "Fiona topganimda, u yig'layotgan edi."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "24",
-        "english_word": "teens/twenties/etc",
-        "uzbek_word": "in your teens/twenties/etc",
-        "definition": "",
-        "example_in_english": "Life isn't always easy when you're in your teens.",
-        "example_in_uzbek": "O'spirin paytingizda hayot har doim oson emas."
-    },
-    {
-        "type": "prepositional _phrases",
-        "unit": "27",
-        "english_word": "time",
-        "uzbek_word": "for a long time",
-        "definition": "",
-        "example_in_english": "I haven't seen George for a long time.",
-        "example_in_uzbek": "Men uzoq vaqt davomida Jorjni ko'rmadim."
-    },
-    {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "18",
         "english_word": "time",
         "uzbek_word": "in time (for)",
@@ -6129,7 +3285,7 @@
         "example_in_uzbek": "Biz kinoteatrga filmning boshlanishiga vaqtida yetib keldik."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "3",
         "english_word": "time",
         "uzbek_word": "on time",
@@ -6138,7 +3294,7 @@
         "example_in_uzbek": "Ertaga vaqtida bu yerda bo'lishingizni ta'minlang."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "39",
         "english_word": "times",
         "uzbek_word": "at times",
@@ -6147,7 +3303,7 @@
         "example_in_uzbek": "Men fransuz tilini o'rganishni yoqtiraman, lekin ba'zan bu qiyin bo'lishi mumkin."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "36",
         "english_word": "top",
         "uzbek_word": "at the top (of)",
@@ -6156,7 +3312,7 @@
         "example_in_uzbek": "Everest tog'ining cho'qqisida qanday edi?"
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "33",
         "english_word": "top",
         "uzbek_word": "on top (of)",
@@ -6165,7 +3321,7 @@
         "example_in_uzbek": "U tortning ustiga shakar sepdi."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "36",
         "english_word": "total",
         "uzbek_word": "in total",
@@ -6174,7 +3330,7 @@
         "example_in_uzbek": "Umuman olganda, biz xayriya uchun 200 evrodan ortiq pul yig'dik."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "24",
         "english_word": "touch",
         "uzbek_word": "in touch (with)",
@@ -6183,7 +3339,7 @@
         "example_in_uzbek": "Men hali ham maktabdagi bir nechta do'stlarim bilan aloqadam."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "42",
         "english_word": "trouble",
         "uzbek_word": "in trouble",
@@ -6192,7 +3348,7 @@
         "example_in_uzbek": "Agar o'qituvchi bizni ushlab olsa, biz muammoga duch kelamiz."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "21",
         "english_word": "TV",
         "uzbek_word": "on TV",
@@ -6201,7 +3357,7 @@
         "example_in_uzbek": "Bugun televizorda biron narsa bormi?"
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "42",
         "english_word": "view",
         "uzbek_word": "in my view",
@@ -6210,7 +3366,7 @@
         "example_in_uzbek": "Menimcha, shanba kunlari maktabga borishimiz kerak emas."
     },
     {
-        "type": "prepositional _phrases",
+        "type": "prepositional_phrases",
         "unit": "12",
         "english_word": "yourself",
         "uzbek_word": "by yourself",
@@ -6388,276 +3544,6 @@
         "definition": "ashamed of",
         "example_in_english": "Aren't you ashamed of what you did?",
         "example_in_uzbek": "Siz qilgan ishingizdan uyalmaysizmi?"
-    },
-    {
-        "type": "word_patterns",
-        "unit": "9",
-        "english_word": "ask",
-        "uzbek_word": "so'ramoq",
-        "definition": "ask (sb) about",
-        "example_in_english": "Why don’t you ask your dad about the party?",
-        "example_in_uzbek": "Nega siz otangizdan partiya haqida so'ramaysiz?"
-    },
-    {
-        "type": "word_patterns",
-        "unit": "9",
-        "english_word": "ask",
-        "uzbek_word": "so'rab olmoq",
-        "definition": "ask for",
-        "example_in_english": "Ed asked for a pencil, so I lent him one.",
-        "example_in_uzbek": "Ed qalam so'radi, shuning uchun unga birini berdim."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "36",
-        "english_word": "aware",
-        "uzbek_word": "xabardor",
-        "definition": "aware of",
-        "example_in_english": "I'm not aware of any flights being cancelled.",
-        "example_in_uzbek": "Hech qanday reyslarning bekor qilinganini bilmayman."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "18",
-        "english_word": "begin",
-        "uzbek_word": "boshlamoq",
-        "definition": "begin sth with",
-        "example_in_english": "Let’s begin the lesson with a revision test.",
-        "example_in_uzbek": "Darsni qayta ko'rib chiqish testidan boshlaylik."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "42",
-        "english_word": "believe",
-        "uzbek_word": "ishonmoq",
-        "definition": "believe in",
-        "example_in_english": "Do you believe in UFOs?",
-        "example_in_uzbek": "Siz NLOlarga ishonasizmi?"
-    },
-    {
-        "type": "word_patterns",
-        "unit": "15",
-        "english_word": "belong",
-        "uzbek_word": "tegishli bo‘lmoq",
-        "definition": "belong to",
-        "example_in_english": "Do these belong to you?",
-        "example_in_uzbek": "Bu narsalar sizniki emasmi?"
-    },
-    {
-        "type": "word_patterns",
-        "unit": "9",
-        "english_word": "blame",
-        "uzbek_word": "ayblamoq",
-        "definition": "blame sth on",
-        "example_in_english": "I blame the accident on Jake.",
-        "example_in_uzbek": "Men baxtsizlikni Jeykka ayblayman."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "9",
-        "english_word": "blame",
-        "uzbek_word": "ayblamoq",
-        "definition": "blame sb for",
-        "example_in_english": "You can’t blame Susie for what happened.",
-        "example_in_uzbek": "Siz Susini bo'lib o'tgan voqealar uchun ayblay olmaysiz."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "3",
-        "english_word": "book",
-        "uzbek_word": "kitob",
-        "definition": "a book (by sb) about",
-        "example_in_english": "I read a great book by an English writer about travelling around Europe.",
-        "example_in_uzbek": "Men ingliz yozuvchisi tomonidan Evropada sayohat qilish haqida yozilgan ajoyib kitobni o'qidim."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "3",
-        "english_word": "bored",
-        "uzbek_word": "zerikkan",
-        "definition": "bored with",
-        "example_in_english": "I’m bored with watching this film.",
-        "example_in_uzbek": "Men ushbu filmni tomosha qilishdan zerikdim."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "15",
-        "english_word": "borrow",
-        "uzbek_word": "qarz olmoq",
-        "definition": "borrow sth from",
-        "example_in_english": "You can borrow some money from me, if you like.",
-        "example_in_uzbek": "Agar xohlasangiz, mendan pul qarz olishingiz mumkin."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "15",
-        "english_word": "buy",
-        "uzbek_word": "sotib olmoq",
-        "definition": "buy sth from",
-        "example_in_english": "Where did you buy your new shoes from?",
-        "example_in_uzbek": "Yangi oyoq kiyimlaringizni qayerdan sotib oldingiz?"
-    },
-    {
-        "type": "word_patterns",
-        "unit": "6",
-        "english_word": "capable",
-        "uzbek_word": "qodir",
-        "definition": "capable of",
-        "example_in_english": "Are you capable of holding your breath under water for two minutes?",
-        "example_in_uzbek": "Siz ikki daqiqa davomida suv ostida nafas olishga qodirmisiz?"
-    },
-    {
-        "type": "word_patterns",
-        "unit": "12",
-        "english_word": "care",
-        "uzbek_word": "g‘amxo‘rlik qilmoq",
-        "definition": "care about",
-        "example_in_english": "Everyone should care about protecting the environment.",
-        "example_in_uzbek": "Har bir kishi atrof-muhitni himoya qilishga e'tibor berishi kerak."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "27",
-        "english_word": "careful",
-        "uzbek_word": "ehtiyotkor",
-        "definition": "careful with",
-        "example_in_english": "Please be careful with that vase - it was my grandmother’s.",
-        "example_in_uzbek": "Iltimos, o'sha vase bilan ehtiyot bo'ling - bu mening buvimniki edi."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "33",
-        "english_word": "change",
-        "uzbek_word": "o'zgartirmoq",
-        "definition": "change sth (from sth) into",
-        "example_in_english": "In the story, the witch changes the prince from a man into a frog.",
-        "example_in_uzbek": "Hikoyada, jodugar shahzodani erkakdan qurbaqaga aylantiradi."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "12",
-        "english_word": "chat",
-        "uzbek_word": "suhbatlashmoq",
-        "definition": "chat (to sb) about",
-        "example_in_english": "I’ll have a chat to Mrs Peters about your marks.",
-        "example_in_uzbek": "Men Mrs Peters bilan sizning baholaringiz haqida suhbatlashaman."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "6",
-        "english_word": "cheat",
-        "uzbek_word": "aldamoq",
-        "definition": "cheat at/in",
-        "example_in_english": "You should never cheat at cards.",
-        "example_in_uzbek": "Siz hech qachon kartalarning aldovini qilmasligingiz kerak."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "15",
-        "english_word": "choose",
-        "uzbek_word": "tanlamoq",
-        "definition": "choose between",
-        "example_in_english": "I love both my brother and my sister and I can’t choose between them.",
-        "example_in_uzbek": "Men akamni va opamni ham yaxshi ko'raman va ular orasidan tanlay olmayman."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "9",
-        "english_word": "close",
-        "uzbek_word": "yaqin",
-        "definition": "close to",
-        "example_in_english": "The Town Hall is quite close to my house.",
-        "example_in_uzbek": "Shahar hokimiyati mening uyimga juda yaqin."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "30",
-        "english_word": "combine",
-        "uzbek_word": "birlashtirmoq",
-        "definition": "combine sth with",
-        "example_in_english": "If you combine oxygen with hydrogen you get water.",
-        "example_in_uzbek": "Agar siz kislorod va vodorodni birlashtirsangiz, siz suv hosil qilasiz."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "21",
-        "english_word": "comment",
-        "uzbek_word": "izoh bermoq",
-        "definition": "comment on",
-        "example_in_english": "The politician refused to comment on the situation.",
-        "example_in_uzbek": "Siyosatchi vaziyat haqida fikr bildirishdan bosh tortdi."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "21",
-        "english_word": "communicate",
-        "uzbek_word": "muloqot qilmoq",
-        "definition": "communicate with",
-        "example_in_english": "I communicate with my cousins in Australia by e-mail.",
-        "example_in_uzbek": "Men Avstraliyadagi qarindoshlarim bilan elektron pochta orqali aloqa qilaman."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "15",
-        "english_word": "compare",
-        "uzbek_word": "taqqoslamoq",
-        "definition": "compare sth to/with",
-        "example_in_english": "I’d like you to compare your composition to/with your partner's composition.",
-        "example_in_uzbek": "Men sizdan kompozitsiyangizni sherigingiznikiga solishtirishingizni xohlayman."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "30",
-        "english_word": "complain",
-        "uzbek_word": "shikoyat qilmoq",
-        "definition": "complain (to sb) about",
-        "example_in_english": "I’m going to complain to the manager about this.",
-        "example_in_uzbek": "Men bu haqda menejerdan shikoyat qilmoqchiman."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "6",
-        "english_word": "confuse",
-        "uzbek_word": "chalkashtirmoq",
-        "definition": "confuse sth with",
-        "example_in_english": "I think you’ve confused me with someone else.",
-        "example_in_uzbek": "Menimcha, siz meni boshqa biri bilan aralashtirdingiz."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "39",
-        "english_word": "congratulate",
-        "uzbek_word": "tabriklamoq",
-        "definition": "congratulate sb on",
-        "example_in_english": "The coach congratulated us on winning the final.",
-        "example_in_uzbek": "Murabbiy bizni finalni yutganimiz bilan tabrikladi."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "18",
-        "english_word": "connect",
-        "uzbek_word": "ulamoq",
-        "definition": "connect sth to/with",
-        "example_in_english": "Can you connect this wire to/with this one?",
-        "example_in_uzbek": "Siz bu simni shu biri bilan ulay olasizmi?"
-    },
-    {
-        "type": "word_patterns",
-        "unit": "6",
-        "english_word": "continue",
-        "uzbek_word": "davom ettirmoq",
-        "definition": "continue with",
-        "example_in_english": "Continue with your work and I'll be back in a moment.",
-        "example_in_uzbek": "Ishingizni davom ettiring, men birozdan keyin qaytaman."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "6",
-        "english_word": "cope",
-        "uzbek_word": "uddalamoq",
-        "definition": "cope with",
-        "example_in_english": "I can’t cope with all this homework!",
-        "example_in_uzbek": "Men barcha bu uy vazifalarini bajara olmayapman!"
     },
     {
         "type": "word_patterns",
@@ -7704,132 +4590,6 @@
         "example_in_uzbek": "Rupert ishlash uchun yomon boshliq emas."
     },
     {
-        "type": "word_patterns",
-        "unit": "36",
-        "english_word": "worry",
-        "uzbek_word": "xavotirlanmoq",
-        "definition": "worry about",
-        "example_in_english": "I’m very worried about Tracy.",
-        "example_in_uzbek": "Men Tracy haqida juda xavotirdaman."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "21",
-        "english_word": "write",
-        "uzbek_word": "yozmoq",
-        "definition": "write (to sb) about",
-        "example_in_english": "Write to your grandma about what you bought with your Christmas money.",
-        "example_in_uzbek": "Rojdestvo pulingiz bilan nima sotib olganingiz haqida buvingizga yozing."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "15",
-        "english_word": "wrong",
-        "uzbek_word": "noto‘g‘ri",
-        "definition": "wrong about",
-        "example_in_english": "I think Serena is wrong about Ian - he seems really nice to me.",
-        "example_in_uzbek": "Men Serena Ian haqida noto'g'ri deb o'ylayman - u menga juda yaxshi ko'rinadi."
-    },
-    {
-        "type": "word_patterns",
-        "unit": "15",
-        "english_word": "wrong",
-        "uzbek_word": "noto‘g‘ri",
-        "definition": "wrong with",
-        "example_in_english": "There’s something wrong with my watch. What time is it?",
-        "example_in_uzbek": "Mening soatimda biror narsa noto'g'ri. Hozir soat nechida?"
-    },
-    {
-        "type": "",
-        "unit": "",
-        "english_word": "",
-        "uzbek_word": "",
-        "definition": "",
-        "example_in_english": "",
-        "example_in_uzbek": ""
-    },
-    {
-        "type": "",
-        "unit": "",
-        "english_word": "",
-        "uzbek_word": "",
-        "definition": "",
-        "example_in_english": "",
-        "example_in_uzbek": ""
-    },
-    {
-        "type": "",
-        "unit": "",
-        "english_word": "",
-        "uzbek_word": "",
-        "definition": "",
-        "example_in_english": "",
-        "example_in_uzbek": ""
-    },
-    {
-        "type": "word_formation",
-        "unit": "12",
-        "english_word": "able",
-        "uzbek_word": "ga qodir",
-        "definition": "",
-        "example_in_english": "",
-        "example_in_uzbek": "Men sizning ko'plab tillarda gapira olish qobiliyatingizga qoyil qilyapman."
-    },
-    {
-        "type": "word_formation",
-        "unit": "12",
-        "english_word": "ability",
-        "uzbek_word": "qobiliyat",
-        "definition": "",
-        "example_in_english": "I admire your ability to speak so many different languages.",
-        "example_in_uzbek": "Ko'plab nogironlar ish bilan band."
-    },
-    {
-        "type": "word_formation",
-        "unit": "12",
-        "english_word": "disabled",
-        "uzbek_word": "nogiron, majruh",
-        "definition": "",
-        "example_in_english": "Lots of disabled people have jobs.",
-        "example_in_uzbek": "Men ertangi yig'ilishga borolmayman."
-    },
-    {
-        "type": "word_formation",
-        "unit": "12",
-        "english_word": "unable",
-        "uzbek_word": "ga qodir emas",
-        "definition": "",
-        "example_in_english": "I'm unable to attend the meeting tomorrow.",
-        "example_in_uzbek": "Shifokorlar tez harakat qilib, uning hayotini saqlab qoldilar."
-    },
-    {
-        "type": "word_formation",
-        "unit": "3",
-        "english_word": "act",
-        "uzbek_word": "harakat qilmoq",
-        "definition": "",
-        "example_in_english": "By acting quickly doctors saved her life.",
-        "example_in_uzbek": "Ular amallar so'zlardan kuchliroq deb aytishadi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "3",
-        "english_word": "action",
-        "uzbek_word": "harakat",
-        "definition": "",
-        "example_in_english": "They say that actions speak louder than words.",
-        "example_in_uzbek": "Men aktyor bo'lishni juda xohlayman."
-    },
-    {
-        "type": "word_formation",
-        "unit": "3",
-        "english_word": "actor",
-        "uzbek_word": "aktyor",
-        "definition": "",
-        "example_in_english": "I would love to be an actor.",
-        "example_in_uzbek": "Jonni oltita yoshda, shuning uchun u juda faol va ko'p energiyaga ega."
-    },
-    {
         "type": "word_formation",
         "unit": "3",
         "english_word": "active",
@@ -8398,393 +5158,6 @@
     },
     {
         "type": "word_formation",
-        "unit": "21",
-        "english_word": "certainty",
-        "uzbek_word": "aniqlik",
-        "definition": "",
-        "example_in_english": "‘Matt must have left,’ George said with certainty.",
-        "example_in_uzbek": "U suv kompaniyasida kimyogar sifatida ishlagan."
-    },
-    {
-        "type": "word_formation",
-        "unit": "18",
-        "english_word": "chemist",
-        "uzbek_word": "kimyogar; dorixona",
-        "definition": "",
-        "example_in_english": "She worked as a chemist for the water company.",
-        "example_in_uzbek": "Natriy kimyoviy elementdir."
-    },
-    {
-        "type": "word_formation",
-        "unit": "18",
-        "english_word": "chemical",
-        "uzbek_word": "kimyoviy modda",
-        "definition": "",
-        "example_in_english": "Sodium is a chemical.",
-        "example_in_uzbek": "Men maktabda kimyo o'rganishni yaxshi ko'raman."
-    },
-    {
-        "type": "word_formation",
-        "unit": "18",
-        "english_word": "chemistry",
-        "uzbek_word": "kimyo fani; kimyoviy tadqiqotlar",
-        "definition": "",
-        "example_in_english": "I like doing chemistry at school.",
-        "example_in_uzbek": "Bu multfilm 3 yoshli bolalar uchun mos keladi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "3",
-        "english_word": "child",
-        "uzbek_word": "bola",
-        "definition": "",
-        "example_in_english": "This cartoon is suitable for a 3-year-old child.",
-        "example_in_uzbek": "Men o'yin maydonchasida bolalarning o'ynayotganini ko'rdim."
-    },
-    {
-        "type": "word_formation",
-        "unit": "3",
-        "english_word": "children",
-        "uzbek_word": "bolalar",
-        "definition": "",
-        "example_in_english": "I watched some children playing in the playground.",
-        "example_in_uzbek": "Onam bolalik davrini Frantsiyada o'tkazgan."
-    },
-    {
-        "type": "word_formation",
-        "unit": "3",
-        "english_word": "childhood",
-        "uzbek_word": "bolalik",
-        "definition": "",
-        "example_in_english": "My mum spent her childhood in France.",
-        "example_in_uzbek": "U Buyuk Britaniyada qolish yoki uyga qaytish o'rtasida tanlashga majbur edi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "9",
-        "english_word": "choose",
-        "uzbek_word": "tanlamoq",
-        "definition": "",
-        "example_in_english": "She had to choose between staying in the UK or going home.",
-        "example_in_uzbek": "Silyaviya nihoyat shokoladli muzqaymoqni tanladi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "9",
-        "english_word": "chose",
-        "uzbek_word": "choose fe'lining o'tgan zamon shakli",
-        "definition": "",
-        "example_in_english": "Sylvia finally chose chocolate ice cream.",
-        "example_in_uzbek": "Tanlagan kitobingizni olib, kutubxonachidan muhrlatib oling."
-    },
-    {
-        "type": "word_formation",
-        "unit": "9",
-        "english_word": "chosen",
-        "uzbek_word": "choose fe'lining past participle shakli",
-        "definition": "",
-        "example_in_english": "Take the book you have chosen and get it stamped by the librarian.",
-        "example_in_uzbek": "Sizda tanlov bor - qizil mevali yoki shokoladli muzqaymoq tanlashingiz mumkin."
-    },
-    {
-        "type": "word_formation",
-        "unit": "9",
-        "english_word": "choice",
-        "uzbek_word": "tanlash imkoniyati",
-        "definition": "",
-        "example_in_english": "You have a choice - you can either have strawberry or chocolate ice cream.",
-        "example_in_uzbek": "U changda barmog'i bilan doira chizdi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "36",
-        "english_word": "circle",
-        "uzbek_word": "aylana",
-        "definition": "",
-        "example_in_english": "He traced a circle in the dust with his finger.",
-        "example_in_uzbek": "Bizning ovqatlanish stolimiz dumaloq."
-    },
-    {
-        "type": "word_formation",
-        "unit": "36",
-        "english_word": "circular",
-        "uzbek_word": "aylana shaklda, dumaloq",
-        "definition": "",
-        "example_in_english": "Our dining table is circular.",
-        "example_in_uzbek": "U 1785 yilda tangalar yig'ishni boshladi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "3",
-        "english_word": "collect",
-        "uzbek_word": "yig'moq",
-        "definition": "",
-        "example_in_english": "He took up collecting coins in 1785.",
-        "example_in_uzbek": "Jonning ajoyib futbol ko'ylaklari kolleksiyasi bor."
-    },
-    {
-        "type": "word_formation",
-        "unit": "3",
-        "english_word": "collection",
-        "uzbek_word": "kolleksiya, to'plam",
-        "definition": "",
-        "example_in_english": "John has got a great collection of football shirts.",
-        "example_in_uzbek": "Men eski markalarimni kollektsionerga sotdim."
-    },
-    {
-        "type": "word_formation",
-        "unit": "3",
-        "english_word": "collector",
-        "uzbek_word": "kolleksioner, yig'uvchi",
-        "definition": "",
-        "example_in_english": "I sold my old stamps to a collector.",
-        "example_in_uzbek": "Ular televizorda komediyani soatlab tomosha qilishdi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "39",
-        "english_word": "comedy",
-        "uzbek_word": "komediya",
-        "definition": "",
-        "example_in_english": "They spent hours watching comedy on television.",
-        "example_in_uzbek": "Mening eng sevimli komediyam Jim Carrey."
-    },
-    {
-        "type": "word_formation",
-        "unit": "39",
-        "english_word": "comedian",
-        "uzbek_word": "komediyachi, qiziqchi",
-        "definition": "",
-        "example_in_english": "My favourite comedian is Jim Carrey.",
-        "example_in_uzbek": "Men yotog'imning qulayligini tark etishni xohlamadim."
-    },
-    {
-        "type": "word_formation",
-        "unit": "9",
-        "english_word": "comfort",
-        "uzbek_word": "qulaylik",
-        "definition": "",
-        "example_in_english": "I didn't want to leave the comfort of my bed.",
-        "example_in_uzbek": "O'sha divan juda qulay ko'rinadi, shundaymi?"
-    },
-    {
-        "type": "word_formation",
-        "unit": "9",
-        "english_word": "comfortable",
-        "uzbek_word": "qulay",
-        "definition": "",
-        "example_in_english": "That sofa looks very comfortable, doesn’t it?",
-        "example_in_uzbek": "To'rt soatlik parvozdan so'ng, men noqulaylikni his qila boshladim."
-    },
-    {
-        "type": "word_formation",
-        "unit": "9",
-        "english_word": "uncomfortable",
-        "uzbek_word": "noqulay",
-        "definition": "",
-        "example_in_english": "After four hours on the plane, I was beginning to feel uncomfortable.",
-        "example_in_uzbek": "Delfinlar o'zaro muloqot qilish uchun tovushdan foydalanadilar."
-    },
-    {
-        "type": "word_formation",
-        "unit": "21",
-        "english_word": "communicate",
-        "uzbek_word": "aloqa qilmoq, muloqot qilmoq",
-        "definition": "",
-        "example_in_english": "Dolphins use sound to communicate with each other.",
-        "example_in_uzbek": "Bu kurs sizning muloqot ko'nikmalaringizni yaxshilash uchun mo'ljallangan."
-    },
-    {
-        "type": "word_formation",
-        "unit": "21",
-        "english_word": "communication",
-        "uzbek_word": "aloqa, muloqot",
-        "definition": "",
-        "example_in_english": "This course is designed to improve your communication skills.",
-        "example_in_uzbek": "Avval printerni kompyuterga ulashing."
-    },
-    {
-        "type": "word_formation",
-        "unit": "21",
-        "english_word": "connect",
-        "uzbek_word": "ulamoq, biriktirmoq",
-        "definition": "",
-        "example_in_english": "First connect the printer to the computer.",
-        "example_in_uzbek": "Internetga ulanishim oyiga taxminan 30 evro turadi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "21",
-        "english_word": "connection",
-        "uzbek_word": "ulanish, aloqa",
-        "definition": "",
-        "example_in_english": "My connection to the internet costs about €30 a month.",
-        "example_in_uzbek": "Siz DVD pleerni televizordan uzib qo'yishingiz kerak, keyin PlayStation'ni ulang."
-    },
-    {
-        "type": "word_formation",
-        "unit": "21",
-        "english_word": "disconnect",
-        "uzbek_word": "uzmoq, ajratmoq",
-        "definition": "",
-        "example_in_english": "You need to disconnect the DVD player from the TV before you connect the PlayStation.",
-        "example_in_uzbek": "Men har doim xarid qilmasdan oldin narxlarni taqqoslayman."
-    },
-    {
-        "type": "word_formation",
-        "unit": "15",
-        "english_word": "compare",
-        "uzbek_word": "solishtirmoq",
-        "definition": "",
-        "example_in_english": "I always compare prices before I buy.",
-        "example_in_uzbek": "Siz Tim va Alex o'rtasida taqqoslash qila olmaysiz - ular butunlay farq qiladi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "15",
-        "english_word": "comparison",
-        "uzbek_word": "taqqoslash",
-        "definition": "",
-        "example_in_english": "You can't draw a comparison between Tim and Alex - they’re completely different.",
-        "example_in_uzbek": "Mozart o'zining oxirgi operasini o'lishidan biroz oldin yozgan."
-    },
-    {
-        "type": "word_formation",
-        "unit": "33",
-        "english_word": "compose",
-        "uzbek_word": "yaratmoq, bastalamoq",
-        "definition": "",
-        "example_in_english": "Mozart composed his last opera shortly before he died.",
-        "example_in_uzbek": "Iltimos, meni payshanba kuni sizning kompozitsiyalaringizni bering."
-    },
-    {
-        "type": "word_formation",
-        "unit": "33",
-        "english_word": "composition",
-        "uzbek_word": "bayon",
-        "definition": "",
-        "example_in_english": "Please give me your compositions on Thursday.",
-        "example_in_uzbek": "Mozart mening eng sevimli kompozitorim."
-    },
-    {
-        "type": "word_formation",
-        "unit": "33",
-        "english_word": "composer",
-        "uzbek_word": "bastakor",
-        "definition": "",
-        "example_in_english": "Mozart is my favourite composer.",
-        "example_in_uzbek": "Uchrashuv ikki soatlik muhokamadan so'ng yakunlandi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "18",
-        "english_word": "conclude",
-        "uzbek_word": "xulosa qilmoq",
-        "definition": "",
-        "example_in_english": "The meeting was concluded after two hours of discussion.",
-        "example_in_uzbek": "Men imtihonlarning foydali ekanligi haqida xulosaga keldim."
-    },
-    {
-        "type": "word_formation",
-        "unit": "18",
-        "english_word": "conclusion",
-        "uzbek_word": "xulosa",
-        "definition": "",
-        "example_in_english": "I’ve come to the conclusion that exams are useful.",
-        "example_in_uzbek": "U o'z taqdimotida juda ishonchli."
-    },
-    {
-        "type": "word_formation",
-        "unit": "12",
-        "english_word": "confident",
-        "uzbek_word": "o'ziga ishongan",
-        "definition": "",
-        "example_in_english": "She is very confident about her presentation.",
-        "example_in_uzbek": "Jamoat oldida chiqish uchun ishonch kerak."
-    },
-    {
-        "type": "word_formation",
-        "unit": "12",
-        "english_word": "confidence",
-        "uzbek_word": "o'ziga ishonch",
-        "definition": "",
-        "example_in_english": "You need confidence to perform in public.",
-        "example_in_uzbek": "Ko'rsatmalar meni chalkashtirdi, shuning uchun yordam so'radim."
-    },
-    {
-        "type": "word_formation",
-        "unit": "42",
-        "english_word": "confuse",
-        "uzbek_word": "chalkashtirmoq, adashtirmoq",
-        "definition": "",
-        "example_in_english": "The instructions confused me, so I asked for help.",
-        "example_in_uzbek": "Men nima bo'lganini hali ham chalkashlikda qoldim."
-    },
-    {
-        "type": "word_formation",
-        "unit": "42",
-        "english_word": "confused",
-        "uzbek_word": "chalkashib ketgan, tushunmay turgan",
-        "definition": "",
-        "example_in_english": "I’m still confused about what happened.",
-        "example_in_uzbek": "Yoqilg'ich signalizatori chaqirilganda katta chalkashlik bo'ldi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "42",
-        "english_word": "confusion",
-        "uzbek_word": "tushunmovchilik, yanglishish",
-        "definition": "",
-        "example_in_english": "There was a lot of confusion when the fire alarm went off.",
-        "example_in_uzbek": "Onam ajoyib oshpaz."
-    },
-    {
-        "type": "word_formation",
-        "unit": "30",
-        "english_word": "cook",
-        "uzbek_word": "pishirmoq/oshpaz, pazanda",
-        "definition": "",
-        "example_in_english": "My mother is an excellent cook.",
-        "example_in_uzbek": "Biz kecha yangi gaz pechini sotib oldik."
-    },
-    {
-        "type": "word_formation",
-        "unit": "30",
-        "english_word": "cooker",
-        "uzbek_word": "gaz plitasi",
-        "definition": "",
-        "example_in_english": "We bought a new gas cooker yesterday.",
-        "example_in_uzbek": "Men sizning oshpazlik kitobingizni qarzga olsam bo'ladimi?"
-    },
-    {
-        "type": "word_formation",
-        "unit": "30",
-        "english_word": "cookery",
-        "uzbek_word": "taomlarning tayyorlanishi va retsepti yozilgan kitob",
-        "definition": "",
-        "example_in_english": "Can I borrow your cookery book?",
-        "example_in_uzbek": "Sizning javobingiz to'g'ri, yaxshi ishladingiz!"
-    },
-    {
-        "type": "word_formation",
-        "unit": "6",
-        "english_word": "correct",
-        "uzbek_word": "to'g'ri",
-        "definition": "",
-        "example_in_english": "Your answer is correct, well done!",
-        "example_in_uzbek": "Men sizning maqolalaringizga bir necha tuzatishlar kiritdim."
-    },
-    {
-        "type": "word_formation",
-        "unit": "6",
-        "english_word": "correction",
-        "uzbek_word": "to'g'rilash",
-        "definition": "",
-        "example_in_english": "I’ve made a few corrections to your article.",
-        "example_in_uzbek": "Afsuski, bu noto'g'ri."
-    },
-    {
-        "type": "word_formation",
         "unit": "6",
         "english_word": "incorrect",
         "uzbek_word": "noto'g'ri",
@@ -9007,60 +5380,6 @@
         "definition": "",
         "example_in_english": "I asked the taxi driver to slow down.",
         "example_in_uzbek": "Maktablar bolalarni besh yoshdan ta'lim beradi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "6",
-        "english_word": "educate",
-        "uzbek_word": "ta'lim bermoq",
-        "definition": "",
-        "example_in_english": "Schools educate children from the age of five.",
-        "example_in_uzbek": "Ta'lim shaxsiy rivojlanish uchun muhimdir."
-    },
-    {
-        "type": "word_formation",
-        "unit": "6",
-        "english_word": "education",
-        "uzbek_word": "ta'lim",
-        "definition": "",
-        "example_in_english": "Education is important for personal development.",
-        "example_in_uzbek": "O'tgan yili yangi prezident saylandilar."
-    },
-    {
-        "type": "word_formation",
-        "unit": "24",
-        "english_word": "elect",
-        "uzbek_word": "saylamoq",
-        "definition": "",
-        "example_in_english": "They elected a new president last year.",
-        "example_in_uzbek": "Siz tanlovda kimga ovoz berasiz?"
-    },
-    {
-        "type": "word_formation",
-        "unit": "24",
-        "english_word": "election",
-        "uzbek_word": "saylov",
-        "definition": "",
-        "example_in_english": "Who are you going to vote for in the election?",
-        "example_in_uzbek": "U film davomida hissiyotlarini yashira olmadi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "39",
-        "english_word": "emotion",
-        "uzbek_word": "his-tuyg'u",
-        "definition": "",
-        "example_in_english": "She couldn't hide her emotions during the movie.",
-        "example_in_uzbek": "Nayjl juda hissiyotli odam va juda oson qayg'uradi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "39",
-        "english_word": "emotional",
-        "uzbek_word": "hissiyotlarga beriluvchan",
-        "definition": "",
-        "example_in_english": "Nigel is quite an emotional person and gets upset very easily.",
-        "example_in_uzbek": "Kompaniya 200 dan ortiq odamni ishga oladi."
     },
     {
         "type": "word_formation",
@@ -9781,411 +6100,6 @@
         "definition": "",
         "example_in_english": "Imagine you are on a tropical beach.",
         "example_in_uzbek": "Teresada juda ko'p tasavvur kuchi bor."
-    },
-    {
-        "type": "word_formation",
-        "unit": "33",
-        "english_word": "imagination",
-        "uzbek_word": "tasavvur",
-        "definition": "",
-        "example_in_english": "Theresa has got a lot of imagination.",
-        "example_in_uzbek": "U tasavvur kuchi kuchli yozuvchi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "33",
-        "english_word": "imaginative",
-        "uzbek_word": "tasavvurga boy, kreativ, o'zgacha",
-        "definition": "",
-        "example_in_english": "She’s an imaginative writer.",
-        "example_in_uzbek": "Har qanday o'zgarishlardan xabardor qiling, iltimos."
-    },
-    {
-        "type": "word_formation",
-        "unit": "21",
-        "english_word": "inform",
-        "uzbek_word": "ma'lumot bermoq, xabardor etmoq",
-        "definition": "",
-        "example_in_english": "Please inform me of any changes.",
-        "example_in_uzbek": "O'rganishchilar haqida yana qanday ma'lumotlar bor?"
-    },
-    {
-        "type": "word_formation",
-        "unit": "21",
-        "english_word": "information",
-        "uzbek_word": "ma'lumot",
-        "definition": "",
-        "example_in_english": "Have they got any more information about the explorers yet?",
-        "example_in_uzbek": "Sizning elektron pochtangiz juda ma'lumotli edi - rahmat."
-    },
-    {
-        "type": "word_formation",
-        "unit": "21",
-        "english_word": "informative",
-        "uzbek_word": "ma'lumotga boy",
-        "definition": "",
-        "example_in_english": "Your e-mail was very informative - thanks.",
-        "example_in_uzbek": "O'qituvchi sizga vazifani qanday bajarishni tushuntiradi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "6",
-        "english_word": "instruct",
-        "uzbek_word": "ko'rsatma bermoq",
-        "definition": "",
-        "example_in_english": "The teacher will instruct you on how to complete the task.",
-        "example_in_uzbek": "Mashqni bajarishdan oldin ko'rsatmalarga diqqat bilan quloq soling."
-    },
-    {
-        "type": "word_formation",
-        "unit": "6",
-        "english_word": "instruction",
-        "uzbek_word": "ko'rsatma",
-        "definition": "",
-        "example_in_english": "Listen carefully to the instructions before you do the exercise.",
-        "example_in_uzbek": "U haydovchilik instruktori."
-    },
-    {
-        "type": "word_formation",
-        "unit": "6",
-        "english_word": "instructor",
-        "uzbek_word": "instruktor (ustoz)",
-        "definition": "",
-        "example_in_english": "She’s a driving instructor.",
-        "example_in_uzbek": "Delfinlar juda aqlli hayvonlardir."
-    },
-    {
-        "type": "word_formation",
-        "unit": "33",
-        "english_word": "intelligent",
-        "uzbek_word": "aqlli, idrokli",
-        "definition": "",
-        "example_in_english": "Dolphins are very intelligent animals.",
-        "example_in_uzbek": "Chimpanzelarning aqlini o'lchash oson emas."
-    },
-    {
-        "type": "word_formation",
-        "unit": "33",
-        "english_word": "intelligence",
-        "uzbek_word": "aql-idrok, zukkolik",
-        "definition": "",
-        "example_in_english": "It’s not easy to measure the intelligence of chimpanzees.",
-        "example_in_uzbek": "Men loyihamni hafta oxiriga qadar tugatishni rejalashtiryapman."
-    },
-    {
-        "type": "word_formation",
-        "unit": "30",
-        "english_word": "intend",
-        "uzbek_word": "mo'ljallamoq, rejalashtirmoq",
-        "definition": "",
-        "example_in_english": "I intend to finish my project by the weekend.",
-        "example_in_uzbek": "U muammo chiqarishni xohlamagan."
-    },
-    {
-        "type": "word_formation",
-        "unit": "30",
-        "english_word": "intention",
-        "uzbek_word": "niyat, maqsad",
-        "definition": "",
-        "example_in_english": "He had no intention of causing trouble.",
-        "example_in_uzbek": "Bu xohlaganimcha bo'lmadi! Men buni xato bilan qildim!"
-    },
-    {
-        "type": "word_formation",
-        "unit": "30",
-        "english_word": "intentional",
-        "uzbek_word": "atayin qilingan",
-        "definition": "",
-        "example_in_english": "It wasn’t intentional! I did it by mistake!",
-        "example_in_uzbek": "Sizni do'stim bilan tanishtiray."
-    },
-    {
-        "type": "word_formation",
-        "unit": "12",
-        "english_word": "introduce",
-        "uzbek_word": "tanishtirmoq",
-        "definition": "",
-        "example_in_english": "Let me introduce you to my friend.",
-        "example_in_uzbek": "Men kitobning kirish qismini o'qimadim."
-    },
-    {
-        "type": "word_formation",
-        "unit": "12",
-        "english_word": "introduction",
-        "uzbek_word": "kirish; tanishtiruv",
-        "definition": "",
-        "example_in_english": "I didn’t read the introduction to the book.",
-        "example_in_uzbek": "Armiyamiz mamlakatni bosib olishni rejalashtirdi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "36",
-        "english_word": "invade",
-        "uzbek_word": "bostirib kirmoq",
-        "definition": "",
-        "example_in_english": "The army planned to invade the country.",
-        "example_in_uzbek": "Yuliy Sezar Rimning Britaniyani bosib olishni boshqargan."
-    },
-    {
-        "type": "word_formation",
-        "unit": "36",
-        "english_word": "invasion",
-        "uzbek_word": "istilo qilish, bostirib kirish",
-        "definition": "",
-        "example_in_english": "Julius Caesar led the Roman invasion of Britain.",
-        "example_in_uzbek": "Mahalliy odamlar bosqinchilarga qarshi kurashdi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "36",
-        "english_word": "invader",
-        "uzbek_word": "bosqinchi",
-        "definition": "",
-        "example_in_english": "Local people fought against the invaders.",
-        "example_in_uzbek": "Men ertalab yugurishni yoqtiraman."
-    },
-    {
-        "type": "word_formation",
-        "unit": "30",
-        "english_word": "jog",
-        "uzbek_word": "yengil yugurmoq",
-        "definition": "",
-        "example_in_english": "I like to jog in the morning.",
-        "example_in_uzbek": "Men har kuni ertalab yugurishga boraman."
-    },
-    {
-        "type": "word_formation",
-        "unit": "30",
-        "english_word": "jogging",
-        "uzbek_word": "yengil yugurish (sport turi)",
-        "definition": "",
-        "example_in_english": "I go jogging every morning.",
-        "example_in_uzbek": "Parkda ertalab yuguruvchilar to'la."
-    },
-    {
-        "type": "word_formation",
-        "unit": "30",
-        "english_word": "jogger",
-        "uzbek_word": "mashq tarzida yengil yuguruvchi",
-        "definition": "",
-        "example_in_english": "The park is full of joggers in the morning.",
-        "example_in_uzbek": "Boshqa biror kishini butun hikoyani bilmasdan hukm qilish adolatli emas."
-    },
-    {
-        "type": "word_formation",
-        "unit": "15",
-        "english_word": "judge",
-        "uzbek_word": "hakamlik qilmoq",
-        "definition": "",
-        "example_in_english": "It's not fair to judge someone without knowing the whole story.",
-        "example_in_uzbek": "Hukmga hech kim hayron bo'lmadi - hatto jinoyatchi o'zi ham."
-    },
-    {
-        "type": "word_formation",
-        "unit": "15",
-        "english_word": "judgement",
-        "uzbek_word": "hukm, qaror",
-        "definition": "",
-        "example_in_english": "Nobody was surprised at the judgment—not even the criminal himself.",
-        "example_in_uzbek": "Siz ota-onangizga yolg'on gapirmasligingiz kerak."
-    },
-    {
-        "type": "word_formation",
-        "unit": "12",
-        "english_word": "lie",
-        "uzbek_word": "yolg'on gapirmoq",
-        "definition": "",
-        "example_in_english": "You shouldn’t lie to your parents.",
-        "example_in_uzbek": "Siz yolg'onchisiz!"
-    },
-    {
-        "type": "word_formation",
-        "unit": "12",
-        "english_word": "liar",
-        "uzbek_word": "yolg'onchi",
-        "definition": "",
-        "example_in_english": "You're a liar!",
-        "example_in_uzbek": "Do'stlaringizga yolg'on gapirish juda yomon."
-    },
-    {
-        "type": "word_formation",
-        "unit": "12",
-        "english_word": "lying",
-        "uzbek_word": "yolg'on gapirish",
-        "definition": "",
-        "example_in_english": "Lying to your friends is very bad.",
-        "example_in_uzbek": "Hayot kutilmagan voqealar bilan to'la."
-    },
-    {
-        "type": "word_formation",
-        "unit": "24",
-        "english_word": "life",
-        "uzbek_word": "hayot",
-        "definition": "",
-        "example_in_english": "Life is full of surprises.",
-        "example_in_uzbek": "Men avval Kanadada yashardim."
-    },
-    {
-        "type": "word_formation",
-        "unit": "24",
-        "english_word": "live",
-        "uzbek_word": "yashamoq",
-        "definition": "",
-        "example_in_english": "I used to live in Canada.",
-        "example_in_uzbek": "Yashayotganimdan xursandman!"
-    },
-    {
-        "type": "word_formation",
-        "unit": "24",
-        "english_word": "alive",
-        "uzbek_word": "tirik",
-        "definition": "",
-        "example_in_english": "I’m glad I’m alive!",
-        "example_in_uzbek": "Uning uzun sochlari bor."
-    },
-    {
-        "type": "word_formation",
-        "unit": "18",
-        "english_word": "long",
-        "uzbek_word": "uzun",
-        "definition": "",
-        "example_in_english": "She has long hair.",
-        "example_in_uzbek": "Men suzish havzasining uzunligini suzdim."
-    },
-    {
-        "type": "word_formation",
-        "unit": "18",
-        "english_word": "length",
-        "uzbek_word": "uzunlik",
-        "definition": "",
-        "example_in_english": "I swam the length of the swimming pool.",
-        "example_in_uzbek": "U qimor o'ynashda juda ko'p omadga ega."
-    },
-    {
-        "type": "word_formation",
-        "unit": "42",
-        "english_word": "luck",
-        "uzbek_word": "omad",
-        "definition": "",
-        "example_in_english": "He has a lot of luck when it comes to gambling.",
-        "example_in_uzbek": "Siz umuman omadli odam deb o'ylaysizmi?"
-    },
-    {
-        "type": "word_formation",
-        "unit": "42",
-        "english_word": "lucky",
-        "uzbek_word": "omadli",
-        "definition": "",
-        "example_in_english": "Do you think you’re a lucky person generally?",
-        "example_in_uzbek": "Biz o'yinda mag'lub bo'lishda omadimiz kelmadi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "42",
-        "english_word": "unlucky",
-        "uzbek_word": "omadsiz",
-        "definition": "",
-        "example_in_english": "We were unlucky to lose the match.",
-        "example_in_uzbek": "Omad qilib, men o'yinni yutdim."
-    },
-    {
-        "type": "word_formation",
-        "unit": "42",
-        "english_word": "luckily",
-        "uzbek_word": "yaxshiyamki",
-        "definition": "",
-        "example_in_english": "Luckily, I won the game.",
-        "example_in_uzbek": "Omadsizlik bilan, mashinamiz buzildi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "42",
-        "english_word": "unluckily",
-        "uzbek_word": "baxtga qarshi",
-        "definition": "",
-        "example_in_english": "Unluckily, our car broke down.",
-        "example_in_uzbek": "Biz devorning balandligini o'lchashimiz kerak."
-    },
-    {
-        "type": "word_formation",
-        "unit": "18",
-        "english_word": "measure",
-        "uzbek_word": "o'lchamoq",
-        "definition": "",
-        "example_in_english": "We need to measure the height of the wall.",
-        "example_in_uzbek": "Ular daryodagi ifloslanish darajasini o'lchashdi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "18",
-        "english_word": "measurement",
-        "uzbek_word": "o'lchov",
-        "definition": "",
-        "example_in_english": "They took measurements of the level of pollution in the river.",
-        "example_in_uzbek": "Bu dori ikki marta kuniga oling."
-    },
-    {
-        "type": "word_formation",
-        "unit": "30",
-        "english_word": "medicine",
-        "uzbek_word": "dori/tibbiyot",
-        "definition": "",
-        "example_in_english": "Take this medicine twice a day.",
-        "example_in_uzbek": "Bu jiddiy tibbiy muammo emasmi?"
-    },
-    {
-        "type": "word_formation",
-        "unit": "30",
-        "english_word": "medical",
-        "uzbek_word": "tibbiy",
-        "definition": "",
-        "example_in_english": "Is it a serious medical problem?",
-        "example_in_uzbek": "Yodingiz avvalgidek yaxshi emas."
-    },
-    {
-        "type": "word_formation",
-        "unit": "6",
-        "english_word": "memory",
-        "uzbek_word": "xotira",
-        "definition": "",
-        "example_in_english": "My memory isn't as good as it used to be.",
-        "example_in_uzbek": "Biz bu barcha noan'anaviy fe'llarni yodlashimiz kerakmi?"
-    },
-    {
-        "type": "word_formation",
-        "unit": "6",
-        "english_word": "memorise",
-        "uzbek_word": "yodlamoq",
-        "definition": "",
-        "example_in_english": "Do we have to memorise all these irregular verbs?",
-        "example_in_uzbek": "Maktab bog'ida janob Watkinsga bag'ishlangan yodgorlik mavjud."
-    },
-    {
-        "type": "word_formation",
-        "unit": "6",
-        "english_word": "memorial",
-        "uzbek_word": "haykal, yodgorlik",
-        "definition": "",
-        "example_in_english": "There’s a memorial to Mr. Watkins in the school garden.",
-        "example_in_uzbek": "Men klassik musiqani tinglashni yoqtiraman."
-    },
-    {
-        "type": "word_formation",
-        "unit": "3",
-        "english_word": "music",
-        "uzbek_word": "musiqa",
-        "definition": "",
-        "example_in_english": "I love listening to classical music.",
-        "example_in_uzbek": "Sizda ko'p musiqiy iste'dod bormikan?"
-    },
-    {
-        "type": "word_formation",
-        "unit": "3",
-        "english_word": "musical",
-        "uzbek_word": "musiqiy",
-        "definition": "",
-        "example_in_english": "Do you have much musical talent?",
-        "example_in_uzbek": "Professional musiqachi bo'lish oson emas."
     },
     {
         "type": "word_formation",
@@ -11257,77 +7171,5 @@
         "definition": "",
         "example_in_english": "I always use my computer for work and entertainment.",
         "example_in_uzbek": "Men har doim kompyuterimni ish va ko'ngilochar maqsadlarda ishlataman."
-    },
-    {
-        "type": "word_formation",
-        "unit": "15",
-        "english_word": "useful",
-        "uzbek_word": "foydali",
-        "definition": "",
-        "example_in_english": "My laptop is really useful—I don't know what I would do without it.",
-        "example_in_uzbek": "Mening noutbukim juda foydali—uningisiz nima qilishimni bilmayman."
-    },
-    {
-        "type": "word_formation",
-        "unit": "15",
-        "english_word": "useless",
-        "uzbek_word": "foydasiz",
-        "definition": "",
-        "example_in_english": "You’ve broken the DVD player and now it's useless!",
-        "example_in_uzbek": "Siz DVD pleyerni buzdingiz va endi u foydasiz!"
-    },
-    {
-        "type": "word_formation",
-        "unit": "15",
-        "english_word": "value",
-        "uzbek_word": "baholamoq, narxlamoq",
-        "definition": "",
-        "example_in_english": "She values honesty above all other qualities.",
-        "example_in_uzbek": "U samimiylikni barcha boshqa sifatlardan yuqori baholaydi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "15",
-        "english_word": "valuable",
-        "uzbek_word": "qimmat",
-        "definition": "",
-        "example_in_english": "Are any of these paintings valuable?",
-        "example_in_uzbek": "Ushbu rasmlardan biri qiymatlimi?"
-    },
-    {
-        "type": "word_formation",
-        "unit": "9",
-        "english_word": "visit",
-        "uzbek_word": "tashrif buyurmoq",
-        "definition": "",
-        "example_in_english": "We plan to visit our grandparents next weekend.",
-        "example_in_uzbek": "Biz keyingi hafta buvi va buvijonimizni ziyorat qilishni rejalashtirmoqdamiz."
-    },
-    {
-        "type": "word_formation",
-        "unit": "9",
-        "english_word": "visitor",
-        "uzbek_word": "tashrif buyuruvchi, mehmon",
-        "definition": "",
-        "example_in_english": "The zoo has about 250,000 visitors a year.",
-        "example_in_uzbek": "Hayvonot bog'ida yiliga taxminan 250,000 tashrif buyuruvchi bor."
-    },
-    {
-        "type": "word_formation",
-        "unit": "30",
-        "english_word": "weigh",
-        "uzbek_word": "vazn bosmoq",
-        "definition": "",
-        "example_in_english": "The doctor asked him to weigh himself regularly.",
-        "example_in_uzbek": "Shifokor unga o'zini muntazam ravishda vaznini o'lchashni so'radi."
-    },
-    {
-        "type": "word_formation",
-        "unit": "30",
-        "english_word": "weight",
-        "uzbek_word": "vazn",
-        "definition": "",
-        "example_in_english": "You don't need to lose weight.",
-        "example_in_uzbek": "Sizga vazn yo'qotish kerak emas."
     }
 ]

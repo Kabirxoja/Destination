@@ -15,6 +15,23 @@
 
         <item name="fontFamily">@font/mplusrounded1c_bold</item>
 
+
+
+    </style>
+
+    <style name="CustomEditTextStyle">
+        <item name="android:background">@drawable/bac_curve</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateVisible</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:textCursorDrawable">@drawable/text_cursor_drawable</item>
+        <item name="android:textSelectHandleLeft">@drawable/text_select_handle_drawable_left</item>
+        <item name="android:textSelectHandleRight">@drawable/text_select_handle_drawable_right</item>
+        <item name="android:textSelectHandle">@drawable/text_select_handle_drawable</item>
+        <item name="android:hint">enter the words...</item>
+        <item name="android:inputType">text</item>
     </style>
 
 </resources>

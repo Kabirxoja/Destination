@@ -6,7 +6,7 @@
     android:background="@drawable/bottom_sheet_background"
     android:backgroundTint="@color/white"
     android:padding="16dp"
-    tools:context=".ui.selection.choice.BottomSheetDialog"
+    tools:context=".ui.additionals.BottomSheetDialog"
 
 
     >

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_test_choice"
-        android:name="com.example.destination.ui.selection.choice.TestChoiceFragment"
+        android:name="com.example.destination.ui.details.TestChoiceFragment"
         android:label="@string/nav_name_home"
         tools:layout="@layout/fragment_test_choice" >
         <action
@@ -17,13 +17,13 @@
 
     <fragment
         android:id="@+id/navigation_search"
-        android:name="com.example.destination.ui.search.SearchFragment"
+        android:name="com.example.destination.ui.details.SearchFragment"
         android:label="@string/nav_name_search"
         tools:layout="@layout/fragment_settings" />
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.destination.ui.home.HomeFragment"
+        android:name="com.example.destination.ui.details.HomeFragment"
         android:label="@string/nav_name_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -33,34 +33,48 @@
 
     <fragment
         android:id="@+id/navigation_notes"
-        android:name="com.example.destination.ui.notes.NotesFragment"
+        android:name="com.example.destination.ui.details.NotesFragment"
         android:label="@string/nav_name_notes"
         tools:layout="@layout/fragment_notes" />
 
     <fragment
         android:id="@+id/navigation_settings"
-        android:name="com.example.destination.ui.settings.SettingsFragment"
+        android:name="com.example.destination.ui.details.SettingsFragment"
         android:label="@string/nav_name_settings"
         tools:layout="@layout/fragment_settings" />
 
     <fragment
         android:id="@+id/navigation_main"
-        android:name="com.example.destination.MainFragment"
+        android:name="com.example.destination.ui.main.MainFragment"
         android:label="main"
         tools:layout="@layout/fragment_main" />
     <fragment
         android:id="@+id/vocabularyFragment"
-        android:name="com.example.destination.ui.home.vocabulary.VocabularyFragment"
+        android:name="com.example.destination.ui.details.VocabularyFragment"
         android:label="fragment_vocabulary"
         tools:layout="@layout/fragment_vocabulary" />
     <fragment
         android:id="@+id/testFragment"
-        android:name="com.example.destination.ui.selection.test.TestFragment"
+        android:name="com.example.destination.ui.details.TestFragment"
         android:label="fragment_test"
-        tools:layout="@layout/fragment_test" />
+        tools:layout="@layout/fragment_test" >
+        <action
+            android:id="@+id/action_testFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:popUpTo="@id/navigation_test_choice" />
+    </fragment>
     <dialog
         android:id="@+id/bottomSheetDialog"
-        android:name="com.example.destination.ui.selection.choice.BottomSheetDialog"
+        android:name="com.example.destination.ui.additionals.BottomSheetDialog"
         android:label="fragment_bottom_sheet_dialog"
         tools:layout="@layout/fragment_bottom_sheet_dialog" />
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.destination.ui.details.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_testFragment"
+            app:destination="@id/testFragment" />
+    </fragment>
 </navigation>

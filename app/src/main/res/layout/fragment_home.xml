@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment"
+    tools:context=".ui.details.HomeFragment"
     android:background="@color/light_gray"
 
     >
@@ -31,6 +31,8 @@
         android:layout_height="wrap_content"
         tools:listitem="@layout/recycle_vocabulary_item_layout"
         android:layout_below="@id/text_banner"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="72dp"
         />
 
 </RelativeLayout>

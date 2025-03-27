@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_gray"
-    tools:context=".ui.selection.choice.TestChoiceFragment"
+    tools:context=".ui.details.TestChoiceFragment"
 
     >
 
@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="Vocabulary"
+        android:text="Test"
         android:textAlignment="center"
         android:textColor="@color/gray"
         android:textSize="32sp"
@@ -30,10 +30,11 @@
         android:layout_below="@id/text_banner"
         android:layout_alignBottom="@id/start_button"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="24dp"
         android:background="@drawable/bac_curve"
         android:backgroundTint="@color/white"
         android:src="@drawable/settings_inactive"
+        android:layout_marginTop="12dp"
 
 
         />
@@ -43,8 +44,8 @@
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_below="@id/text_banner"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:layout_toStartOf="@id/adjustment_button"
         android:background="@drawable/bac_curve"
         android:backgroundTint="@color/blue"
@@ -52,6 +53,7 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="18sp"
+        android:layout_marginTop="12dp"
 
 
         />
@@ -62,7 +64,7 @@
         android:layout_height="match_parent"
         android:layout_below="@id/adjustment_button"
         android:layout_centerHorizontal="true"
-        android:layout_marginHorizontal="16dp"
+        android:layout_marginHorizontal="24dp"
         android:layout_marginTop="16dp"
         tools:listitem="@layout/recycle_indicator_item"
 

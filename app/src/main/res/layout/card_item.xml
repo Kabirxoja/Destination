@@ -28,7 +28,7 @@
                 android:layout_height="28dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="80dp"
-                android:background="@drawable/ic_changing_notes"
+                android:background="@drawable/ic_note_true"
                 android:padding="6dp" />
 
             <ImageButton

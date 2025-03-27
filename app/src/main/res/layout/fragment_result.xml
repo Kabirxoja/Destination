@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.details.ResultFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_alignBottom="@+id/bac_congratulations"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/congrat_hundred" />
+
+        <ImageView
+            android:id="@+id/bac_congratulations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/congrat_bac" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Congratulations!"
+        android:textColor="@color/green"
+        android:textSize="38sp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="24dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bac_curve"
+            android:backgroundTint="@color/orange"
+
+            />
+
+
+        <TextView
+            android:id="@+id/number_of_words"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bac_curve"
+            android:backgroundTint="@color/green"
+            android:gravity="center"
+            android:text="24"
+            android:textColor="@color/white"
+            android:textSize="42sp"
+
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/number_of_words"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="8dp"
+            android:text="You memorized all these words😎"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+
+
+            />
+
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/back_to_menu"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_below="@id/text_banner"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_toStartOf="@id/adjustment_button"
+        android:background="@drawable/bac_curve"
+        android:backgroundTint="@color/blue"
+        android:text="Back to main screen"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+
+
+        />
+
+
+    <Button
+        android:id="@+id/start_again"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_below="@id/text_banner"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_toStartOf="@id/adjustment_button"
+        android:background="@drawable/bac_curve"
+        android:backgroundTint="@color/white"
+        android:text="Repeat"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+
+
+        />
+
+
+</LinearLayout>

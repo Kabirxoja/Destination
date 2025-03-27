@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.search.SearchFragment"
     android:background="@color/light_gray"
+    tools:context=".ui.details.SearchFragment"
 
     >
 
@@ -14,10 +14,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:textAlignment="center"
-        android:textSize="32sp"
         android:text="Search"
+        android:textAlignment="center"
         android:textColor="@color/gray"
+        android:textSize="32sp"
         android:textStyle="bold"
 
 
@@ -28,19 +28,35 @@
         android:id="@+id/searchEditText"
         android:layout_width="match_parent"
         android:layout_height="46dp"
-        android:hint="Search..."
-        android:textSize="18sp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/gray"
-        android:drawablePadding="8dp"
         android:layout_below="@+id/text_banner"
-        android:layout_marginHorizontal="16dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/bac_curve"
         android:backgroundTint="@color/white"
+        android:drawablePadding="8dp"
+        android:hint="Search..."
+        android:paddingHorizontal="12dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
         android:textCursorDrawable="@drawable/text_cursor_drawable"
+        android:textSelectHandle="@drawable/text_select_handle_drawable"
         android:textSelectHandleLeft="@drawable/text_select_handle_drawable_left"
         android:textSelectHandleRight="@drawable/text_select_handle_drawable_right"
-        android:textSelectHandle="@drawable/text_select_handle_drawable"
-        android:paddingHorizontal="12dp"
+        android:textSize="18sp"
+
         />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/parent_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchEditText"
+        android:layout_marginTop="12dp"
+        android:fadeScrollbars="false"
+        android:fastScrollEnabled="true"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/recycle_parent_item_layout" />
+
+
 </RelativeLayout>

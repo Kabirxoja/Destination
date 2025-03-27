@@ -5,7 +5,22 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".ui.notes.NotesFragment">
+    tools:context=".ui.details.NotesFragment">
+
+
+    <TextView
+        android:id="@+id/text_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Notes"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="32sp"
+        android:textStyle="bold"
+
+
+        />
 
 
     <EditText
@@ -14,21 +29,29 @@
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:hint="Enter a word"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:visibility="gone"
+        />
 
     <Button
         android:id="@+id/btnSpeakMale"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Speak (Male Voice)" />
+        android:text="Speak (Male Voice)"
+        android:visibility="gone"
+
+        />
 
     <Button
         android:id="@+id/btnSpeakFemale"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Speak (Female Voice)" />
+        android:text="Speak (Female Voice)"
+        android:visibility="gone"
+
+        />
 
 
 

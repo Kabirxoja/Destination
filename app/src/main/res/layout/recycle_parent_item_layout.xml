@@ -2,11 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="16dp"
+    android:layout_marginHorizontal="24dp"
     android:layout_marginBottom="12dp"
     android:background="@drawable/bac_curve"
     android:backgroundTint="@color/white"
-    android:padding="12dp"
 
     >
 
@@ -18,7 +17,11 @@
         android:layout_alignBottom="@id/en_text_view"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:src="@drawable/ic_uk" />
+        android:src="@drawable/ic_uk"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+
+        />
 
     <TextView
         android:id="@+id/en_text_view"
@@ -29,7 +32,23 @@
         android:layout_toEndOf="@id/en_icon"
         android:text="abroad (noun)"
         android:textColor="#222222"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:layout_marginTop="12dp"
+        />
+
+    <TextView
+        android:id="@+id/selection_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="vocabulary"
+        android:textColor="#222222"
+        android:textSize="10sp"
+        android:background="@drawable/bac_curve"
+        android:backgroundTint="@color/light_gray"
+        android:padding="2dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="2dp"
+        />
 
     <ImageView
         android:id="@+id/audio_speaker"
@@ -50,7 +69,9 @@
         android:layout_alignTop="@id/uz_text_view"
         android:layout_alignBottom="@id/uz_text_view"
         android:layout_alignParentStart="true"
-        android:src="@drawable/ic_uz" />
+        android:src="@drawable/ic_uz"
+        android:layout_marginStart="12dp"
+        />
 
     <TextView
         android:id="@+id/uz_text_view"
@@ -62,7 +83,9 @@
         android:layout_toEndOf="@id/uz_icon"
         android:text="xorij"
         android:textColor="#222222"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:layout_marginBottom="12dp"
+        />
 
     <ImageView
         android:id="@+id/add_note"
@@ -72,7 +95,7 @@
         android:layout_marginHorizontal="18dp"
         android:layout_toStartOf="@+id/audio_speaker"
         android:padding="4dp"
-        android:src="@drawable/ic_changing_notes"
+        android:src="@drawable/ic_note_true"
 
 
         />

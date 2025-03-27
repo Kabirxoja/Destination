@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_gray"
-    tools:context=".ui.selection.test.TestFragment">
+    tools:context=".ui.details.TestFragment">
 
     <LinearLayout
         android:id="@+id/btn_back"
         android:layout_width="42dp"
         android:layout_height="42dp"
-        android:layout_margin="16dp"
+        android:layout_margin="24dp"
         android:background="@drawable/bac_curve"
         android:backgroundTint="@color/white"
         android:paddingVertical="8dp"
@@ -27,6 +27,26 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/btn_clue"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="24dp"
+        android:background="@drawable/bac_curve"
+        android:backgroundTint="@color/white"
+        android:padding="6dp"
+
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_bulb" />
+
+
+    </LinearLayout>
+
 
     <!-- Horizontal Progress Bar -->
     <ProgressBar
@@ -35,98 +55,205 @@
         android:layout_width="match_parent"
         android:layout_height="12dp"
         android:layout_below="@id/btn_back"
-        android:layout_marginHorizontal="16dp"
+        android:layout_marginHorizontal="24dp"
         android:max="100"
         android:progress="30"
         android:progressDrawable="@drawable/progress_bar_style"
+        android:visibility="gone"
 
 
         />
 
     <TextView
-        android:id="@+id/txt_text_1"
+        android:id="@+id/unit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_back"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/bac_curve"
+        android:backgroundTint="@color/green"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:text="TYPE OF TOPIC"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+
+
+        />
+
+
+    <TextView
+        android:id="@+id/unit_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_back"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/bac_curve"
+        android:backgroundTint="@color/blue"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:text="TYPE OF TOPIC"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+
+
+
+        />
+
+
+    <TextView
+        android:id="@+id/txt_translation"
         android:layout_width="match_parent"
         android:layout_height="72dp"
-        android:layout_below="@id/progressBar"
-        android:layout_marginHorizontal="16dp"
+        android:layout_below="@id/unit_text"
+        android:layout_marginHorizontal="24dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/bac_curve"
         android:backgroundTint="@color/white"
         android:gravity="center"
-        android:text="Blow up"
+        android:text="portlamoq"
         android:textColor="@color/black"
         android:textSize="28sp"
 
 
         />
 
-    <TextView
-        android:id="@+id/txt_text_2"
+    <RelativeLayout
+        android:id="@+id/checking_layout"
         android:layout_width="match_parent"
         android:layout_height="72dp"
-        android:layout_below="@id/txt_text_1"
-        android:layout_marginHorizontal="16dp"
+        android:layout_below="@id/txt_translation"
+        android:layout_marginHorizontal="24dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/bac_curve"
         android:backgroundTint="@color/white"
-        android:gravity="center"
-        android:text="portlatish"
-        android:textColor="@color/green"
-        android:textSize="28sp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txt_english"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginHorizontal="28dp"
+            android:background="@drawable/bac_curve"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:text="Blow up"
+            android:textColor="@color/green"
+            android:textSize="28sp"
+            android:visibility="invisible"
 
 
+            />
 
-        />
+        <ImageView
+            android:id="@+id/img_correct"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="6dp"
+            android:src="@drawable/ic_checkbox_true"
+            android:visibility="visible"
 
+            />
+
+        <ImageView
+            android:id="@+id/img_incorrect"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="6dp"
+            android:src="@drawable/ic_checkbox_false"
+            android:visibility="visible"
+
+
+            />
+    </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/edit_layout"
         android:layout_width="match_parent"
         android:layout_height="46dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginHorizontal="16dp"
+        android:layout_below="@id/checking_layout"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="32dp"
         android:layout_marginBottom="12dp"
 
 
         >
 
         <EditText
-            android:id="@+id/put_into"
+            android:id="@+id/edit_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="18sp"
-            android:hint="enter the words..."
-            android:textColor="@color/black"
-            android:textColorHint="@color/gray"
-            android:drawablePadding="8dp"
             android:background="@drawable/bac_curve"
             android:backgroundTint="@color/white"
+            android:drawablePadding="8dp"
+            android:hint="enter the words..."
+            android:inputType="text"
+            android:paddingHorizontal="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
             android:textCursorDrawable="@drawable/text_cursor_drawable"
+            android:textSelectHandle="@drawable/text_select_handle_drawable"
             android:textSelectHandleLeft="@drawable/text_select_handle_drawable_left"
             android:textSelectHandleRight="@drawable/text_select_handle_drawable_right"
-            android:textSelectHandle="@drawable/text_select_handle_drawable"
-            android:paddingHorizontal="12dp"
-            android:inputType="text"
-            android:imeOptions="actionDone"
-            />
+            android:textSize="18sp" />
 
 
         <TextView
             android:id="@+id/doNotKnowTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Do not know"
-            android:textSize="12sp"
-            android:textColor="@color/black"
-            android:visibility="visible"
-            android:layout_alignEnd="@id/put_into"
+            android:layout_alignEnd="@id/edit_text"
             android:layout_centerVertical="true"
             android:layout_marginEnd="6dp"
             android:padding="6dp"
+            android:text="Do not know"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:visibility="visible"
 
             />
 
 
     </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/clue_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_layout"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bac_curve"
+        android:backgroundTint="@color/white"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="6dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_bulb"
+            android:backgroundTint="@color/orange"
+
+
+            />
+
+        <TextView
+            android:id="@+id/txt_clue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:text="defination"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </LinearLayout>
 
 
 </RelativeLayout>
