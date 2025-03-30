@@ -3,6 +3,8 @@ package com.example.destination.ui.adapters
 import android.animation.AnimatorInflater
 import android.animation.AnimatorSet
 import android.annotation.SuppressLint
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,14 +17,17 @@ import androidx.viewpager.widget.PagerAdapter
 import com.example.destination.R
 import com.example.destination.data.data.VocabularyItem
 
-class WordPagerAdapter(private val words: List<VocabularyItem>) : PagerAdapter() {
+class WordPagerAdapter() : PagerAdapter() {
 
     private var listener: OnItemClickListener? = null
+
+    private val list: MutableList<VocabularyItem> = mutableListOf()
 
 
     @SuppressLint("MissingInflatedId")
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        val view = LayoutInflater.from(container.context).inflate(R.layout.card_item, container, false)
+        val view =
+            LayoutInflater.from(container.context).inflate(R.layout.card_item, container, false)
 
         val frontText: TextView = view.findViewById(R.id.text_front_title)
         val frontText2: TextView = view.findViewById(R.id.text_front_subtext)
@@ -39,19 +44,27 @@ class WordPagerAdapter(private val words: List<VocabularyItem>) : PagerAdapter()
         var isFront = true
 
         // Bind data to views
-        frontText.text = words[position].enWord
-        frontText2.text = words[position].uzWord
-        textUzWord.text = words[position].uzExample
-        textEnWord.text = words[position].enExample
-        textDefinition.text = words[position].definition
+        frontText.text = list[position].enWord
+        frontText2.text = list[position].uzWord
+        textUzWord.text = list[position].uzExample
+        textEnWord.text = list[position].enExample
+        textDefinition.text = list[position].definition
+
+        if (list[position].isNoted == 1) addToNotes.setBackgroundResource(R.drawable.ic_note_true)
+        else addToNotes.setBackgroundResource(R.drawable.ic_note_false)
 
         // Set up flip animation
         cardView.setOnClickListener {
             isFront = flipCard(cardView, isFront)
         }
-
-        audioIcon.setOnClickListener{
-            Toast.makeText(view.context, "audioIcon", Toast.LENGTH_SHORT).show()
+        audioIcon.setOnClickListener {
+            listener?.onAudioClickPager(list[position])
+            audioIcon.setBackgroundResource(R.drawable.ic_audio_on)
+            Handler(Looper.getMainLooper()).postDelayed({ audioIcon.setBackgroundResource(R.drawable.ic_audio_off) }, 1500)
+        }
+        addToNotes.setOnClickListener {
+            listener?.onNoteClickPager(list[position])
+            toggleNoteState(list[position], addToNotes)  // Update icon immediately
         }
 
 
@@ -64,7 +77,7 @@ class WordPagerAdapter(private val words: List<VocabularyItem>) : PagerAdapter()
     }
 
     override fun getCount(): Int {
-        return words.size
+        return list.size
     }
 
     override fun isViewFromObject(view: View, `object`: Any): Boolean {
@@ -75,8 +88,10 @@ class WordPagerAdapter(private val words: List<VocabularyItem>) : PagerAdapter()
         val scale = cardView.context.resources.displayMetrics.density
         cardView.cameraDistance = 12000 * scale  // Depth effect
 
-        val flipOut = AnimatorInflater.loadAnimator(cardView.context, R.animator.flip_out) as AnimatorSet
-        val flipIn = AnimatorInflater.loadAnimator(cardView.context, R.animator.flip_in) as AnimatorSet
+        val flipOut =
+            AnimatorInflater.loadAnimator(cardView.context, R.animator.flip_out) as AnimatorSet
+        val flipIn =
+            AnimatorInflater.loadAnimator(cardView.context, R.animator.flip_in) as AnimatorSet
 
         flipOut.setTarget(cardView)
         flipIn.setTarget(cardView)
@@ -117,12 +132,39 @@ class WordPagerAdapter(private val words: List<VocabularyItem>) : PagerAdapter()
         flipIn.start()
 
         return !isFront
+
+
     }
 
+
     interface OnItemClickListener {
-        fun onItemClick(word: VocabularyItem)
+        fun onAudioClickPager(word: VocabularyItem)
+        fun onNoteClickPager(word: VocabularyItem)
     }
+
     fun setOnItemClickListener(listener: OnItemClickListener) {
         this.listener = listener
     }
+
+    fun getList(list: List<VocabularyItem>) {
+        this.list.clear()
+        this.list.addAll(list)
+        notifyDataSetChanged()
+    }
+
+    private fun updateNoteIcon(button: ImageButton, isNoted: Int) {
+        if (isNoted == 1) {
+            button.setBackgroundResource(R.drawable.ic_note_true)
+        } else {
+            button.setBackgroundResource(R.drawable.ic_note_false)
+        }
+    }
+
+    private fun toggleNoteState(vocabularyItem: VocabularyItem, button: ImageButton) {
+        val newIsNoted = if (vocabularyItem.isNoted == 1) 0 else 1
+        vocabularyItem.isNoted = newIsNoted
+        updateNoteIcon(button, newIsNoted) // Update UI immediately
+    }
+
+
 }

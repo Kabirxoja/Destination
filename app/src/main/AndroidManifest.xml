@@ -34,7 +34,7 @@
             android:name=".ui.main.MainFragment"
             android:windowSoftInputMode="adjustPan|adjustResize" />
         <activity
-            android:name=".ui.details.TestFragment"
+            android:name=".ui.fragments.TestFragment"
             android:windowSoftInputMode="adjustResize" />
     </application>
 

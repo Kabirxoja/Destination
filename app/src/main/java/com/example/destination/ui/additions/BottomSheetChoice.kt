@@ -1,4 +1,4 @@
-package com.example.destination.ui.additionals
+package com.example.destination.ui.additions
 
 import android.content.res.ColorStateList
 import android.graphics.Color
@@ -14,12 +14,12 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import com.example.destination.R
-import com.example.destination.databinding.FragmentBottomSheetDialogBinding
+import com.example.destination.databinding.FragmentBottomSheetChoiceBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-open class BottomSheetDialog : BottomSheetDialogFragment() {
+open class BottomSheetChoice : BottomSheetDialogFragment() {
 
-    private var _binding: FragmentBottomSheetDialogBinding? = null
+    private var _binding: FragmentBottomSheetChoiceBinding? = null
     private val binding get() = _binding!!
 
     private var listener: BottomSheetListener? = null
@@ -27,6 +27,8 @@ open class BottomSheetDialog : BottomSheetDialogFragment() {
     private val rowSelections = mutableMapOf<Int, Boolean>() // Store row selections
     private val buttonSelections = mutableMapOf<Int, Boolean>() // Store button selections
     private var selectedButton: Int = 0 // Track selected button
+
+
 
     fun setListener(listener: BottomSheetListener) {
         this.listener = listener
@@ -36,7 +38,7 @@ open class BottomSheetDialog : BottomSheetDialogFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentBottomSheetDialogBinding.inflate(layoutInflater, container, false)
+        _binding = FragmentBottomSheetChoiceBinding.inflate(layoutInflater, container, false)
 
         // Initialize rowSelections with default values for all rows
         for (rowNumber in 1..5) {
@@ -92,6 +94,8 @@ open class BottomSheetDialog : BottomSheetDialogFragment() {
             updateRowImage(rowNumber, isSelected)
         }
 
+
+
         return binding.root
     }
 
@@ -130,8 +134,7 @@ open class BottomSheetDialog : BottomSheetDialogFragment() {
 
         imageView?.setImageDrawable(
             if (isSelected) ContextCompat.getDrawable(requireContext(), R.drawable.ic_checkbox_true)
-            else ContextCompat.getDrawable(requireContext(), R.drawable.ic_checkbox_false)
-        )
+            else ContextCompat.getDrawable(requireContext(), R.drawable.ic_checkbox_false))
     }
 
     interface BottomSheetListener {

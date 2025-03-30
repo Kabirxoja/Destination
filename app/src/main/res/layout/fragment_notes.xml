@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".ui.details.NotesFragment">
+    tools:context=".ui.fragments.NotesFragment">
 
 
     <TextView
@@ -30,7 +30,7 @@
         android:autofillHints=""
         android:hint="Enter a word"
         android:textSize="18sp"
-        android:visibility="gone"
+        android:visibility="visible"
         />
 
     <Button
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Speak (Male Voice)"
-        android:visibility="gone"
+        android:visibility="visible"
 
         />
 
@@ -49,13 +49,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Speak (Female Voice)"
-        android:visibility="gone"
+        android:visibility="visible"
 
         />
-
-
-
-
 
 </LinearLayout>
 

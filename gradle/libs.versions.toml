@@ -17,8 +17,8 @@ gsonVersion = "2.8.8"
 toolsCore = "1.0.0-alpha12"
 playServicesBasement = "18.5.0"
 
-roomVersion = "2.6.1" # Use the latest stable version
-ksp = "1.9.0-1.0.13" # Use the latest KSP version
+roomVersion = "2.6.1"
+ksp = "1.9.0-1.0.13"
 
 [libraries]
 

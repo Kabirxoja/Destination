@@ -37,8 +37,9 @@
                 android:layout_height="32dp"
                 android:layout_gravity="center_vertical|end"
                 android:layout_marginEnd="80dp"
-                android:background="@drawable/ic_audio_speaker"
-                android:padding="6dp" />
+                android:background="@drawable/ic_audio_off"
+
+                />
 
             <!-- Hidden Back View -->
             <TextView

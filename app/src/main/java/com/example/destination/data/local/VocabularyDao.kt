@@ -3,6 +3,8 @@ package com.example.destination.data.local
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
+import androidx.room.Update
+import kotlinx.coroutines.flow.Flow
 import java.util.ArrayList
 
 @Dao
@@ -11,7 +13,7 @@ interface VocabularyDao {
     suspend fun insertAll(words: List<VocabularyEntity>)
 
     @Query("SELECT * FROM vocabulary WHERE unit = :unit")
-    suspend fun getWordsByUnit(unit: String): List<VocabularyEntity>
+    fun getWordsByUnit(unit: String): Flow<List<VocabularyEntity>>
 
     @Query("SELECT COUNT(*) FROM vocabulary")
     suspend fun getRowCount(): Int
@@ -22,5 +24,7 @@ interface VocabularyDao {
     @Query("SELECT * FROM vocabulary WHERE englishWord LIKE '%' || :query || '%'")
     suspend fun searchItems(query: String): List<VocabularyEntity>
 
+    @Update
+    suspend fun updateItem(vocabularyEntity: VocabularyEntity)
 
 }

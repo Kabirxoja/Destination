@@ -1,11 +1,12 @@
 package com.example.destination.ui.adapters
 
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -51,16 +52,20 @@ class VocabularyAdapter : ListAdapter<VocabularyItem, VocabularyAdapter.ParentVi
         fun bind(parentItem: VocabularyItem) {
             uzTextView.text = parentItem.uzWord
             enTextView.text = parentItem.enWord
-            selectionType.text  = parentItem.type
+            selectionType.text = parentItem.type
+            correctionText(parentItem.type)
+            if (parentItem.isNoted == 1) addNote.setImageResource(R.drawable.ic_note_true)
+            else addNote.setImageResource(R.drawable.ic_note_false)
         }
 
         private fun showBottomSheet(parentItem: VocabularyItem, itemView: View) {
             val bottomSheetDialog = BottomSheetDialog(itemView.context)
-            val bottomSheetView = LayoutInflater.from(itemView.context).inflate(R.layout.bottom_sheet_vocab, null)
+            val bottomSheetView =
+                LayoutInflater.from(itemView.context).inflate(R.layout.fragment_bottom_sheet_vocabulary, null)
 
             bottomSheetView.findViewById<TextView>(R.id.en_word_bottom_sheet).text = parentItem.enExample
             bottomSheetView.findViewById<TextView>(R.id.uz_word_bottom_sheet).text = parentItem.uzExample
-            bottomSheetView.findViewById<TextView>(R.id.defination_bottom_sheet).text =parentItem.definition
+            bottomSheetView.findViewById<TextView>(R.id.defination_bottom_sheet).text = parentItem.definition
 
             bottomSheetDialog.setContentView(bottomSheetView)
             bottomSheetDialog.show()
@@ -71,9 +76,9 @@ class VocabularyAdapter : ListAdapter<VocabularyItem, VocabularyAdapter.ParentVi
             itemView.rootView.setOnClickListener {
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
-                    (itemView.context as? AppCompatActivity)?.let { activity ->
+                    (itemView.context as? AppCompatActivity)?.let {
                         val adapter = (recyclerView.adapter as? VocabularyAdapter)
-                            ?: return@setOnClickListener  // Now recyclerView is available!
+                            ?: return@setOnClickListener
                         val parentItem = adapter.getItem(position)
                         showBottomSheet(parentItem, itemView)
                         adapter.notifyItemChanged(position)
@@ -81,15 +86,52 @@ class VocabularyAdapter : ListAdapter<VocabularyItem, VocabularyAdapter.ParentVi
 
                 }
             }
+            audioSpeaker.setOnClickListener {
+                audioSpeaker.setImageResource(R.drawable.ic_audio_on) // Change icon when clicked
+                Handler(Looper.getMainLooper()).postDelayed({
+                    audioSpeaker.setImageResource(R.drawable.ic_audio_off) // Reset only this button
+                }, 2000)
 
-            audioSpeaker.setOnClickListener{
-                Toast.makeText(itemView.context.applicationContext, "audioSpeaker", Toast.LENGTH_SHORT).show()
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    val item = getItem(position)
+                    noteClickListener?.onAudioClick(item)
+                }
             }
 
             addNote.setOnClickListener {
-                Toast.makeText(itemView.context.applicationContext, "addNote", Toast.LENGTH_SHORT).show()
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    val item = getItem(position)
+                    noteClickListener?.onNoteClick(item)
+                }
+            }
+        }
 
+        private fun correctionText(string: String) {
+            when (string) {
+                "topic_vocabulary" -> selectionType.text = "vocabulary"
+                "phrasal_verbs" -> selectionType.text = "phrasal verbs"
+                "prepositional_phrases" -> selectionType.text = "prepositional phrases"
+                "word_formation" -> selectionType.text = "word formation"
+                "word_patterns" -> selectionType.text = "word patterns"
             }
         }
     }
+
+    interface OnNoteClickListener {
+        fun onNoteClick(vocabularyEntity: VocabularyItem)
+        fun onAudioClick(vocabularyEntity: VocabularyItem)
+    }
+
+    private var noteClickListener: OnNoteClickListener? = null
+
+    fun setOnNoteClickListener(listener: OnNoteClickListener) {
+        noteClickListener = listener
+    }
+
+
+
+
+
 }

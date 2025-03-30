@@ -6842,7 +6842,7 @@
     {
         "type": "word_patterns",
         "unit": "42",
-        "english_word": "accuse sb of",
+        "english_word": "accuse (sb) of",
         "uzbek_word": "birovni ...da ayblamoq",
         "definition": "accuse",
         "example_in_english": "They accused me of stealing some money!",
@@ -6862,7 +6862,7 @@
     {
         "type": "word_patterns",
         "unit": "12",
-        "english_word": "admire sb for",
+        "english_word": "admire (sb) for",
         "uzbek_word": "birovni ...uchun qoyil qoldirmoq",
         "definition": "admire",
         "example_in_english": "I really admire you for everything you’ve achieved.",
@@ -7102,7 +7102,7 @@
     {
         "type": "word_patterns",
         "unit": "9",
-        "english_word": "blame sb for",
+        "english_word": "blame (sb) for",
         "uzbek_word": "(birovni) ...uchun ayblamoq",
         "definition": "blame",
         "example_in_english": "You can’t blame Susie for what happened.",
@@ -7292,7 +7292,7 @@
     {
         "type": "word_patterns",
         "unit": "39",
-        "english_word": "congratulate sb on",
+        "english_word": "congratulate (sb) on",
         "uzbek_word": "(birovni) ...bilan tabriklamoq",
         "definition": "congratulate",
         "example_in_english": "The coach congratulated us on winning the final.",
@@ -7352,7 +7352,7 @@
     {
         "type": "word_patterns",
         "unit": "42",
-        "english_word": "criticise sb for",
+        "english_word": "criticise (sb) for",
         "uzbek_word": "(birovni) ...uchun tanqid qilmoq",
         "definition": "criticise",
         "example_in_english": "Don’t criticise me for asking questions in class!",
@@ -7622,7 +7622,7 @@
     {
         "type": "word_patterns",
         "unit": "12",
-        "english_word": "forgive sb for",
+        "english_word": "forgive (sb) for",
         "uzbek_word": "(birovni) ...uchun kechirmoq",
         "definition": "forgive",
         "example_in_english": "I'll never forgive you for what you’ve done!",
@@ -7762,7 +7762,7 @@
     {
         "type": "word_patterns",
         "unit": "27",
-        "english_word": "inform sb about",
+        "english_word": "inform (sb) about",
         "uzbek_word": "(birovga) ...haqida xabar bermoq",
         "definition": "inform",
         "example_in_english": "Please inform a member of staff about any problems you may have.",
@@ -7802,7 +7802,7 @@
     {
         "type": "word_patterns",
         "unit": "21",
-        "english_word": "invite sb to",
+        "english_word": "invite (sb) to",
         "uzbek_word": "(birovni) ...ga taklif qilmoq",
         "definition": "invite",
         "example_in_english": "I’m going to invite everyone to my party.",
@@ -8052,7 +8052,7 @@
     {
         "type": "word_patterns",
         "unit": "36",
-        "english_word": "prevent sb from",
+        "english_word": "prevent (sb) from",
         "uzbek_word": "(birovni) ...dan to‘xtatmoq",
         "definition": "prevent",
         "example_in_english": "The wall is designed to prevent the animals from leaving.",
@@ -8072,7 +8072,7 @@
     {
         "type": "word_patterns",
         "unit": "9",
-        "english_word": "provide sb with",
+        "english_word": "provide (sb) with",
         "uzbek_word": "(birovga) ...ni yetkazib bermoq",
         "definition": "provide",
         "example_in_english": "The college provides all the students with books.",
@@ -8082,7 +8082,7 @@
     {
         "type": "word_patterns",
         "unit": "42",
-        "english_word": "punish sb for",
+        "english_word": "punish (sb) for",
         "uzbek_word": "(birovni) ...uchun jazolamoq",
         "definition": "punish",
         "example_in_english": "You shouldn't punish someone for telling the truth.",
@@ -8182,7 +8182,7 @@
     {
         "type": "word_patterns",
         "unit": "33",
-        "english_word": "remind sb of",
+        "english_word": "remind (sb) of",
         "uzbek_word": "(birovga) ...ni eslatmoq",
         "definition": "remind",
         "example_in_english": "Who does this picture remind you of?",
@@ -8412,7 +8412,7 @@
     {
         "type": "word_patterns",
         "unit": "21",
-        "english_word": "tell sb about",
+        "english_word": "tell (sb) about",
         "uzbek_word": "(birovga) ...haqida aytib bermoq",
         "definition": "tell",
         "example_in_english": "I’ve got something to tell you about.",

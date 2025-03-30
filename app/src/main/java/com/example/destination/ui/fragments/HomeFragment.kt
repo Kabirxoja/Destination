@@ -1,6 +1,7 @@
-package com.example.destination.ui.details
+package com.example.destination.ui.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +13,7 @@ import com.example.destination.R
 import com.example.destination.data.data.HomeItem
 import com.example.destination.databinding.FragmentHomeBinding
 import com.example.destination.ui.adapters.HomeAdapter
+import com.example.destination.ui.additions.LanguagePreference
 import com.example.destination.viewmodel.VocabViewModel
 
 class HomeFragment : Fragment() {
@@ -32,11 +34,11 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        val language = LanguagePreference.getLanguage(binding.root.context)
+        Log.d("xxxx", language)
 
         // Instantiate VocabViewModel using the factory
         viewModel2 = ViewModelProvider(this)[VocabViewModel::class.java]
-
-
 
         binding.topicsRecyclerView.layoutManager = LinearLayoutManager(root.context)
 
@@ -68,7 +70,7 @@ class HomeFragment : Fragment() {
                 val bundle = Bundle()
                 bundle.putString("topicName", item.unitName)
                 bundle.putInt("topicUnit", item.unitNumber)
-                findNavController().navigate(R.id.action_navigation_home_to_vocabularyFragment, bundle) // action ID from your nav_graph.xml
+                findNavController().navigate(R.id.action_navigation_home_to_vocabularyFragment, bundle)
             }
         })
 

@@ -1,4 +1,4 @@
-package com.example.destination.ui.details
+package com.example.destination.ui.fragments
 
 import android.annotation.SuppressLint
 import android.graphics.drawable.Drawable
@@ -201,8 +201,6 @@ class TestFragment : Fragment() {
                 currentIndex = 0
                 showWord()
             } else {
-                // All words are correct, end the test
-                Toast.makeText(binding.root.context, "Test completed!", Toast.LENGTH_SHORT).show()
                 val bundle = Bundle()
                 bundle.putInt("listSize", totalWords)
                 findNavController().navigate(R.id.action_testFragment_to_resultFragment, bundle)

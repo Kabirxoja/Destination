@@ -13,8 +13,6 @@ class TestChoiceViewModel : ViewModel() {
     private val _bottomSheetData = MutableLiveData<Pair<Map<Int, Boolean>, Map<Int, Boolean>>>()
     val bottomSheetData: LiveData<Pair<Map<Int, Boolean>, Map<Int, Boolean>>> = _bottomSheetData
 
-
-
     fun setBottomSheetData(
         rowSelections: Map<Int, Boolean>,
         buttonSelections: Map<Int, Boolean>

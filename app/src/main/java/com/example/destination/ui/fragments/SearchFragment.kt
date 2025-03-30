@@ -1,4 +1,4 @@
-package com.example.destination.ui.details
+package com.example.destination.ui.fragments
 
 import android.annotation.SuppressLint
 import android.graphics.drawable.Drawable
@@ -112,11 +112,6 @@ class SearchFragment : Fragment() {
         enExample = exampleInEnglish ?: "",
         uzExample = exampleInUzbek ?: "",
     )
-
-
-
-
-
 
 
     override fun onDestroyView() {

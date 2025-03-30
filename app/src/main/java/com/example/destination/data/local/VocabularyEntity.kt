@@ -9,11 +9,12 @@ import com.google.gson.annotations.SerializedName
 @Entity(tableName = "vocabulary")
 data class VocabularyEntity(
     @PrimaryKey(autoGenerate = true) val id: Int? = null,
-    val type: String? = null, // Make nullable
-    @SerializedName("unit") val unit: String? = null, // Make nullable
-    @SerializedName("english_word") val englishWord: String? = null, // Make nullable
-    @SerializedName("uzbek_word") val uzbekWord: String? = null, // Make nullable
-    val definition: String? = null, // Make nullable
-    @SerializedName("example_in_english") val exampleInEnglish: String? = null, // Make nullable
-    @SerializedName("example_in_uzbek") val exampleInUzbek: String? = null // Make nullable
+    val type: String? = null,
+    @SerializedName("unit") val unit: String? = null,
+    @SerializedName("english_word") val englishWord: String? = null,
+    @SerializedName("uzbek_word") val uzbekWord: String? = null,
+    val definition: String? = null,
+    @SerializedName("example_in_english") val exampleInEnglish: String? = null,
+    @SerializedName("example_in_uzbek") val exampleInUzbek: String? = null,
+    val isNoted: Int? = 0
 )

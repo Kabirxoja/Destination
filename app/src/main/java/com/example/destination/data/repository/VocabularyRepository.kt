@@ -7,6 +7,7 @@ import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException
 import com.google.gson.reflect.TypeToken
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.withContext
 import java.io.IOException
 import java.util.ArrayList
@@ -19,7 +20,7 @@ class VocabularyRepository(private val dao: VocabularyDao, private val context: 
         }
     }
 
-    suspend fun getWordsByUnit(unit: String): List<VocabularyEntity> {
+    suspend fun getWordsByUnit(unit: String): Flow<List<VocabularyEntity>> {
         return withContext(Dispatchers.IO) {
             dao.getWordsByUnit(unit)
         }
@@ -34,6 +35,12 @@ class VocabularyRepository(private val dao: VocabularyDao, private val context: 
     suspend fun getSearchItems(query: String): List<VocabularyEntity> {
         return withContext(Dispatchers.IO) {
             dao.searchItems(query)
+        }
+    }
+
+    suspend fun updateItem(vocabularyEntity: VocabularyEntity) {
+        withContext(Dispatchers.IO) {
+            dao.updateItem(vocabularyEntity)
         }
     }
 

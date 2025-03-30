@@ -55,6 +55,6 @@ dependencies {
     implementation(libs.gson)
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
-    ksp(libs.room.compiler) // Use KSP instead of annotationProcessor
+    ksp(libs.room.compiler)
 
 }

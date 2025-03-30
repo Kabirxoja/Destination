@@ -6,7 +6,7 @@
     android:background="@drawable/bottom_sheet_background"
     android:backgroundTint="@color/white"
     android:padding="16dp"
-    tools:context=".ui.additionals.BottomSheetDialog"
+    tools:context=".ui.additions.BottomSheetChoice"
 
 
     >
@@ -272,7 +272,7 @@
         android:layout_height="46dp"
         android:layout_below="@id/bottomButtons"
         android:layout_marginTop="12dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="28dp"
         android:background="@drawable/bac_curve"
         android:backgroundTint="@color/blue"
         android:text="Single Button"

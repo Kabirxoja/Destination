@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_gray"
-    tools:context=".ui.details.TestChoiceFragment"
+    tools:context=".ui.fragments.TestChoiceFragment"
 
     >
 
@@ -23,37 +23,75 @@
 
         />
 
-    <ImageButton
-        android:id="@+id/adjustment_button"
-        android:layout_width="46dp"
-        android:layout_height="46dp"
+
+    <RelativeLayout
+        android:id="@+id/adjustment_layout"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
         android:layout_below="@id/text_banner"
         android:layout_alignBottom="@id/start_button"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="24dp"
-        android:background="@drawable/bac_curve"
-        android:backgroundTint="@color/white"
-        android:src="@drawable/settings_inactive"
-        android:layout_marginTop="12dp"
+        android:gravity="bottom"
 
 
-        />
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/adjust_layout"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:background="@drawable/bac_curve"
+            android:backgroundTint="@color/white"
+            android:gravity="bottom"
+
+            >
+
+            <ImageView
+                android:id="@+id/adjust_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_changing_settings"
+
+
+                />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/checked_indicator"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignEnd="@id/adjust_layout"
+            android:layout_marginTop="-4dp"
+            android:layout_marginEnd="-4dp"
+            android:background="@drawable/bac_curve"
+            android:backgroundTint="@color/blue"
+
+            />
+
+    </RelativeLayout>
+
 
     <Button
         android:id="@+id/start_button"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_below="@id/text_banner"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_toStartOf="@id/adjustment_button"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="18dp"
+        android:layout_toStartOf="@id/adjustment_layout"
         android:background="@drawable/bac_curve"
-        android:backgroundTint="@color/blue"
+        android:backgroundTint="@color/gray"
         android:text="Start"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:layout_marginTop="12dp"
 
 
         />
@@ -62,7 +100,7 @@
         android:id="@+id/indicator_rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/adjustment_button"
+        android:layout_below="@id/adjustment_layout"
         android:layout_centerHorizontal="true"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="16dp"

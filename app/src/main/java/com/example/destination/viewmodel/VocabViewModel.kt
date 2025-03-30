@@ -8,6 +8,10 @@ import androidx.lifecycle.viewModelScope
 import com.example.destination.data.local.AppDatabase
 import com.example.destination.data.local.VocabularyEntity
 import com.example.destination.data.repository.VocabularyRepository
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
 class VocabViewModel(application: Application) : AndroidViewModel(application) {
@@ -23,11 +27,11 @@ class VocabViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    fun getWordsByUnit(unit: String) {
-        viewModelScope.launch {
-            _wordsByUnit.postValue(repository.getWordsByUnit(unit))
-        }
-    }
+//    fun getWordsByUnit(unit: String) {
+//        viewModelScope.launch {
+//            _wordsByUnit.postValue(repository.getWordsByUnit(unit))
+//        }
+//    }
 
     fun getRowCount(callback: (Int) -> Unit) {
         viewModelScope.launch {

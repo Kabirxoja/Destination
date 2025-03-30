@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_sheet_background"
+    android:backgroundTint="@color/white"
+    android:padding="16dp"
+    tools:context=".ui.additions.BottomSheetLanguage"
+
+
+    >
+
+    <ImageView
+        android:id="@+id/line_of_top"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_bottom_sheet_line"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/row1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_of_top"
+        android:layout_marginTop="18dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/icon1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="Menu Icon"
+            android:src="@drawable/ic_uz" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Uzbek language"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/row2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/row1"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+
+        >
+
+        <ImageView
+            android:id="@+id/icon2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="Menu Icon"
+            android:src="@drawable/ic_ka"
+
+            />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Karakalpak language"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+
+            />
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/bottomButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/row2"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2"
+
+        >
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bottomSingleButton"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_below="@id/bottomButtons"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/bac_curve"
+        android:backgroundTint="@color/blue"
+        android:text="Single Button"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+
+
+
+        />
+</RelativeLayout>

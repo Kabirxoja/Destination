@@ -1,4 +1,4 @@
-package com.example.destination.ui.details
+package com.example.destination.ui.fragments
 
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
@@ -9,9 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import com.example.destination.databinding.FragmentNotesBinding
-import com.example.destination.viewmodel.NotesViewModel
 import java.util.Locale
 
 class NotesFragment : Fragment(), TextToSpeech.OnInitListener {
@@ -30,8 +28,6 @@ class NotesFragment : Fragment(), TextToSpeech.OnInitListener {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notificationsViewModel = ViewModelProvider(this)[NotesViewModel::class.java]
-
         _binding = FragmentNotesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
