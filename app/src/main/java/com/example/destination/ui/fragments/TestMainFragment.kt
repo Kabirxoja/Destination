@@ -19,33 +19,33 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.destination.R
-import com.example.destination.databinding.FragmentTestBinding
-import com.example.destination.viewmodel.TestViewModel
+import com.example.destination.data.data.WordItem
+import com.example.destination.databinding.FragmentTestMainBinding
+import com.example.destination.viewmodel.TestMainViewModel
 
-class TestFragment : Fragment() {
-    private var _binding: FragmentTestBinding? = null
+class TestMainFragment : Fragment() {
+    private var _binding: FragmentTestMainBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var viewModel: TestViewModel
+    private lateinit var viewModel: TestMainViewModel
 
     private var wordList = mutableListOf<WordItem>() // Uzbek, English, Status
     private var currentIndex = 0
     private var correctAnswersCount = 0
     private var totalWords = 0
     private var doNotKnow: Boolean = false
-    private var typeTestString: String = ""
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentTestBinding.inflate(inflater, container, false)
+        _binding = FragmentTestMainBinding.inflate(inflater, container, false)
 
         binding.doNotKnowTextView.setOnClickListener { revealAnswer() }
         binding.btnBack.setOnClickListener { findNavController().popBackStack() }
 
-        viewModel = ViewModelProvider(this)[TestViewModel::class.java]
+        viewModel = ViewModelProvider(this)[TestMainViewModel::class.java]
 
 
         val typeTest = arguments?.getSerializable("rowSelections") as? HashMap<Int, Boolean>
@@ -243,15 +243,4 @@ class TestFragment : Fragment() {
             wordList[currentIndex] = currentWord.copy(status = -1)
         }
     }
-
-
 }
-
-data class WordItem(
-    val uzbekWord: String,
-    val englishWord: String,
-    val type: String,
-    val unit: String,
-    val definition: String,
-    var status: Int  // 0 = unanswered, 1 = correct, -1 = incorrect
-)

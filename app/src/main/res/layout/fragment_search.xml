@@ -56,7 +56,10 @@
         android:fadeScrollbars="false"
         android:fastScrollEnabled="true"
         android:scrollbars="vertical"
-        tools:listitem="@layout/recycle_parent_item_layout" />
+        tools:listitem="@layout/recycle_main_item_layout"
+        android:layout_marginBottom="68dp"
+
+        />
 
 
 </RelativeLayout>

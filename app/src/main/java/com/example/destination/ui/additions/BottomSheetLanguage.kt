@@ -25,29 +25,29 @@ open class BottomSheetLanguage : BottomSheetDialogFragment() {
 
         binding.bottomSingleButton.setOnClickListener {
             Toast.makeText(binding.root.context, "wwwww", Toast.LENGTH_SHORT).show()
-            listener?.onOkButtonClicked(languageSelected)
+            listener?.onSelectedLanguage(languageSelected)
             dismiss()
         }
 
         binding.row1.setOnClickListener {
             languageSelected = "uz"
-            updateRowBackgrounds(binding.text1, binding.text2)
+            updateBackgrounds(binding.text1, binding.text2)
         }
 
         binding.row2.setOnClickListener {
             languageSelected = "ka"
-            updateRowBackgrounds(binding.text2, binding.text1)
+            updateBackgrounds(binding.text2, binding.text1)
         }
 
         return binding.root
     }
-    private fun updateRowBackgrounds(selectedRow: TextView, unselectedRow: TextView) {
+    private fun updateBackgrounds(selectedRow: TextView, unselectedRow: TextView) {
         selectedRow.setTextColor(resources.getColor(R.color.green))
         unselectedRow.setTextColor(resources.getColor(R.color.black))
     }
 
     interface BottomSheetLanguageListener {
-        fun onOkButtonClicked(rowSelections: String)
+        fun onSelectedLanguage(rowSelections: String)
     }
     fun setListener(listener: BottomSheetLanguageListener) {
         this.listener = listener

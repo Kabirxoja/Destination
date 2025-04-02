@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="24dp"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bac_curve"
+    android:backgroundTint="@color/white"
+
+    >
+
+    <ImageView
+        android:id="@+id/en_icon_search"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_alignTop="@id/en_text_view_search"
+        android:layout_alignBottom="@id/en_text_view_search"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_uk"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+
+        />
+
+    <TextView
+        android:id="@+id/en_text_view_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_toEndOf="@id/en_icon_search"
+        android:text="abroad (noun)"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        />
+
+    <TextView
+        android:id="@+id/selection_type_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="vocabulary"
+        android:textColor="@color/white"
+        android:textSize="7sp"
+        android:background="@drawable/bac_curve"
+        android:backgroundTint="@color/green"
+        android:padding="2dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="2dp"
+        android:textAllCaps="true"
+        />
+    <TextView
+        android:id="@+id/selection_unit_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="unit 3"
+        android:textColor="@color/white"
+        android:textSize="7sp"
+        android:background="@drawable/bac_curve"
+        android:backgroundTint="@color/orange"
+        android:padding="2dp"
+        android:textAllCaps="true"
+        android:layout_toStartOf="@id/selection_type_search"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="2dp"
+
+
+        />
+
+    <ImageView
+        android:id="@+id/audio_speaker_search"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:padding="4dp"
+        android:src="@drawable/ic_audio_off"
+
+        />
+
+    <ImageView
+        android:id="@+id/uz_icon_search"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_below="@id/en_icon_search"
+        android:layout_alignTop="@id/uz_text_view_search"
+        android:layout_alignBottom="@id/uz_text_view_search"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ic_uz"
+        android:layout_marginStart="12dp"
+        />
+
+    <TextView
+        android:id="@+id/uz_text_view_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/en_text_view_search"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/uz_icon_search"
+        android:text="xorij"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center_vertical"
+        tools:targetApi="o" />
+
+
+
+</RelativeLayout>

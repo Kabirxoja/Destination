@@ -9,19 +9,28 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.destination.data.data.VocabularyItem
+import com.example.destination.data.local.VocabularyEntity
+import com.example.destination.data.repository.MainViewModelFactory
 import com.example.destination.databinding.FragmentNotesBinding
+import com.example.destination.ui.adapters.NoteAdapter
+import com.example.destination.ui.adapters.SearchAdapter
+import com.example.destination.viewmodel.NotesViewModel
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 import java.util.Locale
 
-class NotesFragment : Fragment(), TextToSpeech.OnInitListener {
+class NotesFragment : Fragment() {
 
     private var _binding: FragmentNotesBinding? = null
     private val binding get() = _binding!!
-
-    private lateinit var tts: TextToSpeech
-    private lateinit var editText: EditText
-    private lateinit var btnSpeakMale: Button
-    private lateinit var btnSpeakFemale: Button
-
+    private lateinit var notesViewModel: NotesViewModel
+    private lateinit var searchAdapter: NoteAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,72 +40,43 @@ class NotesFragment : Fragment(), TextToSpeech.OnInitListener {
         _binding = FragmentNotesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        editText = binding.editTextWord
-        btnSpeakMale = binding.btnSpeakMale
-        btnSpeakFemale = binding.btnSpeakFemale
 
-        tts = TextToSpeech(binding.root.context, this)
+        notesViewModel = ViewModelProvider(
+            this,
+            MainViewModelFactory(requireActivity().application)
+        )[NotesViewModel::class.java]
 
-        btnSpeakMale.setOnClickListener { speakWord("male") }
-        btnSpeakFemale.setOnClickListener { speakWord("female") }
+        searchAdapter = NoteAdapter()
+        binding.recyclerView.layoutManager = LinearLayoutManager(root.context)
+//        searchAdapter.setOnNoteClickListener(this)
+
+        lifecycleScope.launch {
+            notesViewModel.filteredWords.collectLatest { wordList ->
+                Log.d("dddddd", wordList.toString())
+                val changedList = wordList.map { it.toParentItem() }
+                binding.recyclerView.adapter = searchAdapter
+                searchAdapter.submitList(changedList)
+            }
+        }
+
+
 
         return root
     }
 
-
-
-
-    private fun speakWord(gender: String) {
-        val word = editText.text.toString().trim()
-        if (word.isEmpty()) return
-
-        setTTSVoice(gender)  // Set voice type (Male or Female)
-        tts.setSpeechRate(0.9f)  // Slow down for better clarity
-        tts.setPitch(1.1f)       // Adjust pitch for natural sound
-
-        tts.speak(word, TextToSpeech.QUEUE_FLUSH, null, null)
-    }
-
-    private fun setTTSVoice(gender: String) {
-        val availableVoices = tts.voices
-        // Find a male or female voice based on voice attributes
-        val selectedVoice = availableVoices.find { voice ->
-            when (gender) {
-                "female" -> voice.name.contains(
-                    "en-gb-x-gbc",
-                    ignoreCase = true
-                ) // Some female voices
-                "male" -> voice.name.contains("en-us-x-tfb", ignoreCase = true) // Some male voices
-                else -> false
-            }
-        }
-
-
-        if (selectedVoice != null) {
-            tts.voice = selectedVoice
-            for (voice in tts.voices) {
-                Log.d("wwww", "Available voice: ${voice.name}")
-            }
-            Log.d("kkkkkk", "Voice set to: ${selectedVoice.name}")
-        } else {
-            Log.e("kkkkkk", "Requested $gender voice not found. Using default.")
-        }
-    }
-
-
-    override fun onDestroy() {
-        super.onDestroy()
-        tts.stop()
-        tts.shutdown()
-    }
-
-    override fun onInit(status: Int) {
-        if (status == TextToSpeech.SUCCESS) {
-            tts.language = Locale.US  // Set language (adjust as needed)
-        } else {
-            Log.e("TTS", "Initialization failed")
-        }
-    }
+    private fun VocabularyEntity.toParentItem() = VocabularyItem(
+        unit = unit ?: "",
+        type = type ?: "",
+        enWord = englishWord ?: "",
+        uzWord = uzbekWord ?: "",
+        kaWord = karakalpakWord ?: "",
+        definition = definition ?: "",
+        enExample = exampleInEnglish ?: "",
+        uzExample = exampleInUzbek ?: "",
+        kaExample = exampleInKarakalpak ?: "",
+        isNoted = isNoted ?: 0,
+        id = id
+    )
 
 
 }

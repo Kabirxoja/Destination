@@ -1,11 +1,13 @@
 package com.example.destination.viewmodel
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.destination.data.data.TestChoiceItem
 
-class TestChoiceViewModel : ViewModel() {
+class TestChoiceViewModel(application: Application) : AndroidViewModel(application) {
 
     private val _numberList = MutableLiveData<List<TestChoiceItem>>()
     val numberList: LiveData<List<TestChoiceItem>> = _numberList
@@ -21,7 +23,6 @@ class TestChoiceViewModel : ViewModel() {
     }
 
     init {
-
 
         val list = listOf(
             TestChoiceItem("Fun and games", 3, false),
@@ -39,10 +40,6 @@ class TestChoiceViewModel : ViewModel() {
             TestChoiceItem("Laughing and crying", 39, false),
             TestChoiceItem("Problems and solutions", 42, false)
         )
-
-
-
-
         _numberList.value = list
 
     }

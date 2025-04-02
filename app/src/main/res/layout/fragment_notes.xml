@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
     tools:context=".ui.fragments.NotesFragment">
 
 
@@ -20,38 +19,24 @@
         android:textStyle="bold"
 
 
+
         />
 
-
-    <EditText
-        android:id="@+id/editTextWord"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:autofillHints=""
-        android:hint="Enter a word"
-        android:textSize="18sp"
-        android:visibility="visible"
-        />
-
-    <Button
-        android:id="@+id/btnSpeakMale"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Speak (Male Voice)"
-        android:visibility="visible"
+        tools:listitem="@layout/recycle_main_item_layout"
+        android:layout_marginBottom="68dp"
 
         />
 
-    <Button
-        android:id="@+id/btnSpeakFemale"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Speak (Female Voice)"
-        android:visibility="visible"
 
-        />
+
+
+
+
+
 
 </LinearLayout>
 

@@ -55,9 +55,9 @@
         tools:layout="@layout/fragment_vocabulary" />
     <fragment
         android:id="@+id/testFragment"
-        android:name="com.example.destination.ui.fragments.TestFragment"
+        android:name="com.example.destination.ui.fragments.TestMainFragment"
         android:label="fragment_test"
-        tools:layout="@layout/fragment_test" >
+        tools:layout="@layout/fragment_test_main" >
         <action
             android:id="@+id/action_testFragment_to_resultFragment"
             app:destination="@id/resultFragment"

@@ -12,7 +12,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.destination.R
 import com.example.destination.databinding.FragmentMainBinding
-import com.example.destination.data.data.Vocabulary
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -57,36 +56,36 @@ class MainFragment : Fragment() {
 
 
 
-        //Read Json file
-        val vocabularyList = parseJson(mainFragmentBinding.root.context)
-        vocabularyList?.forEach {
-            Log.d("Vocabulary", "theme: ${it.type} - unit: ${it.unit}  = ${it.english_word}")
-        }
+//        //Read Json file
+//        val vocabularyList = parseJson(mainFragmentBinding.root.context)
+//        vocabularyList?.forEach {
+//            Log.d("Vocabulary", "theme: ${it.type} - unit: ${it.unit}  = ${it.english_word}")
+//        }
 
 
         return mainFragmentBinding.root
     }
 
-    private fun getJsonDataFromAssets(context: Context, fileName: String): String? {
-        return try {
-            val inputStream = context.assets.open(fileName)
-            val size = inputStream.available()
-            val buffer = ByteArray(size)
-            inputStream.read(buffer)
-            inputStream.close()
-            String(buffer, Charsets.UTF_8)
-        } catch (ex: Exception) {
-            ex.printStackTrace()
-            null
-        }
-    }
-
-    private fun parseJson(context: Context): List<Vocabulary>? {
-        val jsonString = getJsonDataFromAssets(context, "main_data.json")
-        val gson = Gson()
-        val listType = object : TypeToken<List<Vocabulary>>() {}.type
-        return gson.fromJson(jsonString, listType)
-    }
+//    private fun getJsonDataFromAssets(context: Context, fileName: String): String? {
+//        return try {
+//            val inputStream = context.assets.open(fileName)
+//            val size = inputStream.available()
+//            val buffer = ByteArray(size)
+//            inputStream.read(buffer)
+//            inputStream.close()
+//            String(buffer, Charsets.UTF_8)
+//        } catch (ex: Exception) {
+//            ex.printStackTrace()
+//            null
+//        }
+//    }
+//
+//    private fun parseJson(context: Context): List<Vocabulary>? {
+//        val jsonString = getJsonDataFromAssets(context, "main_data.json")
+//        val gson = Gson()
+//        val listType = object : TypeToken<List<Vocabulary>>() {}.type
+//        return gson.fromJson(jsonString, listType)
+//    }
 
 
 }

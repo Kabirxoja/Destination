@@ -1,6 +1,7 @@
 package com.example.destination.ui.adapters
 
 import android.content.res.ColorStateList
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
@@ -19,8 +20,7 @@ class IndicatorAdapter : RecyclerView.Adapter<IndicatorAdapter.MyViewHolder>() {
         parent: ViewGroup,
         viewType: Int
     ): MyViewHolder {
-        val binding =
-            RecycleIndicatorItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = RecycleIndicatorItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MyViewHolder(binding)
     }
 
@@ -45,9 +45,9 @@ class IndicatorAdapter : RecyclerView.Adapter<IndicatorAdapter.MyViewHolder>() {
 
                 val backgroundColor = if (isChecked) R.color.green else R.color.white
                 val textColor = if (isChecked) R.color.white else R.color.black
-
                 val color = ContextCompat.getColor(binding.root.context, backgroundColor)
                 val colorStateList = ColorStateList.valueOf(color)
+
                 ViewCompat.setBackgroundTintList(
                     binding.indicatorRecyclerView,
                     colorStateList
@@ -73,8 +73,8 @@ class IndicatorAdapter : RecyclerView.Adapter<IndicatorAdapter.MyViewHolder>() {
                     list[selectedPosition].checked = !item.checked
                     notifyItemChanged(selectedPosition)
                 }
-
                 listener?.onClickItem(item)
+                Log.d("llll",item.toString())
             }
 
         }
@@ -95,6 +95,9 @@ class IndicatorAdapter : RecyclerView.Adapter<IndicatorAdapter.MyViewHolder>() {
         list.addAll(newList)
         notifyDataSetChanged()
     }
+
+
+
 
 
 }

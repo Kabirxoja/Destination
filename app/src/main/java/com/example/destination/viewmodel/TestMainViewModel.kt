@@ -7,20 +7,20 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.destination.data.local.AppDatabase
 import com.example.destination.data.local.VocabularyEntity
-import com.example.destination.data.repository.VocabularyRepository
+import com.example.destination.data.repository.MainRepository
 import kotlinx.coroutines.launch
 import java.util.ArrayList
 
-class TestViewModel(application: Application) : AndroidViewModel(application) {
+class TestMainViewModel(application: Application) : AndroidViewModel(application) {
 
 
-    private val repository: VocabularyRepository
+    private val repository: MainRepository
     private val _filteredWords = MutableLiveData<List<VocabularyEntity>>()
     val filteredWords: LiveData<List<VocabularyEntity>> get() = _filteredWords
 
     init {
         val dao = AppDatabase.getDatabase(application).vocabularyDao()
-        repository = VocabularyRepository(dao, application)
+        repository = MainRepository(dao, application)
     }
 
     fun getFilteredWords(units: ArrayList<Int>?, types: List<String>) {
@@ -29,4 +29,6 @@ class TestViewModel(application: Application) : AndroidViewModel(application) {
             _filteredWords.postValue(words)
         }
     }
+
+
 }

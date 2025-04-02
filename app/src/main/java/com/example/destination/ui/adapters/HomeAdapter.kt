@@ -4,14 +4,14 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.destination.data.data.HomeItem
-import com.example.destination.databinding.RecycleVocabularyItemLayoutBinding
+import com.example.destination.databinding.RecycleThemeItemLayoutBinding
 
 class HomeAdapter : RecyclerView.Adapter<HomeAdapter.MyViewHolder>() {
 
     private var list: MutableList<HomeItem> = ArrayList()
     private var listener: OnClickItemListener? = null
 
-    inner class MyViewHolder(private val binding: RecycleVocabularyItemLayoutBinding) :
+    inner class MyViewHolder(private val binding: RecycleThemeItemLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun onBind(item: HomeItem) {
@@ -26,7 +26,7 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.MyViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val binding = RecycleVocabularyItemLayoutBinding.inflate(
+        val binding = RecycleThemeItemLayoutBinding.inflate(
             LayoutInflater.from(parent.context), parent, false
         )
         return MyViewHolder(binding)

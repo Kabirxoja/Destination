@@ -29,10 +29,10 @@
         android:id="@+id/topics_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:listitem="@layout/recycle_vocabulary_item_layout"
+        tools:listitem="@layout/recycle_theme_item_layout"
         android:layout_below="@id/text_banner"
         android:layout_marginTop="12dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="68dp"
         />
 
 </RelativeLayout>

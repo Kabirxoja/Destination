@@ -272,7 +272,7 @@
         android:layout_height="46dp"
         android:layout_below="@id/bottomButtons"
         android:layout_marginTop="12dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/bac_curve"
         android:backgroundTint="@color/blue"
         android:text="Single Button"

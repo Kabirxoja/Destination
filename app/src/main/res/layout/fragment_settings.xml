@@ -62,10 +62,48 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/layout_share"
+        android:id="@+id/layout_voice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/layout_language"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bac_curve"
+        android:backgroundTint="@color/white"
+        android:orientation="horizontal"
+        android:padding="12dp"
+
+        >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_audio_on"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="12dp"
+            android:gravity="center_vertical"
+            android:text="Audio voice"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+
+            />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_voice"
         android:layout_marginHorizontal="24dp"
         android:layout_marginBottom="12dp"
         android:background="@drawable/bac_curve"
@@ -172,51 +210,6 @@
 
 
     </LinearLayout>
-
-
-    <FrameLayout
-        android:id="@+id/custom_button"
-        android:layout_width="200dp"
-        android:layout_height="72dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:layout_below="@id/layout_exit"
-        android:backgroundTint="@color/blue"
-        android:visibility="gone"
-        >
-
-        <!-- Wrapper for moving elements -->
-        <LinearLayout
-            android:id="@+id/movable_content"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:layout_margin="8dp"
-            android:background="@drawable/duolingo_button_selector"
-
-            >
-
-            <!-- Icon -->
-            <ImageView
-                android:id="@+id/buttonIcon"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginStart="16dp"
-                android:src="@drawable/ic_changing_search" /> <!-- Replace with your icon -->
-
-            <!-- Text -->
-            <TextView
-                android:id="@+id/buttonText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="СПРАВОЧНИК"
-                android:textColor="@android:color/white"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:layout_marginStart="8dp"/>
-        </LinearLayout>
-    </FrameLayout>
 
 
 

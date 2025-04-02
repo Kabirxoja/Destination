@@ -15,11 +15,12 @@ import com.example.destination.R
 import com.example.destination.data.data.VocabularyItem
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
-class VocabularyAdapter : ListAdapter<VocabularyItem, VocabularyAdapter.ParentViewHolder>(
+class NoteAdapter : ListAdapter<VocabularyItem, NoteAdapter.ParentViewHolder>(
     DiffCallback()
 ) {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ParentViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.recycle_main_item_layout, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.recycle_note_item_layout, parent, false)
         return ParentViewHolder(view, parent as RecyclerView)
     }
 
@@ -41,26 +42,34 @@ class VocabularyAdapter : ListAdapter<VocabularyItem, VocabularyAdapter.ParentVi
     inner class ParentViewHolder(itemView: View, private val recyclerView: RecyclerView) :
         RecyclerView.ViewHolder(itemView) {
 
-        private val enTextView: TextView = itemView.findViewById(R.id.en_text_view)
-        private val uzTextView: TextView = itemView.findViewById(R.id.uz_text_view)
-        private val audioSpeaker: ImageView = itemView.findViewById(R.id.audio_speaker)
-        private val addNote: ImageView = itemView.findViewById(R.id.add_note)
-        private val selectionType: TextView = itemView.findViewById(R.id.selection_type)
+        private val enTextView: TextView = itemView.findViewById(R.id.en_text_view_search)
+        private val uzTextView: TextView = itemView.findViewById(R.id.uz_text_view_search)
+        private val audioSpeaker: ImageView = itemView.findViewById(R.id.audio_speaker_search)
+        private val selectionType: TextView = itemView.findViewById(R.id.selection_type_search)
+        private val selectionUnit: TextView = itemView.findViewById(R.id.selection_unit_search)
 
 
         fun bind(parentItem: VocabularyItem) {
             uzTextView.text = parentItem.uzWord
             enTextView.text = parentItem.enWord
             selectionType.text = parentItem.type
+
+            //position==0 -> the first item
+            //getItem(position - 1).unit != parentItem.unit -> check previous item
+            if (position == 0 || getItem(position - 1).unit != parentItem.unit) {
+                selectionUnit.visibility = View.VISIBLE
+                selectionUnit.text = "Unit №" + parentItem.unit
+            } else {
+                selectionUnit.visibility = View.GONE
+            }
+
             correctionText(parentItem.type)
-            if (parentItem.isNoted == 1) addNote.setImageResource(R.drawable.ic_note_true)
-            else addNote.setImageResource(R.drawable.ic_note_false)
+
         }
 
         private fun showBottomSheet(parentItem: VocabularyItem, itemView: View) {
             val bottomSheetDialog = BottomSheetDialog(itemView.context)
-            val bottomSheetView =
-                LayoutInflater.from(itemView.context).inflate(R.layout.fragment_bottom_sheet_vocabulary, null)
+            val bottomSheetView = LayoutInflater.from(itemView.context).inflate(R.layout.fragment_bottom_sheet_vocabulary, null)
 
             bottomSheetView.findViewById<TextView>(R.id.en_word_bottom_sheet).text = parentItem.enExample
             bottomSheetView.findViewById<TextView>(R.id.uz_word_bottom_sheet).text = parentItem.uzExample
@@ -76,8 +85,7 @@ class VocabularyAdapter : ListAdapter<VocabularyItem, VocabularyAdapter.ParentVi
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
                     (itemView.context as? AppCompatActivity)?.let {
-                        val adapter = (recyclerView.adapter as? VocabularyAdapter)
-                            ?: return@setOnClickListener
+                        val adapter = (recyclerView.adapter as? NoteAdapter) ?: return@setOnClickListener
                         val parentItem = adapter.getItem(position)
                         showBottomSheet(parentItem, itemView)
                         adapter.notifyItemChanged(position)
@@ -98,13 +106,7 @@ class VocabularyAdapter : ListAdapter<VocabularyItem, VocabularyAdapter.ParentVi
                 }
             }
 
-            addNote.setOnClickListener {
-                val position = adapterPosition
-                if (position != RecyclerView.NO_POSITION) {
-                    val item = getItem(position)
-                    noteClickListener?.onNoteClick(item)
-                }
-            }
+
         }
 
         private fun correctionText(string: String) {
@@ -119,7 +121,6 @@ class VocabularyAdapter : ListAdapter<VocabularyItem, VocabularyAdapter.ParentVi
     }
 
     interface OnNoteClickListener {
-        fun onNoteClick(vocabularyEntity: VocabularyItem)
         fun onAudioClick(vocabularyEntity: VocabularyItem)
     }
 

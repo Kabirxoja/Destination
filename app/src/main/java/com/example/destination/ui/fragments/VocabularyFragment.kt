@@ -2,7 +2,6 @@ package com.example.destination.ui.fragments
 
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -14,9 +13,11 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.destination.R
 import com.example.destination.data.data.VocabularyItem
+import com.example.destination.data.repository.MainViewModelFactory
 import com.example.destination.databinding.FragmentVocabularyBinding
 import com.example.destination.ui.adapters.VocabularyAdapter
 import com.example.destination.ui.adapters.WordPagerAdapter
+import com.example.destination.ui.additions.MainSharedPreference
 import com.example.destination.viewmodel.VocabularyViewModel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -37,13 +38,26 @@ class VocabularyFragment : Fragment(), VocabularyAdapter.OnNoteClickListener,
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         _binding = FragmentVocabularyBinding.inflate(inflater, container, false)
-        viewModel = ViewModelProvider(this)[VocabularyViewModel::class.java]
-        tts = TextToSpeech(requireContext(), this)
+
+        viewModel = ViewModelProvider(
+            this,
+            MainViewModelFactory(requireActivity().application)
+        )[VocabularyViewModel::class.java]
+
+        tts = TextToSpeech(binding.root.context) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                tts?.language = Locale.US
+                println("TTS initialized successfully!")
+            } else {
+                println("TTS initialization failed.")
+            }
+        }
 
         arguments?.let {
             topicNumber = it.getInt("topicUnit")
             viewModel.observeWordsByUnit(topicNumber.toString())
         }
+        binding.txtUnit.text = "Unit " + topicNumber.toString()
 
         setupRecyclerView()
         setupViewPager()
@@ -127,27 +141,35 @@ class VocabularyFragment : Fragment(), VocabularyAdapter.OnNoteClickListener,
     }
 
     override fun onInit(status: Int) {
-        if (status == TextToSpeech.SUCCESS) tts.language = Locale.US
+        if (status == TextToSpeech.SUCCESS)
+            tts.language = Locale.ENGLISH
     }
 
     private fun speakWord(word: String) {
-        setTTSVoice("female")
-        tts.apply {
-            setSpeechRate(0.9f)
-            setPitch(1.1f)
-            speak(word, TextToSpeech.QUEUE_FLUSH, null, null)
+        val speakerType = MainSharedPreference.getSpeakerType(binding.root.context)
+        speakWordWithType(word, speakerType)
+    }
+
+    private fun speakWordWithType(word: String, voiceType: String) {
+        if (tts == null) {
+            println("TTS is not initialized.")
+            return
+        }
+
+        val availableVoices = tts.voices
+
+        val voice = availableVoices.find { it.name == voiceType }
+
+        if (voice != null) {
+            tts!!.voice = voice
+            tts!!.setSpeechRate(0.9f) // Adjust speech rate
+            tts!!.setPitch(1.1f)      // Adjust pitch
+            tts!!.speak(word, TextToSpeech.QUEUE_FLUSH, null, null)
+        } else {
+            println("Voice $voiceType not found. Available voices: ${availableVoices.map { it.name }}")
         }
     }
 
-    private fun setTTSVoice(gender: String) {
-        tts.voices.find { voice ->
-            when (gender) {
-                "female" -> voice.name.contains("en-gb-x-gbc", ignoreCase = true)
-                "male" -> voice.name.contains("en-us-x-tfb", ignoreCase = true)
-                else -> false
-            }
-        }?.let { tts.voice = it }
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()

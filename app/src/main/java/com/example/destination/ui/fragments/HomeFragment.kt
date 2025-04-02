@@ -1,7 +1,6 @@
 package com.example.destination.ui.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,19 +10,17 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.destination.R
 import com.example.destination.data.data.HomeItem
+import com.example.destination.data.repository.MainViewModelFactory
 import com.example.destination.databinding.FragmentHomeBinding
 import com.example.destination.ui.adapters.HomeAdapter
-import com.example.destination.ui.additions.LanguagePreference
-import com.example.destination.viewmodel.VocabViewModel
+import com.example.destination.viewmodel.HomeViewModel
 
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-
+    private lateinit var homeViewModel: HomeViewModel
     private lateinit var homeAdapter: HomeAdapter
-    private lateinit var viewModel2: VocabViewModel
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,20 +28,37 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val language = LanguagePreference.getLanguage(binding.root.context)
-        Log.d("xxxx", language)
+        homeViewModel = ViewModelProvider(
+            this,
+            MainViewModelFactory(requireActivity().application)
+        )[HomeViewModel::class.java]
 
-        // Instantiate VocabViewModel using the factory
-        viewModel2 = ViewModelProvider(this)[VocabViewModel::class.java]
-
-        binding.topicsRecyclerView.layoutManager = LinearLayoutManager(root.context)
 
         homeAdapter = HomeAdapter()
         binding.topicsRecyclerView.adapter = homeAdapter
-        val homeItems = listOf(
+        binding.topicsRecyclerView.layoutManager = LinearLayoutManager(root.context)
+        homeAdapter.updateList(vocabularyTopicsList())
+
+        homeAdapter.setOnClickItemListener(object : HomeAdapter.OnClickItemListener {
+            override fun onClickItem(item: HomeItem) {
+                val bundle = Bundle()
+                bundle.putString("topicName", item.unitName)
+                bundle.putInt("topicUnit", item.unitNumber)
+                findNavController().navigate(
+                    R.id.action_navigation_home_to_vocabularyFragment,
+                    bundle
+                )
+            }
+        })
+
+
+        return root
+    }
+
+    private fun vocabularyTopicsList(): List<HomeItem> {
+        return listOf(
             HomeItem("Fun and games", 3),
             HomeItem("Learning and doing", 6),
             HomeItem("Coming and going", 9),
@@ -60,30 +74,6 @@ class HomeFragment : Fragment() {
             HomeItem("Laughing and crying", 39),
             HomeItem("Problems and solutions", 42)
         )
-
-
-        homeAdapter.updateList(homeItems)
-
-        // Set click listener
-        homeAdapter.setOnClickItemListener(object : HomeAdapter.OnClickItemListener {
-            override fun onClickItem(item: HomeItem) {
-                val bundle = Bundle()
-                bundle.putString("topicName", item.unitName)
-                bundle.putInt("topicUnit", item.unitNumber)
-                findNavController().navigate(R.id.action_navigation_home_to_vocabularyFragment, bundle)
-            }
-        })
-
-        //save only once
-        viewModel2.getRowCount { count->
-            if (count==0){
-                viewModel2.loadData("main_data.json")
-            }
-        }
-
-
-
-        return root
     }
 
     override fun onDestroyView() {

@@ -16,17 +16,17 @@ import com.example.destination.databinding.FragmentTestChoiceBinding
 import com.example.destination.ui.adapters.IndicatorAdapter
 import com.example.destination.ui.additions.BottomSheetChoice
 import com.example.destination.data.data.TestChoiceItem
+import com.example.destination.data.repository.MainViewModelFactory
 import com.example.destination.viewmodel.TestChoiceViewModel
 
-class TestChoiceFragment : Fragment(), BottomSheetChoice.BottomSheetListener {
+class TestChoiceFragment : Fragment(), BottomSheetChoice.BottomSheetListener,
+    IndicatorAdapter.OnClickItemListener {
 
     private var _binding: FragmentTestChoiceBinding? = null
     private val binding get() = _binding!!
-
-    private lateinit var bottomSheetDialog: BottomSheetChoice
-
     private lateinit var testViewModel: TestChoiceViewModel
-
+    private lateinit var indicatorAdapter: IndicatorAdapter
+    private lateinit var bottomSheetDialog: BottomSheetChoice
     private val selectedUnits = mutableListOf<Int>()
 
 
@@ -35,39 +35,23 @@ class TestChoiceFragment : Fragment(), BottomSheetChoice.BottomSheetListener {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        testViewModel = ViewModelProvider(this)[TestChoiceViewModel::class.java]
-
         _binding = FragmentTestChoiceBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        testViewModel = ViewModelProvider(
+            this,
+            MainViewModelFactory(requireActivity().application)
+        )[TestChoiceViewModel::class.java]
 
-        val indicatorAdapter = IndicatorAdapter()
+        indicatorAdapter = IndicatorAdapter()
         binding.indicatorRv.adapter = indicatorAdapter
-        binding.indicatorRv.layoutManager = GridLayoutManager(context, 4) // 3 columns
+        binding.indicatorRv.layoutManager = GridLayoutManager(context, 4)
+        indicatorAdapter.setOnClickListener(this)
 
         testViewModel.numberList.observe(viewLifecycleOwner) {
             indicatorAdapter.updateList(it)
-            Log.d("jjjjj", it.toString())
         }
 
-        indicatorAdapter.setOnClickListener(object : IndicatorAdapter.OnClickItemListener {
-            override fun onClickItem(item: TestChoiceItem) {
-                if (item.checked) {
-                    selectedUnits.add(item.unitNumber) // Add if checked
-                } else {
-                    selectedUnits.remove(item.unitNumber) // Remove if unchecked
-                }
-               if(selectedUnits.isEmpty()){
-                   binding.startButton.isEnabled = false
-                   binding.startButton.backgroundTintList = ContextCompat.getColorStateList(requireContext(), R.color.gray)
-               }
-                else
-               {
-                   binding.startButton.isEnabled = true
-                   binding.startButton.backgroundTintList = ContextCompat.getColorStateList(requireContext(), R.color.blue)
-               }
-            }
-        })
 
         binding.startButton.setOnClickListener {
             if (selectedUnits.isEmpty()) {
@@ -76,6 +60,7 @@ class TestChoiceFragment : Fragment(), BottomSheetChoice.BottomSheetListener {
                     "Please select at least one unit",
                     Toast.LENGTH_SHORT
                 ).show()
+                Log.d("ssss", selectedUnits.toString())
             } else {
                 testViewModel.bottomSheetData.observe(viewLifecycleOwner) { data ->
                     val bundle = Bundle().apply {
@@ -102,6 +87,23 @@ class TestChoiceFragment : Fragment(), BottomSheetChoice.BottomSheetListener {
         return root
     }
 
+    override fun onClickItem(item: TestChoiceItem) {
+        if (item.checked) {
+            selectedUnits.add(item.unitNumber) // Add if checked
+        } else {
+            selectedUnits.remove(item.unitNumber) // Remove if unchecked
+        }
+        if(selectedUnits.isEmpty()){
+            binding.startButton.isEnabled = false
+            binding.startButton.backgroundTintList = ContextCompat.getColorStateList(requireContext(), R.color.gray)
+        }
+        else
+        {
+            binding.startButton.isEnabled = true
+            binding.startButton.backgroundTintList = ContextCompat.getColorStateList(requireContext(), R.color.blue)
+        }
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
@@ -113,5 +115,7 @@ class TestChoiceFragment : Fragment(), BottomSheetChoice.BottomSheetListener {
     ) {
         testViewModel.setBottomSheetData(rowSelections, buttonSelections)
     }
+
+
 
 }

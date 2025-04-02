@@ -29,6 +29,16 @@
                 android:background="@drawable/ic_back" />
         </RelativeLayout>
 
+        <TextView
+            android:id="@+id/txt_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="unit 23"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
         <RelativeLayout
             android:id="@+id/btn_change"
             android:layout_width="42dp"
@@ -64,7 +74,7 @@
         android:layout_height="match_parent"
         android:layout_below="@id/top_layout"
         android:layout_marginTop="12dp"
-        tools:listitem="@layout/recycle_parent_item_layout"
+        tools:listitem="@layout/recycle_main_item_layout"
 
         />
 

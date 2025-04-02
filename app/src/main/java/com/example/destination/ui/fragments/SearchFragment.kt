@@ -3,6 +3,7 @@ package com.example.destination.ui.fragments
 import android.annotation.SuppressLint
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.speech.tts.TextToSpeech
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.LayoutInflater
@@ -16,15 +17,21 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.destination.R
 import com.example.destination.databinding.FragmentSearchBinding
 import com.example.destination.data.local.VocabularyEntity
-import com.example.destination.ui.adapters.VocabularyAdapter
 import com.example.destination.data.data.VocabularyItem
+import com.example.destination.data.repository.MainViewModelFactory
+import com.example.destination.ui.adapters.SearchAdapter
+import com.example.destination.ui.adapters.SpeakerAdapter
+import com.example.destination.ui.additions.MainSharedPreference
 import com.example.destination.viewmodel.SearchViewModel
+import java.util.Locale
 
-class SearchFragment : Fragment() {
+class SearchFragment : Fragment(), SearchAdapter.OnNoteClickListener, TextToSpeech.OnInitListener {
 
     private var _binding: FragmentSearchBinding? = null
     private val binding get() = _binding!!
     private lateinit var searchViewModel: SearchViewModel
+    private lateinit var searchAdapter: SearchAdapter
+    private lateinit var tts: TextToSpeech
 
 
     override fun onCreateView(
@@ -32,20 +39,33 @@ class SearchFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        searchViewModel = ViewModelProvider(this)[SearchViewModel::class.java]
-
         _binding = FragmentSearchBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val vocabularyAdapter = VocabularyAdapter()
-        binding.parentRecyclerView.layoutManager = LinearLayoutManager (root.context)
+        searchViewModel = ViewModelProvider(
+            this,
+            MainViewModelFactory(requireActivity().application)
+        )[SearchViewModel::class.java]
+
+        searchAdapter = SearchAdapter()
+        binding.parentRecyclerView.layoutManager = LinearLayoutManager(root.context)
         searchViewModel.searchItems("")
 
 
-        searchViewModel.filteredWords.observe(viewLifecycleOwner){words->
+        searchViewModel.filteredWords.observe(viewLifecycleOwner) { words ->
             val parentItems = words.map { it.toParentItem() }.sortedBy { it.enWord }
-            binding.parentRecyclerView.adapter = vocabularyAdapter
-            vocabularyAdapter.submitList(parentItems)
+            binding.parentRecyclerView.adapter = searchAdapter
+            searchAdapter.submitList(parentItems)
+            searchAdapter.setOnNoteClickListener(this)
+        }
+
+        tts = TextToSpeech(binding.root.context) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                tts?.language = Locale.ENGLISH
+                println("TTS initialized successfully!")
+            } else {
+                println("TTS initialization failed.")
+            }
         }
 
 
@@ -55,8 +75,24 @@ class SearchFragment : Fragment() {
         return root
     }
 
+    private fun VocabularyEntity.toParentItem() = VocabularyItem(
+        unit = unit ?: "",
+        type = type ?: "",
+        enWord = englishWord ?: "",
+        uzWord = uzbekWord ?: "",
+        kaWord = karakalpakWord ?: "",
+        definition = definition ?: "",
+        enExample = exampleInEnglish ?: "",
+        uzExample = exampleInUzbek ?: "",
+        kaExample = exampleInKarakalpak ?: "",
+        isNoted = isNoted ?: 0,
+        id = id
+    )
+
+
     private fun setupCancelIconVisibility() {
-        val cancelIcon: Drawable? = AppCompatResources.getDrawable(binding.root.context, R.drawable.ic_cancel)
+        val cancelIcon: Drawable? =
+            AppCompatResources.getDrawable(binding.root.context, R.drawable.ic_cancel)
 
         binding.searchEditText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
@@ -89,10 +125,11 @@ class SearchFragment : Fragment() {
     private fun setupCancelClickListener() {
         binding.searchEditText.setOnTouchListener { view, event ->
             if (event.action == MotionEvent.ACTION_UP) {
-                val drawables =  binding.searchEditText.compoundDrawablesRelative // Get the drawables
+                val drawables =
+                    binding.searchEditText.compoundDrawablesRelative // Get the drawables
 
                 if (drawables[2] != null) { // Check if the end drawable (cancel icon) is not null
-                    if (event.rawX >=  binding.searchEditText.right - drawables[2].bounds.width()) {
+                    if (event.rawX >= binding.searchEditText.right - drawables[2].bounds.width()) {
                         binding.searchEditText.text.clear()
                         return@setOnTouchListener true
                     }
@@ -103,19 +140,54 @@ class SearchFragment : Fragment() {
     }
 
 
-    private fun VocabularyEntity.toParentItem() = VocabularyItem(
-        unit = unit ?: "",
-        type = type ?: "",
-        enWord = englishWord ?: "",
-        uzWord = uzbekWord ?: "",
-        definition = definition ?: "",
-        enExample = exampleInEnglish ?: "",
-        uzExample = exampleInUzbek ?: "",
-    )
-
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
+    override fun onAudioClick(vocabularyEntity: VocabularyItem) {
+        speakWord(
+            vocabularyEntity.enWord.replace("sb", "somebody")
+                .replace("sth", "something")
+                .split(Regex("\\b(adj|v|adv|n)\\b"))
+                .firstOrNull() ?: ""
+        )
+    }
+
+    private fun speakWord(word: String) {
+        val speakerType = MainSharedPreference.getSpeakerType(binding.root.context)
+        speakWordWithType(word, speakerType)
+    }
+
+    private fun speakWordWithType(word: String, voiceType: String) {
+        if (tts == null) {
+            println("TTS is not initialized.")
+            return
+        }
+
+        val availableVoices = tts.voices
+
+        val voice = availableVoices.find { it.name == voiceType }
+
+        if (voice != null) {
+            tts!!.voice = voice
+            tts!!.setSpeechRate(0.9f) // Adjust speech rate
+            tts!!.setPitch(1.1f)      // Adjust pitch
+            tts!!.speak(word, TextToSpeech.QUEUE_FLUSH, null, null)
+        } else {
+            println("Voice $voiceType not found. Available voices: ${availableVoices.map { it.name }}")
+        }
+    }
+
+    override fun onInit(status: Int) {
+        if (status == TextToSpeech.SUCCESS)
+            tts.language = Locale.ENGLISH
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        tts.stop()
+        tts.shutdown()
+    }
+
 }

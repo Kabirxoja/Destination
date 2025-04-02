@@ -7,21 +7,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.destination.data.repository.MainViewModelFactory
 import com.example.destination.databinding.FragmentSettingsBinding
 import com.example.destination.ui.additions.BottomSheetLanguage
-import com.example.destination.ui.additions.LanguagePreference
-import com.example.destination.ui.utils.applyPressEffect
+import com.example.destination.ui.additions.BottomSheetSpeaker
+import com.example.destination.ui.additions.MainSharedPreference
 import com.example.destination.viewmodel.SettingsViewModel
 
-class SettingsFragment : Fragment(), BottomSheetLanguage.BottomSheetLanguageListener {
+class SettingsFragment : Fragment(),
+    BottomSheetLanguage.BottomSheetLanguageListener,
+    BottomSheetSpeaker.BottomSheetSpeakerListener {
 
     private var _binding: FragmentSettingsBinding? = null
-
     private val binding get() = _binding!!
-    private lateinit var bottomSheetDialog: BottomSheetLanguage
+    private lateinit var settingsViewModel: SettingsViewModel
+    private lateinit var bottomSheetLanguage: BottomSheetLanguage
+    private lateinit var bottomSheetSpeaker: BottomSheetSpeaker
 
 
     @SuppressLint("ClickableViewAccessibility")
@@ -30,30 +33,41 @@ class SettingsFragment : Fragment(), BottomSheetLanguage.BottomSheetLanguageList
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel = ViewModelProvider(this)[SettingsViewModel::class.java]
-
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        settingsViewModel = ViewModelProvider(
+            this,
+            MainViewModelFactory(requireActivity().application)
+        )[SettingsViewModel::class.java]
+
         val textView: TextView = binding.textBanner
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
+        settingsViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
 
-        binding.customButton.setOnClickListener {
-            Toast.makeText(binding.root.context, "pressed", Toast.LENGTH_SHORT).show()
-        }
+        val selectedLanguage = MainSharedPreference.getLanguage(requireContext())
+        val selectedSpeaker = MainSharedPreference.getSpeakerType(requireContext())
+        Log.d("SettingsFragment", "Selected Language: $selectedLanguage")
+        Log.d("SettingsFragment", "Selected Speaker: $selectedSpeaker")
 
-        binding.customButton.applyPressEffect(binding.movableContent,binding.buttonIcon, binding.buttonText)
+
 
         binding.layoutLanguage.setOnClickListener {
-            bottomSheetDialog = BottomSheetLanguage()
-            bottomSheetDialog.setListener(this)
-            bottomSheetDialog.show(childFragmentManager, "BottomSheet")
+            bottomSheetLanguage = BottomSheetLanguage()
+            bottomSheetLanguage.setListener(this)
+            bottomSheetLanguage.show(childFragmentManager, "BottomSheet")
+        }
+
+        binding.layoutVoice.setOnClickListener {
+            bottomSheetSpeaker = BottomSheetSpeaker()
+            bottomSheetSpeaker.setListener(this)
+            bottomSheetSpeaker.show(childFragmentManager, "BottomSheet")
         }
 
         return root
     }
+
 
 
 
@@ -62,8 +76,13 @@ class SettingsFragment : Fragment(), BottomSheetLanguage.BottomSheetLanguageList
         _binding = null
     }
 
-    override fun onOkButtonClicked(rowSelections:String) {
-        Log.d("eeee", rowSelections)
-        LanguagePreference.saveLanguage(binding.root.context, rowSelections)
+    override fun onSelectedLanguage(selectedLanguage: String) {
+        MainSharedPreference.saveLanguage(requireContext(), selectedLanguage)
     }
+
+    override fun onSelectedSpeaker(selectedSpeaker: String) {
+        MainSharedPreference.saveSpeakerType(requireContext(), selectedSpeaker)
+    }
+
+
 }
