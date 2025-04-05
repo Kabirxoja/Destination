@@ -107,7 +107,7 @@
                         android:layout_height="16dp"
                         android:layout_gravity="top"
                         android:layout_marginEnd="4dp"
-                        android:src="@drawable/ic_uk" />
+                        android:src="@drawable/ic_flag_uk" />
 
                     <ImageView
                         android:layout_width="2dp"
@@ -140,7 +140,7 @@
                         android:layout_height="16dp"
                         android:layout_gravity="top"
                         android:layout_marginEnd="4dp"
-                        android:src="@drawable/ic_uz" />
+                        android:src="@drawable/ic_flag_uz" />
 
                     <ImageView
                         android:layout_width="2dp"

@@ -58,6 +58,20 @@
 
             />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Language"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            android:gravity="right"
+            android:id="@+id/txt_language_chose"
+
+
+            />
+
+
 
     </LinearLayout>
 
@@ -94,6 +108,21 @@
             android:textSize="18sp"
 
             />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Language"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            android:gravity="right"
+            android:id="@+id/txt_voice_chose"
+
+
+            />
+
 
 
     </LinearLayout>

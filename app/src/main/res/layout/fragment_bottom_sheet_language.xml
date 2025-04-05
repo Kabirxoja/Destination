@@ -34,7 +34,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:contentDescription="Menu Icon"
-            android:src="@drawable/ic_uz" />
+            android:src="@drawable/ic_flag_uz" />
 
         <TextView
             android:id="@+id/text1"
@@ -65,7 +65,7 @@
             android:layout_height="20dp"
             android:layout_gravity="center_vertical"
             android:contentDescription="Menu Icon"
-            android:src="@drawable/ic_ka"
+            android:src="@drawable/ic_flag_ka"
 
             />
 
@@ -109,7 +109,7 @@
         android:layout_marginBottom="24dp"
         android:background="@drawable/bac_curve"
         android:backgroundTint="@color/blue"
-        android:text="Single Button"
+        android:text="Select"
         android:textColor="@color/white"
         android:textSize="18sp"
 

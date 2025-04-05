@@ -60,7 +60,7 @@ class MainRepository(
         if (sharedVersion!=UPDATE_JSON_VERSION){
             sharedPreferences.saveUpdateJsonVersion(context, UPDATE_JSON_VERSION)
             val jsonString = try {
-                context.assets.open("main_data.json").bufferedReader().use { it.readText() }
+                context.assets.open("converted.json").bufferedReader().use { it.readText() }
             } catch (ioException: IOException) {
                 ioException.printStackTrace()
                 return

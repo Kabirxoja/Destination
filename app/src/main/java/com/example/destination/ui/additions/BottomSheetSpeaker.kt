@@ -1,5 +1,6 @@
 package com.example.destination.ui.additions
 
+import android.os.Build
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.util.Log
@@ -18,7 +19,8 @@ import kotlinx.coroutines.launch
 import java.util.ArrayList
 import java.util.Locale
 
-class BottomSheetSpeaker : BottomSheetDialogFragment(), SpeakerAdapter.OnClickItemListener, TextToSpeech.OnInitListener {
+class BottomSheetSpeaker : BottomSheetDialogFragment(), SpeakerAdapter.OnClickItemListener,
+    TextToSpeech.OnInitListener {
 
 
     private var _binding: FragmentBottomSheetSpeakerBinding? = null
@@ -27,7 +29,7 @@ class BottomSheetSpeaker : BottomSheetDialogFragment(), SpeakerAdapter.OnClickIt
     private lateinit var adapter: SpeakerAdapter
     private var speakerSelected = ""
     private lateinit var tts: TextToSpeech
-    private var list : List<SpeakerItem>  = ArrayList()
+    private var list: List<SpeakerItem> = ArrayList()
 
 
     override fun onCreateView(
@@ -49,7 +51,7 @@ class BottomSheetSpeaker : BottomSheetDialogFragment(), SpeakerAdapter.OnClickIt
 
         adapter = SpeakerAdapter()
         binding.recyclerView.adapter = adapter
-        binding.recyclerView.layoutManager = GridLayoutManager(root.context,3)
+        binding.recyclerView.layoutManager = GridLayoutManager(root.context, 3)
         adapter.setOnClickListener(this)
 
 
@@ -77,9 +79,6 @@ class BottomSheetSpeaker : BottomSheetDialogFragment(), SpeakerAdapter.OnClickIt
     }
 
 
-
-
-
     private fun speakWord(): List<SpeakerItem> {
 
         val availableVoices = tts.voices // Now safe to access
@@ -89,19 +88,36 @@ class BottomSheetSpeaker : BottomSheetDialogFragment(), SpeakerAdapter.OnClickIt
             allowedLocales.contains(voice.locale.toString()) && !voice.isNetworkConnectionRequired
         }
 
-        val bestVoices = filteredVoices.filter { it.quality >= 400 && it.latency <= 200 }
+//        filteredVoices.filter { it.quality >= 100 && it.latency <= 500 } // Adjust quality and latency for older APIs
 
+
+//        val bestVoices = when {
+//            Build.VERSION.SDK_INT in 21..27 -> {
+//                filteredVoices.filter { it.quality >= 100 && it.latency <= 500 } // Adjust quality and latency for older APIs
+//            }
+//            Build.VERSION.SDK_INT >= 28 -> {
+//                filteredVoices.filter { it.quality >= 200 && it.latency <= 300 } // Your original filter for newer APIs
+//            }
+//            else -> {
+//                filteredVoices.filter { it.quality >= 100 && it.latency <= 500 } // Default for older than API 21, adjust as needed
+//            }
+//        }
         val list = mutableListOf<SpeakerItem>()
 
-        for (i in bestVoices) {
-            list.add(SpeakerItem(i.name, i.locale.toString(), i.quality, i.latency, i.isNetworkConnectionRequired))
+        for (i in filteredVoices) {
+            list.add(
+                SpeakerItem(
+                    i.name,
+                    i.locale.toString(),
+                    i.quality,
+                    i.latency,
+                    i.isNetworkConnectionRequired
+                )
+            )
         }
 
         return list
     }
-
-
-
 
 
     override fun onInit(status: Int) {
@@ -116,24 +132,14 @@ class BottomSheetSpeaker : BottomSheetDialogFragment(), SpeakerAdapter.OnClickIt
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     interface BottomSheetSpeakerListener {
         fun onSelectedSpeaker(selectedSpeaker: String)
     }
-    fun setListener(listener: BottomSheetSpeakerListener){
+
+    fun setListener(listener: BottomSheetSpeakerListener) {
         this.listener = listener
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
@@ -145,7 +151,7 @@ class BottomSheetSpeaker : BottomSheetDialogFragment(), SpeakerAdapter.OnClickIt
         playSpeaker(item.name)
     }
 
-    private fun playSpeaker(speakerType:String) {
+    private fun playSpeaker(speakerType: String) {
         val availableVoices = tts.voices
         val voice = availableVoices.find { it.name == speakerType }
         for (voice in tts!!.voices) {
@@ -166,8 +172,6 @@ class BottomSheetSpeaker : BottomSheetDialogFragment(), SpeakerAdapter.OnClickIt
         }
 
     }
-
-
 
 
 }

@@ -24,7 +24,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="260dp"
+        android:layout_height="wrap_content"
         android:id="@+id/recycler_view"
         tools:listitem="@layout/recycle_speaker_item_layout"
         android:layout_below="@+id/line_of_top"
@@ -44,7 +44,7 @@
         android:layout_marginBottom="24dp"
         android:background="@drawable/bac_curve"
         android:backgroundTint="@color/blue"
-        android:text="Single Button"
+        android:text="Select"
         android:textColor="@color/white"
         android:textSize="18sp"
 

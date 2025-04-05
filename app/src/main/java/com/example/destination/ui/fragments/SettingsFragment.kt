@@ -41,15 +41,28 @@ class SettingsFragment : Fragment(),
             MainViewModelFactory(requireActivity().application)
         )[SettingsViewModel::class.java]
 
-        val textView: TextView = binding.textBanner
-        settingsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
 
         val selectedLanguage = MainSharedPreference.getLanguage(requireContext())
         val selectedSpeaker = MainSharedPreference.getSpeakerType(requireContext())
         Log.d("SettingsFragment", "Selected Language: $selectedLanguage")
         Log.d("SettingsFragment", "Selected Speaker: $selectedSpeaker")
+
+        // Observe language changes
+        settingsViewModel.currentLanguage.observe(viewLifecycleOwner) { language ->
+            binding.txtLanguageChose.text = language
+        }
+
+        // Observe speaker changes
+        settingsViewModel.currentSpeaker.observe(viewLifecycleOwner) { speaker ->
+            binding.txtVoiceChose.text = when {
+                speaker.contains("gb") -> "UK"
+                speaker.contains("au") -> "AUS"
+                speaker.contains("us") -> "USA"
+                else -> speaker
+            }
+        }
+
+
 
 
 
@@ -77,11 +90,12 @@ class SettingsFragment : Fragment(),
     }
 
     override fun onSelectedLanguage(selectedLanguage: String) {
-        MainSharedPreference.saveLanguage(requireContext(), selectedLanguage)
+        settingsViewModel.updateLanguage(selectedLanguage)
+
     }
 
     override fun onSelectedSpeaker(selectedSpeaker: String) {
-        MainSharedPreference.saveSpeakerType(requireContext(), selectedSpeaker)
+        settingsViewModel.updateSpeaker(selectedSpeaker)
     }
 
 

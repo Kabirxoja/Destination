@@ -47,7 +47,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
-            android:src="@drawable/ic_uk"
+            android:src="@drawable/ic_flag_uk"
 
             />
 
@@ -98,7 +98,7 @@
             android:layout_alignBottom="@id/uz_text_view_search"
             android:layout_alignParentStart="true"
             android:layout_marginStart="12dp"
-            android:src="@drawable/ic_uz" />
+            android:src="@drawable/ic_flag_uz" />
 
         <TextView
             android:id="@+id/uz_text_view_search"

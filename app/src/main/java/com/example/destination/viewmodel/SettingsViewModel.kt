@@ -5,11 +5,26 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.destination.ui.additions.MainSharedPreference
 
-class SettingsViewModel(application: Application) : AndroidViewModel(application) {
+class SettingsViewModel(private val application: Application) : AndroidViewModel(application) {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "Settings"
+    val currentLanguage = MutableLiveData<String>().apply {
+        value = MainSharedPreference.getLanguage(application)
     }
-    val text: LiveData<String> = _text
+
+    val currentSpeaker = MutableLiveData<String>().apply {
+        value = MainSharedPreference.getSpeakerType(application)
+    }
+
+    fun updateLanguage(newLanguage: String) {
+        MainSharedPreference.saveLanguage(application, newLanguage)
+        currentLanguage.value = newLanguage
+    }
+
+    fun updateSpeaker(newSpeaker: String) {
+        MainSharedPreference.saveSpeakerType(application, newSpeaker)
+        currentSpeaker.value = newSpeaker
+    }
+
 }

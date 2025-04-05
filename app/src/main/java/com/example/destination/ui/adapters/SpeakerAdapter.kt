@@ -21,12 +21,12 @@ class SpeakerAdapter : RecyclerView.Adapter<SpeakerAdapter.SpeakerViewHolder>() 
         fun onBind(item: SpeakerItem) {
             when (item.locale) {
                 "en_US" -> {
-                    binding.languageIcon.setImageResource(R.drawable.ic_us)
+                    binding.languageIcon.setImageResource(R.drawable.ic_flag_us)
                     binding.languageName.text = "American"
                 }
 
                 "en_GB" -> {
-                    binding.languageIcon.setImageResource(R.drawable.ic_uk)
+                    binding.languageIcon.setImageResource(R.drawable.ic_flag_uk)
                     binding.languageName.text = "British"
                 }
 
