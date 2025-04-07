@@ -12,10 +12,10 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.destination.R
-import com.example.destination.data.data.VocabularyItem
+import com.example.destination.data.data.Vocabulary
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
-class NoteAdapter : ListAdapter<VocabularyItem, NoteAdapter.ParentViewHolder>(
+class NoteAdapter : ListAdapter<Vocabulary, NoteAdapter.ParentViewHolder>(
     DiffCallback()
 ) {
 
@@ -29,12 +29,12 @@ class NoteAdapter : ListAdapter<VocabularyItem, NoteAdapter.ParentViewHolder>(
         holder.bind(parentItem)
     }
 
-    class DiffCallback : DiffUtil.ItemCallback<VocabularyItem>() {
-        override fun areItemsTheSame(oldItem: VocabularyItem, newItem: VocabularyItem): Boolean {
-            return oldItem.enWord == newItem.enWord // Or use a unique ID
+    class DiffCallback : DiffUtil.ItemCallback<Vocabulary>() {
+        override fun areItemsTheSame(oldItem: Vocabulary, newItem: Vocabulary): Boolean {
+            return oldItem.englishWord == newItem.englishWord // Or use a unique ID
         }
 
-        override fun areContentsTheSame(oldItem: VocabularyItem, newItem: VocabularyItem): Boolean {
+        override fun areContentsTheSame(oldItem: Vocabulary, newItem: Vocabulary): Boolean {
             return oldItem == newItem // Or implement a more specific check if needed
         }
     }
@@ -49,9 +49,9 @@ class NoteAdapter : ListAdapter<VocabularyItem, NoteAdapter.ParentViewHolder>(
         private val selectionUnit: TextView = itemView.findViewById(R.id.selection_unit_search)
 
 
-        fun bind(parentItem: VocabularyItem) {
-            uzTextView.text = parentItem.uzWord
-            enTextView.text = parentItem.enWord
+        fun bind(parentItem: Vocabulary) {
+            uzTextView.text = parentItem.translatedWord
+            enTextView.text = parentItem.englishWord
             selectionType.text = parentItem.type
 
             //position==0 -> the first item
@@ -67,12 +67,12 @@ class NoteAdapter : ListAdapter<VocabularyItem, NoteAdapter.ParentViewHolder>(
 
         }
 
-        private fun showBottomSheet(parentItem: VocabularyItem, itemView: View) {
+        private fun showBottomSheet(parentItem: Vocabulary, itemView: View) {
             val bottomSheetDialog = BottomSheetDialog(itemView.context)
             val bottomSheetView = LayoutInflater.from(itemView.context).inflate(R.layout.fragment_bottom_sheet_vocabulary, null)
 
-            bottomSheetView.findViewById<TextView>(R.id.en_word_bottom_sheet).text = parentItem.enExample
-            bottomSheetView.findViewById<TextView>(R.id.uz_word_bottom_sheet).text = parentItem.uzExample
+            bottomSheetView.findViewById<TextView>(R.id.en_word_bottom_sheet).text = parentItem.exampleInEnglish
+            bottomSheetView.findViewById<TextView>(R.id.uz_word_bottom_sheet).text = parentItem.exampleTranslatedWord
             bottomSheetView.findViewById<TextView>(R.id.defination_bottom_sheet).text = parentItem.definition
 
             bottomSheetDialog.setContentView(bottomSheetView)
@@ -121,7 +121,7 @@ class NoteAdapter : ListAdapter<VocabularyItem, NoteAdapter.ParentViewHolder>(
     }
 
     interface OnNoteClickListener {
-        fun onAudioClick(vocabularyEntity: VocabularyItem)
+        fun onAudioClick(vocabularyEntity: Vocabulary)
     }
 
     private var noteClickListener: OnNoteClickListener? = null

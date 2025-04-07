@@ -12,7 +12,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.destination.R
-import com.example.destination.data.data.VocabularyItem
+import com.example.destination.data.data.UpdatedNotes
+import com.example.destination.data.data.Vocabulary
 import com.example.destination.data.repository.MainViewModelFactory
 import com.example.destination.databinding.FragmentVocabularyBinding
 import com.example.destination.ui.adapters.VocabularyAdapter
@@ -38,6 +39,11 @@ class VocabularyFragment : Fragment(), VocabularyAdapter.OnNoteClickListener,
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         _binding = FragmentVocabularyBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         viewModel = ViewModelProvider(
             this,
@@ -46,7 +52,7 @@ class VocabularyFragment : Fragment(), VocabularyAdapter.OnNoteClickListener,
 
         tts = TextToSpeech(binding.root.context) { status ->
             if (status == TextToSpeech.SUCCESS) {
-                tts?.language = Locale.US
+                tts.language = Locale.US
                 println("TTS initialized successfully!")
             } else {
                 println("TTS initialization failed.")
@@ -63,7 +69,6 @@ class VocabularyFragment : Fragment(), VocabularyAdapter.OnNoteClickListener,
         setupViewPager()
         observeData()
         setupClickListeners()
-        return binding.root
     }
 
     private fun setupRecyclerView() {
@@ -113,12 +118,17 @@ class VocabularyFragment : Fragment(), VocabularyAdapter.OnNoteClickListener,
         binding.btnBack.setOnClickListener { findNavController().popBackStack() }
     }
 
-    override fun onNoteClick(vocabularyItem: VocabularyItem) {
-        viewModel.updateItem(vocabularyItem.copy(isNoted = if (vocabularyItem.isNoted == 1) 0 else 1))
+    override fun onNoteClick(vocabulary: Vocabulary) {
+        viewModel.updateItem(
+            UpdatedNotes(
+                id = vocabulary.id,
+                isNoted = if (vocabulary.isNoted == 1) 0 else 1
+            )
+        )
     }
 
-    override fun onAudioClick(vocabularyItem: VocabularyItem) {
-        val word = vocabularyItem.enWord
+    override fun onAudioClick(vocabulary: Vocabulary) {
+        val word = vocabulary.englishWord
             .replace("sb", "somebody")
             .replace("sth", "something")
             .split(Regex("\\b(adj|v|adv|n)\\b"))
@@ -126,18 +136,19 @@ class VocabularyFragment : Fragment(), VocabularyAdapter.OnNoteClickListener,
         speakWord(word)
     }
 
-    override fun onNoteClickPager(vocabularyItem: VocabularyItem) {
-        onNoteClick(vocabularyItem)
+    override fun onNoteClickPager(vocabulary: Vocabulary) {
+        onNoteClick(vocabulary)
         Toast.makeText(requireContext(), "Note status changed", Toast.LENGTH_SHORT).show()
     }
 
-    override fun onAudioClickPager(vocabularyItem: VocabularyItem) {
-        val word = vocabularyItem.enWord
+    override fun onAudioClickPager(vocabulary: Vocabulary) {
+        val word = (vocabulary.englishWord
             .replace("sb", "somebody")
             .replace("sth", "something")
             .split(Regex("\\b(adj|v|adv|n)\\b"))
-            .firstOrNull() ?: ""
-        speakWord(word)
+            .firstOrNull() ?: "").also {
+            speakWord(it)
+        }
     }
 
     override fun onInit(status: Int) {

@@ -35,7 +35,11 @@ class SettingsFragment : Fragment(),
     ): View {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        return root
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         settingsViewModel = ViewModelProvider(
             this,
             MainViewModelFactory(requireActivity().application)
@@ -63,9 +67,6 @@ class SettingsFragment : Fragment(),
         }
 
 
-
-
-
         binding.layoutLanguage.setOnClickListener {
             bottomSheetLanguage = BottomSheetLanguage()
             bottomSheetLanguage.setListener(this)
@@ -78,10 +79,7 @@ class SettingsFragment : Fragment(),
             bottomSheetSpeaker.show(childFragmentManager, "BottomSheet")
         }
 
-        return root
     }
-
-
 
 
     override fun onDestroyView() {

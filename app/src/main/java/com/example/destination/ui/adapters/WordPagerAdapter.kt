@@ -15,19 +15,18 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.viewpager.widget.PagerAdapter
 import com.example.destination.R
-import com.example.destination.data.data.VocabularyItem
+import com.example.destination.data.data.Vocabulary
 
 class WordPagerAdapter() : PagerAdapter() {
 
     private var listener: OnItemClickListener? = null
 
-    private val list: MutableList<VocabularyItem> = mutableListOf()
+    private val list: MutableList<Vocabulary> = mutableListOf()
 
 
     @SuppressLint("MissingInflatedId")
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        val view =
-            LayoutInflater.from(container.context).inflate(R.layout.card_item, container, false)
+        val view = LayoutInflater.from(container.context).inflate(R.layout.card_item, container, false)
 
         val frontText: TextView = view.findViewById(R.id.text_front_title)
         val frontText2: TextView = view.findViewById(R.id.text_front_subtext)
@@ -44,10 +43,10 @@ class WordPagerAdapter() : PagerAdapter() {
         var isFront = true
 
         // Bind data to views
-        frontText.text = list[position].enWord
-        frontText2.text = list[position].uzWord
-        textUzWord.text = list[position].uzExample
-        textEnWord.text = list[position].enExample
+        frontText.text = list[position].englishWord
+        frontText2.text = list[position].translatedWord
+        textUzWord.text = list[position].exampleTranslatedWord
+        textEnWord.text = list[position].exampleInEnglish
         textDefinition.text = list[position].definition
 
         if (list[position].isNoted == 1) addToNotes.setBackgroundResource(R.drawable.ic_note_true)
@@ -138,15 +137,15 @@ class WordPagerAdapter() : PagerAdapter() {
 
 
     interface OnItemClickListener {
-        fun onAudioClickPager(word: VocabularyItem)
-        fun onNoteClickPager(word: VocabularyItem)
+        fun onAudioClickPager(word: Vocabulary)
+        fun onNoteClickPager(word: Vocabulary)
     }
 
     fun setOnItemClickListener(listener: OnItemClickListener) {
         this.listener = listener
     }
 
-    fun getList(list: List<VocabularyItem>) {
+    fun getList(list: List<Vocabulary>) {
         this.list.clear()
         this.list.addAll(list)
         notifyDataSetChanged()
@@ -160,7 +159,7 @@ class WordPagerAdapter() : PagerAdapter() {
         }
     }
 
-    private fun toggleNoteState(vocabularyItem: VocabularyItem, button: ImageButton) {
+    private fun toggleNoteState(vocabularyItem: Vocabulary, button: ImageButton) {
         val newIsNoted = if (vocabularyItem.isNoted == 1) 0 else 1
         vocabularyItem.isNoted = newIsNoted
         updateNoteIcon(button, newIsNoted) // Update UI immediately

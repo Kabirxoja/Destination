@@ -42,13 +42,19 @@ class SearchFragment : Fragment(), SearchAdapter.OnNoteClickListener, TextToSpee
         _binding = FragmentSearchBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         searchViewModel = ViewModelProvider(
             this,
             MainViewModelFactory(requireActivity().application)
         )[SearchViewModel::class.java]
 
         searchAdapter = SearchAdapter()
-        binding.parentRecyclerView.layoutManager = LinearLayoutManager(root.context)
+        binding.parentRecyclerView.layoutManager = LinearLayoutManager(binding.root.context)
         searchViewModel.searchItems("")
 
 
@@ -71,8 +77,6 @@ class SearchFragment : Fragment(), SearchAdapter.OnNoteClickListener, TextToSpee
 
         setupCancelIconVisibility()
         setupCancelClickListener()
-
-        return root
     }
 
     private fun VocabularyEntity.toParentItem() = VocabularyItem(

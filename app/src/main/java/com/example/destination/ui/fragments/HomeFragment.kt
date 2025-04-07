@@ -29,16 +29,18 @@ class HomeFragment : Fragment() {
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        return root
+    }
 
-        homeViewModel = ViewModelProvider(
-            this,
-            MainViewModelFactory(requireActivity().application)
-        )[HomeViewModel::class.java]
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        homeViewModel = ViewModelProvider(this, MainViewModelFactory(requireActivity().application))[HomeViewModel::class.java]
 
 
         homeAdapter = HomeAdapter()
         binding.topicsRecyclerView.adapter = homeAdapter
-        binding.topicsRecyclerView.layoutManager = LinearLayoutManager(root.context)
+        binding.topicsRecyclerView.layoutManager = LinearLayoutManager(binding.root.context)
         homeAdapter.updateList(vocabularyTopicsList())
 
         homeAdapter.setOnClickItemListener(object : HomeAdapter.OnClickItemListener {
@@ -53,8 +55,6 @@ class HomeFragment : Fragment() {
             }
         })
 
-
-        return root
     }
 
     private fun vocabularyTopicsList(): List<HomeItem> {

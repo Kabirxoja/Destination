@@ -1,5 +1,8 @@
 package com.example.destination.data.data
 
+import androidx.room.PrimaryKey
+import com.google.gson.annotations.SerializedName
+
 data class VocabularyItem(
     val unit: String,
     val type: String,

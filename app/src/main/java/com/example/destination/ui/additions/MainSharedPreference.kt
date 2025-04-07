@@ -4,9 +4,11 @@ import android.content.Context
 
 object MainSharedPreference {
     private const val PREF_NAME = "language_pref"
+
     private const val LANGUAGE_KEY = "selected_language"
 
     private const val PREF_JSON_VERSION = "json_version"
+
     private const val PREF_SPEAKER = "speaker_type"
 
 

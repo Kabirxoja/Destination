@@ -5,6 +5,7 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_home">
 
+
     <fragment
         android:id="@+id/navigation_test_choice"
         android:name="com.example.destination.ui.fragments.TestChoiceFragment"
@@ -77,4 +78,14 @@
             android:id="@+id/action_resultFragment_to_testFragment"
             app:destination="@id/testFragment" />
     </fragment>
+    <dialog
+        android:id="@+id/bottomSheetSpeaker"
+        android:name="com.example.destination.ui.additions.BottomSheetSpeaker"
+        android:label="fragment_bottom_sheet_speaker"
+        tools:layout="@layout/fragment_bottom_sheet_speaker" />
+    <dialog
+        android:id="@+id/bottomSheetLanguage"
+        android:name="com.example.destination.ui.additions.BottomSheetLanguage"
+        android:label="fragment_bottom_sheet_language"
+        tools:layout="@layout/fragment_bottom_sheet_language" />
 </navigation>

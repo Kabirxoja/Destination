@@ -3,6 +3,8 @@ package com.example.destination.viewmodel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.destination.data.data.UpdatedNotes
+import com.example.destination.data.data.Vocabulary
 import com.example.destination.data.local.AppDatabase
 import com.example.destination.data.local.VocabularyEntity
 import com.example.destination.data.repository.MainRepository
@@ -15,8 +17,8 @@ import kotlinx.coroutines.launch
 class VocabularyViewModel(application: Application) : AndroidViewModel(application) {
     private val repository: MainRepository
 
-    private val _wordsByUnit = MutableStateFlow<List<VocabularyItem>>(emptyList())
-    val wordsByUnit: StateFlow<List<VocabularyItem>> get() = _wordsByUnit
+    private val _wordsByUnit = MutableStateFlow<List<Vocabulary>>(emptyList())
+    val wordsByUnit: StateFlow<List<Vocabulary>> get() = _wordsByUnit
 
     init {
         val database = AppDatabase.getDatabase(application)
@@ -25,46 +27,15 @@ class VocabularyViewModel(application: Application) : AndroidViewModel(applicati
 
     fun observeWordsByUnit(unit: String) {
         viewModelScope.launch {
-            repository.getWordsByUnit(unit)
-                .map { words -> words.map { it.toParentItem() } }
-                .collect { wordsList ->
-                    _wordsByUnit.value = wordsList
-                }
+            repository.getWordsByUnit(unit).map { it }.collect { wordsList ->
+                _wordsByUnit.value = wordsList
+            }
         }
     }
 
-    fun updateItem(vocabularyItem: VocabularyItem) {
+    fun updateItem(updatedNotes: UpdatedNotes) {
         viewModelScope.launch {
-            repository.updateItem(
-                VocabularyEntity(
-                    id = vocabularyItem.id,
-                    unit = vocabularyItem.unit,
-                    type = vocabularyItem.type,
-                    englishWord = vocabularyItem.enWord,
-                    uzbekWord = vocabularyItem.uzWord,
-                    definition = vocabularyItem.definition,
-                    exampleInEnglish = vocabularyItem.enExample,
-                    exampleInUzbek = vocabularyItem.uzExample,
-                    exampleInKarakalpak = vocabularyItem.kaExample,
-                    karakalpakWord = vocabularyItem.kaWord,
-                    isNoted = vocabularyItem.isNoted
-                )
-            )
+            repository.updateItem(updatedNotes)
         }
     }
-
-    // Convert `VocabularyEntity` to `ParentItem`
-    private fun VocabularyEntity.toParentItem() = VocabularyItem(
-        unit = unit ?: "",
-        type = type ?: "",
-        enWord = englishWord ?: "",
-        uzWord = uzbekWord ?: "",
-        kaWord = karakalpakWord ?: "",
-        definition = definition ?: "",
-        enExample = exampleInEnglish ?: "",
-        uzExample = exampleInUzbek ?: "",
-        kaExample = exampleInKarakalpak ?: "",
-        isNoted = isNoted ?: 0,
-        id = id
-    )
 }

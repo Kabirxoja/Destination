@@ -23,7 +23,6 @@ class TestChoiceViewModel(application: Application) : AndroidViewModel(applicati
     }
 
     init {
-
         val list = listOf(
             TestChoiceItem("Fun and games", 3, false),
             TestChoiceItem("Learning and doing", 6, false),

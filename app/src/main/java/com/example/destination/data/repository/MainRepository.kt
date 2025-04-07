@@ -2,6 +2,8 @@ package com.example.destination.data.repository
 
 import android.content.Context
 import android.util.Log
+import com.example.destination.data.data.UpdatedNotes
+import com.example.destination.data.data.Vocabulary
 import com.example.destination.data.local.VocabularyDao
 import com.example.destination.data.local.VocabularyEntity
 import com.example.destination.ui.additions.MainSharedPreference
@@ -23,9 +25,17 @@ class MainRepository(
 ) {
     private val sharedPreferences: MainSharedPreference = MainSharedPreference
 
-    fun getWordsByUnit(unit: String): Flow<List<VocabularyEntity>> {
-        return dao.getWordsByUnit(unit)
+    fun getWordsByUnit(unit: String): Flow<List<Vocabulary>> {
+
+        val language = sharedPreferences.getLanguage(context)
+
+        return if (language == "uz") {
+            dao.getWordsInUzbek(unit)
+        } else {
+            dao.getWordsInKarakalpak(unit)
+        }
     }
+
 
     suspend fun getFilteredWords(
         units: ArrayList<Int>?,
@@ -42,25 +52,29 @@ class MainRepository(
         }
     }
 
-    suspend fun updateItem(vocabularyEntity: VocabularyEntity) {
+    suspend fun updateItem(updatedNotes: UpdatedNotes) {
         withContext(Dispatchers.IO) {
-            dao.updateItem(vocabularyEntity)
+            dao.updateItem(updatedNotes.id, updatedNotes.isNoted)
         }
     }
 
-    fun getNotedWords(): Flow<List<VocabularyEntity>> = dao.getNotedWords()
-
-
-    suspend fun getRowCount(): Int {
-        return dao.getRowCount()
+    fun getNotedWords(): Flow<List<Vocabulary>> {
+        val language = sharedPreferences.getLanguage(context)
+        Log.d("savedLang", language)
+        return if (language == "uz") {
+            dao.getNotedWordUzbek()
+        } else {
+            dao.getNotedWordKarakalpak()
+        }
     }
+
 
     suspend fun loadJSONAndSaveToDatabase() {
         val sharedVersion = sharedPreferences.getUpdateJsonVersion(context)
-        if (sharedVersion!=UPDATE_JSON_VERSION){
+        if (sharedVersion != UPDATE_JSON_VERSION) {
             sharedPreferences.saveUpdateJsonVersion(context, UPDATE_JSON_VERSION)
             val jsonString = try {
-                context.assets.open("converted.json").bufferedReader().use { it.readText() }
+                context.assets.open("main_data.json").bufferedReader().use { it.readText() }
             } catch (ioException: IOException) {
                 ioException.printStackTrace()
                 return
@@ -74,9 +88,9 @@ class MainRepository(
             } catch (e: JsonSyntaxException) {
                 e.printStackTrace()
             }
-            Log.d("insertWordStatus","Updated")
-        }else{
-            Log.d("insertWordStatus","do not update")
+            Log.d("insertWordStatus", "Updated")
+        } else {
+            Log.d("insertWordStatus", "do not update")
         }
 
     }

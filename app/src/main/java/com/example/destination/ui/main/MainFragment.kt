@@ -53,39 +53,6 @@ class MainFragment : Fragment() {
             }
         }
 
-
-
-
-//        //Read Json file
-//        val vocabularyList = parseJson(mainFragmentBinding.root.context)
-//        vocabularyList?.forEach {
-//            Log.d("Vocabulary", "theme: ${it.type} - unit: ${it.unit}  = ${it.english_word}")
-//        }
-
-
         return mainFragmentBinding.root
     }
-
-//    private fun getJsonDataFromAssets(context: Context, fileName: String): String? {
-//        return try {
-//            val inputStream = context.assets.open(fileName)
-//            val size = inputStream.available()
-//            val buffer = ByteArray(size)
-//            inputStream.read(buffer)
-//            inputStream.close()
-//            String(buffer, Charsets.UTF_8)
-//        } catch (ex: Exception) {
-//            ex.printStackTrace()
-//            null
-//        }
-//    }
-//
-//    private fun parseJson(context: Context): List<Vocabulary>? {
-//        val jsonString = getJsonDataFromAssets(context, "main_data.json")
-//        val gson = Gson()
-//        val listType = object : TypeToken<List<Vocabulary>>() {}.type
-//        return gson.fromJson(jsonString, listType)
-//    }
-
-
 }

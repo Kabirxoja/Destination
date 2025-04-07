@@ -39,44 +39,29 @@ class NotesFragment : Fragment() {
     ): View {
         _binding = FragmentNotesBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        return root
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        notesViewModel = ViewModelProvider(
-            this,
-            MainViewModelFactory(requireActivity().application)
-        )[NotesViewModel::class.java]
+        notesViewModel = ViewModelProvider(this, MainViewModelFactory(requireActivity().application))[NotesViewModel::class.java]
+
+        notesViewModel.getNotes()
 
         searchAdapter = NoteAdapter()
-        binding.recyclerView.layoutManager = LinearLayoutManager(root.context)
-//        searchAdapter.setOnNoteClickListener(this)
+        binding.recyclerView.layoutManager = LinearLayoutManager(binding.root.context)
 
         lifecycleScope.launch {
             notesViewModel.filteredWords.collectLatest { wordList ->
                 Log.d("dddddd", wordList.toString())
-                val changedList = wordList.map { it.toParentItem() }
                 binding.recyclerView.adapter = searchAdapter
-                searchAdapter.submitList(changedList)
+                searchAdapter.submitList(wordList)
             }
         }
 
-
-
-        return root
     }
 
-    private fun VocabularyEntity.toParentItem() = VocabularyItem(
-        unit = unit ?: "",
-        type = type ?: "",
-        enWord = englishWord ?: "",
-        uzWord = uzbekWord ?: "",
-        kaWord = karakalpakWord ?: "",
-        definition = definition ?: "",
-        enExample = exampleInEnglish ?: "",
-        uzExample = exampleInUzbek ?: "",
-        kaExample = exampleInKarakalpak ?: "",
-        isNoted = isNoted ?: 0,
-        id = id
-    )
 
 
 }

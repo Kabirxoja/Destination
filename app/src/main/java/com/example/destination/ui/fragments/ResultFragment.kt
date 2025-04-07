@@ -26,7 +26,11 @@ class ResultFragment : Fragment() {
     ): View? {
         _viewBinding = FragmentResultBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        return root
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         resultViewModel = ViewModelProvider(
             this,
             MainViewModelFactory(requireActivity().application)
@@ -43,11 +47,5 @@ class ResultFragment : Fragment() {
         binding.startAgain.setOnClickListener {
             findNavController().navigate(R.id.action_resultFragment_to_testFragment)
         }
-
-
-
-
-
-        return root
     }
 }

@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.destination.R
@@ -37,11 +38,15 @@ class TestChoiceFragment : Fragment(), BottomSheetChoice.BottomSheetListener,
     ): View {
         _binding = FragmentTestChoiceBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        return root
+    }
 
-        testViewModel = ViewModelProvider(
-            this,
-            MainViewModelFactory(requireActivity().application)
-        )[TestChoiceViewModel::class.java]
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
+
+        testViewModel = ViewModelProvider(this, MainViewModelFactory(requireActivity().application))[TestChoiceViewModel::class.java]
 
         indicatorAdapter = IndicatorAdapter()
         binding.indicatorRv.adapter = indicatorAdapter
@@ -63,16 +68,15 @@ class TestChoiceFragment : Fragment(), BottomSheetChoice.BottomSheetListener,
                 Log.d("ssss", selectedUnits.toString())
             } else {
                 testViewModel.bottomSheetData.observe(viewLifecycleOwner) { data ->
+                    Log.d("navigatedSetNav","coming data: $data")
+
                     val bundle = Bundle().apply {
                         putSerializable("rowSelections", HashMap(data.first))
                         putSerializable("buttonSelections", HashMap(data.second))
                         putIntegerArrayList("selectedUnits", ArrayList(selectedUnits))
                     }
 
-                    findNavController().navigate(
-                        R.id.action_navigation_test_choice_to_testFragment,
-                        bundle
-                    )
+                    findNavController().navigate(R.id.action_navigation_test_choice_to_testFragment, bundle)
                 }
             }
         }
@@ -83,8 +87,6 @@ class TestChoiceFragment : Fragment(), BottomSheetChoice.BottomSheetListener,
             bottomSheetDialog.setListener(this) // Set the listener
             bottomSheetDialog.show(childFragmentManager, "BottomSheet")
         }
-
-        return root
     }
 
     override fun onClickItem(item: TestChoiceItem) {
@@ -114,8 +116,7 @@ class TestChoiceFragment : Fragment(), BottomSheetChoice.BottomSheetListener,
         buttonSelections: Map<Int, Boolean>
     ) {
         testViewModel.setBottomSheetData(rowSelections, buttonSelections)
+        Log.d("navigatedSetNav","$rowSelections  -  $buttonSelections")
+
     }
-
-
-
 }
