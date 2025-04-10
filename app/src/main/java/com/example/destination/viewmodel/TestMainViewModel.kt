@@ -24,7 +24,7 @@ class TestMainViewModel(application: Application) : AndroidViewModel(application
         repository = MainRepository(dao, application)
     }
 
-    fun getFilteredWords(units: ArrayList<Int>?, types: List<String>) {
+    fun getFilteredWords(units: List<Int>, types: List<String>) {
         viewModelScope.launch {
             val words = repository.getFilteredWords(units, types)
             _filteredWords.postValue(words)

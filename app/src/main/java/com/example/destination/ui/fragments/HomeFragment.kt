@@ -37,6 +37,7 @@ class HomeFragment : Fragment() {
 
         homeViewModel = ViewModelProvider(this, MainViewModelFactory(requireActivity().application))[HomeViewModel::class.java]
 
+        homeViewModel.setLoadJson()
 
         homeAdapter = HomeAdapter()
         binding.topicsRecyclerView.adapter = homeAdapter

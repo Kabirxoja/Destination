@@ -9,26 +9,53 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.destination.R
 import com.example.destination.databinding.FragmentTestChoiceBinding
 import com.example.destination.ui.adapters.IndicatorAdapter
-import com.example.destination.ui.additions.BottomSheetChoice
 import com.example.destination.data.data.TestChoiceItem
 import com.example.destination.data.repository.MainViewModelFactory
+import com.example.destination.data.data.OptionItem
 import com.example.destination.viewmodel.TestChoiceViewModel
 
-class TestChoiceFragment : Fragment(), BottomSheetChoice.BottomSheetListener,
-    IndicatorAdapter.OnClickItemListener {
+class TestChoiceFragment : Fragment(), IndicatorAdapter.OnClickItemListener {
 
     private var _binding: FragmentTestChoiceBinding? = null
     private val binding get() = _binding!!
     private lateinit var testViewModel: TestChoiceViewModel
     private lateinit var indicatorAdapter: IndicatorAdapter
-    private lateinit var bottomSheetDialog: BottomSheetChoice
     private val selectedUnits = mutableListOf<Int>()
+
+
+    private val options = mutableListOf(
+        OptionItem("Topic vocabulary", true),
+        OptionItem("Phrasal verbs", true),
+        OptionItem("Prepositional phrases", true),
+        OptionItem("Word patterns", true),
+        OptionItem("Word formation", true),
+        OptionItem("Test", false),
+        OptionItem("Write", false)
+    )
+
+    private val units = listOf(
+        TestChoiceItem("Fun and games", 3, false),
+        TestChoiceItem("Learning and doing", 6, false),
+        TestChoiceItem("Coming and going", 9, false),
+        TestChoiceItem("Friends and relations", 12, false),
+        TestChoiceItem("Buying and selling", 15, false),
+        TestChoiceItem("Inventions and discoveries", 18, false),
+        TestChoiceItem("Sending and receiving", 21, false),
+        TestChoiceItem("People and daily life", 24, false),
+        TestChoiceItem("Working and earning", 27, false),
+        TestChoiceItem("Body and lifestyle", 30, false),
+        TestChoiceItem("Creating and building", 33, false),
+        TestChoiceItem("Nature and the universe", 36, false),
+        TestChoiceItem("Laughing and crying", 39, false),
+        TestChoiceItem("Problems and solutions", 42, false)
+    )
+
+    private var selectedOption: String? = null
 
 
     override fun onCreateView(
@@ -45,8 +72,10 @@ class TestChoiceFragment : Fragment(), BottomSheetChoice.BottomSheetListener,
         super.onViewCreated(view, savedInstanceState)
 
 
-
-        testViewModel = ViewModelProvider(this, MainViewModelFactory(requireActivity().application))[TestChoiceViewModel::class.java]
+        testViewModel = ViewModelProvider(
+            this,
+            MainViewModelFactory(requireActivity().application)
+        )[TestChoiceViewModel::class.java]
 
         indicatorAdapter = IndicatorAdapter()
         binding.indicatorRv.adapter = indicatorAdapter
@@ -57,36 +86,154 @@ class TestChoiceFragment : Fragment(), BottomSheetChoice.BottomSheetListener,
             indicatorAdapter.updateList(it)
         }
 
+        testViewModel.setOptionList(options)
+        testViewModel.setNumberList(units)
+
 
         binding.startButton.setOnClickListener {
-            if (selectedUnits.isEmpty()) {
-                Toast.makeText(
-                    requireContext(),
-                    "Please select at least one unit",
-                    Toast.LENGTH_SHORT
-                ).show()
-                Log.d("ssss", selectedUnits.toString())
-            } else {
-                testViewModel.bottomSheetData.observe(viewLifecycleOwner) { data ->
-                    Log.d("navigatedSetNav","coming data: $data")
-
-                    val bundle = Bundle().apply {
-                        putSerializable("rowSelections", HashMap(data.first))
-                        putSerializable("buttonSelections", HashMap(data.second))
-                        putIntegerArrayList("selectedUnits", ArrayList(selectedUnits))
-                    }
-
-                    findNavController().navigate(R.id.action_navigation_test_choice_to_testFragment, bundle)
-                }
-            }
+            startExam()
         }
-
 
         binding.adjustmentLayout.setOnClickListener {
-            bottomSheetDialog = BottomSheetChoice()
-            bottomSheetDialog.setListener(this) // Set the listener
-            bottomSheetDialog.show(childFragmentManager, "BottomSheet")
+            binding.additionalOptionsLayout.visibility = View.VISIBLE
         }
+
+        binding.text1.text = "Topic vocabulary"
+        binding.text2.text = "Phrasal verbs"
+        binding.text3.text = "Prepositional phrases"
+        binding.text4.text = "Word patterns"
+        binding.text5.text = "Word formation"
+
+
+
+
+        binding.button1.setOnClickListener {
+            if (selectedOption != "Test") {
+                selectedOption?.let {
+                    if (it == "Write") {
+                        options[6].isChecked = false
+                        binding.imgWrite.setImageResource(R.drawable.ic_pencil_off)
+                        binding.txtWrite.setTextColor(
+                            ContextCompat.getColor(
+                                requireContext(),
+                                R.color.black
+                            )
+                        )
+                        binding.txtTest.setTextColor(
+                            ContextCompat.getColor(
+                                requireContext(),
+                                R.color.green
+                            )
+                        )
+                    }
+                }
+
+                // Select "Test"
+                selectedOption = "Test"
+                options[5].isChecked = true
+                binding.imgTest.setImageResource(R.drawable.ic_option_on)
+                binding.txtWrite.setTextColor(
+                    ContextCompat.getColor(
+                        requireContext(),
+                        R.color.black
+                    )
+                )
+                binding.txtTest.setTextColor(
+                    ContextCompat.getColor(
+                        requireContext(),
+                        R.color.green
+                    )
+                )
+            }
+            Toast.makeText(binding.root.context, "Test button clicked", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.button2.setOnClickListener {
+            if (selectedOption != "Write") {
+                selectedOption?.let {
+                    if (it == "Test") {
+                        options[5].isChecked = false
+                        binding.imgTest.setImageResource(R.drawable.ic_option_off)
+                        binding.txtWrite.setTextColor(
+                            ContextCompat.getColor(
+                                requireContext(),
+                                R.color.green
+                            )
+                        )
+                        binding.txtTest.setTextColor(
+                            ContextCompat.getColor(
+                                requireContext(),
+                                R.color.black
+                            )
+                        )
+                    }
+                }
+
+                // Select "Write"
+                selectedOption = "Write"
+                options[6].isChecked = true
+                binding.imgWrite.setImageResource(R.drawable.ic_pencil_on)
+                binding.txtWrite.setTextColor(
+                    ContextCompat.getColor(
+                        requireContext(),
+                        R.color.green
+                    )
+                )
+                binding.txtTest.setTextColor(
+                    ContextCompat.getColor(
+                        requireContext(),
+                        R.color.black
+                    )
+                )
+            }
+            Toast.makeText(binding.root.context, "Write button clicked", Toast.LENGTH_SHORT).show()
+        }
+
+
+
+
+
+        binding.row1.setOnClickListener {
+            val item = options[0]
+            item.isChecked = !item.isChecked
+            binding.icon1.setImageResource(
+                if (item.isChecked) R.drawable.ic_checkbox_true else R.drawable.ic_checkbox_false
+            )
+        }
+
+        binding.row2.setOnClickListener {
+            val item = options[1]
+            item.isChecked = !item.isChecked
+            binding.icon2.setImageResource(
+                if (item.isChecked) R.drawable.ic_checkbox_true else R.drawable.ic_checkbox_false
+            )
+        }
+
+        binding.row3.setOnClickListener {
+            val item = options[2]
+            item.isChecked = !item.isChecked
+            binding.icon3.setImageResource(
+                if (item.isChecked) R.drawable.ic_checkbox_true else R.drawable.ic_checkbox_false
+            )
+        }
+
+        binding.row4.setOnClickListener {
+            val item = options[3]
+            item.isChecked = !item.isChecked
+            binding.icon4.setImageResource(
+                if (item.isChecked) R.drawable.ic_checkbox_true else R.drawable.ic_checkbox_false
+            )
+        }
+
+        binding.row5.setOnClickListener {
+            val item = options[4]
+            item.isChecked = !item.isChecked
+            binding.icon5.setImageResource(
+                if (item.isChecked) R.drawable.ic_checkbox_true else R.drawable.ic_checkbox_false
+            )
+        }
+
+
     }
 
     override fun onClickItem(item: TestChoiceItem) {
@@ -95,15 +242,71 @@ class TestChoiceFragment : Fragment(), BottomSheetChoice.BottomSheetListener,
         } else {
             selectedUnits.remove(item.unitNumber) // Remove if unchecked
         }
-        if(selectedUnits.isEmpty()){
+        if (selectedUnits.isEmpty()) {
             binding.startButton.isEnabled = false
-            binding.startButton.backgroundTintList = ContextCompat.getColorStateList(requireContext(), R.color.gray)
-        }
-        else
-        {
+            binding.startButton.backgroundTintList =
+                ContextCompat.getColorStateList(requireContext(), R.color.gray)
+        } else {
             binding.startButton.isEnabled = true
-            binding.startButton.backgroundTintList = ContextCompat.getColorStateList(requireContext(), R.color.blue)
+            binding.startButton.backgroundTintList =
+                ContextCompat.getColorStateList(requireContext(), R.color.blue)
         }
+    }
+
+    private fun startExam() {
+        Log.d("sssss", "coming data: $options")
+        if (options[5].isChecked || options[6].isChecked) {
+            if (selectedUnits.isEmpty()) {
+                Toast.makeText(
+                    requireContext(),
+                    "Please select at least one unit",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
+
+                var writeFragment = false
+                val bundle = Bundle()
+
+                testViewModel.optionList.observe(viewLifecycleOwner) { updatedOptionList ->
+                    Log.d("OtherFragment", "Updated optionList in ViewModel: $updatedOptionList")
+                    writeFragment = !updatedOptionList[5].isChecked
+
+                    bundle.apply {
+                        putSerializable("updatedOptionList", ArrayList(updatedOptionList))
+                    }
+
+                }
+
+                testViewModel.numberList.observe(viewLifecycleOwner) { updatedNumberList ->
+                    Log.d("OtherFragment", "Updated numberList in ViewModel: $updatedNumberList")
+
+                    bundle.apply {
+                        putSerializable("updatedNumberList", ArrayList(updatedNumberList))
+                    }
+                }
+
+                if (writeFragment){
+                    findNavController().navigate(
+                        R.id.action_navigation_test_choice_to_testFragment,
+                        bundle
+                    )
+                }else{
+                    findNavController().navigate(
+                        R.id.action_navigation_test_choice_to_testOptionFragment,
+                        bundle
+                    )
+                }
+
+
+            }
+        } else {
+            Toast.makeText(
+                requireContext(),
+                "first of all, you should select options",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+
     }
 
     override fun onDestroyView() {
@@ -111,12 +314,7 @@ class TestChoiceFragment : Fragment(), BottomSheetChoice.BottomSheetListener,
         _binding = null
     }
 
-    override fun onOkButtonClicked(
-        rowSelections: Map<Int, Boolean>,
-        buttonSelections: Map<Int, Boolean>
-    ) {
-        testViewModel.setBottomSheetData(rowSelections, buttonSelections)
-        Log.d("navigatedSetNav","$rowSelections  -  $buttonSelections")
 
-    }
 }
+
+

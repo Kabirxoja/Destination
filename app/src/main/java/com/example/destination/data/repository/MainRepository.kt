@@ -25,10 +25,9 @@ class MainRepository(
 ) {
     private val sharedPreferences: MainSharedPreference = MainSharedPreference
 
+
     fun getWordsByUnit(unit: String): Flow<List<Vocabulary>> {
-
         val language = sharedPreferences.getLanguage(context)
-
         return if (language == "uz") {
             dao.getWordsInUzbek(unit)
         } else {
@@ -38,7 +37,7 @@ class MainRepository(
 
 
     suspend fun getFilteredWords(
-        units: ArrayList<Int>?,
+        units: List<Int>,
         types: List<String>
     ): List<VocabularyEntity> {
         return withContext(Dispatchers.IO) {
@@ -68,6 +67,7 @@ class MainRepository(
         }
     }
 
+    //ask for Sherali this place was written correctly
 
     suspend fun loadJSONAndSaveToDatabase() {
         val sharedVersion = sharedPreferences.getUpdateJsonVersion(context)

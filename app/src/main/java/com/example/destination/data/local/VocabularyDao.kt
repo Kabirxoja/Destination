@@ -23,7 +23,7 @@ interface VocabularyDao {
 
 
     @Query("SELECT * FROM vocabulary WHERE unit IN (:unit) AND type IN (:type)")
-    suspend fun getFilteredWords(unit: ArrayList<Int>?, type: List<String>): List<VocabularyEntity>
+    suspend fun getFilteredWords(unit: List<Int>, type: List<String>): List<VocabularyEntity>
 
     @Query("SELECT * FROM vocabulary WHERE englishWord LIKE '%' || :query || '%'")
     suspend fun searchItems(query: String): List<VocabularyEntity>

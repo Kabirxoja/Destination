@@ -21,9 +21,11 @@ import androidx.navigation.fragment.findNavController
 import com.example.destination.R
 import com.example.destination.data.data.WordItem
 import com.example.destination.databinding.FragmentTestMainBinding
+import com.example.destination.data.data.OptionItem
+import com.example.destination.data.data.TestChoiceItem
 import com.example.destination.viewmodel.TestMainViewModel
 
-class TestMainFragment : Fragment() {
+class TestWriteFragment : Fragment() {
     private var _binding: FragmentTestMainBinding? = null
     private val binding get() = _binding!!
 
@@ -53,26 +55,27 @@ class TestMainFragment : Fragment() {
         viewModel = ViewModelProvider(this)[TestMainViewModel::class.java]
 
 
-        val typeTest = arguments?.getSerializable("rowSelections") as? HashMap<Int, Boolean>
-        val styleTest = arguments?.getSerializable("buttonSelections") as? HashMap<Int, Boolean>
-        val selectedUnits = arguments?.getIntegerArrayList("selectedUnits")
+        val unitTest = arguments?.getSerializable("updatedNumberList") as? ArrayList<TestChoiceItem>
+        val optionTest = arguments?.getSerializable("updatedOptionList") as? ArrayList<OptionItem>
 
-        val typeMap = mapOf(
-            1 to "topic_vocabulary",
-            2 to "phrasal_verbs",
-            3 to "prepositional_phrases",
-            4 to "word_patterns",
-            5 to "word_formation"
-        )
+        Log.d("eyuu", "unitTest: $unitTest, optionTest: $optionTest")
 
-        val selectedTypes = typeTest?.filter { it.value } // Filter only `true` values
-            ?.keys // Get keys
-            ?.mapNotNull { typeMap[it] } // Map keys to corresponding strings
-            ?: emptyList() // Default to empty list if `typeTest` is null
+        val selectedOption: List<String> = optionTest
+            ?.filter { it.isChecked }
+            ?.map { it.text }
+            ?.dropLast(1) // remove the last item
+            ?.map { it.lowercase().replace(" ", "_") }
+            ?: emptyList()
 
-        Log.d("uuyyy", "selectedTypes: $selectedTypes, selectedUnits: $selectedUnits")
 
-        viewModel.getFilteredWords(selectedUnits, selectedTypes)
+        val selectedUnits: List<Int> = unitTest
+            ?.filter { it.checked }
+            ?.map { it.unitNumber }
+            ?: emptyList()
+
+        Log.d("errr", "unitTest: $selectedUnits, optionTest: $selectedOption")
+
+        viewModel.getFilteredWords(selectedUnits, selectedOption)
 
         viewModel.filteredWords.observe(viewLifecycleOwner) { words ->
             wordList.clear()
