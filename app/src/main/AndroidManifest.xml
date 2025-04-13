@@ -16,7 +16,7 @@
         android:theme="@style/Theme.Destination"
         tools:targetApi="31">
         <activity
-            android:name=".ui.main.MainActivity"
+            android:name="uz.kabirhoja.destination.ui.main.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustPan|adjustResize"
@@ -29,13 +29,6 @@
             </intent-filter>
         </activity>
 
-
-        <activity
-            android:name=".ui.main.MainFragment"
-            android:windowSoftInputMode="adjustPan|adjustResize" />
-        <activity
-            android:name=".ui.fragments.TestFragment"
-            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

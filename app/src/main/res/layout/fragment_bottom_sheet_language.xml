@@ -6,7 +6,7 @@
     android:background="@drawable/bottom_sheet_background"
     android:backgroundTint="@color/white"
     android:padding="16dp"
-    tools:context=".ui.additions.BottomSheetLanguage"
+    tools:context="uz.kabirhoja.destination.ui.additions.BottomSheetLanguage"
 
 
     >

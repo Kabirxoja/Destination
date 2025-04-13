@@ -91,11 +91,10 @@
 
         <ImageView
             android:id="@+id/note_icon"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:padding="4dp"
             android:src="@drawable/notes_inactive"
             android:layout_marginEnd="42dp"
 

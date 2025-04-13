@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.destination"
+    namespace = "com.kabirhoja.destination"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.destination"
+        applicationId = "com.kabirhoja.destination"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

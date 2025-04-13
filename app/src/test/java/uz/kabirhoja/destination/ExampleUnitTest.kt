@@ -1,4 +1,4 @@
-package com.example.destination
+package uz.kabirhoja.destination
 
 import org.junit.Test
 

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.fragments.NotesFragment">
+    tools:context="uz.kabirhoja.destination.ui.fragments.NotesFragment">
 
 
     <TextView
@@ -26,7 +26,7 @@
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:listitem="@layout/recycle_main_item_layout"
+        tools:listitem="@layout/recycle_note_item_layout"
         android:layout_marginBottom="68dp"
 
         />
