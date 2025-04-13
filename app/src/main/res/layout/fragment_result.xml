@@ -113,23 +113,4 @@
         />
 
 
-    <Button
-        android:id="@+id/start_again"
-        android:layout_width="match_parent"
-        android:layout_height="46dp"
-        android:layout_below="@id/text_banner"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/bac_curve"
-        android:backgroundTint="@color/white"
-        android:text="Repeat"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-
-
-        />
-
-
 </LinearLayout>

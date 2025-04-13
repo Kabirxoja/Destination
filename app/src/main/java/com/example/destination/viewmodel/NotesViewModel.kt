@@ -5,6 +5,7 @@ import android.content.Context
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.destination.data.data.UpdatedNotes
 import com.example.destination.data.data.Vocabulary
 import com.example.destination.data.local.AppDatabase
 import com.example.destination.data.local.VocabularyEntity
@@ -29,6 +30,13 @@ class NotesViewModel(application: Application) : AndroidViewModel(application) {
                 _filteredWords.value = wordList.sortedBy { it.unit.toInt() }
             }
         }
+    }
+
+    fun updateItem(updatedNotes: UpdatedNotes) {
+        viewModelScope.launch {
+            repository.updateItem(updatedNotes)
+        }
+
     }
 
 

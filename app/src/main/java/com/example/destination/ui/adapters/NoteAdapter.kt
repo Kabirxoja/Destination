@@ -45,6 +45,7 @@ class NoteAdapter : ListAdapter<Vocabulary, NoteAdapter.ParentViewHolder>(
         private val enTextView: TextView = itemView.findViewById(R.id.en_text_view_search)
         private val uzTextView: TextView = itemView.findViewById(R.id.uz_text_view_search)
         private val audioSpeaker: ImageView = itemView.findViewById(R.id.audio_speaker_search)
+        private val noteIcon: ImageView = itemView.findViewById(R.id.note_icon)
         private val selectionType: TextView = itemView.findViewById(R.id.selection_type_search)
         private val selectionUnit: TextView = itemView.findViewById(R.id.selection_unit_search)
 
@@ -64,6 +65,9 @@ class NoteAdapter : ListAdapter<Vocabulary, NoteAdapter.ParentViewHolder>(
             }
 
             correctionText(parentItem.type)
+
+            if (parentItem.isNoted == 1) noteIcon.setImageResource(R.drawable.ic_note_true)
+            else noteIcon.setImageResource(R.drawable.ic_note_false)
 
         }
 
@@ -106,6 +110,16 @@ class NoteAdapter : ListAdapter<Vocabulary, NoteAdapter.ParentViewHolder>(
                 }
             }
 
+            noteIcon.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    val item = getItem(position)
+                    noteClickListener?.onNoteClick(item)
+                }
+            }
+
+
+
 
         }
 
@@ -122,6 +136,7 @@ class NoteAdapter : ListAdapter<Vocabulary, NoteAdapter.ParentViewHolder>(
 
     interface OnNoteClickListener {
         fun onAudioClick(vocabularyEntity: Vocabulary)
+        fun onNoteClick(vocabularyEntity: Vocabulary)
     }
 
     private var noteClickListener: OnNoteClickListener? = null

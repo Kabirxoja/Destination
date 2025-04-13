@@ -20,16 +20,17 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.destination.R
 import com.example.destination.data.data.WordItem
-import com.example.destination.databinding.FragmentTestMainBinding
 import com.example.destination.data.data.OptionItem
 import com.example.destination.data.data.TestChoiceItem
-import com.example.destination.viewmodel.TestMainViewModel
+import com.example.destination.data.repository.MainViewModelFactory
+import com.example.destination.databinding.FragmentTestWriteBinding
+import com.example.destination.viewmodel.TestWriteViewModel
 
 class TestWriteFragment : Fragment() {
-    private var _binding: FragmentTestMainBinding? = null
+    private var _binding: FragmentTestWriteBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var viewModel: TestMainViewModel
+    private lateinit var viewModel: TestWriteViewModel
 
     private var wordList = mutableListOf<WordItem>() // Uzbek, English, Status
     private var currentIndex = 0
@@ -42,7 +43,7 @@ class TestWriteFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentTestMainBinding.inflate(inflater, container, false)
+        _binding = FragmentTestWriteBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -52,7 +53,10 @@ class TestWriteFragment : Fragment() {
         binding.doNotKnowTextView.setOnClickListener { revealAnswer() }
         binding.btnBack.setOnClickListener { findNavController().popBackStack() }
 
-        viewModel = ViewModelProvider(this)[TestMainViewModel::class.java]
+        viewModel = ViewModelProvider(
+            this,
+            MainViewModelFactory(requireActivity().application)
+        )[TestWriteViewModel::class.java]
 
 
         val unitTest = arguments?.getSerializable("updatedNumberList") as? ArrayList<TestChoiceItem>
@@ -82,11 +86,11 @@ class TestWriteFragment : Fragment() {
 
             wordList.addAll(words.map {
                 WordItem(
-                    uzbekWord = it.uzbekWord ?: "",
-                    englishWord = it.englishWord?.substringBefore(" (") ?: "",
-                    type = it.type ?: "Unknown",
-                    unit = it.unit ?: "Unknown",
-                    definition = it.definition ?: "No definition available",
+                    uzbekWord = it.translatedWord,
+                    englishWord = it.englishWord.substringBefore(" ("),
+                    type = it.type,
+                    unit = it.unit,
+                    definition = it.definition,
                     status = 0
                 )
             }.sortedBy { it.unit.toIntOrNull() ?: 0 })
@@ -187,7 +191,6 @@ class TestWriteFragment : Fragment() {
         Handler(Looper.getMainLooper()).postDelayed({ showWord() }, 1000)
     }
 
-
     private fun showWord() {
         Log.d("ShowWord", "Current Index: $currentIndex, Word List Size: ${wordList}")
 
@@ -209,6 +212,7 @@ class TestWriteFragment : Fragment() {
                 showWord()
             } else {
                 val bundle = Bundle()
+                totalWords=wordList.size
                 bundle.putInt("listSize", totalWords)
                 findNavController().navigate(R.id.action_testFragment_to_resultFragment, bundle)
             }

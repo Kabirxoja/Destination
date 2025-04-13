@@ -112,7 +112,7 @@
         android:background="@drawable/bac_curve"
         android:backgroundTint="@color/white"
         android:gravity="center"
-        android:text="portlamoq"
+        android:text=""
         android:textColor="@color/black"
         android:textSize="28sp"
 

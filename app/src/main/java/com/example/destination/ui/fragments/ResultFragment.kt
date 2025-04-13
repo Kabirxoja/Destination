@@ -31,10 +31,7 @@ class ResultFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        resultViewModel = ViewModelProvider(
-            this,
-            MainViewModelFactory(requireActivity().application)
-        )[ResultViewModel::class.java]
+        resultViewModel = ViewModelProvider(this, MainViewModelFactory(requireActivity().application))[ResultViewModel::class.java]
 
         val initialSize = arguments?.getInt("listSize") ?: 0
 
@@ -44,8 +41,5 @@ class ResultFragment : Fragment() {
             findNavController().popBackStack()
         }
 
-        binding.startAgain.setOnClickListener {
-            findNavController().navigate(R.id.action_resultFragment_to_testFragment)
-        }
     }
 }

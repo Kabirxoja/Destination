@@ -90,6 +90,21 @@
             />
 
         <ImageView
+            android:id="@+id/note_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="4dp"
+            android:src="@drawable/notes_inactive"
+            android:layout_marginEnd="42dp"
+
+            />
+
+
+
+
+        <ImageView
             android:id="@+id/uz_icon_search"
             android:layout_width="16dp"
             android:layout_height="16dp"

@@ -39,15 +39,25 @@ class MainRepository(
     suspend fun getFilteredWords(
         units: List<Int>,
         types: List<String>
-    ): List<VocabularyEntity> {
+    ): List<Vocabulary> {
         return withContext(Dispatchers.IO) {
-            dao.getFilteredWords(units, types)
+            val language = sharedPreferences.getLanguage(context)
+            if (language == "uz") {
+                dao.getFilteredUzbekWords(units, types)
+            } else {
+                dao.getFilteredKarakalpakWords(units, types)
+            }
         }
     }
 
-    suspend fun getSearchItems(query: String): List<VocabularyEntity> {
+    suspend fun getSearchItems(query: String): List<Vocabulary> {
         return withContext(Dispatchers.IO) {
-            dao.searchItems(query)
+            val language = sharedPreferences.getLanguage(context)
+            if (language == "uz") {
+                dao.searchInUzbek(query)
+            } else {
+                dao.searchInKarakaplak(query)
+            }
         }
     }
 

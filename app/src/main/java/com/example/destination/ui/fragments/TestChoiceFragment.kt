@@ -1,320 +1,248 @@
 package com.example.destination.ui.fragments
 
+import android.content.res.ColorStateList
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
+import androidx.core.view.ViewCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.GridLayoutManager
 import com.example.destination.R
-import com.example.destination.databinding.FragmentTestChoiceBinding
-import com.example.destination.ui.adapters.IndicatorAdapter
-import com.example.destination.data.data.TestChoiceItem
-import com.example.destination.data.repository.MainViewModelFactory
 import com.example.destination.data.data.OptionItem
+import com.example.destination.data.data.TestChoiceItem
+import com.example.destination.data.data.WordItem
+import com.example.destination.data.repository.MainViewModelFactory
+import com.example.destination.databinding.FragmentTestOptionBinding
 import com.example.destination.viewmodel.TestChoiceViewModel
 
-class TestChoiceFragment : Fragment(), IndicatorAdapter.OnClickItemListener {
-
-    private var _binding: FragmentTestChoiceBinding? = null
+class TestChoiceFragment : Fragment() {
+    private var _binding: FragmentTestOptionBinding? = null
     private val binding get() = _binding!!
-    private lateinit var testViewModel: TestChoiceViewModel
-    private lateinit var indicatorAdapter: IndicatorAdapter
-    private val selectedUnits = mutableListOf<Int>()
+    private lateinit var testChoiceViewModel: TestChoiceViewModel
 
-
-    private val options = mutableListOf(
-        OptionItem("Topic vocabulary", true),
-        OptionItem("Phrasal verbs", true),
-        OptionItem("Prepositional phrases", true),
-        OptionItem("Word patterns", true),
-        OptionItem("Word formation", true),
-        OptionItem("Test", false),
-        OptionItem("Write", false)
-    )
-
-    private val units = listOf(
-        TestChoiceItem("Fun and games", 3, false),
-        TestChoiceItem("Learning and doing", 6, false),
-        TestChoiceItem("Coming and going", 9, false),
-        TestChoiceItem("Friends and relations", 12, false),
-        TestChoiceItem("Buying and selling", 15, false),
-        TestChoiceItem("Inventions and discoveries", 18, false),
-        TestChoiceItem("Sending and receiving", 21, false),
-        TestChoiceItem("People and daily life", 24, false),
-        TestChoiceItem("Working and earning", 27, false),
-        TestChoiceItem("Body and lifestyle", 30, false),
-        TestChoiceItem("Creating and building", 33, false),
-        TestChoiceItem("Nature and the universe", 36, false),
-        TestChoiceItem("Laughing and crying", 39, false),
-        TestChoiceItem("Problems and solutions", 42, false)
-    )
-
-    private var selectedOption: String? = null
+    private var wordList = mutableListOf<WordItem>() // Uzbek, English, Status
+    private var currentIndex = 0
+    private var options: List<String> = emptyList()
+    private var totalWords = 0
 
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentTestChoiceBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-        return root
+    ): View? {
+        _binding = FragmentTestOptionBinding.inflate(inflater, container, false)
+
+
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-        testViewModel = ViewModelProvider(
+        testChoiceViewModel = ViewModelProvider(
             this,
             MainViewModelFactory(requireActivity().application)
         )[TestChoiceViewModel::class.java]
 
-        indicatorAdapter = IndicatorAdapter()
-        binding.indicatorRv.adapter = indicatorAdapter
-        binding.indicatorRv.layoutManager = GridLayoutManager(context, 4)
-        indicatorAdapter.setOnClickListener(this)
 
-        testViewModel.numberList.observe(viewLifecycleOwner) {
-            indicatorAdapter.updateList(it)
-        }
+        val unitTest = arguments?.getSerializable("updatedNumberList") as? ArrayList<TestChoiceItem>
+        val optionTest = arguments?.getSerializable("updatedOptionList") as? ArrayList<OptionItem>
 
-        testViewModel.setOptionList(options)
-        testViewModel.setNumberList(units)
+        Log.d("eyuu", "unitTest: $unitTest, optionTest: $optionTest")
 
-
-        binding.startButton.setOnClickListener {
-            startExam()
-        }
-
-        binding.adjustmentLayout.setOnClickListener {
-            binding.additionalOptionsLayout.visibility = View.VISIBLE
-        }
-
-        binding.text1.text = "Topic vocabulary"
-        binding.text2.text = "Phrasal verbs"
-        binding.text3.text = "Prepositional phrases"
-        binding.text4.text = "Word patterns"
-        binding.text5.text = "Word formation"
+        val selectedOption: List<String> = optionTest
+            ?.filter { it.isChecked }
+            ?.map { it.text }
+            ?.dropLast(1) // remove the last item
+            ?.map { it.lowercase().replace(" ", "_") }
+            ?: emptyList()
 
 
+        val selectedUnits: List<Int> = unitTest
+            ?.filter { it.checked }
+            ?.map { it.unitNumber }
+            ?: emptyList()
 
+        testChoiceViewModel.setOptions(selectedUnits, selectedOption)
 
-        binding.button1.setOnClickListener {
-            if (selectedOption != "Test") {
-                selectedOption?.let {
-                    if (it == "Write") {
-                        options[6].isChecked = false
-                        binding.imgWrite.setImageResource(R.drawable.ic_pencil_off)
-                        binding.txtWrite.setTextColor(
-                            ContextCompat.getColor(
-                                requireContext(),
-                                R.color.black
-                            )
-                        )
-                        binding.txtTest.setTextColor(
-                            ContextCompat.getColor(
-                                requireContext(),
-                                R.color.green
-                            )
-                        )
-                    }
-                }
+        testChoiceViewModel.getOptions.observe(viewLifecycleOwner) { options ->
+            Log.d("tuuya", "unitTest: $options")
 
-                // Select "Test"
-                selectedOption = "Test"
-                options[5].isChecked = true
-                binding.imgTest.setImageResource(R.drawable.ic_option_on)
-                binding.txtWrite.setTextColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.black
-                    )
+            wordList.clear()
+            wordList.addAll(options.map {
+                WordItem(
+                    uzbekWord = it.translatedWord,
+                    englishWord = it.englishWord.substringBefore(" ("),
+                    type = it.type,
+                    unit = it.unit,
+                    definition = it.definition,
+                    status = 0
                 )
-                binding.txtTest.setTextColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.green
-                    )
-                )
-            }
-            Toast.makeText(binding.root.context, "Test button clicked", Toast.LENGTH_SHORT).show()
-        }
+            }.sortedBy { it.unit.toIntOrNull() ?: 0 })
 
-        binding.button2.setOnClickListener {
-            if (selectedOption != "Write") {
-                selectedOption?.let {
-                    if (it == "Test") {
-                        options[5].isChecked = false
-                        binding.imgTest.setImageResource(R.drawable.ic_option_off)
-                        binding.txtWrite.setTextColor(
-                            ContextCompat.getColor(
-                                requireContext(),
-                                R.color.green
-                            )
-                        )
-                        binding.txtTest.setTextColor(
-                            ContextCompat.getColor(
-                                requireContext(),
-                                R.color.black
-                            )
-                        )
-                    }
-                }
-
-                // Select "Write"
-                selectedOption = "Write"
-                options[6].isChecked = true
-                binding.imgWrite.setImageResource(R.drawable.ic_pencil_on)
-                binding.txtWrite.setTextColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.green
-                    )
-                )
-                binding.txtTest.setTextColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.black
-                    )
-                )
-            }
-            Toast.makeText(binding.root.context, "Write button clicked", Toast.LENGTH_SHORT).show()
+            if (wordList.isNotEmpty())
+                showWord()
         }
 
 
-
-
-
-        binding.row1.setOnClickListener {
-            val item = options[0]
-            item.isChecked = !item.isChecked
-            binding.icon1.setImageResource(
-                if (item.isChecked) R.drawable.ic_checkbox_true else R.drawable.ic_checkbox_false
-            )
-        }
-
-        binding.row2.setOnClickListener {
-            val item = options[1]
-            item.isChecked = !item.isChecked
-            binding.icon2.setImageResource(
-                if (item.isChecked) R.drawable.ic_checkbox_true else R.drawable.ic_checkbox_false
-            )
-        }
-
-        binding.row3.setOnClickListener {
-            val item = options[2]
-            item.isChecked = !item.isChecked
-            binding.icon3.setImageResource(
-                if (item.isChecked) R.drawable.ic_checkbox_true else R.drawable.ic_checkbox_false
-            )
-        }
-
-        binding.row4.setOnClickListener {
-            val item = options[3]
-            item.isChecked = !item.isChecked
-            binding.icon4.setImageResource(
-                if (item.isChecked) R.drawable.ic_checkbox_true else R.drawable.ic_checkbox_false
-            )
-        }
-
-        binding.row5.setOnClickListener {
-            val item = options[4]
-            item.isChecked = !item.isChecked
-            binding.icon5.setImageResource(
-                if (item.isChecked) R.drawable.ic_checkbox_true else R.drawable.ic_checkbox_false
-            )
-        }
+        binding.optionA.setOnClickListener { checkWord(binding.optionA.text.toString()) }
+        binding.optionB.setOnClickListener { checkWord(binding.optionB.text.toString()) }
+        binding.optionC.setOnClickListener { checkWord(binding.optionC.text.toString()) }
+        binding.optionD.setOnClickListener { checkWord(binding.optionD.text.toString()) }
 
 
     }
 
-    override fun onClickItem(item: TestChoiceItem) {
-        if (item.checked) {
-            selectedUnits.add(item.unitNumber) // Add if checked
-        } else {
-            selectedUnits.remove(item.unitNumber) // Remove if unchecked
-        }
-        if (selectedUnits.isEmpty()) {
-            binding.startButton.isEnabled = false
-            binding.startButton.backgroundTintList =
-                ContextCompat.getColorStateList(requireContext(), R.color.gray)
-        } else {
-            binding.startButton.isEnabled = true
-            binding.startButton.backgroundTintList =
-                ContextCompat.getColorStateList(requireContext(), R.color.blue)
-        }
-    }
 
-    private fun startExam() {
-        Log.d("sssss", "coming data: $options")
-        if (options[5].isChecked || options[6].isChecked) {
-            if (selectedUnits.isEmpty()) {
+    private fun showWord() {
+        while (currentIndex < wordList.size && wordList[currentIndex].status == 1) {
+            currentIndex++
+        }
+
+        if (currentIndex >= wordList.size) {
+            if (wordList.any { it.status == -1 }) {
                 Toast.makeText(
-                    requireContext(),
-                    "Please select at least one unit",
+                    binding.root.context,
+                    "Retrying incorrect words...",
                     Toast.LENGTH_SHORT
                 ).show()
+                currentIndex = 0
+                showWord()
             } else {
-
-                var writeFragment = false
+                Toast.makeText(binding.root.context, "you have finished test", Toast.LENGTH_SHORT)
+                    .show()
                 val bundle = Bundle()
-
-                testViewModel.optionList.observe(viewLifecycleOwner) { updatedOptionList ->
-                    Log.d("OtherFragment", "Updated optionList in ViewModel: $updatedOptionList")
-                    writeFragment = !updatedOptionList[5].isChecked
-
-                    bundle.apply {
-                        putSerializable("updatedOptionList", ArrayList(updatedOptionList))
-                    }
-
-                }
-
-                testViewModel.numberList.observe(viewLifecycleOwner) { updatedNumberList ->
-                    Log.d("OtherFragment", "Updated numberList in ViewModel: $updatedNumberList")
-
-                    bundle.apply {
-                        putSerializable("updatedNumberList", ArrayList(updatedNumberList))
-                    }
-                }
-
-                if (writeFragment){
-                    findNavController().navigate(
-                        R.id.action_navigation_test_choice_to_testFragment,
-                        bundle
-                    )
-                }else{
-                    findNavController().navigate(
-                        R.id.action_navigation_test_choice_to_testOptionFragment,
-                        bundle
-                    )
-                }
-
-
+                totalWords = wordList.size
+                bundle.putInt("listSize", totalWords)
+                findNavController().navigate(
+                    R.id.action_testChoiceFragment_to_resultFragment,
+                    bundle
+                )
             }
-        } else {
-            Toast.makeText(
-                requireContext(),
-                "first of all, you should select options",
-                Toast.LENGTH_SHORT
-            ).show()
+            return
         }
 
+
+        if (currentIndex < wordList.size) {
+            val currentWord = wordList[currentIndex]
+            options = generateOptions(currentWord)
+            binding.txtTranslation.text = currentWord.uzbekWord
+            binding.optionA.text = options.getOrNull(0) ?: ""
+            binding.optionB.text = options.getOrNull(1) ?: ""
+            binding.optionC.text = options.getOrNull(2) ?: ""
+            binding.optionD.text = options.getOrNull(3) ?: ""
+
+            binding.txtEnglish.visibility = View.INVISIBLE
+            binding.imgCorrect.visibility = View.GONE
+            binding.imgIncorrect.visibility = View.GONE
+
+            binding.unitText.text = "Unit №${currentWord.unit}"
+            when (currentWord.type) {
+                "topic_vocabulary" -> binding.unitType.text = "Topic vocabulary"
+                "phrasal_verbs" -> binding.unitType.text = "Phrasal verbs"
+                "prepositional_phrases" -> binding.unitType.text = "Prepositional phrases"
+                "word_patterns" -> binding.unitType.text = "Word patterns"
+                "word_formation" -> binding.unitType.text = "Word formation"
+            }
+
+            binding.optionA.isEnabled = true
+            binding.optionB.isEnabled = true
+            binding.optionC.isEnabled = true
+            binding.optionD.isEnabled = true
+
+            val defaultTextColor = ContextCompat.getColor(requireContext(), R.color.black)
+            listOf(binding.optionA, binding.optionB, binding.optionC, binding.optionD).forEach {
+                it.setTextColor(defaultTextColor)
+                val color = ContextCompat.getColor(binding.root.context, R.color.white)
+                val colorStateList = ColorStateList.valueOf(color)
+                it.setBackgroundResource(R.drawable.bac_curve)
+
+                ViewCompat.setBackgroundTintList(
+                    it,
+                    colorStateList
+                )
+            }
+        }
+
+
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    private fun generateOptions(currentWord: WordItem): List<String> {
+        if (currentWord == null) return emptyList()
+
+        val incorrectOptions = mutableSetOf<String>()
+        while (incorrectOptions.size < 3 && wordList.size > 1) {
+            val randomWord = wordList.random()
+            if (randomWord.englishWord != currentWord.englishWord) {
+                incorrectOptions.add(randomWord.englishWord)
+            }
+        }
+
+        val allOptions = incorrectOptions.toList() + currentWord.englishWord
+        return allOptions.shuffled()
     }
 
+    private fun checkWord(selectedText: String) {
+        if (currentIndex < wordList.size) {
+            val correctText = wordList[currentIndex].englishWord
 
+            // Show the selected answer
+            binding.txtEnglish.text = selectedText
+            binding.txtEnglish.visibility = View.VISIBLE
+
+            // Reset button colors
+            val defaultColor = ContextCompat.getColor(requireContext(), android.R.color.transparent)
+            listOf(binding.optionA, binding.optionB, binding.optionC, binding.optionD).forEach {
+                it.setBackgroundColor(defaultColor)
+            }
+
+            // Show correct and incorrect feedback
+            if (selectedText.equals(correctText, ignoreCase = true)) {
+                wordList[currentIndex] = wordList[currentIndex].copy(status = 1)
+                binding.imgCorrect.visibility = View.VISIBLE
+                binding.imgIncorrect.visibility = View.GONE
+
+                // Highlight correct in green
+                highlightButtonWithText(correctText, R.color.green)
+            } else {
+                wordList[currentIndex] = wordList[currentIndex].copy(status = -1)
+                binding.imgCorrect.visibility = View.GONE
+                binding.imgIncorrect.visibility = View.VISIBLE
+
+                // Highlight selected in red, correct in green
+                highlightButtonWithText(selectedText, R.color.red)
+                highlightButtonWithText(correctText, R.color.green)
+            }
+
+            // Disable all buttons
+            listOf(binding.optionA, binding.optionB, binding.optionC, binding.optionD).forEach {
+                it.isEnabled = false
+            }
+
+            currentIndex++
+            Handler(Looper.getMainLooper()).postDelayed({ showWord() }, 1000)
+        }
+    }
+
+    private fun highlightButtonWithText(text: String, colorResId: Int) {
+
+        val color = ContextCompat.getColor(requireContext(), colorResId)
+        when (text) {
+            binding.optionA.text -> binding.optionA.setTextColor(color)
+            binding.optionB.text -> binding.optionB.setTextColor(color)
+            binding.optionC.text -> binding.optionC.setTextColor(color)
+            binding.optionD.text -> binding.optionD.setTextColor(color)
+        }
+
+        listOf(binding.optionA, binding.optionB, binding.optionC, binding.optionD).forEach {
+            it.setBackgroundResource(R.drawable.bac_curve)
+        }
+    }
 }
-
-

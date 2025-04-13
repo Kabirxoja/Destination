@@ -8,8 +8,9 @@ import com.example.destination.viewmodel.NotesViewModel
 import com.example.destination.viewmodel.ResultViewModel
 import com.example.destination.viewmodel.SearchViewModel
 import com.example.destination.viewmodel.SettingsViewModel
+import com.example.destination.viewmodel.ChoiceViewModel
 import com.example.destination.viewmodel.TestChoiceViewModel
-import com.example.destination.viewmodel.TestMainViewModel
+import com.example.destination.viewmodel.TestWriteViewModel
 import com.example.destination.viewmodel.VocabularyViewModel
 
 class MainViewModelFactory(private var application: Application) :ViewModelProvider.Factory{
@@ -30,12 +31,12 @@ class MainViewModelFactory(private var application: Application) :ViewModelProvi
             return SettingsViewModel(application) as T
         }
 
-        if (modelClass.isAssignableFrom(TestChoiceViewModel::class.java)){
-            return TestChoiceViewModel(application) as T
+        if (modelClass.isAssignableFrom(ChoiceViewModel::class.java)){
+            return ChoiceViewModel(application) as T
         }
 
-        if (modelClass.isAssignableFrom(TestMainViewModel::class.java)){
-            return TestMainViewModel(application) as T
+        if (modelClass.isAssignableFrom(TestWriteViewModel::class.java)){
+            return TestWriteViewModel(application) as T
         }
 
         if (modelClass.isAssignableFrom(VocabularyViewModel::class.java)){
@@ -44,6 +45,9 @@ class MainViewModelFactory(private var application: Application) :ViewModelProvi
 
         if (modelClass.isAssignableFrom(ResultViewModel::class.java)){
             return ResultViewModel(application) as T
+        }
+        if (modelClass.isAssignableFrom(TestChoiceViewModel::class.java)){
+            return TestChoiceViewModel(application) as T
         }
 
 

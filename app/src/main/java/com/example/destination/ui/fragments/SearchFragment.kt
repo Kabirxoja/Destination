@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.destination.R
+import com.example.destination.data.data.Vocabulary
 import com.example.destination.databinding.FragmentSearchBinding
 import com.example.destination.data.local.VocabularyEntity
 import com.example.destination.data.data.VocabularyItem
@@ -59,9 +60,8 @@ class SearchFragment : Fragment(), SearchAdapter.OnNoteClickListener, TextToSpee
 
 
         searchViewModel.filteredWords.observe(viewLifecycleOwner) { words ->
-            val parentItems = words.map { it.toParentItem() }.sortedBy { it.enWord }
             binding.parentRecyclerView.adapter = searchAdapter
-            searchAdapter.submitList(parentItems)
+            searchAdapter.submitList(words.sortedBy { it.englishWord })
             searchAdapter.setOnNoteClickListener(this)
         }
 
@@ -78,20 +78,6 @@ class SearchFragment : Fragment(), SearchAdapter.OnNoteClickListener, TextToSpee
         setupCancelIconVisibility()
         setupCancelClickListener()
     }
-
-    private fun VocabularyEntity.toParentItem() = VocabularyItem(
-        unit = unit ?: "",
-        type = type ?: "",
-        enWord = englishWord ?: "",
-        uzWord = uzbekWord ?: "",
-        kaWord = karakalpakWord ?: "",
-        definition = definition ?: "",
-        enExample = exampleInEnglish ?: "",
-        uzExample = exampleInUzbek ?: "",
-        kaExample = exampleInKarakalpak ?: "",
-        isNoted = isNoted ?: 0,
-        id = id
-    )
 
 
     private fun setupCancelIconVisibility() {
@@ -149,9 +135,9 @@ class SearchFragment : Fragment(), SearchAdapter.OnNoteClickListener, TextToSpee
         _binding = null
     }
 
-    override fun onAudioClick(vocabularyEntity: VocabularyItem) {
+    override fun onAudioClick(vocabularyEntity: Vocabulary) {
         speakWord(
-            vocabularyEntity.enWord.replace("sb", "somebody")
+            vocabularyEntity.englishWord.replace("sb", "somebody")
                 .replace("sth", "something")
                 .split(Regex("\\b(adj|v|adv|n)\\b"))
                 .firstOrNull() ?: ""

@@ -13,6 +13,8 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.destination.data.data.UpdatedNotes
+import com.example.destination.data.data.Vocabulary
 import com.example.destination.data.data.VocabularyItem
 import com.example.destination.data.local.VocabularyEntity
 import com.example.destination.data.repository.MainViewModelFactory
@@ -25,12 +27,12 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import java.util.Locale
 
-class NotesFragment : Fragment() {
+class NotesFragment : Fragment(), NoteAdapter.OnNoteClickListener {
 
     private var _binding: FragmentNotesBinding? = null
     private val binding get() = _binding!!
     private lateinit var notesViewModel: NotesViewModel
-    private lateinit var searchAdapter: NoteAdapter
+    private lateinit var noteAdapter: NoteAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -49,19 +51,28 @@ class NotesFragment : Fragment() {
 
         notesViewModel.getNotes()
 
-        searchAdapter = NoteAdapter()
+        noteAdapter = NoteAdapter()
         binding.recyclerView.layoutManager = LinearLayoutManager(binding.root.context)
+        noteAdapter.setOnNoteClickListener(this)
+
 
         lifecycleScope.launch {
             notesViewModel.filteredWords.collectLatest { wordList ->
                 Log.d("dddddd", wordList.toString())
-                binding.recyclerView.adapter = searchAdapter
-                searchAdapter.submitList(wordList)
+                binding.recyclerView.adapter = noteAdapter
+                noteAdapter.submitList(wordList)
             }
         }
 
     }
 
+    override fun onAudioClick(vocabularyEntity: Vocabulary) {
+
+    }
+
+    override fun onNoteClick(vocabularyEntity: Vocabulary) {
+       notesViewModel.updateItem(UpdatedNotes(vocabularyEntity.id, if (vocabularyEntity.isNoted == 1) 0 else 1))
+    }
 
 
 }

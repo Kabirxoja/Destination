@@ -4,23 +4,30 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import com.example.destination.data.data.TestChoiceItem
-import com.example.destination.data.data.OptionItem
+import com.example.destination.data.data.Vocabulary
+import com.example.destination.data.local.AppDatabase
+import com.example.destination.data.repository.MainRepository
+import kotlinx.coroutines.launch
 
 class TestChoiceViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val _numberList = MutableLiveData<List<TestChoiceItem>>()
-    val numberList: LiveData<List<TestChoiceItem>> = _numberList
+    private val repository: MainRepository
+    private val getFilteredList = MutableLiveData<List<Vocabulary>>()
+    val getOptions:LiveData<List<Vocabulary>> get() = getFilteredList
 
-    private val _optionList = MutableLiveData<List<OptionItem>>()
-    val optionList: LiveData<List<OptionItem>> = _optionList
 
-    fun setOptionList(list: List<OptionItem>) {
-        _optionList.value = list
+    init {
+        val dao = AppDatabase.getDatabase(application).vocabularyDao()
+        repository = MainRepository(dao, application)
     }
 
-    fun setNumberList(list: List<TestChoiceItem>) {
-        _numberList.value = list
+    fun setOptions(units: List<Int>, types: List<String>){
+        viewModelScope.launch {
+            val options = repository.getFilteredWords(units, types)
+            getFilteredList.value = options
+        }
     }
 
 
