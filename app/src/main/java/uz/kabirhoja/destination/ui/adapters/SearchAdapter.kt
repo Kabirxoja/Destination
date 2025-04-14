@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import uz.kabirhoja.destination.data.data.Vocabulary
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.kabirhoja.destination.R
+import uz.kabirhoja.destination.custom.AnimationButton.animateClick
 
 class SearchAdapter : ListAdapter<Vocabulary, SearchAdapter.ParentViewHolder>(
     DiffCallback()
@@ -84,6 +85,8 @@ class SearchAdapter : ListAdapter<Vocabulary, SearchAdapter.ParentViewHolder>(
                     }
 
                 }
+                it.animateClick()
+
             }
             audioSpeaker.setOnClickListener {
                 audioSpeaker.setImageResource(R.drawable.ic_audio_on) // Change icon when clicked

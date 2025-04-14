@@ -14,6 +14,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.viewpager.widget.PagerAdapter
 import com.kabirhoja.destination.R
+import uz.kabirhoja.destination.custom.AnimationButton.animateClick
 import uz.kabirhoja.destination.data.data.Vocabulary
 
 class WordPagerAdapter() : PagerAdapter() {
@@ -51,6 +52,7 @@ class WordPagerAdapter() : PagerAdapter() {
         if (list[position].isNoted == 1) addToNotes.setBackgroundResource(R.drawable.ic_note_true)
         else addToNotes.setBackgroundResource(R.drawable.ic_note_false)
 
+
         // Set up flip animation
         cardView.setOnClickListener {
             isFront = flipCard(cardView, isFront)
@@ -59,10 +61,12 @@ class WordPagerAdapter() : PagerAdapter() {
             listener?.onAudioClickPager(list[position])
             audioIcon.setBackgroundResource(R.drawable.ic_audio_on)
             Handler(Looper.getMainLooper()).postDelayed({ audioIcon.setBackgroundResource(R.drawable.ic_audio_off) }, 1500)
+            it.animateClick()
         }
         addToNotes.setOnClickListener {
             listener?.onNoteClickPager(list[position])
-            toggleNoteState(list[position], addToNotes)  // Update icon immediately
+            toggleNoteState(list[position], addToNotes)
+            it.animateClick()
         }
 
 
@@ -87,10 +91,8 @@ class WordPagerAdapter() : PagerAdapter() {
         val scale = cardView.context.resources.displayMetrics.density
         cardView.cameraDistance = 12000 * scale  // Depth effect
 
-        val flipOut =
-            AnimatorInflater.loadAnimator(cardView.context, R.anim.flip_out) as AnimatorSet
-        val flipIn =
-            AnimatorInflater.loadAnimator(cardView.context, R.anim.flip_in) as AnimatorSet
+        val flipOut = AnimatorInflater.loadAnimator(cardView.context, R.anim.flip_out) as AnimatorSet
+        val flipIn = AnimatorInflater.loadAnimator(cardView.context, R.anim.flip_in) as AnimatorSet
 
         flipOut.setTarget(cardView)
         flipIn.setTarget(cardView)

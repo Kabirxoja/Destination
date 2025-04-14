@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kabirhoja.destination.databinding.RecycleThemeItemLayoutBinding
+import uz.kabirhoja.destination.custom.AnimationButton.animateClick
 import uz.kabirhoja.destination.data.data.HomeItem
 
 class HomeAdapter : RecyclerView.Adapter<HomeAdapter.MyViewHolder>() {
@@ -18,9 +19,9 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.MyViewHolder>() {
             binding.unitNumber.text = item.unitNumber.toString()
             binding.unitName.text = item.unitName
 
-            // Set click listener
             binding.root.setOnClickListener {
                 listener?.onClickItem(item)
+                it.animateClick()
             }
         }
     }

@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.kabirhoja.destination.R
 import uz.kabirhoja.destination.data.data.SpeakerItem
 import com.kabirhoja.destination.databinding.RecycleSpeakerItemLayoutBinding
+import uz.kabirhoja.destination.custom.AnimationButton.animateClick
 
 class SpeakerAdapter : RecyclerView.Adapter<SpeakerAdapter.SpeakerViewHolder>() {
     private var listener: OnClickItemListener? = null
@@ -52,6 +53,8 @@ class SpeakerAdapter : RecyclerView.Adapter<SpeakerAdapter.SpeakerViewHolder>() 
                 notifyItemChanged(previousSelectedPosition)
                 notifyItemChanged(selectedPosition)
                 listener?.onClickItem(item)
+                it.animateClick()
+
             }
 
 
