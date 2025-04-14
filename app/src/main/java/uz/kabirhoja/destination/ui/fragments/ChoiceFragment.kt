@@ -17,6 +17,8 @@ import uz.kabirhoja.destination.data.data.TestChoiceItem
 import uz.kabirhoja.destination.data.repository.MainViewModelFactory
 import uz.kabirhoja.destination.data.data.OptionItem
 import com.kabirhoja.destination.databinding.FragmentChoiceBinding
+import uz.kabirhoja.destination.custom.AnimationButton
+import uz.kabirhoja.destination.custom.AnimationButton.animateClick
 import uz.kabirhoja.destination.viewmodel.ChoiceViewModel
 
 class ChoiceFragment : Fragment(), IndicatorAdapter.OnClickItemListener {
@@ -92,10 +94,12 @@ class ChoiceFragment : Fragment(), IndicatorAdapter.OnClickItemListener {
 
         binding.startButton.setOnClickListener {
             startExam()
+            it.animateClick()
         }
 
         binding.adjustmentLayout.setOnClickListener {
             binding.additionalOptionsLayout.visibility = View.VISIBLE
+            it.animateClick()
         }
 
         binding.text1.text = "Topic vocabulary"
@@ -146,6 +150,7 @@ class ChoiceFragment : Fragment(), IndicatorAdapter.OnClickItemListener {
                 )
             }
             Toast.makeText(binding.root.context, "Test button clicked", Toast.LENGTH_SHORT).show()
+            it.animateClick()
         }
 
         binding.button2.setOnClickListener {
@@ -187,6 +192,7 @@ class ChoiceFragment : Fragment(), IndicatorAdapter.OnClickItemListener {
                 )
             }
             Toast.makeText(binding.root.context, "Write button clicked", Toast.LENGTH_SHORT).show()
+            it.animateClick()
         }
 
 
@@ -199,6 +205,7 @@ class ChoiceFragment : Fragment(), IndicatorAdapter.OnClickItemListener {
             binding.icon1.setImageResource(
                 if (item.isChecked) R.drawable.ic_checkbox_true else R.drawable.ic_unselected
             )
+
         }
 
         binding.row2.setOnClickListener {
@@ -244,12 +251,10 @@ class ChoiceFragment : Fragment(), IndicatorAdapter.OnClickItemListener {
         }
         if (selectedUnits.isEmpty()) {
             binding.startButton.isEnabled = false
-            binding.startButton.backgroundTintList =
-                ContextCompat.getColorStateList(requireContext(), R.color.gray)
+            binding.startButton.backgroundTintList = ContextCompat.getColorStateList(requireContext(), R.color.gray)
         } else {
             binding.startButton.isEnabled = true
-            binding.startButton.backgroundTintList =
-                ContextCompat.getColorStateList(requireContext(), R.color.blue)
+            binding.startButton.backgroundTintList = ContextCompat.getColorStateList(requireContext(), R.color.blue)
         }
     }
 

@@ -104,7 +104,7 @@
     <TextView
         android:id="@+id/txt_translation"
         android:layout_width="match_parent"
-        android:layout_height="72dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/unit_text"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="16dp"
@@ -114,6 +114,9 @@
         android:text=""
         android:textColor="@color/black"
         android:textSize="28sp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="24dp"
+
 
 
         />
@@ -121,7 +124,7 @@
     <RelativeLayout
         android:id="@+id/checking_layout"
         android:layout_width="match_parent"
-        android:layout_height="72dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/txt_translation"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="16dp"
@@ -132,7 +135,7 @@
         <TextView
             android:id="@+id/txt_english"
             android:layout_width="match_parent"
-            android:layout_height="72dp"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="28dp"
             android:background="@drawable/bac_curve"
             android:backgroundTint="@color/white"
@@ -142,7 +145,8 @@
             android:textSize="28sp"
             android:visibility="invisible"
 
-
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="24dp"
             />
 
         <ImageView
@@ -173,7 +177,7 @@
     <LinearLayout
         android:id="@+id/options_layout"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/checking_layout"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="24dp"
@@ -182,7 +186,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="82dp"
             android:layout_weight="1"
             android:orientation="horizontal"
             android:weightSum="2">
@@ -215,7 +219,9 @@
                 android:gravity="center"
                 android:text="option 1"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+
+                />
 
 
         </LinearLayout>
@@ -223,7 +229,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="82dp"
             android:layout_weight="1"
             android:orientation="horizontal"
             android:weightSum="2">

@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.kabirhoja.destination.R
 import com.kabirhoja.destination.databinding.RecycleIndicatorItemBinding
+import uz.kabirhoja.destination.custom.AnimationButton.animateClick
 import uz.kabirhoja.destination.data.data.TestChoiceItem
 
 class IndicatorAdapter : RecyclerView.Adapter<IndicatorAdapter.MyViewHolder>() {
@@ -75,6 +76,7 @@ class IndicatorAdapter : RecyclerView.Adapter<IndicatorAdapter.MyViewHolder>() {
                 }
                 listener?.onClickItem(item)
                 Log.d("llll",item.toString())
+                it.animateClick()
             }
 
         }

@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import uz.kabirhoja.destination.data.repository.MainViewModelFactory
 import com.kabirhoja.destination.databinding.FragmentSettingsBinding
+import uz.kabirhoja.destination.custom.AnimationButton.animateClick
 import uz.kabirhoja.destination.ui.additions.BottomSheetLanguage
 import uz.kabirhoja.destination.ui.additions.BottomSheetSpeaker
 import uz.kabirhoja.destination.ui.additions.MainSharedPreference
@@ -70,12 +71,14 @@ class SettingsFragment : Fragment(),
             bottomSheetLanguage = BottomSheetLanguage()
             bottomSheetLanguage.setListener(this)
             bottomSheetLanguage.show(childFragmentManager, "BottomSheet")
+            it.animateClick()
         }
 
         binding.layoutVoice.setOnClickListener {
             bottomSheetSpeaker = BottomSheetSpeaker()
             bottomSheetSpeaker.setListener(this)
             bottomSheetSpeaker.show(childFragmentManager, "BottomSheet")
+            it.animateClick()
         }
 
     }

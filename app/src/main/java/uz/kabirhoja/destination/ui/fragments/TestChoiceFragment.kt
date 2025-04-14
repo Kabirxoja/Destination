@@ -21,6 +21,7 @@ import uz.kabirhoja.destination.data.data.TestChoiceItem
 import uz.kabirhoja.destination.data.data.WordItem
 import uz.kabirhoja.destination.data.repository.MainViewModelFactory
 import com.kabirhoja.destination.databinding.FragmentTestOptionBinding
+import uz.kabirhoja.destination.custom.AnimationButton.animateClick
 import uz.kabirhoja.destination.viewmodel.TestChoiceViewModel
 
 class TestChoiceFragment : Fragment() {
@@ -93,12 +94,32 @@ class TestChoiceFragment : Fragment() {
         }
 
 
-        binding.optionA.setOnClickListener { checkWord(binding.optionA.text.toString()) }
-        binding.optionB.setOnClickListener { checkWord(binding.optionB.text.toString()) }
-        binding.optionC.setOnClickListener { checkWord(binding.optionC.text.toString()) }
-        binding.optionD.setOnClickListener { checkWord(binding.optionD.text.toString()) }
+        binding.optionA.setOnClickListener {
+            it.animateClick()
 
-        binding.btnBack.setOnClickListener { findNavController().popBackStack() }
+            checkWord(binding.optionA.text.toString()) }
+        binding.optionB.setOnClickListener {
+            it.animateClick()
+
+            checkWord(binding.optionB.text.toString()) }
+        binding.optionC.setOnClickListener {
+            it.animateClick()
+
+            checkWord(binding.optionC.text.toString()) }
+        binding.optionD.setOnClickListener {
+            it.animateClick()
+
+            checkWord(binding.optionD.text.toString()) }
+
+        binding.btnBack.setOnClickListener {
+            findNavController().popBackStack()
+            it.animateClick()
+        }
+
+        binding.btnClue.setOnClickListener {
+            binding.clueLayout.visibility = View.VISIBLE
+            it.animateClick()
+        }
 
     }
 
@@ -144,6 +165,8 @@ class TestChoiceFragment : Fragment() {
             binding.txtEnglish.visibility = View.INVISIBLE
             binding.imgCorrect.visibility = View.GONE
             binding.imgIncorrect.visibility = View.GONE
+            binding.clueLayout.visibility = View.GONE
+
 
             binding.unitText.text = "Unit №${currentWord.unit}"
             when (currentWord.type) {
@@ -153,6 +176,8 @@ class TestChoiceFragment : Fragment() {
                 "word_patterns" -> binding.unitType.text = "Word patterns"
                 "word_formation" -> binding.unitType.text = "Word formation"
             }
+
+            binding.txtClue.text = currentWord.definition
 
             binding.optionA.isEnabled = true
             binding.optionB.isEnabled = true

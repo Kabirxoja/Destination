@@ -24,6 +24,7 @@ import uz.kabirhoja.destination.data.data.OptionItem
 import uz.kabirhoja.destination.data.data.TestChoiceItem
 import uz.kabirhoja.destination.data.repository.MainViewModelFactory
 import com.kabirhoja.destination.databinding.FragmentTestWriteBinding
+import uz.kabirhoja.destination.custom.AnimationButton.animateClick
 import uz.kabirhoja.destination.viewmodel.TestWriteViewModel
 
 class TestWriteFragment : Fragment() {
@@ -50,8 +51,14 @@ class TestWriteFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.doNotKnowTextView.setOnClickListener { revealAnswer() }
-        binding.btnBack.setOnClickListener { findNavController().popBackStack() }
+        binding.doNotKnowTextView.setOnClickListener {
+            revealAnswer()
+            it.animateClick()
+        }
+        binding.btnBack.setOnClickListener {
+            findNavController().popBackStack()
+            it.animateClick()
+        }
 
         viewModel = ViewModelProvider(
             this,
@@ -118,6 +125,7 @@ class TestWriteFragment : Fragment() {
 
         binding.btnClue.setOnClickListener {
             binding.clueLayout.visibility = View.VISIBLE
+            it.animateClick()
         }
 
     }
@@ -212,7 +220,7 @@ class TestWriteFragment : Fragment() {
                 showWord()
             } else {
                 val bundle = Bundle()
-                totalWords=wordList.size
+                totalWords = wordList.size
                 bundle.putInt("listSize", totalWords)
                 findNavController().navigate(R.id.action_testFragment_to_resultFragment, bundle)
             }
