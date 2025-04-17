@@ -30,15 +30,15 @@
                 android:layout_marginStart="80dp"
                 android:background="@drawable/ic_note_true"
                 android:padding="6dp" />
-
-            <ImageButton
+            <ImageView
                 android:id="@+id/btn_audio"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_audio_off"
                 android:layout_gravity="center_vertical|end"
                 android:layout_marginEnd="80dp"
-                android:background="@drawable/ic_audio_off"
-
                 />
 
             <!-- Hidden Back View -->

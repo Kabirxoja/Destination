@@ -5,12 +5,12 @@ import android.animation.ObjectAnimator
 import android.view.View
 
 object AnimationButton {
-    fun View.animateClick(duration: Long = 100) {
-        val scaleXDown = ObjectAnimator.ofFloat(this, View.SCALE_X, 1.0f, 0.9f)
-        val scaleYDown = ObjectAnimator.ofFloat(this, View.SCALE_Y, 1.0f, 0.9f)
+    fun View.animateClick(duration: Long = 100, scaleNormal: Float = 1.0f, scaleShrink: Float = 0.9f) {
+        val scaleXDown = ObjectAnimator.ofFloat(this, View.SCALE_X, scaleNormal, scaleShrink)
+        val scaleYDown = ObjectAnimator.ofFloat(this, View.SCALE_Y, scaleNormal, scaleShrink)
 
-        val scaleXUp = ObjectAnimator.ofFloat(this, View.SCALE_X, 0.9f, 1.0f)
-        val scaleYUp = ObjectAnimator.ofFloat(this, View.SCALE_Y, 0.9f, 1.0f)
+        val scaleXUp = ObjectAnimator.ofFloat(this, View.SCALE_X, scaleShrink, scaleNormal)
+        val scaleYUp = ObjectAnimator.ofFloat(this, View.SCALE_Y, scaleShrink, scaleNormal)
 
         scaleXDown.duration = duration
         scaleYDown.duration = duration

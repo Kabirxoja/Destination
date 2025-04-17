@@ -95,19 +95,19 @@ class TestChoiceFragment : Fragment() {
 
 
         binding.optionA.setOnClickListener {
-            it.animateClick()
+            it.animateClick(scaleNormal = 1.0f, scaleShrink = 0.96f)
 
             checkWord(binding.optionA.text.toString()) }
         binding.optionB.setOnClickListener {
-            it.animateClick()
+            it.animateClick(scaleNormal = 1.0f, scaleShrink = 0.96f)
 
             checkWord(binding.optionB.text.toString()) }
         binding.optionC.setOnClickListener {
-            it.animateClick()
+            it.animateClick(scaleNormal = 1.0f, scaleShrink = 0.96f)
 
             checkWord(binding.optionC.text.toString()) }
         binding.optionD.setOnClickListener {
-            it.animateClick()
+            it.animateClick(scaleNormal = 1.0f, scaleShrink = 0.96f)
 
             checkWord(binding.optionD.text.toString()) }
 

@@ -85,20 +85,21 @@ class SearchAdapter : ListAdapter<Vocabulary, SearchAdapter.ParentViewHolder>(
                     }
 
                 }
-                it.animateClick()
+                it.animateClick(scaleNormal = 1.0f, scaleShrink = 0.96f)
 
             }
             audioSpeaker.setOnClickListener {
                 audioSpeaker.setImageResource(R.drawable.ic_audio_on) // Change icon when clicked
                 Handler(Looper.getMainLooper()).postDelayed({
                     audioSpeaker.setImageResource(R.drawable.ic_audio_off) // Reset only this button
-                }, 2000)
+                }, 1500)
 
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
                     val item = getItem(position)
                     noteClickListener?.onAudioClick(item)
                 }
+                it.animateClick(scaleNormal = 1.0f, scaleShrink = 0.86f)
             }
 
 

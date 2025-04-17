@@ -71,14 +71,14 @@ class SettingsFragment : Fragment(),
             bottomSheetLanguage = BottomSheetLanguage()
             bottomSheetLanguage.setListener(this)
             bottomSheetLanguage.show(childFragmentManager, "BottomSheet")
-            it.animateClick()
+            it.animateClick(scaleNormal = 1.0f, scaleShrink = 0.96f)
         }
 
         binding.layoutVoice.setOnClickListener {
             bottomSheetSpeaker = BottomSheetSpeaker()
             bottomSheetSpeaker.setListener(this)
             bottomSheetSpeaker.show(childFragmentManager, "BottomSheet")
-            it.animateClick()
+            it.animateClick(scaleNormal = 1.0f, scaleShrink = 0.96f)
         }
 
     }

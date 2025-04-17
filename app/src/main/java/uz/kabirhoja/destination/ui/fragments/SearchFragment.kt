@@ -10,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -62,18 +63,20 @@ class SearchFragment : Fragment(), SearchAdapter.OnNoteClickListener, TextToSpee
             searchAdapter.setOnNoteClickListener(this)
         }
 
-        tts = TextToSpeech(binding.root.context) { status ->
-            if (status == TextToSpeech.SUCCESS) {
-                tts?.language = Locale.ENGLISH
-                println("TTS initialized successfully!")
-            } else {
-                println("TTS initialization failed.")
-            }
-        }
-
 
         setupCancelIconVisibility()
         setupCancelClickListener()
+        setTextSpeech()
+    }
+
+    private fun setTextSpeech(){
+        tts = TextToSpeech(binding.root.context) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                tts.language = Locale.ENGLISH
+            } else {
+                Toast.makeText(binding.root.context, "Speech voice initialization failed.", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
 
@@ -157,10 +160,10 @@ class SearchFragment : Fragment(), SearchAdapter.OnNoteClickListener, TextToSpee
         val voice = availableVoices.find { it.name == voiceType }
 
         if (voice != null) {
-            tts!!.voice = voice
-            tts!!.setSpeechRate(0.9f) // Adjust speech rate
-            tts!!.setPitch(1.1f)      // Adjust pitch
-            tts!!.speak(word, TextToSpeech.QUEUE_FLUSH, null, null)
+            tts.voice = voice
+            tts.setSpeechRate(0.9f) // Adjust speech rate
+            tts.setPitch(1.1f)      // Adjust pitch
+            tts.speak(word, TextToSpeech.QUEUE_FLUSH, null, null)
         } else {
             println("Voice $voiceType not found. Available voices: ${availableVoices.map { it.name }}")
         }

@@ -22,6 +22,7 @@ import uz.kabirhoja.destination.ui.additions.MainSharedPreference
 import uz.kabirhoja.destination.viewmodel.VocabularyViewModel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import uz.kabirhoja.destination.custom.AnimationButton.animateClick
 import java.util.Locale
 import kotlin.math.abs
 
@@ -50,14 +51,6 @@ class VocabularyFragment : Fragment(), VocabularyAdapter.OnNoteClickListener,
             MainViewModelFactory(requireActivity().application)
         )[VocabularyViewModel::class.java]
 
-        tts = TextToSpeech(binding.root.context) { status ->
-            if (status == TextToSpeech.SUCCESS) {
-                tts.language = Locale.US
-                println("TTS initialized successfully!")
-            } else {
-                println("TTS initialization failed.")
-            }
-        }
 
         arguments?.let {
             topicNumber = it.getInt("topicUnit")
@@ -69,6 +62,7 @@ class VocabularyFragment : Fragment(), VocabularyAdapter.OnNoteClickListener,
         setupViewPager()
         observeData()
         setupClickListeners()
+        setTextSpeech()
     }
 
     private fun setupRecyclerView() {
@@ -111,11 +105,14 @@ class VocabularyFragment : Fragment(), VocabularyAdapter.OnNoteClickListener,
             binding.viewPager.visibility = if (isListView) View.VISIBLE else View.GONE
             binding.mainRecyclerView.visibility = if (isListView) View.GONE else View.VISIBLE
             binding.btnChangeIcon.setBackgroundResource(if (isListView) R.drawable.ic_list else R.drawable.ic_card)
-
             observeData()
+            it.animateClick()
         }
 
-        binding.btnBack.setOnClickListener { findNavController().popBackStack() }
+        binding.btnBack.setOnClickListener {
+            findNavController().popBackStack()
+            it.animateClick()
+        }
     }
 
     override fun onNoteClick(vocabulary: Vocabulary) {
@@ -134,6 +131,17 @@ class VocabularyFragment : Fragment(), VocabularyAdapter.OnNoteClickListener,
             .split(Regex("\\b(adj|v|adv|n)\\b"))
             .firstOrNull() ?: ""
         speakWord(word)
+    }
+
+    private fun setTextSpeech(){
+        tts = TextToSpeech(binding.root.context) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                tts.language = Locale.ENGLISH
+                println("TTS initialized successfully!")
+            } else {
+                println("TTS initialization failed.")
+            }
+        }
     }
 
     override fun onNoteClickPager(vocabulary: Vocabulary) {

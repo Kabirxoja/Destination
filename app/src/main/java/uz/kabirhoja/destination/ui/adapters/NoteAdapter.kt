@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.kabirhoja.destination.R
+import uz.kabirhoja.destination.custom.AnimationButton.animateClick
 import uz.kabirhoja.destination.data.data.Vocabulary
 
 class NoteAdapter : ListAdapter<Vocabulary, NoteAdapter.ParentViewHolder>(
@@ -95,6 +96,7 @@ class NoteAdapter : ListAdapter<Vocabulary, NoteAdapter.ParentViewHolder>(
                         adapter.notifyItemChanged(position)
                     }
                 }
+                it.animateClick(scaleNormal = 1.0f, scaleShrink = 0.96f)
             }
             audioSpeaker.setOnClickListener {
                 audioSpeaker.setImageResource(R.drawable.ic_audio_on) // Change icon when clicked
@@ -107,6 +109,7 @@ class NoteAdapter : ListAdapter<Vocabulary, NoteAdapter.ParentViewHolder>(
                     val item = getItem(position)
                     noteClickListener?.onAudioClick(item)
                 }
+                it.animateClick(scaleNormal = 1.0f, scaleShrink = 0.86f)
             }
 
             noteIcon.setOnClickListener {
@@ -115,6 +118,7 @@ class NoteAdapter : ListAdapter<Vocabulary, NoteAdapter.ParentViewHolder>(
                     val item = getItem(position)
                     noteClickListener?.onNoteClick(item)
                 }
+                it.animateClick(scaleNormal = 1.0f, scaleShrink = 0.86f)
             }
         }
 

@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
@@ -26,13 +27,14 @@ class WordPagerAdapter() : PagerAdapter() {
 
     @SuppressLint("MissingInflatedId")
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        val view = LayoutInflater.from(container.context).inflate(R.layout.card_item, container, false)
+        val view =
+            LayoutInflater.from(container.context).inflate(R.layout.card_item, container, false)
 
         val frontText: TextView = view.findViewById(R.id.text_front_title)
         val frontText2: TextView = view.findViewById(R.id.text_front_subtext)
         val backLayout: LinearLayout = view.findViewById(R.id.layout_back_content)
         val addToNotes: ImageButton = view.findViewById(R.id.btn_add_to_notes)
-        val audioIcon: ImageButton = view.findViewById(R.id.btn_audio)
+        val audioIcon: ImageView = view.findViewById(R.id.btn_audio)
         val cardView: CardView = view.findViewById(R.id.card_container)
 
 
@@ -59,8 +61,10 @@ class WordPagerAdapter() : PagerAdapter() {
         }
         audioIcon.setOnClickListener {
             listener?.onAudioClickPager(list[position])
-            audioIcon.setBackgroundResource(R.drawable.ic_audio_on)
-            Handler(Looper.getMainLooper()).postDelayed({ audioIcon.setBackgroundResource(R.drawable.ic_audio_off) }, 1500)
+            audioIcon.setImageResource(R.drawable.ic_audio_on) // Change icon when clicked
+            Handler(Looper.getMainLooper()).postDelayed({
+                audioIcon.setImageResource(R.drawable.ic_audio_off) // Reset only this button
+            }, 1500)
             it.animateClick()
         }
         addToNotes.setOnClickListener {
@@ -91,7 +95,8 @@ class WordPagerAdapter() : PagerAdapter() {
         val scale = cardView.context.resources.displayMetrics.density
         cardView.cameraDistance = 12000 * scale  // Depth effect
 
-        val flipOut = AnimatorInflater.loadAnimator(cardView.context, R.anim.flip_out) as AnimatorSet
+        val flipOut =
+            AnimatorInflater.loadAnimator(cardView.context, R.anim.flip_out) as AnimatorSet
         val flipIn = AnimatorInflater.loadAnimator(cardView.context, R.anim.flip_in) as AnimatorSet
 
         flipOut.setTarget(cardView)
