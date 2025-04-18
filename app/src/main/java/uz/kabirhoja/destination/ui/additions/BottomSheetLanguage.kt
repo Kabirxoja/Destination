@@ -24,7 +24,6 @@ open class BottomSheetLanguage : BottomSheetDialogFragment() {
         _binding = FragmentBottomSheetLanguageBinding.inflate(layoutInflater, container, false)
 
         binding.bottomSingleButton.setOnClickListener {
-            Toast.makeText(binding.root.context, "wwwww", Toast.LENGTH_SHORT).show()
             listener?.onSelectedLanguage(languageSelected)
             dismiss()
         }

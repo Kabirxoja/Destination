@@ -16,7 +16,7 @@ navVersion = "1.7.0"
 gsonVersion = "2.8.8"
 toolsCore = "1.0.0-alpha12"
 playServicesBasement = "18.5.0"
-
+inAppUpdate = "2.1.0"
 roomVersion = "2.6.1"
 ksp = "1.9.0-1.0.13"
 
@@ -42,6 +42,10 @@ play-services-basement = { group = "com.google.android.gms", name = "play-servic
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomVersion" }
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "roomVersion" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomVersion" }
+
+app-update = {group="com.google.android.play", name = "app-update", version.ref = "inAppUpdate"}
+app-update-ktx = {group="com.google.android.play", name = "app-update-ktx", version.ref = "inAppUpdate"}
+
 
 ksp-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "ksp" }
 

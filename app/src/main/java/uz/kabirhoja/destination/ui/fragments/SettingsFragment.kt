@@ -1,7 +1,11 @@
 package uz.kabirhoja.destination.ui.fragments
 
 import android.annotation.SuppressLint
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.provider.Telephony.Mms.Intents
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -78,6 +82,29 @@ class SettingsFragment : Fragment(),
             bottomSheetSpeaker = BottomSheetSpeaker()
             bottomSheetSpeaker.setListener(this)
             bottomSheetSpeaker.show(childFragmentManager, "BottomSheet")
+            it.animateClick(scaleNormal = 1.0f, scaleShrink = 0.96f)
+        }
+
+        binding.layoutShare.setOnClickListener {
+            val shareIntent = Intent(Intent.ACTION_SEND)
+            shareIntent.type = "text/plain"
+            shareIntent.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=com.kabirhoja.destination")
+            startActivity(Intent.createChooser(shareIntent, "Share via"))
+            it.animateClick(scaleNormal = 1.0f, scaleShrink = 0.96f)
+        }
+
+        binding.layoutRate.setOnClickListener {
+            val appPackageName = "com.kabirhoja.destination"
+            try {
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$appPackageName")))
+            } catch (e: ActivityNotFoundException) {
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$appPackageName")))
+                it.animateClick(scaleNormal = 1.0f, scaleShrink = 0.96f)
+            }
+        }
+
+        binding.layoutExit.setOnClickListener {
+            requireActivity().finish()
             it.animateClick(scaleNormal = 1.0f, scaleShrink = 0.96f)
         }
 

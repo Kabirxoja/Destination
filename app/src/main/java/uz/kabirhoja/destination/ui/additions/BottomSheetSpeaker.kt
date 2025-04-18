@@ -38,8 +38,6 @@ class BottomSheetSpeaker : BottomSheetDialogFragment(), SpeakerAdapter.OnClickIt
         val root = binding.root
 
 
-
-
         binding.bottomSingleButton.setOnClickListener {
             listener?.onSelectedSpeaker(speakerSelected)
             dismiss()
@@ -63,9 +61,6 @@ class BottomSheetSpeaker : BottomSheetDialogFragment(), SpeakerAdapter.OnClickIt
                 Log.e("TTS", "TTS initialization failed.")
             }
         }
-
-
-
 
 
 
@@ -101,14 +96,15 @@ class BottomSheetSpeaker : BottomSheetDialogFragment(), SpeakerAdapter.OnClickIt
 //        }
         val list = mutableListOf<SpeakerItem>()
 
-        for (i in filteredVoices) {
+        for (i in filteredVoices.indices) {
             list.add(
                 SpeakerItem(
-                    i.name,
-                    i.locale.toString(),
-                    i.quality,
-                    i.latency,
-                    i.isNetworkConnectionRequired
+                    i,
+                    filteredVoices[i].name,
+                    filteredVoices[i].locale.toString(),
+                    filteredVoices[i].quality,
+                    filteredVoices[i].latency,
+                    filteredVoices[i].isNetworkConnectionRequired
                 )
             )
         }

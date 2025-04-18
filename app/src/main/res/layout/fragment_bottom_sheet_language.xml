@@ -84,28 +84,13 @@
 
 
 
-    <LinearLayout
-        android:id="@+id/bottomButtons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/row2"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="16dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:weightSum="2"
-
-        >
-
-
-    </LinearLayout>
 
     <Button
         android:id="@+id/bottomSingleButton"
         android:layout_width="match_parent"
         android:layout_height="46dp"
-        android:layout_below="@id/bottomButtons"
-        android:layout_marginTop="12dp"
+        android:layout_below="@id/row2"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/bac_curve"
         android:backgroundTint="@color/blue"

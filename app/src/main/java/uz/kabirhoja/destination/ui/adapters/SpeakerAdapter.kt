@@ -35,9 +35,9 @@ class SpeakerAdapter : RecyclerView.Adapter<SpeakerAdapter.SpeakerViewHolder>() 
                     binding.languageIcon.setImageResource(R.drawable.ic_au)
                     binding.languageName.text = "Australian"
                 }
-
-
             }
+
+            binding.languageNumber.text = "Voice №" + (item.number+1).toString()
 
 
             if (adapterPosition == selectedPosition) {
