@@ -109,8 +109,6 @@ class ChoiceFragment : Fragment(), IndicatorAdapter.OnClickItemListener {
         binding.text5.text = "Word formation"
 
 
-
-
         binding.button1.setOnClickListener {
             if (selectedOption != "Test") {
                 selectedOption?.let {
@@ -149,7 +147,6 @@ class ChoiceFragment : Fragment(), IndicatorAdapter.OnClickItemListener {
                     )
                 )
             }
-            Toast.makeText(binding.root.context, "Test button clicked", Toast.LENGTH_SHORT).show()
             it.animateClick()
         }
 
@@ -191,7 +188,6 @@ class ChoiceFragment : Fragment(), IndicatorAdapter.OnClickItemListener {
                     )
                 )
             }
-            Toast.makeText(binding.root.context, "Write button clicked", Toast.LENGTH_SHORT).show()
             it.animateClick()
         }
 

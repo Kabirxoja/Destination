@@ -34,7 +34,7 @@ class WordPagerAdapter() : PagerAdapter() {
         val frontText2: TextView = view.findViewById(R.id.text_front_subtext)
         val backLayout: LinearLayout = view.findViewById(R.id.layout_back_content)
         val addToNotes: ImageButton = view.findViewById(R.id.btn_add_to_notes)
-        val audioIcon: ImageView = view.findViewById(R.id.btn_audio)
+        val audioIcon: ImageButton = view.findViewById(R.id.btn_audio)
         val cardView: CardView = view.findViewById(R.id.card_container)
 
 
@@ -61,10 +61,10 @@ class WordPagerAdapter() : PagerAdapter() {
         }
         audioIcon.setOnClickListener {
             listener?.onAudioClickPager(list[position])
-            audioIcon.setImageResource(R.drawable.ic_audio_on) // Change icon when clicked
+            audioIcon.setBackgroundResource(R.drawable.ic_audio_on) // Change icon when clicked
             Handler(Looper.getMainLooper()).postDelayed({
-                audioIcon.setImageResource(R.drawable.ic_audio_off) // Reset only this button
-            }, 1500)
+                audioIcon.setBackgroundResource(R.drawable.ic_audio_off) // Reset only this button
+            }, 500)
             it.animateClick()
         }
         addToNotes.setOnClickListener {
@@ -106,7 +106,7 @@ class WordPagerAdapter() : PagerAdapter() {
         val frontText2: TextView = cardView.findViewById(R.id.text_front_subtext)
         val backLayout: LinearLayout = cardView.findViewById(R.id.layout_back_content)
         val addToNotes: ImageButton = cardView.findViewById(R.id.btn_add_to_notes)
-        val audioIcon: ImageButton = cardView.findViewById(R.id.btn_audio)
+        val audioIcon: ImageView = cardView.findViewById(R.id.btn_audio)
 
 
         frontText.visibility = View.GONE

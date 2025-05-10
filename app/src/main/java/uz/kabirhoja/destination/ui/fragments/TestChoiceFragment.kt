@@ -139,8 +139,6 @@ class TestChoiceFragment : Fragment() {
                 currentIndex = 0
                 showWord()
             } else {
-                Toast.makeText(binding.root.context, "you have finished test", Toast.LENGTH_SHORT)
-                    .show()
                 val bundle = Bundle()
                 totalWords = wordList.size
                 bundle.putInt("listSize", totalWords)

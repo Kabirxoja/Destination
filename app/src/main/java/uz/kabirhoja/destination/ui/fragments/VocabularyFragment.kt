@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -146,7 +145,6 @@ class VocabularyFragment : Fragment(), VocabularyAdapter.OnNoteClickListener,
 
     override fun onNoteClickPager(vocabulary: Vocabulary) {
         onNoteClick(vocabulary)
-        Toast.makeText(requireContext(), "Note status changed", Toast.LENGTH_SHORT).show()
     }
 
     override fun onAudioClickPager(vocabulary: Vocabulary) {
