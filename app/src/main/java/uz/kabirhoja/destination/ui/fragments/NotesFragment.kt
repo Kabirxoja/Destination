@@ -85,19 +85,27 @@ class NotesFragment : Fragment(), NoteAdapter.OnNoteClickListener, TextToSpeech.
         )
     }
 
-    private fun setTextSpeech(){
+    private fun setTextSpeech() {
         tts = TextToSpeech(binding.root.context) { status ->
             if (status == TextToSpeech.SUCCESS) {
                 tts.language = Locale.ENGLISH
             } else {
-                Toast.makeText(binding.root.context, "Speech voice initialization failed.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    binding.root.context,
+                    "Speech voice initialization failed.",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
     }
 
     private fun speakWord(word: String) {
         val speakerType = MainSharedPreference.getSpeakerType(binding.root.context)
-        speakWordWithType(word, speakerType)
+        if (speakerType.isEmpty()) {
+            Toast.makeText(binding.root.context, "Speaker type not selected", Toast.LENGTH_SHORT).show()
+        } else {
+            speakWordWithType(word, speakerType)
+        }
     }
 
     private fun speakWordWithType(word: String, voiceType: String) {
@@ -107,7 +115,6 @@ class NotesFragment : Fragment(), NoteAdapter.OnNoteClickListener, TextToSpeech.
         }
 
         val availableVoices = tts.voices
-
         val voice = availableVoices.find { it.name == voiceType }
 
         if (voice != null) {

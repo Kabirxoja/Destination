@@ -146,7 +146,11 @@ class SearchFragment : Fragment(), SearchAdapter.OnNoteClickListener, TextToSpee
 
     private fun speakWord(word: String) {
         val speakerType = MainSharedPreference.getSpeakerType(binding.root.context)
-        speakWordWithType(word, speakerType)
+        if (speakerType.isEmpty()) {
+            Toast.makeText(binding.root.context, "Speaker type not selected", Toast.LENGTH_SHORT).show()
+        } else {
+            speakWordWithType(word, speakerType)
+        }
     }
 
     private fun speakWordWithType(word: String, voiceType: String) {

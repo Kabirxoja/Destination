@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -132,7 +133,7 @@ class VocabularyFragment : Fragment(), VocabularyAdapter.OnNoteClickListener,
         speakWord(word)
     }
 
-    private fun setTextSpeech(){
+    private fun setTextSpeech() {
         tts = TextToSpeech(binding.root.context) { status ->
             if (status == TextToSpeech.SUCCESS) {
                 tts.language = Locale.ENGLISH
@@ -164,7 +165,11 @@ class VocabularyFragment : Fragment(), VocabularyAdapter.OnNoteClickListener,
 
     private fun speakWord(word: String) {
         val speakerType = MainSharedPreference.getSpeakerType(binding.root.context)
-        speakWordWithType(word, speakerType)
+        if (speakerType.isEmpty()) {
+            Toast.makeText(binding.root.context, "Speaker type not selected", Toast.LENGTH_SHORT).show()
+        } else {
+            speakWordWithType(word, speakerType)
+        }
     }
 
     private fun speakWordWithType(word: String, voiceType: String) {

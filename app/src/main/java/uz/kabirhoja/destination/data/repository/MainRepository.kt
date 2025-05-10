@@ -76,8 +76,6 @@ class MainRepository(
         }
     }
 
-    //ask for Sherali this place was written correctly
-
     suspend fun loadJSONAndSaveToDatabase() {
         val sharedVersion = sharedPreferences.getUpdateJsonVersion(context)
         if (sharedVersion != UPDATE_JSON_VERSION) {
@@ -97,9 +95,6 @@ class MainRepository(
             } catch (e: JsonSyntaxException) {
                 e.printStackTrace()
             }
-            Log.d("insertWordStatus", "Updated")
-        } else {
-            Log.d("insertWordStatus", "do not update")
         }
 
     }
