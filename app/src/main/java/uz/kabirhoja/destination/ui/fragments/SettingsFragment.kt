@@ -57,7 +57,10 @@ class SettingsFragment : Fragment(),
 
         // Observe language changes
         settingsViewModel.currentLanguage.observe(viewLifecycleOwner) { language ->
-            binding.txtLanguageChose.text = language
+            when(language){
+                "ka" -> binding.txtLanguageChose.text = "Karakalpak"
+                "uz" -> binding.txtLanguageChose.text = "Uzbek"
+            }
         }
 
         // Observe speaker changes

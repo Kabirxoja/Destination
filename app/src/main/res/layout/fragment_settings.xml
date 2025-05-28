@@ -29,12 +29,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/text_banner"
         android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="12dp"
         android:layout_marginBottom="12dp"
         android:background="@drawable/bac_curve"
         android:backgroundTint="@color/white"
         android:orientation="horizontal"
         android:padding="12dp"
-        android:layout_marginTop="12dp"
 
         >
 
@@ -59,18 +59,17 @@
             />
 
         <TextView
+            android:id="@+id/txt_language_chose"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
+            android:gravity="right"
             android:text="Language"
             android:textColor="@color/gray"
             android:textSize="18sp"
-            android:gravity="right"
-            android:id="@+id/txt_language_chose"
 
 
             />
-
 
 
     </LinearLayout>
@@ -111,18 +110,17 @@
 
 
         <TextView
+            android:id="@+id/txt_voice_chose"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
+            android:gravity="right"
             android:text="Language"
             android:textColor="@color/gray"
             android:textSize="18sp"
-            android:gravity="right"
-            android:id="@+id/txt_voice_chose"
 
 
             />
-
 
 
     </LinearLayout>
@@ -239,9 +237,6 @@
 
 
     </LinearLayout>
-
-
-
 
 
 </RelativeLayout>

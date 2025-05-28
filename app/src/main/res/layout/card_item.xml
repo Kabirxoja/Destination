@@ -140,7 +140,7 @@
                         android:layout_height="16dp"
                         android:layout_gravity="top"
                         android:layout_marginEnd="4dp"
-                        android:src="@drawable/ic_flag_uz" />
+                        android:src="@drawable/ic_flag" />
 
                     <ImageView
                         android:layout_width="2dp"

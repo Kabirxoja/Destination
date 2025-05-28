@@ -88,7 +88,7 @@
         android:layout_alignTop="@id/uz_text_view_search"
         android:layout_alignBottom="@id/uz_text_view_search"
         android:layout_alignParentStart="true"
-        android:src="@drawable/ic_flag_uz"
+        android:src="@drawable/ic_flag"
         android:layout_marginStart="12dp"
         />
 

@@ -112,7 +112,7 @@
             android:layout_alignBottom="@id/uz_text_view_search"
             android:layout_alignParentStart="true"
             android:layout_marginStart="12dp"
-            android:src="@drawable/ic_flag_uz" />
+            android:src="@drawable/ic_flag" />
 
         <TextView
             android:id="@+id/uz_text_view_search"
