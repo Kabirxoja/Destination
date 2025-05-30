@@ -11,15 +11,11 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
-class NotesViewModel(application: Application) : AndroidViewModel(application) {
-    private val repository: MainRepository
+class NotesViewModel(application: Application, private val repository: MainRepository) : AndroidViewModel(application) {
+
     private val _filteredWords = MutableStateFlow<List<Vocabulary>>(emptyList())
     val filteredWords: StateFlow<List<Vocabulary>> get() = _filteredWords
 
-    init {
-        val dao = AppDatabase.getDatabase(application).vocabularyDao()
-        repository = MainRepository(dao, application)
-    }
 
     fun getNotes(){
         viewModelScope.launch{

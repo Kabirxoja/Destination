@@ -10,15 +10,9 @@ import uz.kabirhoja.destination.data.data.Vocabulary
 import uz.kabirhoja.destination.data.local.AppDatabase
 import uz.kabirhoja.destination.data.repository.MainRepository
 
-class SearchViewModel(application: Application) : AndroidViewModel(application) {
-    private val repository: MainRepository
+class SearchViewModel(application: Application,private val repository: MainRepository) : AndroidViewModel(application) {
     private val _filteredWords = MutableLiveData<List<Vocabulary>>()
     val filteredWords: LiveData<List<Vocabulary>> get() = _filteredWords
-
-    init {
-        val dao = AppDatabase.getDatabase(application).vocabularyDao()
-        repository = MainRepository(dao, application)
-    }
 
     fun searchItems(query: String) {
         viewModelScope.launch {

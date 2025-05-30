@@ -10,17 +10,10 @@ import uz.kabirhoja.destination.data.local.AppDatabase
 import uz.kabirhoja.destination.data.repository.MainRepository
 import kotlinx.coroutines.launch
 
-class TestWriteViewModel(application: Application) : AndroidViewModel(application) {
+class TestWriteViewModel(application: Application, private val repository: MainRepository) : AndroidViewModel(application) {
 
-
-    private val repository: MainRepository
     private val _filteredWords = MutableLiveData<List<Vocabulary>>()
     val filteredWords: LiveData<List<Vocabulary>> get() = _filteredWords
-
-    init {
-        val dao = AppDatabase.getDatabase(application).vocabularyDao()
-        repository = MainRepository(dao, application)
-    }
 
     fun getFilteredWords(units: List<Int>, types: List<String>) {
         viewModelScope.launch {

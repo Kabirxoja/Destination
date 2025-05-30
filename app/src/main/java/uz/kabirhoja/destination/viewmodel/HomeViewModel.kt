@@ -7,22 +7,12 @@ import uz.kabirhoja.destination.data.local.AppDatabase
 import uz.kabirhoja.destination.data.repository.MainRepository
 import kotlinx.coroutines.launch
 
-class HomeViewModel(application: Application) : AndroidViewModel(application) {
-    private val repository: MainRepository
+class HomeViewModel(application: Application, private val repository: MainRepository) : AndroidViewModel(application) {
 
-    init {
-        val database = AppDatabase.getDatabase(application)
-        repository = MainRepository(database.vocabularyDao(), application)
-    }
-
-
-    //ask for Sherali this place was written correctly
     fun setLoadJson() {
         viewModelScope.launch {
             repository.loadJSONAndSaveToDatabase()
         }
     }
-
-
 
 }

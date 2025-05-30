@@ -12,16 +12,11 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
-class VocabularyViewModel(application: Application) : AndroidViewModel(application) {
-    private val repository: MainRepository
+class VocabularyViewModel(application: Application, private val repository: MainRepository) : AndroidViewModel(application) {
 
     private val _wordsByUnit = MutableStateFlow<List<Vocabulary>>(emptyList())
     val wordsByUnit: StateFlow<List<Vocabulary>> get() = _wordsByUnit
 
-    init {
-        val database = AppDatabase.getDatabase(application)
-        repository = MainRepository(database.vocabularyDao(), application)
-    }
 
     fun observeWordsByUnit(unit: String) {
         viewModelScope.launch {
