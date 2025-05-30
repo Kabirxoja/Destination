@@ -5,7 +5,6 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import uz.kabirhoja.destination.data.data.UpdatedNotes
 import uz.kabirhoja.destination.data.data.Vocabulary
-import uz.kabirhoja.destination.data.local.AppDatabase
 import uz.kabirhoja.destination.data.repository.MainRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

@@ -6,7 +6,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import uz.kabirhoja.destination.data.data.Vocabulary
-import uz.kabirhoja.destination.data.local.AppDatabase
 import uz.kabirhoja.destination.data.repository.MainRepository
 import kotlinx.coroutines.launch
 

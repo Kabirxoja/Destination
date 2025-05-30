@@ -7,7 +7,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import uz.kabirhoja.destination.data.data.Vocabulary
-import uz.kabirhoja.destination.data.local.AppDatabase
 import uz.kabirhoja.destination.data.repository.MainRepository
 
 class SearchViewModel(application: Application,private val repository: MainRepository) : AndroidViewModel(application) {
